@@ -1,0 +1,514 @@
+entity = {
+	name = "decagrammaton_hod_tentacle_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+	locator = {
+		name = "section_1"
+		position = { 0 0 -8 }
+		rotation = { 0 140 0 }
+	}
+
+	attach = {
+		section_1 = "decagrammaton_hod_tentacle_a_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_a_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_a"
+		position = { 0 1.2 -8.8 }
+		rotation = { 0 20 0 }
+	}
+
+	attach = {
+		section_a = "decagrammaton_hod_tentacle_b_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_b_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_b"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_b = "decagrammaton_hod_tentacle_c_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_c_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_c"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_c = "decagrammaton_hod_tentacle_d_entity"
+	}
+
+}
+
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_d_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_d"
+		position = { 0 1.2 -8.8 }
+		rotation = { 0 20 0 }
+	}
+
+	attach = {
+		section_d = "decagrammaton_hod_tentacle_e_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_e_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_e"
+		position = { 0 1.2 -8.8 }
+		rotation = { 0 20 0 }
+	}
+
+	attach = {
+		section_e = "decagrammaton_hod_tentacle_f_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_f_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_f"
+		position = { 0 1.2 -8.8 }
+		rotation = { 0 20 0 }
+	}
+
+	attach = {
+		section_f = "decagrammaton_hod_tentacle_g_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_g_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_g"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_g = "decagrammaton_hod_tentacle_h_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_h_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_h"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_h = "decagrammaton_hod_tentacle_i_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_i_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_i"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_i = "decagrammaton_hod_tentacle_j_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_j_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_j"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_j = "decagrammaton_hod_tentacle_k_entity"
+	}
+
+}
+
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_k_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_k"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_k = "decagrammaton_hod_tentacle_l_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_l_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_l"
+		position = { 0 1.2 -8.8 }
+		rotation = { 0 20 0 }
+	}
+
+	attach = {
+		section_l = "decagrammaton_hod_tentacle_m_entity"
+	}
+
+}
+
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_m_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_m"
+		position = { 0 1.2 -8.8 }
+		rotation = { 0 20 0 }
+	}
+
+	attach = {
+		section_m = "decagrammaton_hod_tentacle_n_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_n_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_n"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_n = "decagrammaton_hod_tentacle_o_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_o_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_o"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_o = "decagrammaton_hod_tentacle_p_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_p_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_p"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_p = "decagrammaton_hod_tentacle_q_entity"
+	}
+
+}
+
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_q_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_q"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_q = "decagrammaton_hod_tentacle_r_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_r_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_r"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_r = "decagrammaton_hod_tentacle_s_entity"
+	}
+
+}
+
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_s_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+	locator = {
+		name = "section_s"
+		position = { 0 0 -7.2 }
+		rotation = { 0 -20 0 }
+	}
+
+	attach = {
+		section_s = "decagrammaton_hod_tentacle_t_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_t_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+
+	locator = {
+		name = "section_t"
+		position = { 0 0 -8 }
+		rotation = { 0 0 0 }
+	}
+
+	attach = {
+		section_t = "decagrammaton_hod_tentacle_u_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_u_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+
+	locator = {
+		name = "section_u"
+		position = { 0 0 -8 }
+		rotation = { 0 0 0 }
+	}
+
+	attach = {
+		section_u = "decagrammaton_hod_tentacle_v_entity"
+	}
+
+}
+
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_v_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+
+	locator = {
+		name = "section_v"
+		position = { 0 0 -8 }
+		rotation = { 0 0 0 }
+	}
+
+	attach = {
+		section_v = "decagrammaton_hod_tentacle_w_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_w_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+
+	locator = {
+		name = "section_w"
+		position = { 0 0 -8 }
+		rotation = { 0 0 0 }
+	}
+
+	attach = {
+		section_w = "decagrammaton_hod_tentacle_x_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_x_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+
+	locator = {
+		name = "section_x"
+		position = { 0 0 -8 }
+		rotation = { 0 0 0 }
+	}
+
+	attach = {
+		section_x = "decagrammaton_hod_tentacle_y_entity"
+	}
+
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_y_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+
+	locator = {
+		name = "section_y"
+		position = { 0 0 -8 }
+		rotation = { 0 0 0 }
+	}
+
+	attach = {
+		section_x = "decagrammaton_hod_tentacle_z_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_tentacle_z_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+
+
+	locator = {
+		name = "section_z"
+		position = { 0 -3 -8 }
+		rotation = { 0 0 0 }
+	}
+
+	attach = {
+		section_z = "decagrammaton_hod_turret_x_entity"
+	}
+
+}
+
+
+entity = {
+	name = "decagrammaton_hod_turret_x_entity"
+	pdxmesh = "decagrammaton_hod_turret_x_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1
+
+	game_data = {
+		emissive_recolor_crunch = 2.0
+		uv_animation_speed 		= @flowmap_speed
+		uv_animation_direction 	= { @flowmap_intensity 0.0 }
+	}
+}
+
+entity = {
+	name = "decagrammaton_hod_tentacle_section_entity"
+	pdxmesh = "decagrammaton_hod_tentacle_section_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+
+}

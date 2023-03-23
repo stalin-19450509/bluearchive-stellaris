@@ -1,0 +1,13 @@
+version="0.6"
+tags={
+	"Species"
+	"Sound"
+	"Anime"
+	"story"
+	"event"
+	"Technology"
+}
+picture="thumbnail.png"
+name="BlueArchive"
+supported_version="3.6.*"
+remote_file_id="2810064268"

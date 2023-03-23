@@ -1,0 +1,86 @@
+spriteTypes = {
+	portraitType = {
+		#这个应该没用了
+		name = "GFX_portrait_Shittem_mask"
+		masking_texture = "gfx/interface/ui/BA_GUI_BLANK_ALPHA.dds"
+		#effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		type = room
+		character = yes
+	}
+	portraitType = {
+		name = "GFX_portrait_Arona_mask"
+		masking_texture = "gfx/interface/ui/BA_ARONA_BLANK_ALPHA.dds"
+		#effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		type = room
+		character = yes
+	}
+	spriteType = {
+		#抓紧让它用不上
+		name = "GFX_BA_UI_Exit"
+		textureFile = "gfx/interface/ui/BA_ui_exit.dds"
+	}
+	spriteType = {
+		#用不上了
+		name = "GFX_BA_UI_Option"
+		textureFile = "gfx/interface/ui/BA_ui_option.dds"
+	}
+	spriteType = {
+		#背景
+		name = "GFX_BA_UI_Background"
+		textureFile = "gfx/interface/ui/BA_Shittem_background.dds"
+	}
+	spriteType = {
+		#立绘
+		name = "GFX_BA_UI_Portrait"
+		textureFile = "gfx/interface/ui/BA_ui_arona_potrait.dds"
+	}
+	spriteType = {
+		#对话框
+		name = "GFX_BA_UI_Message_box"
+		textureFile = "gfx/interface/ui/BA_messege_box.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	#按钮
+	spriteType = {
+		name = "GFX_BA_communication_button"
+		textureFile = "gfx/interface/ui/BA_ui_button_communication.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_logistics_button"
+		textureFile = "gfx/interface/ui/BA_ui_button_logistics.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_angel24_button"
+		textureFile = "gfx/interface/ui/BA_ui_button_angel24.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_underconstruction_button"
+		textureFile = "gfx/interface/ui/BA_ui_button_underconstruction.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_entrust_button"
+		textureFile = "gfx/interface/ui/BA_ui_button_entrust.dds"
+	}
+	#logo
+	spriteType = {
+		name = "GFX_BA_logo"
+		textureFile = "gfx/interface/ui/BA_ui_logo.dds"
+	}
+	#验证界面
+	spriteType = {
+		name = "GFX_BA_Arona_1"
+		textureFile = "gfx/interface/ui/BA_ui_Arona_1.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Arona_2"
+		textureFile = "gfx/interface/ui/BA_ui_Arona_2.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Arona_3"
+		textureFile = "gfx/interface/ui/BA_ui_Arona_3.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Arona_Yubisaki"
+		textureFile = "gfx/interface/ui/BA_Arona_YUBISAKI_square.dds"
+	}
+}

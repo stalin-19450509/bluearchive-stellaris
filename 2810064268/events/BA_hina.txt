@@ -1,0 +1,13 @@
+namespace = BA_hina
+#日奈就职事件链，因为没想好后续，所以就先这样吧
+country_event = {
+	id = BA_hina.0001
+	is_triggered_only = yes
+	title = "BA_hina.0001.name"
+	desc = "BA_hina.0001.desc"
+	picture = GFX_BA_hina1
+	option = {
+		name = BA_hina.0001.a
+		default_hide_option = yes
+	}
+}

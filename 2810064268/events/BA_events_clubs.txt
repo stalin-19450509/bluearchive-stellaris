@@ -1,0 +1,2865 @@
+namespace = BA_club
+####################
+##### 创建社团
+####################
+country_event = {
+	id = BA_club.0001
+	is_triggered_only = yes
+	title = BA_club.0001.title
+	desc = BA_club.0001.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = Arona0012
+		room = "BA_Shittem_room"
+	}
+	trigger = {
+		has_authority = auth_kivotos
+		last_increased_tech = tech_BA_culture_Federal
+	}
+	option = {
+		name = BA_club.0001.comfirmed
+	}
+}
+
+ship_event = {
+	id = BA_club.0002
+	is_triggered_only = yes
+	title = BA_club.0002.title
+	desc = BA_club.0002.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = Arona0012
+		room = "BA_Shittem_room"
+	}
+	trigger = {
+		is_ship_size = BA_club_ship
+		NOT = {
+			owner = {
+				has_country_flag = BA_club_institute_gived
+			}
+		}
+	}
+	immediate = {
+		owner = {
+			set_country_flag = BA_club_institute_gived
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							has_country_flag = BA_club_communicate_country
+						}
+					}
+				}
+				create_country = {
+					name = "Club_communicate.name"
+					type = Shittem_communication
+					flag = {
+						icon = {
+							category = "ba"
+							file = "ba_flags_01.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "00_solid.dds"
+						}
+						colors = {
+							"white"
+							"white"
+							"white"
+							"white"
+						}
+					}
+				}
+				last_created_country = {
+					set_country_flag = BA_club_communicate_country
+					save_global_event_target_as = BA_club_communicate_country
+				}
+			}
+			event_target:BA_club_communicate_country = {
+				establish_communications_no_message = root.owner
+			}
+		}
+	}
+	option = {
+		name = BA_club.0002.comfirmed
+	}
+}
+
+#建立社团：船到达位置，消除船
+fleet_event = {
+	id = BA_club.0005
+	is_triggered_only = yes
+	title = BA_club.0005.title
+	desc = BA_club.0005.desc
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_colony_settlement
+	location = from
+	trigger = {
+		this = {
+			is_ship_size = BA_club_ship
+		}
+		from = {
+			is_megastructure_type = BA_club_base
+			NOT = {
+				has_megastructure_flag = BA_club_occupied
+			}
+		}
+		this.owner = {
+			is_same_empire = from.owner
+		}
+	}
+	immediate = {
+		from = {
+			set_megastructure_flag = BA_club_occupied
+		}
+	}
+	### 选项仅设置旗帜
+	# TODO：随社团更新
+	#随机
+	option = {
+		name = BA_club.0005.random
+	}
+	#游戏部
+	option = {
+		name = Game_development_department
+		trigger = {
+			owner = {
+				NOT = {
+					has_country_flag = BA_Game_development_department
+				}
+			}
+		}
+		hidden_effect = {
+			from.owner = {
+				set_country_flag = BA_club_other_block
+				set_country_flag = BA_club_set_Game_development_department
+			}
+		}
+	}
+	#工程师部
+	option = {
+		name = Engineering_club
+		trigger = {
+			owner = {
+				NOT = {
+					has_country_flag = BA_Engineering_club
+				}
+			}
+		}
+		hidden_effect = {
+			from.owner = {
+				set_country_flag = BA_club_other_block
+				set_country_flag = BA_club_set_Engineering_club
+			}
+		}
+	}
+	#真理部
+	option = {
+		name = Veritas
+		trigger = {
+			owner = {
+				NOT = {
+					has_country_flag = BA_Veritas
+				}
+			}
+		}
+		hidden_effect = {
+			from.owner = {
+				set_country_flag = BA_club_other_block
+				set_country_flag = BA_club_set_Veritas
+			}
+		}
+	}
+	#对策委员会
+	option = {
+		name = Foreclosure_task_force
+		trigger = {
+			owner = {
+				NOT = {
+					has_country_flag = BA_Foreclosure_task_force
+				}
+			}
+		}
+		hidden_effect = {
+			from.owner = {
+				set_country_flag = BA_club_other_block
+				set_country_flag = BA_club_set_Foreclosure_task_force
+			}
+		}
+	}
+	#茶会
+	option = {
+		name = Teaparty
+		trigger = {
+			owner = {
+				NOT = {
+					has_country_flag = BA_Teaparty
+				}
+			}
+		}
+		hidden_effect = {
+			from.owner = {
+				set_country_flag = BA_club_other_block
+				set_country_flag = BA_club_set_Teaparty
+			}
+		}
+	}
+	#取消
+	option = {
+		name = BA_club.0005.cancel
+		from = {
+			owner = {
+				set_country_flag = BA_club_other_block
+			}
+		}
+	}
+	### 功能器
+	after = {
+		hidden_effect = {
+			from = {
+				owner = {
+					# TODO：随社团更新
+					random_list = {
+						#游戏部
+						1000 = {
+							modifier = {
+								set = 0
+								has_country_flag = BA_Game_development_department
+							}
+							modifier = {
+								set = 0
+								has_country_flag = BA_club_other_block
+								NOT = {
+									has_country_flag = BA_club_set_Game_development_department
+								}
+							}
+							prev = {
+								upgrade_megastructure_to = BA_club_station_game_dev
+							}
+							country_event = {
+								id = BA_club.1001
+								days = 5
+							}
+							BA_club_cap_use = yes
+							remove_country_flag = BA_club_set_Game_development_department
+							set_country_flag = BA_Game_development_department
+							destroy_fleet = root
+						}
+						#工程师部
+						1000 = {
+							modifier = {
+								set = 0
+								has_country_flag = BA_Engineering_club
+							}
+							modifier = {
+								set = 0
+								has_country_flag = BA_club_other_block
+								NOT = {
+									has_country_flag = BA_club_set_Engineering_club
+								}
+							}
+							prev = {
+								upgrade_megastructure_to = BA_club_station_engineering_club
+							}
+							country_event = {
+								id = BA_club.1101
+								days = 5
+							}
+							BA_club_cap_use = yes
+							remove_country_flag = BA_club_set_Engineering_club
+							set_country_flag = BA_Engineering_club
+							destroy_fleet = root
+						}
+						#真理部
+						1000 = {
+							modifier = {
+								set = 0
+								has_country_flag = BA_Veritas
+							}
+							modifier = {
+								set = 0
+								has_country_flag = BA_club_other_block
+								NOT = {
+									has_country_flag = BA_club_set_Veritas
+								}
+							}
+							prev = {
+								upgrade_megastructure_to = BA_club_station_veritas
+							}
+							country_event = {
+								id = BA_club.1201
+								days = 5
+							}
+							BA_club_cap_use = yes
+							remove_country_flag = BA_club_set_Veritas
+							set_country_flag = BA_Veritas
+							destroy_fleet = root
+						}
+						#对策委员会
+						1000 = {
+							modifier = {
+								set = 0
+								has_country_flag = BA_Foreclosure_task_force
+							}
+							modifier = {
+								set = 0
+								has_country_flag = BA_club_other_block
+								NOT = {
+									has_country_flag = BA_club_set_Foreclosure_task_force
+								}
+							}
+							prev = {
+								upgrade_megastructure_to = BA_club_station_countermeasures_committee
+							}
+							country_event = {
+								id = BA_club.1301
+								days = 5
+							}
+							BA_club_cap_use = yes
+							remove_country_flag = BA_club_set_Foreclosure_task_force
+							set_country_flag = BA_Foreclosure_task_force
+							destroy_fleet = root
+						}
+						#茶会
+						1000 = {
+							modifier = {
+								set = 0
+								has_country_flag = BA_Teaparty
+							}
+							modifier = {
+								set = 0
+								has_country_flag = BA_club_other_block
+								NOT = {
+									has_country_flag = BA_club_set_Teaparty
+								}
+							}
+							prev = {
+								upgrade_megastructure_to = BA_club_station_tea_party
+							}
+							country_event = {
+								id = BA_club.1401
+								days = 5
+							}
+							BA_club_cap_use = yes
+							remove_country_flag = BA_club_set_Teaparty
+							set_country_flag = BA_Teaparty
+							destroy_fleet = root
+						}
+						#取消
+						1 = {
+							prev = {
+								remove_megastructure_flag = BA_club_occupied
+							}
+							country_event = {
+								id = BA_club.0006
+							}
+						}
+					}
+					remove_country_flag = BA_club_other_block
+				}
+			}
+		}
+	}
+}
+
+#创部失败，不进行下一步
+country_event = {
+	id = BA_club.0006
+	is_triggered_only = yes
+	title = BA_club.0006.title
+	desc = BA_club.0006.desc
+	show_sound = event_mystic_reveal
+	picture = GFX_BA_Azusa_in_Trinity
+	option = {
+		name = CONFIRM
+	}
+}
+
+# #获得社团容量
+# country_event = {
+# 	id = BA_club.0011
+# 	is_triggered_only = yes
+# 	hide_window = yes
+# 	immediate = {
+# 		change_variable = {
+# 			which = BA_Club_limit
+# 			value = 1
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_modifier = modifier_BA_club_overload
+# 				check_variable = {
+# 					which = BA_Club_count
+# 					value <= BA_Club_limit
+# 				}
+# 			}
+# 			remove_modifier = modifier_BA_club_overload
+# 		}
+# 	}
+# }
+# #占用社团容量
+# country_event = {
+# 	id = BA_club.0012
+# 	is_triggered_only = yes
+# 	hide_window = yes
+# 	immediate = {
+# 		change_variable = {
+# 			which = BA_Club_count
+# 			value = 1
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_modifier = modifier_BA_club_overload
+# 				}
+# 				check_variable = {
+# 					which = BA_Club_count
+# 					value >= BA_Club_limit
+# 				}
+# 			}
+# 			add_modifier = {
+# 				modifier = modifier_BA_club_overload
+# 			}
+# 		}
+# 	}
+# }
+#社团舰殖民
+planet_event = {
+	id = BA_club.0030
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = from
+		from = {
+			is_ship_size = BA_club_ship
+		}
+	}
+	immediate = {
+		owner = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = BA_club_colonized
+					}
+				}
+				set_country_flag = BA_club_colonized
+				set_country_flag = BA_Club_ship_upgrade_0
+				country_event = {
+					id = BA_club.0032
+				}
+			}
+		}
+		switch = {
+			trigger = has_country_flag
+			BA_Club_ship_upgrade_0 = {
+				add_modifier = {
+					modifier = BA_colony_development_00
+					days = 2160
+				}
+			}
+			BA_Club_ship_upgrade_1 = {
+				add_modifier = {
+					modifier = BA_colony_development_01
+					days = 2160
+				}
+			}
+			BA_Club_ship_upgrade_2 = {
+				add_modifier = {
+					modifier = BA_colony_development_02
+					days = 2160
+				}
+			}
+			BA_Club_ship_upgrade_3 = {
+				add_modifier = {
+					modifier = BA_colony_development_03
+					days = 2160
+				}
+			}
+		}
+		add_building = building_ba_Schale_office
+	}
+}
+
+planet_event = {
+	id = BA_club.0031
+	is_triggered_only = yes
+	hide_window = yes
+}
+
+country_event = {
+	id = BA_club.0032
+	is_triggered_only = yes
+	title = BA_club.0032.title
+	desc = BA_club.0032.desc
+	picture = GFX_BA_Azusa_in_Trinity
+	option = {
+		name = CONFIRM
+	}
+}
+
+####################
+##### 社团交流
+####################
+######             基沃托斯社团交流总部            ######
+#触发器
+country_event = {
+	id = BA_club.0050
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			has_country_flag = BA_club_communicate_country
+		}
+	}
+	immediate = {
+		country_event = {
+			id = BA_club.0051
+		}
+	}
+}
+
+#主界面
+country_event = {
+	id = BA_club.0051
+	is_triggered_only = yes
+	title = BA_club.0051.title
+	desc = BA_club.0051.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		room = "BA_Shittem_room"
+	}
+	option = {
+		name = BA_club.0051.exit
+		default_hide_option = yes
+	}
+	#联邦学生会社团总部
+	option = {
+		name = Communication_main
+		country_event = {
+			id = BA_club.0052
+		}
+	}
+	# TODO：随社团更新
+	#游戏开发部
+	option = {
+		name = Game_development_department
+		trigger = {
+			has_country_flag = BA_Game_development_department
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					country_event = {
+						id = BA_club.1004
+					}
+				}
+				10 = {
+					country_event = {
+						id = BA_club.1005
+					}
+				}
+			}
+		}
+	}
+	#工程师部
+	option = {
+		name = Engineering_club
+		trigger = {
+			has_country_flag = BA_Engineering_club
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					country_event = {
+						id = BA_club.1104
+					}
+				}
+				10 = {
+					country_event = {
+						id = BA_club.1105
+					}
+				}
+			}
+		}
+	}
+	#真理部
+	option = {
+		name = Veritas
+		trigger = {
+			has_country_flag = BA_Veritas
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					country_event = {
+						id = BA_club.1204
+					}
+				}
+				10 = {
+					country_event = {
+						id = BA_club.1205
+					}
+				}
+			}
+		}
+	}
+	#对策委员会
+	option = {
+		name = Foreclosure_task_force
+		trigger = {
+			has_country_flag = BA_Foreclosure_task_force
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					country_event = {
+						id = BA_club.1304
+					}
+				}
+				10 = {
+					country_event = {
+						id = BA_club.1305
+					}
+				}
+			}
+		}
+	}
+	#茶会
+	option = {
+		name = Teaparty
+		trigger = {
+			has_country_flag = BA_Teaparty
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					country_event = {
+						id = BA_club.1404
+					}
+				}
+				10 = {
+					country_event = {
+						id = BA_club.1405
+					}
+				}
+				10 = {
+					modifier = {
+						set = 0
+						has_country_flag = mika_is_leader_flag
+					}
+					country_event = {
+						id = BA_club.1406
+					}
+				}
+			}
+		}
+	}
+}
+
+#交流总部主界面
+country_event = {
+	id = BA_club.0052
+	is_triggered_only = yes
+	title = Communication_main
+	desc = Communication_main.desc1
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = "Arona0012"
+		room = "BA_Shittem_room"
+	}
+	immediate = {
+		#清点赞助情况
+		BA_club_check_sponse = yes
+		#计算限制
+		BA_club_cap_recount = yes
+		#计算资源
+		BA_club_resource_recount = yes
+	}
+	#赞助
+	option = {
+		name = Sponsor_all_club
+		is_dialog_only = yes
+		response_text = Sponsor_all_club.re
+		custom_tooltip = Sponsor_all_club.tip
+		allow = {
+			custom_tooltip = {
+				fail_text = All_club_sponsed
+				check_variable = {
+					which = BA_club_to_sponse
+					value >= 1
+				}
+			}
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 1
+				multiplier = BA_club_sponse_cost
+			}
+		}
+		hidden_effect = {
+			BA_club_sponse_all = yes
+		}
+	}
+	#提高社团容量
+	option = {
+		name = Gain_more_club
+		is_dialog_only = yes
+		response_text = Gain_more_club.re
+		custom_tooltip = Gain_more_club.tip
+		allow = {
+			custom_tooltip = {
+				fail_text = Club_overlimit
+				check_variable = {
+					which = BA_Club_check
+					value <= 2
+				}
+			}
+			resource_stockpile_compare = {
+				resource = consumer_goods
+				value >= 1
+				multiplier = BA_club_cap_consumer_goods_cost
+			}
+			resource_stockpile_compare = {
+				resource = sr_pyroxenes
+				value >= 1
+				multiplier = BA_club_cap_pyroxenes_cost
+			}
+			resource_stockpile_compare = {
+				resource = sr_keystone
+				value >= 1
+				multiplier = BA_club_cap_keystone_cost
+			}
+		}
+		hidden_effect = {
+			#增加容量
+			BA_club_cap_add = yes
+			#计算限制
+			BA_club_cap_recount = yes
+			#计算资源
+			BA_club_resource_recount = yes
+		}
+		add_resource = {
+			consumer_goods = -1
+			multiplier = BA_club_cap_consumer_goods_cost
+		}
+		add_resource = {
+			sr_pyroxenes = -1
+			multiplier = BA_club_cap_pyroxenes_cost
+		}
+		add_resource = {
+			sr_keystone = -1
+			multiplier = BA_club_cap_keystone_cost
+		}
+	}
+	#提升社团部室上限
+	#强化社团舰
+	option = {
+		name = Upgrade_club_ship
+		is_dialog_only = yes
+		response_text = Upgrade_club_ship.re
+		custom_tooltip = Upgrade_club_ship.tip
+		trigger = {
+			has_country_flag = BA_club_colonized
+			NOR = {
+				has_country_flag = BA_Club_ship_upgrade_3
+			}
+		}
+		allow = {
+			if = {
+				limit = {
+					has_country_flag = BA_Club_ship_upgrade_0
+				}
+				has_technology = tech_capital_productivity_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = BA_Club_ship_upgrade_1
+				}
+				has_technology = tech_capital_productivity_2
+			}
+			else_if = {
+				limit = {
+					has_country_flag = BA_Club_ship_upgrade_2
+				}
+				has_technology = tech_capital_productivity_3
+			}
+			else = {
+				hidden_trigger = {
+					always = yes
+				}
+			}
+		}
+		###
+		if = {
+			limit = {
+				has_country_flag = BA_Club_ship_upgrade_2
+			}
+			remove_country_flag = BA_Club_ship_upgrade_2
+			set_country_flag = BA_Club_ship_upgrade_3
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BA_Club_ship_upgrade_1
+			}
+			remove_country_flag = BA_Club_ship_upgrade_1
+			set_country_flag = BA_Club_ship_upgrade_2
+		}
+		else = {
+			set_country_flag = BA_Club_ship_upgrade_1
+			remove_country_flag = BA_Club_ship_upgrade_0
+		}
+	}
+	#返回
+	option = {
+		name = Communication_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+######   游戏部 Game_development_department 100   ######
+### 建部通知
+country_event = {
+	id = BA_club.1001
+	is_triggered_only = yes
+	title = BA_club.1001.title
+	desc = BA_club.1001.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		#以后改
+		portrait = BA_Yuzu
+		room = enclave_curator_room
+	}
+	immediate = {
+		fromfrom = {
+			solar_system = {
+				set_star_flag = BA_Game_development_department_system
+			}
+			set_megastructure_flag = BA_mega_club_room
+			set_megastructure_flag = Mega_Game_development_department
+			set_megastructure_flag = Mega_Game_development_department_@owner
+		}
+		set_variable = {
+			which = Game_development_department			#好感度
+			value = 0
+		}
+		set_variable = {
+			which = Game_development_department_game_count			#开发的游戏计数器
+			value = 0
+		}
+		set_variable = {
+			which = Game_development_department_room_limit			#部室限制
+			value = 1
+		}
+		every_country = {
+			limit = {
+				has_authority = auth_kivotos
+			}
+			country_event = {
+				id = BA_club.1002
+			}
+		}
+	}
+	option = {
+		name = BA_club.1001.next
+	}
+}
+
+country_event = {
+	id = BA_club.1002
+	is_triggered_only = yes
+	title = BA_club.1002.title
+	desc = BA_club.1002.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		NOT = {
+			has_country_flag = BA_Game_development_department
+		}
+	}
+	option = {
+		name = HARDWORK
+	}
+}
+
+### 主界面 （多个事件显示不同部员 功能应完全一致）
+country_event = {
+	id = BA_club.1004
+	title = Game_development_department	#事件标题
+	desc = Yuzu_desc1	#事件文本
+	desc = Yuzu_desc2	#事件文本2
+	desc = Yuzu_desc3	#事件文本3
+	is_triggered_only = yes	#通过引入事件触发
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		#以后改
+		portrait = BA_Yuzu
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Game_development_department
+		CHARA = Yuzu
+	}
+	#打游戏
+	# option = {
+	# 	name = Game_development_department_play
+	# }
+	#制作一个游戏
+	option = {
+		name = Game_development_department_game_develop
+		allow = {
+			custom_tooltip = {
+				fail_text = favor_fail
+				check_variable = {
+					which = Game_development_department
+					value >= 40
+				}
+			}
+			custom_tooltip = {
+				fail_text = Game_developing
+				NOT = {
+					has_country_flag = Game_development_department_busy
+				}
+			}
+		}
+		response_text = Game_development_department_game_develop_YuzuRE
+		hidden_effect = {
+			set_country_flag = Game_development_department_working
+			set_timed_country_flag = {
+				flag = Game_development_department_busy
+				days = 720
+			}
+			change_variable = {
+				which = Game_development_department_game_count
+				value = 1
+			}
+			set_variable = {
+				which = Game_development_department_score
+				value = Game_development_department_game_count
+			}
+			multiply_variable = {
+				which = Game_development_department_score
+				value = 5
+			}
+			country_event = {
+				id = BA_club.1023
+				days = 20
+				random = 20
+			}
+			country_event = {
+				id = BA_club.1024
+				days = 180
+				random = 360
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Game_development_department
+		CHARA = Yuzu
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_club.1005
+	title = Game_development_department	#事件标题
+	desc = Aris_desc1	#事件文本
+	desc = Aris_desc2	#事件文本2
+	desc = Aris_desc3	#事件文本3
+	is_triggered_only = yes	#通过引入事件触发
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		#以后改
+		portrait = BA_Aris
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Game_development_department
+		CHARA = Aris
+	}
+	#打游戏
+	#制作一个游戏
+	option = {
+		name = Game_development_department_game_develop
+		allow = {
+			custom_tooltip = {
+				fail_text = favor_fail
+				check_variable = {
+					which = Game_development_department
+					value >= 40
+				}
+			}
+			custom_tooltip = {
+				fail_text = Game_developing
+				NOT = {
+					has_country_flag = Game_development_department_busy
+				}
+			}
+		}
+		response_text = Game_development_department_game_develop_ArisRE
+		hidden_effect = {
+			set_country_flag = Game_development_department_working
+			set_timed_country_flag = {
+				flag = Game_development_department_busy
+				days = 720
+			}
+			change_variable = {
+				which = Game_development_department_game_count
+				value = 1
+			}
+			set_variable = {
+				which = Game_development_department_score
+				value = Game_development_department_game_count
+			}
+			multiply_variable = {
+				which = Game_development_department_score
+				value = 5
+			}
+			country_event = {
+				id = BA_club.1023
+				days = 20
+				random = 20
+			}
+			country_event = {
+				id = BA_club.1024
+				days = 180
+				random = 360
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Game_development_department
+		CHARA = Aris
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+### TODO: 打游戏
+### 游戏制作过程
+country_event = {
+	id = BA_club.1023
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_country_flag = Game_development_department_working
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = BA_club_Game_development_department_sponsoring
+			}
+			change_variable = {
+				which = Game_development_department_score
+				value = 1
+			}
+		}
+		random_list = {
+			25 = {
+			}
+			50 = {
+				change_variable = {
+					which = Game_development_department_score
+					value = 1
+				}
+			}
+			25 = {
+				change_variable = {
+					which = Game_development_department_score
+					value = 2
+				}
+			}
+		}
+		country_event = {
+			id = BA_club.1023
+			days = 20
+			random = 20
+		}
+	}
+}
+
+country_event = {
+	id = BA_club.1024
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		remove_country_flag = Game_development_department_working
+		if = {
+			limit = {
+				has_country_flag = Game_development_department_in_series
+			}
+			country_event = {
+				id = BA_club.1029
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = Game_development_department_score
+					value < 18
+				}
+			}
+			country_event = {
+				id = BA_club.1025
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = Game_development_department_score
+					value < 23
+				}
+			}
+			country_event = {
+				id = BA_club.1026
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = Game_development_department_score
+					value < 28
+				}
+			}
+			country_event = {
+				id = BA_club.1027
+			}
+		}
+		else = {
+			country_event = {
+				id = BA_club.1028
+			}
+		}
+	}
+}
+
+#制作游戏成品-普通
+country_event = {
+	id = BA_club.1025
+	is_triggered_only = yes
+	title = Game_development_department_game_complete
+	desc = Game_development_department_game_complete_1
+	picture = GFX_BA_Emergencies_0004
+	option = {
+		name = CONFIRM
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 3
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_modifier = modifier_BA_game_1
+					has_modifier = modifier_BA_game_2
+					has_modifier = modifier_BA_game_3
+					has_modifier = modifier_BA_game_4
+				}
+			}
+			add_modifier = {
+				modifier = modifier_BA_game_1
+			}
+		}
+	}
+}
+
+#制作游戏成品-精良
+country_event = {
+	id = BA_club.1026
+	is_triggered_only = yes
+	title = Game_development_department_game_complete
+	desc = Game_development_department_game_complete_2
+	picture = GFX_BA_Emergencies_0004
+	immediate = {
+		random = {
+			chance = 10
+			set_country_flag = Game_development_department_in_series
+		}
+	}
+	option = {
+		name = CONFIRM
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 6
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_modifier = modifier_BA_game_1
+				}
+				remove_modifier = modifier_BA_game_1
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_modifier = modifier_BA_game_2
+					has_modifier = modifier_BA_game_3
+					has_modifier = modifier_BA_game_4
+				}
+			}
+			add_modifier = {
+				modifier = modifier_BA_game_2
+			}
+		}
+	}
+}
+
+#制作游戏成品-史诗
+country_event = {
+	id = BA_club.1027
+	is_triggered_only = yes
+	title = Game_development_department_game_complete
+	desc = Game_development_department_game_complete_3
+	picture = GFX_BA_Emergencies_0004
+	immediate = {
+		random = {
+			chance = 40
+			set_country_flag = Game_development_department_in_series
+		}
+	}
+	option = {
+		name = CONFIRM
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 12
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_modifier = modifier_BA_game_1
+				}
+				remove_modifier = modifier_BA_game_1
+			}
+			if = {
+				limit = {
+					has_modifier = modifier_BA_game_2
+				}
+				remove_modifier = modifier_BA_game_2
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_modifier = modifier_BA_game_3
+					has_modifier = modifier_BA_game_4
+				}
+			}
+			add_modifier = {
+				modifier = modifier_BA_game_3
+			}
+		}
+	}
+}
+
+#制作游戏成品-传说
+country_event = {
+	id = BA_club.1028
+	is_triggered_only = yes
+	title = Game_development_department_game_complete
+	desc = Game_development_department_game_complete_4
+	picture = GFX_BA_Emergencies_0004
+	immediate = {
+		random = {
+			chance = 70
+			set_country_flag = Game_development_department_in_series
+		}
+	}
+	option = {
+		name = CONFIRM
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 24
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_modifier = modifier_BA_game_1
+				}
+				remove_modifier = modifier_BA_game_1
+			}
+			if = {
+				limit = {
+					has_modifier = modifier_BA_game_2
+				}
+				remove_modifier = modifier_BA_game_2
+			}
+			if = {
+				limit = {
+					has_modifier = modifier_BA_game_3
+				}
+				remove_modifier = modifier_BA_game_3
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_modifier = modifier_BA_game_4
+				}
+			}
+			add_modifier = {
+				modifier = modifier_BA_game_4
+			}
+		}
+	}
+}
+
+#制作游戏成品-续集
+country_event = {
+	id = BA_club.1029
+	is_triggered_only = yes
+	title = Game_development_department_game_complete
+	desc = Game_development_department_game_complete_5
+	picture = GFX_BA_Emergencies_0004
+	immediate = {
+		random = {
+			chance = 40
+			remove_country_flag = Game_development_department_in_series
+		}
+	}
+	option = {
+		name = CONFIRM
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 12
+		}
+	}
+}
+
+######   工程师部 Engineering_club 101   ######
+### 建部通知
+country_event = {
+	id = BA_club.1101
+	is_triggered_only = yes
+	title = BA_club.1101.title
+	desc = BA_club.1101.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Utaha
+		room = enclave_curator_room
+	}
+	immediate = {
+		fromfrom = {
+			solar_system = {
+				set_star_flag = BA_Engineering_club_system
+			}
+			set_megastructure_flag = BA_mega_club_room
+			set_megastructure_flag = Mega_Engineering_club
+			set_megastructure_flag = Mega_Engineering_club_@owner
+			set_name = Engineering_club
+		}
+		set_variable = {
+			which = Engineering_club			#好感度
+			value = 0
+		}
+		set_variable = {
+			which = Engineering_club_weapon_count			#开发的武器计数器
+			value = 0
+		}
+		set_variable = {
+			which = Engineering_club_room_limit			#部室限制
+			value = 1
+		}
+		every_country = {
+			limit = {
+				has_authority = auth_kivotos
+			}
+			country_event = {
+				id = BA_club.1102
+			}
+		}
+	}
+	option = {
+		name = BA_club.1101.next
+	}
+}
+
+country_event = {
+	id = BA_club.1102
+	is_triggered_only = yes
+	title = BA_club.1102.title
+	desc = BA_club.1102.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		NOT = {
+			has_country_flag = BA_Engineering_club
+		}
+	}
+	option = {
+		name = HARDWORK
+	}
+}
+
+### 主界面
+country_event = {
+	id = BA_club.1104
+	title = Engineering_club	#事件标题
+	desc = Utaha_desc1	#事件文本
+	desc = Utaha_desc2	#事件文本2
+	desc = Utaha_desc3	#事件文本3
+	is_triggered_only = yes	#通过引入事件触发
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		#以后改
+		portrait = BA_Utaha
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Engineering_club
+		CHARA = Utaha
+	}
+	#研究武器
+	option = {
+		name = Engineering_club_weapon_develop
+		allow = {
+			custom_tooltip = {
+				fail_text = favor_fail
+				check_variable = {
+					which = Engineering_club
+					value >= 40
+				}
+			}
+			#has_technology = tech_BA_pyroxenes_crafting
+			custom_tooltip = {
+				fail_text = enginner_developing_cooldown
+				NOT = {
+					has_country_flag = Engineering_club_weapon_develop_cooldown
+				}
+			}
+		}
+		hidden_effect = {
+			BA_Engineering_club_weapon_develop = yes
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Engineering_club
+		CHARA = Utaha
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_club.1105
+	title = Engineering_club	#事件标题
+	desc = Hibiki_desc1	#事件文本
+	desc = Hibiki_desc2	#事件文本2
+	desc = Hibiki_desc3	#事件文本3
+	is_triggered_only = yes	#通过引入事件触发
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Engineering_club
+		CHARA = Hibiki
+	}
+	#研究武器
+	option = {
+		name = Engineering_club_weapon_develop
+		allow = {
+			custom_tooltip = {
+				text = favor_fail
+				check_variable = {
+					which = Engineering_club
+					value >= 40
+				}
+			}
+			#has_technology = tech_BA_pyroxenes_crafting
+			custom_tooltip = {
+				fail_text = enginner_developing_cooldown
+				NOT = {
+					has_country_flag = Engineering_club_weapon_develop_cooldown
+				}
+			}
+		}
+		hidden_effect = {
+			BA_Engineering_club_weapon_develop = yes
+		}
+	}
+	inline_script = {
+		script = Club_room_std
+		CLUB = Engineering_club
+		CHARA = Hibiki
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+### 武器研究
+#触发器
+country_event = {
+	id = BA_club.1109
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 1080
+	}
+	immediate = {
+		set_country_flag = BA_block_blank_weapon_opinion
+		if = {
+			limit = {
+				check_variable = {
+					which = Engineering_club
+					value >= 40
+				}
+			}
+			BA_Engineering_club_weapon_develop = yes
+		}
+		remove_country_flag = BA_block_blank_weapon_opinion
+	}
+}
+
+#武器研究：空队列
+country_event = {
+	id = BA_club.1110
+	title = Engineering_club
+	desc = Hibiki_Blank
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+	}
+}
+
+#武器研究：射手座之夜
+country_event = {
+	id = BA_club.1111
+	title = Engineering_club
+	desc = Hibiki_Sagittarius_night
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = Sagittarius_night_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_Sagittarius_night
+	}
+}
+
+#武器研究：575
+country_event = {
+	id = BA_club.1112
+	title = Engineering_club
+	desc = Hibiki_Grenadiers_575
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = Grenadiers_575_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_Grenadiers_575
+	}
+}
+
+#武器研究：爱迪娜3号
+country_event = {
+	id = BA_club.1113
+	title = Engineering_club
+	desc = Hibiki_Adena_3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = Adena_3_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_Adena_3
+	}
+}
+
+#武器研究：奇幻色彩
+country_event = {
+	id = BA_club.1114
+	title = Engineering_club
+	desc = Hibiki_Fantacy_colors
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = Fantacy_colors_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_Fantacy_colors
+	}
+}
+
+#武器研究：超新星
+country_event = {
+	id = BA_club.1115
+	title = Engineering_club
+	desc = Hibiki_SuperNova
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = SuperNova_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_SuperNova
+	}
+}
+
+#武器研究：刚柔并济之心
+country_event = {
+	id = BA_club.1116
+	title = Engineering_club
+	desc = Hibiki_Soft_determination
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = Soft_determination_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_Soft_determination
+	}
+}
+
+#武器研究：独特点子
+country_event = {
+	id = BA_club.1117
+	title = Engineering_club
+	desc = Hibiki_Unique_idea
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = Unique_idea_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_Unique_idea
+	}
+}
+
+#武器研究：清爽灵感
+country_event = {
+	id = BA_club.1118
+	title = Engineering_club
+	desc = Hibiki_Flashy_inspiration
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = Flashy_inspiration_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_Flashy_inspiration
+	}
+}
+
+#武器研究：爆裂一击
+country_event = {
+	id = BA_club.1119
+	title = Engineering_club
+	desc = Hibiki_Crack_shot
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hibiki
+		room = enclave_curator_room
+	}
+	option = {
+		name = CONFIRM
+		hidden_effect = {
+			set_country_flag = Crack_shot_developed
+			set_timed_country_flag = {
+				flag = Engineering_club_weapon_develop_cooldown
+				days = 180
+			}
+		}
+		add_research_option = tech_BA_Crack_shot
+	}
+}
+
+######   真理部 Veritas 102   ######
+### 建部通知
+country_event = {
+	id = BA_club.1201
+	is_triggered_only = yes
+	title = BA_club.1201.title
+	desc = BA_club.1201.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Chihiro
+		room = enclave_curator_room
+	}
+	immediate = {
+		fromfrom = {
+			solar_system = {
+				set_star_flag = BA_Veritas_system
+			}
+			set_megastructure_flag = BA_mega_club_room
+			set_megastructure_flag = Mega_Veritas
+			set_megastructure_flag = Mega_Veritas_@owner
+			set_name = Veritas
+		}
+		set_variable = {
+			which = Veritas			#好感度
+			value = 0
+		}
+		set_variable = {
+			which = Veritas_sensor_cost			#传感器消耗
+			value = 2500
+		}
+		set_variable = {
+			which = Veritas_room_limit			#部室限制
+			value = 1
+		}
+		every_country = {
+			limit = {
+				has_authority = auth_kivotos
+			}
+			country_event = {
+				id = BA_club.1202
+			}
+		}
+	}
+	option = {
+		name = BA_club.1201.next
+	}
+}
+
+country_event = {
+	id = BA_club.1202
+	is_triggered_only = yes
+	title = BA_club.1202.title
+	desc = BA_club.1202.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		NOT = {
+			has_country_flag = BA_Veritas
+		}
+	}
+	option = {
+		name = HARDWORK
+	}
+}
+
+### 主界面
+country_event = {
+	id = BA_club.1204
+	title = Veritas
+	desc = Chihiro_desc1
+	desc = Chihiro_desc2
+	desc = Chihiro_desc3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Chihiro
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Veritas
+		CHARA = Chihiro
+	}
+	#搭传感器
+	option = {
+		name = Veritas_sensor_crafting
+		trigger = {
+			NOT = {
+				has_modifier = modifier_BA_Veritas_4
+			}
+		}
+		allow = {
+			resource_stockpile_compare = {
+				resource = alloys
+				value >= 1
+				multiplier = Veritas_sensor_cost
+			}
+			custom_tooltip = {
+				fail_text = Veritas_crafting_sensor
+				NOT = {
+					has_country_flag = BA_Veritas_crafting
+				}
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = BA_Veritas_crafting
+				days = 960
+			}
+		}
+		add_resource = {
+			alloys = -1
+			multiplier = Veritas_sensor_cost
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_BA_Veritas_3
+			}
+			country_event = {
+				id = BA_club.1214
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Veritas_2
+			}
+			country_event = {
+				id = BA_club.1213
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Veritas_1
+			}
+			country_event = {
+				id = BA_club.1212
+			}
+		}
+		else = {
+			country_event = {
+				id = BA_club.1211
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Veritas
+		CHARA = Chihiro
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_club.1205
+	title = Veritas
+	desc = Hare_desc1
+	desc = Hare_desc2
+	desc = Hare_desc3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hare
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Veritas
+		CHARA = Hare
+	}
+	#搭传感器
+	option = {
+		name = Veritas_sensor_crafting
+		trigger = {
+			NOT = {
+				has_modifier = modifier_BA_Veritas_4
+			}
+		}
+		allow = {
+			resource_stockpile_compare = {
+				resource = alloys
+				value >= 1
+				multiplier = Veritas_sensor_cost
+			}
+			custom_tooltip = {
+				fail_text = Veritas_crafting_sensor
+				NOT = {
+					has_country_flag = BA_Veritas_crafting
+				}
+			}
+		}
+		add_resource = {
+			alloys = -1
+			multiplier = Veritas_sensor_cost
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_BA_Veritas_3
+			}
+			country_event = {
+				id = BA_club.1214
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Veritas_2
+			}
+			country_event = {
+				id = BA_club.1213
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Veritas_1
+			}
+			country_event = {
+				id = BA_club.1212
+			}
+		}
+		else = {
+			country_event = {
+				id = BA_club.1211
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Veritas
+		CHARA = Chihiro
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+### 升级传感器
+#传感器1级
+country_event = {
+	id = BA_club.1211
+	title = Veritas
+	desc = Veritas_sensor1
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Chihiro
+		room = enclave_curator_room
+	}
+	option = {
+		name = Veritas_sensor1.next
+		add_modifier = {
+			modifier = modifier_BA_Veritas_1
+		}
+	}
+}
+
+#传感器2级
+country_event = {
+	id = BA_club.1212
+	title = Veritas
+	desc = Veritas_sensor2
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hare
+		room = enclave_curator_room
+	}
+	option = {
+		name = Veritas_sensor2.next
+		hidden_effect = {
+			remove_modifier = modifier_BA_Veritas_1
+		}
+		add_modifier = {
+			modifier = modifier_BA_Veritas_2
+		}
+	}
+}
+
+#传感器3级
+country_event = {
+	id = BA_club.1213
+	title = Veritas
+	desc = Veritas_sensor3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Hare
+		room = enclave_curator_room
+	}
+	option = {
+		name = Veritas_sensor3.next
+		hidden_effect = {
+			remove_modifier = modifier_BA_Veritas_2
+		}
+		add_modifier = {
+			modifier = modifier_BA_Veritas_3
+		}
+	}
+}
+
+#传感器4级
+country_event = {
+	id = BA_club.1214
+	title = Veritas
+	desc = Veritas_sensor4
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Chihiro
+		room = enclave_curator_room
+	}
+	option = {
+		name = Veritas_sensor4.next
+		hidden_effect = {
+			remove_modifier = modifier_BA_Veritas_3
+		}
+		add_modifier = {
+			modifier = modifier_BA_Veritas_4
+		}
+	}
+}
+
+######   对策委员会 Foreclosure_task_force  103   ######
+### 建部通知
+country_event = {
+	id = BA_club.1301
+	is_triggered_only = yes
+	title = BA_club.1301.title
+	desc = BA_club.1301.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Ayane
+		room = enclave_curator_room
+	}
+	immediate = {
+		fromfrom = {
+			solar_system = {
+				set_star_flag = BA_Foreclosure_task_force_system
+			}
+			set_megastructure_flag = BA_mega_club_room
+			set_megastructure_flag = Mega_Foreclosure_task_force
+			set_megastructure_flag = Mega_Foreclosure_task_force_@owner
+			set_name = Foreclosure_task_force
+		}
+		set_variable = {
+			which = Foreclosure_task_force			#好感度
+			value = 0
+		}
+		set_variable = {
+			which = Foreclosure_task_force_room_limit			#部室限制
+			value = 1
+		}
+		every_country = {
+			limit = {
+				has_authority = auth_kivotos
+			}
+			country_event = {
+				id = BA_club.1302
+			}
+		}
+	}
+	option = {
+		name = BA_club.1301.next
+	}
+}
+
+country_event = {
+	id = BA_club.1302
+	is_triggered_only = yes
+	title = BA_club.1302.title
+	desc = BA_club.1302.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		NOT = {
+			has_country_flag = BA_Foreclosure_task_force
+		}
+	}
+	option = {
+		name = HARDWORK
+	}
+}
+
+### 主界面
+country_event = {
+	id = BA_club.1304
+	title = Foreclosure_task_force
+	desc = Nonomi_desc1
+	desc = Nonomi_desc2
+	desc = Nonomi_desc3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Nonomi
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Foreclosure_task_force
+		CHARA = Nonomi
+	}
+	#优化决策
+	option = {
+		name = Foreclosure_task_force_decisions
+		custom_tooltip = Foreclosure_task_force_decisions.tip
+		response_text = Foreclosure_task_force_decisions.NonomiRE
+		allow = {
+			custom_tooltip = {
+				text = favor_fail
+				check_variable = {
+					which = Foreclosure_task_force
+					value >= 40
+				}
+			}
+			custom_tooltip = {
+				fail_text = taskforce_not_finished
+				NOT = {
+					has_country_flag = BA_Foreclosure_decisions_ready
+				}
+			}
+			custom_tooltip = {
+				fail_text = taskforce_cooldown
+				NOT = {
+					has_country_flag = BA_Foreclosure_decisions_cooldown
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = BA_Foreclosure_decisions_ready
+			set_timed_country_flag = {
+				flag = BA_Foreclosure_decisions_cooldown
+				days = 180
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Foreclosure_task_force
+		CHARA = Nonomi
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_club.1305
+	title = Foreclosure_task_force
+	desc = Shiroko_desc1
+	desc = Shiroko_desc2
+	desc = Shiroko_desc3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Shiroko
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Foreclosure_task_force
+		CHARA = Shiroko
+	}
+	#优化决策
+	option = {
+		name = Foreclosure_task_force_decisions
+		custom_tooltip = Foreclosure_task_force_decisions.tip
+		response_text = Foreclosure_task_force_decisions.ShirokoRE
+		allow = {
+			custom_tooltip = {
+				text = favor_fail
+				check_variable = {
+					which = Foreclosure_task_force
+					value >= 40
+				}
+			}
+			custom_tooltip = {
+				fail_text = taskforce_not_finished
+				NOT = {
+					has_country_flag = BA_Foreclosure_decisions_ready
+				}
+			}
+			custom_tooltip = {
+				fail_text = taskforce_cooldown
+				NOT = {
+					has_country_flag = BA_Foreclosure_decisions_cooldown
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = BA_Foreclosure_decisions_ready
+			set_timed_country_flag = {
+				flag = BA_Foreclosure_decisions_cooldown
+				days = 180
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Foreclosure_task_force
+		CHARA = Shiroko
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+### 彩蛋：白子抢劫行商
+# TODO
+######   茶会 Teaparty  104   ######
+### 建部通知
+country_event = {
+	id = BA_club.1401
+	is_triggered_only = yes
+	title = BA_club.1401.title
+	desc = BA_club.1401.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Nagisa
+		room = enclave_curator_room
+	}
+	immediate = {
+		fromfrom = {
+			solar_system = {
+				set_star_flag = BA_Teaparty_system
+			}
+			set_megastructure_flag = BA_mega_club_room
+			set_megastructure_flag = Mega_Teaparty
+			set_megastructure_flag = Mega_Teaparty_@owner
+			set_name = Teaparty
+		}
+		set_variable = {
+			which = Teaparty			#好感度
+			value = 0
+		}
+		set_variable = {
+			which = Teaparty_room_limit			#部室限制
+			value = 1
+		}
+		every_country = {
+			limit = {
+				has_authority = auth_kivotos
+			}
+			country_event = {
+				id = BA_club.1402
+			}
+		}
+	}
+	option = {
+		name = BA_club.1401.next
+	}
+}
+
+country_event = {
+	id = BA_club.1402
+	is_triggered_only = yes
+	title = BA_club.1402.title
+	desc = BA_club.1402.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		NOT = {
+			has_country_flag = BA_Teaparty
+		}
+	}
+	option = {
+		name = HARDWORK
+	}
+}
+
+### 主界面
+country_event = {
+	id = BA_club.1404
+	title = Teaparty
+	desc = Nagisa_desc1
+	desc = Nagisa_desc2
+	desc = Nagisa_desc3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Nagisa
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Teaparty
+		CHARA = Nagisa
+	}
+	#行政人员援助
+	option = {
+		name = Teaparty_support
+		custom_tooltip = Teaparty_support.tip
+		response_text = Teaparty_support.NagisaRE
+		allow = {
+			custom_tooltip_fail = {
+				text = Teaparty_support_capped
+				NOT = {
+					has_modifier = modifier_BA_Teaparty_4
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_3
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 15000
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_2
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 4000
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_1
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 1200
+				}
+			}
+			else = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 200
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_3
+			}
+			add_resource = {
+				energy = -15000
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_3
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_2
+			}
+			add_resource = {
+				energy = -4000
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_2
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_1
+			}
+			add_resource = {
+				energy = -1200
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_1
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_2
+			}
+		}
+		else = {
+			add_resource = {
+				energy = -200
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_1
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Teaparty
+		CHARA = Nagisa
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_club.1405
+	title = Teaparty
+	desc = Seia_desc1
+	desc = Seia_desc2
+	desc = Seia_desc3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Seia
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Teaparty
+		CHARA = Seia
+	}
+	#行政人员援助
+	option = {
+		name = Teaparty_support
+		custom_tooltip = Teaparty_support.tip
+		response_text = Teaparty_support.SeiaRE
+		allow = {
+			custom_tooltip_fail = {
+				text = Teaparty_support_capped
+				NOT = {
+					has_modifier = modifier_BA_Teaparty_4
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_3
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 15000
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_2
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 4000
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_1
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 1200
+				}
+			}
+			else = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 200
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_3
+			}
+			add_resource = {
+				energy = -15000
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_3
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_2
+			}
+			add_resource = {
+				energy = -4000
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_2
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_1
+			}
+			add_resource = {
+				energy = -1200
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_1
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_2
+			}
+		}
+		else = {
+			add_resource = {
+				energy = -200
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_1
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Teaparty
+		CHARA = Seia
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_club.1406
+	title = Teaparty
+	desc = Mika_desc1
+	desc = Mika_desc2
+	desc = Mika_desc3
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Mika
+		room = enclave_curator_room
+	}
+	#赞助
+	inline_script = {
+		script = Club_sponsor
+		CLUB = Teaparty
+		CHARA = Mika
+	}
+	#行政人员援助
+	option = {
+		name = Teaparty_support
+		custom_tooltip = Teaparty_support.tip
+		response_text = Teaparty_support.MikaRE
+		allow = {
+			custom_tooltip_fail = {
+				text = Teaparty_support_capped
+				NOT = {
+					has_modifier = modifier_BA_Teaparty_4
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_3
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 15000
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_2
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 4000
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = modifier_BA_Teaparty_1
+				}
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 1200
+				}
+			}
+			else = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 200
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_3
+			}
+			add_resource = {
+				energy = -15000
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_3
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_2
+			}
+			add_resource = {
+				energy = -4000
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_2
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = modifier_BA_Teaparty_1
+			}
+			add_resource = {
+				energy = -1200
+			}
+			hidden_effect = {
+				remove_modifier = modifier_BA_Teaparty_1
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_2
+			}
+		}
+		else = {
+			add_resource = {
+				energy = -200
+			}
+			add_modifier = {
+				modifier = modifier_BA_Teaparty_1
+			}
+		}
+	}
+	#部室
+	inline_script = {
+		script = Club_room_std
+		CLUB = Teaparty
+		CHARA = Mika
+	}
+	#返回
+	option = {
+		name = BA_option_club_exit
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_club.0051
+			}
+		}
+	}
+}
+
+#######################
+#调试用事件
+#存储用事件
+country_event = {
+	id = BA_club.9999
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		#
+		set_timed_country_flag = {
+			flag = BA_club_Game_development_department_sponsoring
+			days = 720
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Engineering_club_sponsoring
+			days = 720
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Veritas_sponsoring
+			days = 720
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Foreclosure_task_force_sponsoring
+			days = 720
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Teaparty_sponsoring
+			days = 720
+		}
+		#
+		set_country_flag = allow_Game_development_department
+		set_country_flag = allow_Engineering_club
+		set_country_flag = allow_Veritas
+		set_country_flag = allow_Foreclosure_task_force
+		set_country_flag = allow_Teaparty
+	}
+}

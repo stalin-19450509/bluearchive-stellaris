@@ -1,0 +1,139 @@
+﻿l_simp_chinese:
+#### 建筑
+#青辉石
+ BA_Mega_pyroxenes_base_0:0 "$BA_Mega_pyroxenes_base_3$ 基址"
+ BA_Mega_pyroxenes_base_0_DESC:0 "这是未来用于建造$BA_Mega_pyroxenes_base_3$的基址。"
+ BA_Mega_pyroxenes_base_0_MEGASTRUCTURE_DETAILS:0 "利用黑洞周边独特的引力场，使用引力透镜直接从黑洞中生产青辉石。"
+
+ BA_Mega_pyroxenes_base_1:0 "$BA_Mega_pyroxenes_base_3$ 透镜核心"
+ BA_Mega_pyroxenes_base_1_DESC:0 "架设完成的透镜核心，目前还不能开满产率。"
+ BA_Mega_pyroxenes_base_1_MEGASTRUCTURE_DETAILS:0 "$BA_Mega_pyroxenes_base_0_MEGASTRUCTURE_DETAILS$"
+
+ BA_Mega_pyroxenes_base_2:0 "$BA_Mega_pyroxenes_base_3$ 围护壳"
+ BA_Mega_pyroxenes_base_2_DESC:0 "搭建了一些从黑洞中获取能源的设施，依此设置了许多的辅助设施。"
+ BA_Mega_pyroxenes_base_2_MEGASTRUCTURE_DETAILS:0 "$BA_Mega_pyroxenes_base_0_MEGASTRUCTURE_DETAILS$"
+
+ BA_Mega_pyroxenes_base_3:0 "太空青辉石制造机"
+ BA_Mega_pyroxenes_base_3_DESC:0 "使用引力透镜直接从黑洞中生产青辉石的装置。"
+ BA_Mega_pyroxenes_base_3_MEGASTRUCTURE_DETAILS:0 "$BA_Mega_pyroxenes_base_0_MEGASTRUCTURE_DETAILS$"
+
+ BA_Mega_pyroxenes_base_4:0 "链路化$BA_Mega_pyroxenes_base_3$"
+ BA_Mega_pyroxenes_base_4_DESC:0 "更换了全新的引力透镜，大量提升产量。"
+ BA_Mega_pyroxenes_base_4_MEGASTRUCTURE_DETAILS:0 "$BA_Mega_pyroxenes_base_0_MEGASTRUCTURE_DETAILS$"
+
+
+#制造石
+ BA_Mega_keystone_base_0:0 "$BA_Mega_keystone_base_2$ 基址"
+ BA_Mega_keystone_base_0_DESC:0 "这是未来用于建造$BA_Mega_keystone_base_2$的基址。"
+ BA_Mega_keystone_base_0_MEGASTRUCTURE_DETAILS:0 "制造石制造过程大多已经自动化，因此可以将其搬至太空。" 
+
+ BA_Mega_keystone_base_1:0 "$BA_Mega_keystone_base_2$ 核心"
+ BA_Mega_keystone_base_1_DESC:0 "制造制造石的核心组件。由于配套设施不完整，尚不能发挥出全部的产量潜力。"
+ BA_Mega_keystone_base_1_MEGASTRUCTURE_DETAILS:0 "$BA_Mega_keystone_base_0_MEGASTRUCTURE_DETAILS$"
+
+ BA_Mega_keystone_base_2:0 "太空制造石制造机"
+ BA_Mega_keystone_base_2_DESC:0 "自动化产出制造石的太空设施。"
+ BA_Mega_keystone_base_2_MEGASTRUCTURE_DETAILS:0 "$BA_Mega_keystone_base_0_MEGASTRUCTURE_DETAILS$"
+
+ BA_Mega_keystone_base_3:0 "链路化$BA_Mega_keystone_base_2$"
+ BA_Mega_keystone_base_3_DESC:0 "改造过后的制造机，规模更大，效率更好，产量更高。"
+ BA_Mega_keystone_base_3_MEGASTRUCTURE_DETAILS:0 "$BA_Mega_keystone_base_0_MEGASTRUCTURE_DETAILS$"
+
+
+#自动化居住站
+ BA_auto_habitat:0 "自动化居住站"
+ BA_auto_habitat_DESC:0 "利用青辉石的独特性质，可以在低重力环境中建造一系列自动化设施，甚至可以用来承担一些居民的生活。"
+ BA_auto_habitat_MEGASTRUCTURE_DETAILS:0 "$BA_auto_habitat_DESC$"
+
+ decision_BA_upgrade_habitat:0 "居住站扩建"
+ decision_BA_upgrade_habitat_desc:0 "加装更多的青辉石自动化模块"
+
+ d_BA_hab_gas_1:0 "$d_hab_gas_1$"
+ d_BA_hab_gas_1_desc:0 "$d_hab_gas_1_desc$"
+ d_BA_hab_gas_2:0 "$d_hab_gas_2$"
+ d_BA_hab_gas_2_desc:0 "$d_hab_gas_2_desc$"
+ d_BA_hab_gas_3:0 "$d_hab_gas_3$"
+ d_BA_hab_gas_3_desc:0 "$d_hab_gas_3_desc$"
+ d_BA_hab_gas_4:0 "$d_hab_gas_4$"
+ d_BA_hab_gas_4_desc:0 "$d_hab_gas_4_desc$"
+ d_BA_hab_gas_5:0 "$d_hab_gas_5$"
+ d_BA_hab_gas_5_desc:0 "$d_hab_gas_5_desc$"
+ d_BA_hab_crystal_1:0 "$d_hab_crystal_1$"
+ d_BA_hab_crystal_1_desc:0 "$d_hab_crystal_1_desc$"
+ d_BA_hab_crystal_2:0 "$d_hab_crystal_2$"
+ d_BA_hab_crystal_2_desc:0 "$d_hab_crystal_2_desc$"
+ d_BA_hab_crystal_3:0 "$d_hab_crystal_3$"
+ d_BA_hab_crystal_3_desc:0 "$d_hab_crystal_3_desc$"
+ d_BA_hab_crystal_4:0 "$d_hab_crystal_4$"
+ d_BA_hab_crystal_4_desc:0 "$d_hab_crystal_4_desc$"
+ d_BA_hab_crystal_5:0 "$d_hab_crystal_5$"
+ d_BA_hab_crystal_5_desc:0 "$d_hab_crystal_5_desc$"
+ d_BA_hab_mote_1:0 "$d_hab_mote_1$"
+ d_BA_hab_mote_1_desc:0 "$d_hab_mote_1_desc$"
+ d_BA_hab_mote_2:0 "$d_hab_mote_2$"
+ d_BA_hab_mote_2_desc:0 "$d_hab_mote_2_desc$"
+ d_BA_hab_mote_3:0 "$d_hab_mote_3$"
+ d_BA_hab_mote_3_desc:0 "$d_hab_mote_3_desc$"
+ d_BA_hab_mote_4:0 "$d_hab_mote_4$"
+ d_BA_hab_mote_4_desc:0 "$d_hab_mote_4_desc$"
+ d_BA_hab_mote_5:0 "$d_hab_mote_5$"
+ d_BA_hab_mote_5_desc:0 "$d_hab_mote_5_desc$"
+ d_BA_hab_zro_1:0 "$d_hab_zro_1$"
+ d_BA_hab_zro_1_desc:0 "$d_hab_zro_1_desc$"
+ d_BA_hab_zro_2:0 "$d_hab_zro_2$"
+ d_BA_hab_zro_2_desc:0 "$d_hab_zro_2_desc$"
+ d_BA_hab_zro_3:0 "$d_hab_zro_3$"
+ d_BA_hab_zro_3_desc:0 "$d_hab_zro_3_desc$"
+ d_BA_hab_dark_matter_1:0 "$d_hab_dark_matter_1$"
+ d_BA_hab_dark_matter_1_desc:0 "$d_hab_dark_matter_1_desc$"
+ d_BA_hab_dark_matter_2:0 "$d_hab_dark_matter_2$"
+ d_BA_hab_dark_matter_2_desc:0 "$d_hab_dark_matter_2_desc$"
+ d_BA_hab_dark_matter_3:0 "$d_hab_dark_matter_3$"
+ d_BA_hab_dark_matter_3_desc:0 "$d_hab_dark_matter_3_desc$"
+ d_BA_hab_living_metal_1:0 "$d_hab_living_metal_1$"
+ d_BA_hab_living_metal_1_desc:0 "$d_hab_living_metal_1_desc$"
+ d_BA_hab_alloy_1:0 "$d_hab_alloy_1$"
+ d_BA_hab_alloy_1_desc:0 "$d_hab_alloy_1_desc$"
+ d_BA_hab_alloy_2:0 "$d_hab_alloy_2$"
+ d_BA_hab_alloy_2_desc:0 "$d_hab_alloy_2_desc$"
+ d_BA_hab_alloy_3:0 "$d_hab_alloy_3$"
+ d_BA_hab_alloy_3_desc:0 "$d_hab_alloy_3_desc$"
+ d_BA_hab_alloy_4:0 "$d_hab_alloy_4$"
+ d_BA_hab_alloy_4_desc:0 "$d_hab_alloy_4_desc$"
+ d_BA_hab_alloy_5:0 "$d_hab_alloy_5$"
+ d_BA_hab_alloy_5_desc:0 "$d_hab_alloy_5_desc$"
+ d_BA_hab_nanites_1:0 "$d_hab_nanites_1$"
+ d_BA_hab_nanites_1_desc:0 "$d_hab_nanites_1_desc$"
+
+
+#### 事件
+ BA_Shittem.3101.title:0 "$BA_Mega_pyroxenes_base_1$"
+ BA_Shittem.3101.desc:0 "自动化生产青辉石，黑洞周围特殊的引力场是必要条件。\n第一步，安装一个引力透镜来从黑洞中直接吸取生产青辉石所需的物质，将其输送至核心组件中生产青辉石。这个核心目前还不能开足功率，需要更多的配套设施。"
+ BA_Shittem.3101.next:0 "工艺美学。"
+
+ BA_Shittem.3102.title:0 "$BA_Mega_pyroxenes_base_2$"
+ BA_Shittem.3102.desc:0 "生产青辉石的规模化配套设施需要安装在一个外壳中，以避免被黑洞扯成面条。这些设施可以更好的向核心供给原料，并将产物高效的收集起来，装上运输船。"
+ BA_Shittem.3102.next:0 "工艺美学。"
+
+ BA_Shittem.3103.title:0 "$BA_Mega_pyroxenes_base_3$"
+ BA_Shittem.3103.desc:0 "太空青辉石制造设施的外壳已封闭，其内部已经配备了完整的自我维护设施。只要不被人为破坏，这个半永久性的设施可以源源不断的自动产出大量青辉石。"
+ BA_Shittem.3103.next:0 "工艺美学。"
+
+ BA_Shittem.3104.title:0 "$BA_Mega_pyroxenes_base_4$"
+ BA_Shittem.3104.desc:0 "对引力透镜进行一次改进后，核心的生产效率得到了大幅度的提升。同时，我们在其内部新建了一个小型的船坞和锚地，用于青辉石运输船的维护和补给。"
+ BA_Shittem.3104.next:0 "工艺美学。"
+
+ BA_Shittem.3105.title:0 "$BA_Mega_keystone_base_1$"
+ BA_Shittem.3105.desc:0 "既然制造石的生产是自动化的，我们可以将其搬上太空。这是一个大型的制造石制造机的雏形，安装了简陋的核心，以及和青辉石相关的仓库等设施。"
+ BA_Shittem.3105.next:0 "工艺美学。"
+
+ BA_Shittem.3106.title:0 "$BA_Mega_keystone_base_2$"
+ BA_Shittem.3106.desc:0 "制造石制造机的外壳已经封闭，内部的核心和设施已经建造完全。零重力环境下生产制造石拥有略高的效率，同时能源消耗可以大幅降低。"
+ BA_Shittem.3106.next:0 "工艺美学。"
+
+ BA_Shittem.3107.title:0 "$BA_Mega_keystone_base_3$"
+ BA_Shittem.3107.desc:0 "在原有制造机的基础上，将核心更换为链路版型号，并安装了许多附属的小型设备，以提升规模并更好的利用边角料。"
+ BA_Shittem.3107.next:0 "工艺美学。"
+
+ BA_Shittem.3108.name:0 "$BA_auto_habitat$"
+ BA_Shittem.3108.desc.a:0 "自动化居住站已经修建完成。\n从机械核心到山麓之巅，居住站的一砖一瓦都经过精心设计，该准备一艘殖民船，着陆在我们亲手创造的世界上了。"

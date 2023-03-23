@@ -1,0 +1,656 @@
+### 通用
+#一段光环
+leader_trait_halo_awakened_ruler = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_halo_full_awakened.dds"
+	modifier = {
+		country_ruler_influence_produces_add = 1
+		terraform_speed_mult = 0.25
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.25
+	}
+}
+
+leader_trait_halo_awakened_governor = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	icon = "gfx/interface/icons/traits/Icon_halo_full_awakened.dds"
+	modifier = {
+		planet_building_build_speed_mult = 0.1
+		planet_jobs_upkeep_mult = -0.1
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.25
+	}
+}
+
+leader_trait_halo_awakened_scientist = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	icon = "gfx/interface/icons/traits/Icon_halo_full_awakened.dds"
+	modifier = {
+		science_ship_survey_speed = 0.15
+		ship_archaeological_site_excavation_speed_mult = 0.15
+		ship_anomaly_generation_chance_mult = 0.2
+		all_technology_research_speed = 0.1
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.25
+	}
+}
+
+leader_trait_halo_awakened_admiral = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	icon = "gfx/interface/icons/traits/Icon_halo_full_awakened.dds"
+	modifier = {
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+		ship_speed_mult = 0.15
+		ship_evasion_mult = 0.1
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.25
+	}
+}
+
+leader_trait_halo_awakened_general = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	icon = "gfx/interface/icons/traits/Icon_halo_full_awakened.dds"
+	modifier = {
+		army_disengage_chance_mult = 0.12
+		army_morale = 0.12
+		army_damage_mult = 0.15
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.25
+	}
+}
+
+#二段光环
+leader_trait_halo_full_awakened_ruler = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_mimori_ao.dds"
+	modifier = {
+		country_ruler_influence_produces_add = 1.5
+		terraform_speed_mult = 0.5
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+leader_trait_halo_full_awakened_governor = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	icon = "gfx/interface/icons/traits/Icon_mimori_ao.dds"
+	modifier = {
+		planet_building_build_speed_mult = 0.18
+		planet_jobs_upkeep_mult = -0.18
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+leader_trait_halo_full_awakened_scientist = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	icon = "gfx/interface/icons/traits/Icon_mimori_ao.dds"
+	modifier = {
+		science_ship_survey_speed = 0.25
+		ship_archaeological_site_excavation_speed_mult = 0.25
+		ship_anomaly_generation_chance_mult = 0.2
+		all_technology_research_speed = 0.2
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+leader_trait_halo_full_awakened_admiral = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	icon = "gfx/interface/icons/traits/Icon_mimori_ao.dds"
+	modifier = {
+		ship_weapon_range_mult = 0.3
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+		ship_speed_mult = 0.15
+		ship_evasion_mult = 0.1
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+leader_trait_halo_full_awakened_general = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	icon = "gfx/interface/icons/traits/Icon_mimori_ao.dds"
+	modifier = {
+		army_disengage_chance_mult = 0.3
+		army_morale = 0.3
+		army_damage_mult = 0.4
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+#星野
+leader_trait_ruler_hoshino = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_ruler_hoshino.dds"
+	modifier = {
+		country_ruler_influence_produces_add = 1
+		planet_building_build_speed_mult = 0.3
+		terraform_speed_mult = 0.5
+		deposit_blockers_cost_mult = -0.3
+	}
+}
+
+leader_trait_ruler_hoshino2 = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_ruler_hoshino2.dds"
+}
+
+leader_trait_admiral_hoshino = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_ruler_hoshino2.dds"
+	modifier = {
+		ship_friendly_territory_evasion_mult = 0.15
+		ship_friendly_territory_tracking_mult = 0.15
+		ship_friendly_territory_fire_rate_mult = 0.3
+		ship_friendly_territory_shield_mult = 0.3
+		ship_speed_mult = 0.1
+		ship_disengage_chance_mult = -10
+	}
+}
+
+#日奈
+leader_trait_ruler_hina = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_admiral_hina.dds"
+	modifier = {
+		country_ruler_influence_produces_add = 1
+		planet_crime_add = -25
+		planet_stability_add = 10
+		country_admin_cap_mult = 0.2
+	}
+}
+
+leader_trait_ruler_hina2 = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_ruler_hina2.dds"
+}
+
+leader_trait_admiral_hina = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_admiral_hina.dds"
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_speed_mult = 0.1
+		ship_weapon_range_mult = 0.2
+		ship_weapon_damage = 0.05
+		ship_sensor_range_add = 1
+	}
+}
+
+#未花
+leader_trait_admiral_mika = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_admiral_mika.dds"
+	modifier = {
+		ship_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
+		ship_weapon_damage = 0.2
+	}
+}
+
+leader_trait_ruler_mika = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/governments/civics/Trinity.dds"
+	modifier = {
+		country_ruler_influence_produces_add = 1
+		country_unity_produces_mult = 0.1
+		edicts_upkeep_mult = -0.1
+		country_edict_fund_add = 20
+	}
+}
+
+leader_trait_ruler_mika2 = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_admiral_mika.dds"
+	modifier = {
+		country_naval_cap_mult = 0.2
+		ship_weapon_damage = 0.1
+		army_damage_mult = 0.1
+	}
+}
+
+#佑香
+leader_trait_ruler_yuuka = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_governor_yuuka.dds"
+	modifier = {
+		country_ruler_influence_produces_add = 1
+		ships_upkeep_mult = -0.2
+		armies_upkeep_mult = -0.2
+		planet_buildings_cost_mult = -0.2
+		planet_districts_cost_mult = -0.2
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+}
+
+leader_trait_ruler_yuuka2 = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		ruler
+	}
+	leader_class = {
+		ruler
+	}
+	icon = "gfx/interface/icons/traits/Icon_no_pack_man.dds"
+}
+
+leader_trait_governor_yuuka = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_governor_yuuka.dds"
+	modifier = {
+		planet_buildings_cost_mult = -0.1
+		planet_districts_cost_mult = -0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+}
+
+#亚津子（统治者
+leader_trait_governor_atsuko = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_governor_atsuko.dds"
+	modifier = {
+		planet_buildings_cost_mult = -0.2
+		planet_districts_cost_mult = -0.2
+		planet_pops_upkeep_mult = -0.1
+		planet_jobs_unity_produces_mult = 0.1
+	}
+}
+
+#纱织
+leader_trait_admiral_saori = {
+	cost = 0
+	sorting_priority = 1000
+	initial = no
+	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_admiral_saori.dds"
+	modifier = {
+		ship_speed_mult = 0.15
+		ship_fire_rate_mult = 0.2
+		ships_upkeep_mult = -0.2
+	}
+}
+
+#爱丽丝-科学家
+leader_trait_scientist_aris = {
+	cost = 0
+	sorting_priority = 999
+	initial = no
+	randomized = no
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_aris.dds"
+	modifier = {
+		science_ship_survey_speed = 0.4
+		ship_anomaly_generation_chance_mult = 0.15
+		ship_anomaly_research_speed_mult = 0.6
+		ship_archaeological_site_excavation_speed_mult = 0.15
+		ship_archaeological_site_clues_add = 3
+		species_leader_exp_gain = -5
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+#爱丽丝-总督
+leader_trait_governor_aris = {
+	cost = 0
+	sorting_priority = 999
+	initial = no
+	randomized = no
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_aris.dds"
+	modifier = {
+		planet_stability_add = 10
+		planet_jobs_upkeep_mult = -0.1
+		planet_building_build_speed_mult = 0.1
+		planet_decision_enact_speed_mult = 0.25
+		planet_army_build_speed_mult = 0.2
+		starbase_shipyard_build_speed_mult = 0.2
+		species_leader_exp_gain = -5
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+#爱丽丝-舰队司令
+leader_trait_admiral_aris = {
+	cost = 0
+	sorting_priority = 999
+	initial = no
+	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_aris.dds"
+	modifier = {
+		ship_emergency_ftl_mult = -0.25
+		ship_disengage_chance_mult = 0.4
+		ship_fire_rate_mult = 0.15
+		ship_weapon_range_mult = 0.2
+		ship_sensor_range_add = 1
+		species_leader_exp_gain = -5
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+#爱丽丝-陆军统帅
+leader_trait_general_aris = {
+	cost = 0
+	sorting_priority = 999
+	initial = no
+	randomized = no
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_aris.dds"
+	modifier = {
+		army_collateral_damage_mult = 5
+		army_disengage_chance_mult = 0.2
+		army_morale = 0.3
+		army_damage_mult = 0.3
+		species_leader_exp_gain = -5
+		leaders_upkeep_mult = 0.5
+	}
+}
+
+#### 定制
+#泛用
+leader_trait_customize = {
+	cost = 0
+	sorting_priority = 998
+	initial = no
+	randomized = no
+	leader_trait = {
+		general
+		admiral
+		governor
+		scientist
+	}
+	leader_class = {
+		general
+		admiral
+		governor
+		scientist
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_customize.dds"
+}
+
+#芹娜
+leader_trait_governor_Serina = {
+	cost = 0
+	sorting_priority = 998
+	initial = no
+	randomized = no
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	modifier = {
+		pop_happiness = 0.3
+		planet_jobs_produces_mult = 0.1
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_Serina.dds"
+}
+
+#伊织
+leader_trait_admiral_Iori = {
+	cost = 0
+	sorting_priority = 998
+	initial = no
+	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	modifier = {
+		ship_fire_rate_mult = 0.25
+		ship_weapon_damage = 0.25
+		ship_damage_against_starbases_mult = 1
+		#ship_hull_damage_mult = 0.25
+		#ship_armor_damage_mult = 0.25
+		#ship_armor_penetration_mult = 0.25
+	}
+	icon = "gfx/interface/icons/traits/Icon_leader_trait_Serina.dds"
+}

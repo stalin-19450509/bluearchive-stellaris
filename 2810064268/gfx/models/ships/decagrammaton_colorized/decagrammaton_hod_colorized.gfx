@@ -1,0 +1,289 @@
+objectTypes = {
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_mesh"
+		file = "gfx/models/ships/colossus/toxoid_01/toxoid_01_colossus.mesh"
+		
+		animation = { id = "idle"			type = "toxoid_01_colossus_idle_animation" }
+		animation = { id = "open"			type = "toxoid_01_colossus_open_animation" }
+		animation = { id = "opening"		type = "toxoid_01_colossus_opening_animation" }
+		animation = { id = "closing"		type = "toxoid_01_colossus_closing_animation" }
+		animation = { id = "closed_death"	type = "toxoid_01_colossus_closed_death_animation" }
+		animation = { id = "opened_death"	type = "toxoid_01_colossus_opened_death_animation" }
+		
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "decagrammaton_hod_colorized_diffuse.dds"
+			texture_normal = "decagrammaton_hod_colorized_normal.dds"
+			texture_specular = "decagrammaton_hod_colorized_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+
+		}
+
+
+
+		meshsettings = {
+
+			index = 1
+			texture_diffuse = "toxoid_01_gas_diffuse.dds"	
+			texture_normal = "toxoid_01_gas_flowmap.dds"
+			texture_specular = "toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		scale = 4.0
+	}
+	
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_frame_mesh"
+		file = "gfx/models/ships/colossus/toxoid_01/toxoid_01_colossus_frame.mesh"
+		
+		animation = { id = "idle"			type = "toxoid_01_colossus_frame_idle_animation" }
+		animation = { id = "closed_death"	type = "toxoid_01_colossus_frame_closed_death_animation" }
+		animation = { id = "opened_death"	type = "toxoid_01_colossus_frame_opened_death_animation" }
+		scale = 4.0
+	}
+	
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_effect_mesh"
+		file = "gfx/models/ships/colossus/toxoid_01/toxoid_01_colossus_effect.mesh"
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "toxoid_01_juggernaut_effect.dds"
+			texture_specular = "toxoid_01_gas_specular.dds"
+			texture_normal = "toxoid_01_gas_flowmap.dds"
+			shader = "PdxMeshFlowAlphaEmpireColor"
+		}
+		scale = 4.0
+	}
+
+
+
+
+
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_titan_bow_mesh"
+		file = "gfx/models/ships/titans/toxoid_01/toxoid_01_titan_bow_XL.mesh"
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "decagrammaton_hod_colorized_titan_diffuse.dds"
+			texture_normal = "decagrammaton_hod_colorized_titan_normal.dds"
+			texture_specular = "decagrammaton_hod_colorized_titan_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		meshsettings = {
+			name = "toxoid_01_titan_bow_XL|g_body|g_bodyShape"
+			index = 1
+			texture_diffuse = "toxoid_01_gas_diffuse.dds"
+			texture_normal = "toxoid_01_gas_flowmap.dds"
+			texture_specular = "toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		scale = 2.4
+	}
+
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_titan_mid_mesh"
+		file = "gfx/models/ships/titans/toxoid_01/toxoid_01_titan_mid_L4.mesh"
+
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "decagrammaton_hod_colorized_titan_diffuse.dds"
+			texture_normal = "decagrammaton_hod_colorized_titan_normal.dds"
+			texture_specular = "decagrammaton_hod_colorized_titan_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		meshsettings = {
+			name = "toxoid_01_titan_mid_L4|g_body|g_bodyShape"
+			index = 1
+			texture_diffuse = "toxoid_01_gas_diffuse.dds"
+			texture_normal = "toxoid_01_gas_flowmap.dds"
+			texture_specular = "toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		scale = 2.8
+	}
+
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_titan_mid_1_mesh"
+		file = "gfx/models/ships/titans/toxoid_01/toxoid_01_titan_mid_L4.mesh"
+
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "decagrammaton_hod_colorized_titan_diffuse.dds"
+			texture_normal = "decagrammaton_hod_colorized_titan_normal.dds"
+			texture_specular = "decagrammaton_hod_colorized_titan_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		meshsettings = {
+			name = "toxoid_01_titan_mid_L4|g_body|g_bodyShape"
+			index = 1
+			texture_diffuse = "toxoid_01_gas_diffuse.dds"
+			texture_normal = "toxoid_01_gas_flowmap.dds"
+			texture_specular = "toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		scale = 2.4
+	}
+
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_titan_stern_mesh"
+		file = "gfx/models/ships/titans/toxoid_01/toxoid_01_titan_stern_L2.mesh"
+
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "decagrammaton_hod_colorized_titan_diffuse.dds"
+			texture_normal = "decagrammaton_hod_colorized_titan_normal.dds"
+			texture_specular = "decagrammaton_hod_colorized_titan_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		meshsettings = {
+			name = "toxoid_01_titan_stern_L2|g_body|g_bodyShape"
+			index = 1
+			texture_diffuse = "toxoid_01_gas_diffuse.dds"
+			texture_normal = "toxoid_01_gas_flowmap.dds"
+			texture_specular = "toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		scale = 2.4
+	}
+	
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_titan_light_effect_mesh"
+		file = "gfx/models/ships/titans/toxoid_01/toxoid_01_titan_lights.mesh"
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "mammalian_01_titan_effect.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshColorAlphaAdditiveAnimateUV"
+		}
+
+		scale = 2.4
+	}
+
+
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_turret_xl_mesh"
+		file = "gfx/models/ships/toxoid_01/toxoid_01_turret_xl.mesh"
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = 	"decagrammaton_hod_colorized_turret_xl_diffuse.dds"
+			texture_normal = 	"decagrammaton_hod_colorized_turret_xl_normal.dds"
+			texture_specular = 	"decagrammaton_hod_colorized_turret_xl_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		meshsettings = {
+			name="g_toxoid_01_xl_turretShape"
+			index = 1
+			texture_diffuse = 	"toxoid_01_gas_diffuse.dds"
+			texture_normal = 	"toxoid_01_gas_flowmap.dds"
+			texture_specular = 	"toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		scale = 8.0
+	}
+
+
+
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_turret_x_mesh"
+		file = "gfx/models/ships/toxoid_01/toxoid_01_turret_xl.mesh"
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = 	"decagrammaton_hod_colorized_turret_xl_diffuse.dds"
+			texture_normal = 	"decagrammaton_hod_colorized_turret_xl_normal.dds"
+			texture_specular = 	"decagrammaton_hod_colorized_turret_xl_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		meshsettings = {
+			name="g_toxoid_01_xl_turretShape"
+			index = 1
+			texture_diffuse = 	"toxoid_01_gas_diffuse.dds"
+			texture_normal = 	"toxoid_01_gas_flowmap.dds"
+			texture_specular = 	"toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		scale = 4.0
+	}
+	
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_portal_rings_mesh"
+		file = "gfx/models/ships/guardians/dimensional_horror/dimensional_horror_portal_rings.mesh"
+		scale = 1.2
+
+		meshsettings = {
+			texture_diffuse = "dimensional_horror_portal_rings_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_turret_missile_large_mesh"
+		file = "gfx/models/ships/toxoid_01/toxoid_01_turret_missile_large.mesh"
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "decagrammaton_hod_colorized_turrets_diffuse.dds"
+			texture_normal = "decagrammaton_hod_colorized_turrets_normal.dds"
+			texture_specular = "decagrammaton_hod_colorized_turrets_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		meshsettings = {
+			name = "toxoid_01_turret_missile_large|g_body|g_bodyShape"
+			index = 1
+			texture_diffuse = 	"toxoid_01_gas_diffuse.dds"
+			texture_normal = 	"toxoid_01_gas_flowmap.dds"
+			texture_specular = 	"toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		scale = 16.0
+	}
+
+
+
+	pdxmesh = {
+		name = "decagrammaton_hod_colorized_tentacle_section_mesh"
+		file = "gfx/models/ships/toxoid_01/toxoid_01_turret_projectile_large.mesh"
+
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "decagrammaton_hod_colorized_turrets_diffuse.dds"
+			texture_normal = "decagrammaton_hod_colorized_turrets_normal.dds"
+			texture_specular = "decagrammaton_hod_colorized_turrets_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+
+		meshsettings = {
+			name = "toxoid_01_turret_projectile_large|g_body|g_bodyShape"
+			index = 1
+			texture_diffuse = "toxoid_01_gas_diffuse.dds"
+			texture_normal = "toxoid_01_gas_flowmap.dds"
+			texture_specular = "toxoid_01_gas_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+	scale = 3.4
+	}
+
+
+}

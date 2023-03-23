@@ -1,0 +1,245 @@
+﻿l_simp_chinese:
+###############################
+#物种相关基本信息及称呼
+ Schale:1 "基沃托斯学生"
+ Schalebot:1 "基沃托斯学生(机械)"
+
+
+ Schale_desc:0 "来自学园都市基沃托斯的学生们。"
+ Schale_plural:0 "基沃托斯学生"
+
+ Schale_insult_01:0 "小垃姬"
+ Schale_insult_plural_01:0 "小垃姬"
+ Schale_compliment_01:0 "主人"
+ Schale_compliment_plural_01:0 "主人"
+
+ Schale_spawn:0 "新生"
+ Schale_spawn_plural:0 "新生"
+ Schale_sound_01:0 "谈笑"
+ Schale_organ:0 "器官"
+ Schale_mouth:0 "嘴"
+ Schale_hand:0 "手"
+ Schale_ear:0 "耳朵"
+ Schale_tooth:0 "牙齿"
+ Schale_fossil:0 "没有那种东西"
+ Schale_remnant:0 "遗物"
+
+ FLAG_CATEGORY_ba:0 "碧蓝档案旗帜"
+ name_list_Schale:0 "碧蓝档案"
+
+ BA_Robot:0 "姬器人"
+
+
+#物种特质
+ trait_test:0 "测试中"
+ trait_test_desc:0 "测试中的机器人，目前还只是一批原型机。"
+ trait_test_finished:0 "姬器人核心"
+ trait_test_finished_desc:0 "专门为姬器人设计的核心，安装后会产生一个模拟的光环。"
+
+ trait_halo_unreleased:0 "神性光环"
+ trait_halo_unreleased_desc:0 "原理未知的、自出生便伴随我们的光环，它带来的祝福似乎并没有被察觉到。"
+ trait_halo_awakened:0 "改造神性光环"
+ trait_halo_awakened_desc:0 "经过部分解放的光环。"
+ trait_halo_full_awakened:0 "外域神性光环"
+ trait_halo_full_awakened_desc:0 "令一切黯然失色的，完全被解放的光环。"
+ trait_Halo_amplifier:0 "增幅神性光环"
+ trait_Halo_amplifier_desc:0 "使用外置青辉石设备强化的光环，标志着我们屹立于艺术与神秘的顶点。"
+
+ trait_tactical_training:0 "战术训练"
+ trait_tactical_training_desc:0 "学生们每周都要抽出一点时间进行战术训练。"
+ trait_starlink:0 "星链"
+ trait_starlink_desc:0 "市场营销部把宣发做过头了!放的卫星都能连结成星链了,同时这也让学生们十分期待。"
+ trait_boarding:0 "合宿"
+ trait_boarding_desc:0 "部分学生比起独自居住还是更喜欢合宿。"
+ trait_camp:0 "摇曳露营"
+ trait_camp_desc:0 "学生们在假期时会去各种地方露营,因此她们能更快适应新环境。"
+ trait_exoskeleton_armor:0 "顶配主义"
+ trait_exoskeleton_armor_desc:0 "每天买30管体力用于让全部学生升级至顶配装备，这极大增强了学生们的作战能力和效率。"
+ trait_BD_case:0 "BD补给方案"
+ trait_BD_case_desc:0 "不惜一切代价的痛殴寿司战队以充分获取战术BD、技能书与秘传笔记,保证学生们人人都可以奋发精进。"
+
+ trait_slack:0 "摸鱼"
+ trait_slack_desc:0 "今天的文件?先摸他个几小时再说!"
+ trait_food_1:0 "多灾多难的食堂"
+ trait_food_1_desc:0 "今天食堂又爆炸了...好饿...看来只有吃饭团了,等等,刚刚好像有什么东西窜出去了?!"
+ trait_gammer:0 "沉迷游戏"
+ trait_gammer_desc:0 "学生们非常喜欢假期在家玩游戏,很难把她们叫出来,就算叫出来了,嘴上也还时不时说着卡点,对轴,强度之类的词..."
+ trait_loophole:0 "管制漏洞"
+ trait_loophole_desc:0 "由于市场上出现了一款叫暴君mk2的陆空两用摩托,有些学生喜欢以管制台雷达无法检测到的高度进行极低空高速飞行,导致经常出现各种事故,比如撞上楼层..."
+ trait_no_pack_man:0 "没包人"
+ trait_no_pack_man_desc:0 "因为负责打头阵的学生忘记带补给背包导致输出能力和承伤能力直线下降。"
+
+ trait_good_students:0 "三好学生"
+ trait_good_students_desc:0 "刨除掉那些搞事的学生，我们大部分都是好好学习的三好学生。"
+ trait_koharu:0 "小春化"
+ trait_koharu_desc:0 "不可以色色！"
+
+ trait_ship_slow:0 "舰船：技术思维"
+ trait_ship_slow_desc:0 "学生们喜欢精细、缓慢的建造属于自己的舰船，既有趣又可以节省花费。"
+ trait_ship_fast:0 "舰船：工业思维"
+ trait_ship_fast_desc:0 "学生们偏向快速、粗放的建造太空舰船，永远不会有人嫌弃一支壮观的舰队，不是吗？"
+
+ trait_void_halo:0 "匿于虚空"
+ trait_void_halo_desc:0 "在自动化居住站的环境中生活了太久的学生们，"
+
+ trait_keystone_protocol:0 "制造机协议"
+ trait_keystone_protocol_desc:0 "让光环产生类似于制造机的功能，可以迅速解决手头的小问题。"
+ trait_keystone_protocol_tip:0 "TODO"
+ trait_Halo_matrix:0 "光环运算区"
+ trait_Halo_matrix_desc:0 "将光环设备的空余算力传输至联邦矩阵，以加快研究。"
+ trait_Halo_matrix_tip:0 "TODO"
+ trait_divine_coordinator:0 "神性协调器"
+ trait_divine_coordinator_desc:0 "基于另一条道路的研究，中和一些运算冲突引起的不和谐因素。"
+ trait_divine_coordinator_tip:0 "TODO"
+ trait_inner_purfier:0 "内净化模块"
+ trait_inner_purfier_desc:0 "这个模块使得光环可以将一些摄入的有害物质清除。"
+ trait_inner_purfier_tip:0 "TODO"
+ trait_starlink_receiver:0 "星链接收端"
+ trait_starlink_receiver_desc:0 "这个接收端口使得宣发卫星能够更快的落地。"
+ trait_starlink_receiver_tip:0 "TODO"
+
+ trait_gamegirl:0 "GAMEGIRL协议"
+ trait_gamegirl_desc:0 "内置协议使得姬器人可以更好的玩游戏、制作游戏。"
+ trait_wingbot:0 "小帮手"
+ trait_wingbot_desc:0 "协议命令她们从事各种零碎工作以搜集数据、采样处理、分配算力，帮助中心节点进行研究。"
+ trait_randomized_line:0 "回流化生产工序"
+ trait_randomized_line_desc:0 "命令暂未出厂的姬器人协助进行组装工作，加快速度，同时使产品之间产生细微差别。"
+ trait_federation_matrix:0 "联邦智械矩阵"
+ trait_federation_matrix_desc:0 "开放智械矩阵的使用协议给非科研姬器人。"
+ trait_substance_module:0 "物质处理模块"
+ trait_substance_module_desc:0 "Red Winter特供的物质处理器，可以将有机质转化为能量，让姬器人的体温维持在40°C。"
+ trait_substance_module_tip:0 "将一半的£energy£能量币维护费转化为£food£维护费\n£job£岗位生产的舒适度:§G+20%§!"
+
+ trait_Halo_precursor:0 "先驱者神性光环"
+ trait_Halo_precursor_desc:0 "如群星般璀璨的光环。"
+ trait_G_after:0 "数秘术核心"
+ trait_G_after_desc:0 "千百年来自行演化发展出的核心，会产生一个和学生们相差无几的光环。"
+
+
+
+
+ gov_Kivotos_country:0 "联邦学生会制"
+ gov_Kivotos_country_desc:0 "由集中管辖组织“联邦学生会”掌管大小事务。"
+ auth_kivotos:0 "学园联邦制"
+ auth_kivotos_desc:0 "基沃托斯是一个由大量学园组成的联邦，各个学园实行高度自治，但是又受到联邦学生会的统一管辖。"
+ #但是自上一任联邦学生会长神秘消失以后，基沃托斯已经难以再像之前一般团结了
+ scripted_student_federal_president:0 "联邦学生会长"
+
+ auth_ba_fe:0 "???"
+ auth_ba_fe_desc:0 "我们无法知晓他们的帝国具体构成"
+
+#指针悬停政府类型时显示的内容
+ KIVOTOS_STUDENTS:0 "帝国由学生们联邦自治。"
+ MOD_AUTHORITIES_LIMIT:0 "§R碧蓝档案mod的绝大多数内容只会在使用此政体时触发§!"
+ PROJECT_LIMITIED:0 "§Y强烈推荐使用§!基沃托斯§Y初始星系开局§!"
+
+
+#国民理念
+ civic_Kivotos:0 "枪械、少女、青春"
+ civic_Kivotos_desc:0 "众所周知，基沃托斯是一个武德充沛的地方（指抢银行），因此，我们对于武器的运用已经是得心应手，但是这也给我们内部带来了不稳定性。"
+ civic_one_school_only:0 "只能拥有一个学园级国民理念"
+ civic_Abydos:0 "阿拜多斯高等学校"
+ civic_Abydos_desc:0 "阿拜多斯的复兴漫长而曲折，过往的经历让人们更加注重对于环境的保护。"
+ civic_Millennium:0 "千年科技学园"
+ civic_Millennium_desc:0 "说起科技的中心，在基沃托斯一直指的是千年，而在整个星系也将会是千年。"
+ civic_Trinity:0 "三位一体综合学园"
+ civic_Trinity_desc:0 "第一次公会议将我们联合，伊甸条约将我们引向光明的彼岸。"
+ civic_Gehenna:0 "格黑那学园"
+ civic_Gehenna_desc:0 "秩序由混乱而生，烈火不熄。"
+ civic_Omnia_Vanitas:0 "万物皆虚"
+ civic_Omnia_Vanitas_desc:0 "Omnia Vanitas……"
+ civic_Omnia_Vanitas_effects:0 "我们隐藏于面纱之下。使用§Y$purge_Sacrifice$§!宣战借口可以揭开面纱。\n揭开面纱后：\n§Y异种有机人口§!将会被净化\n净化异种£pop£人口将获得£sr_keystone£§Y制造石§!\n\n\n"
+ civic_emergency:0 "联邦应急事件对策法案"
+ civic_emergency_desc:0 "为应对发生大规模突发事件,联邦学生会要求各学园备有多支能随时调度的应急反应小队。"
+ civic_explore:0 "联邦星际探索局"
+ civic_explore_desc:0 "我们的征途是星辰大海!纵观银河亿万星,逐鹿星河又一年。"
+
+
+
+#起源
+ origin_Kivotos_Eden_treaty:0 "伊甸条约"
+ origin_Kivotos_Eden_treaty_desc:0 "为了抵御对我们发起的全面进攻，我们在一位值得信任的人的帮助下签署了伊甸条约，新组建的学园联邦经过了数年的战争洗礼，给母星带来了极为严重的损失。另一边，勇敢聪慧的学生们从飞船残骸中解析出了超空间航行技术。\n尽管母星的重建工作尚未完成，但是我们不得不防备深空中的威胁，于是我们决定将这两件事同时进行。"
+ origin_Kivotos_Eden_treaty_effects:0 "-以一颗有部分区块障碍的母星开始游戏，请尽快完成重建工作。\n§R-于国家创建界面选择的初始领袖将会被替换。§!"
+
+ origin_Kivotos_Kyrie:0 "致被遗忘的众神"
+ origin_Kivotos_Kyrie_desc:0 "我们曾经拥有一片净土，我们在那里相遇，一同落泪，一同欢笑。\n然而，我们怀着憎恨亲手践踏昔日净土，将其化为一片火海。无处可回，无人可依，我们在断壁残垣间默默徘徊，渴望着昔日的温暖。\n没人能想到，只在悲伤时才仰望的星河，竟然成为了我们新的家园。"
+ origin_Kivotos_Kyrie_effects:0 "-以一颗学园都市废墟星球作为母星，对废墟的开发会带来灾害\n§R-需要在50年内完成学园都市星球的重建，否则……§!"
+
+ origin_Kivotos_Void_halo:0 "匿于虚空"
+ origin_Kivotos_Void_halo_desc:0 "一个个胶囊般的居住舱，是我们每天的日常上演的舞台。我们在其中舒适快乐的做着想要做的事情，学习、工作、挥洒青春。“你知道吗，基沃托斯曾经是一个广阔无垠的学院都市……”\n我们如此传说着，但我们并不向往。毕竟，现在的生活有什么不好？我们以为小小的居住站就会是我们的全部天地，直到那颗奇怪星球的屏障打开为止……"
+ origin_Kivotos_Void_halo_effects:0 "-初始人口分散在一颗学园都市星球及若干自动化居住站上\n-开局拥有建造自动化居住站相关科技"
+
+#政策
+ policy_BA_Arius_mining_policy:0 "废墟采矿政策"
+ policy_BA_Arius_mining_policy_desc:0 "堆积如山的废墟是我们重要的资源来源，我们应该充分利用。"
+ BA_Arius_mining_consumer_goods_name:0 "废墟采矿：消费品"
+ For_consumer_goods:0 "废墟采矿：消费品"
+ For_consumer_goods_desc:0 "$job_BA_scavenger$和$job_BA_reminer$将产出额外的£consumer_goods£消费品。"
+ BA_Arius_mining_rare_resource_name:0 "废墟采矿：稀有资源"
+ For_rare_resource:0 "废墟采矿：稀有资源"
+ For_rare_resource_desc:0 "$job_BA_scavenger$和$job_BA_reminer$将产出额外的£rare_crystals£ £volatile_motes£ £exotic_gases£稀有资源。"
+
+ policy_BA_Arius_guise_policy:0 "面纱"
+ policy_BA_Arius_guise_policy_desc:0 "外星人对我们而言，不过是复兴之路上的垫脚石。\n§R该政策不可更改§!"
+ BA_Arius_guise_policy_tooltip:0 "我们需要一个契机。"
+ BA_Arius_Under_guise_name:0 "面纱之下"
+ Arius_Under_guise:0 "面纱之下"
+ Arius_Under_guise_desc:0 "为了更好的利用它们，足够的伪装是必要的。"
+ BA_Arius_Guise_lifted_name:0 "面纱已揭"
+ Arius_Guise_lifted:0 "面纱已揭"
+ Arius_Guise_lifted_desc:0 "所有外星人口会被献祭，获得£alloys£合金与£sr_keystone£制造石。战争摧毁一个国家时，获得其部分库存资源。"
+ BA_Arius_Guise_aborted_name:0 "双面之人"
+ Arius_Guise_aborted:0 "双面之人"
+ Arius_Guise_aborted_desc:0 "也许，你我之间并无太多不同……"
+
+#物种增长
+mod_Schale_pop_growth_speed:0 "基沃托斯学生增长速度"
+mod_Schale_pop_growth_speed_DESC:0 "此数值影响基沃托斯学生的成长速度"
+
+#
+ BA_Shittem.3002.name:0 "爱丽丝"
+ BA_Shittem.3002.desc:0 "（提交委托后不久，两位身着§B千年科技学园§!制服的奇怪的少女闯进了办公室）"
+ BA_Shittem.3002.a:0 "你们是？"
+ BA_Shittem.3002.a.re:0 "§W“唐突打扰十分抱歉，老师。我是研讨会的生盐诺亚，这位是游戏开发部的天童爱丽丝，我们想就本次委托的内容向您做一个汇报。”§!\n\n§B“老师，感谢您对千年科技学园工作的赞助！吾名为天童爱丽丝，是担负拯救之使命的勇者……\n也是此次机器人实验的原型机! ”§!"
+ BA_Shittem.3002.b:0 "……你好，爱丽丝，诺亚。"
+ BA_Shittem.3002.b.re:0 "§W“之前，我们千年科技学园对制作出爱丽丝的那些科技十分感兴趣，所以试着进行了一些扫描和分析，并且成功的逆向出了一些目前无法解决的关键技术。多亏了您的协助，我们这次制作出了许多的试做机体和模板，但它们的智能程度远远无法和爱丽丝相比……\n现在我们需要收集很多很多数据对量产型的智能进行优化，方式是让爱丽丝进行各种工作……老师，您意下如何？”§!"
+ BA_Shittem.3002.c:0 "去联邦学生会如何？科研部门会很欢迎你的。"
+ BA_Shittem.3002.c.re:0 "§B“梆梆咔梆! 爱丽丝接受了新任务，爱丽丝会努力帮忙的! ”§!\n\n\n(可以在“交流”页面里让爱丽丝去担任其他职务)"
+ Aris_joined:0 "爱丽丝成为了科学家领袖。"
+
+ BA_Shittem.3010.name:0 ""
+ BA_Shittem.3010.desc:0 "老师，感谢您对千年科技学园工作的赞助！天童爱丽丝，担负拯救之使命的勇者……\n也是此次机器人实验的原型机! "
+ AoharuUI.common_btn.none:0 "REPLACE_ME"
+
+ name_list_ArisName:0 "爱丽丝"
+ name_list_ArisPrName:0 "先驱爱丽丝"
+
+ BA_Shittem.3003.name:0 "交流：爱丽丝"
+ BA_Shittem.3003.desc.normal.a:0 "“嗯……爱丽丝的等级仍然不足，还需要更多经验值……”"
+ BA_Shittem.3003.desc.scientist.a:0 "“……”\n（运算中）"
+ BA_Shittem.3003.desc.governor.a:0 "“啊哈哈哈，文件，文件！好多好多的文件，没完没了的文件！”"
+ BA_Shittem.3003.desc.admiral.a:0 "“柚子号，前进四！欸，那个不能这样玩吗……爱丽丝知道了……”"
+ BA_Shittem.3003.desc.general.a:0 "“各位，做好准备，Stand by for Arisfall！爱丽丝下次就这样登陆星球，然后‘光呦!’，一定很有趣！”"
+ BA_Shittem.3003.exit:0 "返回"
+ Aris_cooldown:0 "任职时间过短"
+ Aris_reload:0 "(若出现bug，执行任意需要读取领袖列表的操作即可解决)"
+ Aris_to_scientist:0 "果然爱丽丝还是适合研究工作，不是吗？"
+ Aris_to_scientist.re:0 "“爱丽丝接受了大贤者的委托，获得了新装备‘科研船’！”\n\n$Aris_reload$"
+ Aris_to_governor:0 "爱丽丝处理公务的能力如何呢……"
+ Aris_to_governor.re:0 "“经营游戏超好玩，爱丽丝很期待！”\n\n$Aris_reload$"
+ Aris_to_admiral:0 "指挥舰队什么的，爱丽丝能做到吗?"
+ Aris_to_admiral.re:0 "“传感器连线，武器系统冷却正常！爱丽丝，状态良好！”\n\n$Aris_reload$"
+ Aris_to_general:0 "地面作战，对爱丽丝来说小菜一碟吧。"
+ Aris_to_general.re:0 "“协议，坚守任务！爱丽丝获得了新的部队！”\n\n$Aris_reload$"
+ Aris_to_matrix:0 "（这孩子也许可以用来挖矿……）"
+ Aris_to_matrix.re:0 "“挖……矿，那是什么? \n……哈希运算? 爱丽丝明白了，爱丽丝最擅长计算了，交给我吧！”\n\n$Aris_reload$"
+
+
+#  BA_ape.2003.tip:0 "城郊区区划将提供更多§G£job£岗位§!，并且这些岗位的产出都会提升§G25%§!。"
+#  BA_ape.2004.tip:0 "自治区区划将提供更多§G£job£岗位§!，包括产出£sr_pyroxenes£青辉石的£job£岗位。"
+#  BA_ape.2005.tip:0 "军工厂区划将提供更多§G£job£岗位§!，同时$job_BA_keystone_foundry$岗位会代替$job_foundry$。"
+#  BA_ape.2006.tip:0 "学园都市星球上的区划将提供更多£housing£住房和§G建筑槽位§!。"
+#  BA_ape.2007.tip:0 "学园区划将提供更多§G£job£岗位§!，并且不再减少星球稳定度。"
+#  BA_ape.2008.tip:0 "舰船与巨构建筑建造速度§G+50%§!，同时所有岗位的£alloys£合金产出都会提升§G10%§!。"
+#  BA_ape.2010.tip:0 "学园都市星球上的每个§H区划§!将使该星球上的£job£岗位产出的资源§G+2.5%§!，§H宿舍区划§!具有双倍效果。"
+

@@ -1,0 +1,107 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_Abydos_vs_Binah"
+		texturefile = "gfx/event/common_event/BA_Abydos_vs_Binah.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Arius_ruins"
+		texturefile = "gfx/event/common_event/BA_arius_ruins.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Arius_squad"
+		texturefile = "gfx/event/common_event/BA_arius_squad.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Azusa_in_Trinity"
+		texturefile = "gfx/event/common_event/BA_azusa_in_trinity.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Broken_pad"
+		texturefile = "gfx/event/common_event/BA_broken_pad.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Checkmate"
+		texturefile = "gfx/event/common_event/BA_checkmate.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Desert_base"
+		texturefile = "gfx/event/common_event/BA_desert_base.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Friendly_Trinity"
+		texturefile = "gfx/event/common_event/BA_friendly_Trinity.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Gliched_street"
+		texturefile = "gfx/event/common_event/BA_gliched_street.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Hidden_lab"
+		texturefile = "gfx/event/common_event/BA_hidden_lab.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Kivotos_highway"
+		texturefile = "gfx/event/common_event/BA_Kivotos_highway.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_New_Cathedral"
+		texturefile = "gfx/event/common_event/BA_new_cathedral.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_No_signal"
+		texturefile = "gfx/event/common_event/BA_no_signal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Old_Cathedral"
+		texturefile = "gfx/event/common_event/BA_old_cathedral.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Retreating_squard"
+		texturefile = "gfx/event/common_event/BA_retreating_squard.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Ruined_building_Day"
+		texturefile = "gfx/event/common_event/BA_ruined_building_day.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Ruined_building_Night"
+		texturefile = "gfx/event/common_event/BA_ruined_building_night.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Ruined_street"
+		texturefile = "gfx/event/common_event/BA_ruined_street.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Saori"
+		texturefile = "gfx/event/common_event/BA_saori.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Shield_of_Hoshino"
+		texturefile = "gfx/event/common_event/BA_shield_of_hoshino.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Site_of_Aris"
+		texturefile = "gfx/event/common_event/BA_site_of_aris.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+}

@@ -1,0 +1,145 @@
+##### 引用来源：小伞泛用规则兼容 WorkshopID=2409276081  伞OW_UGRC_rules.txt  修改日期：22/11/04
+####   ！此文件涉及原版修改
+is_organic_species = {
+	species = {
+		OR = {
+			is_archetype = BIOLOGICAL			# original trigger did not include pre-sapient classes
+			is_archetype = WARSHIPGIRL
+			is_archetype = SHENHAI
+			is_archetype = LITHOID
+			is_archetype = STARSHIPGIRLS
+			is_archetype = Dolls
+			is_archetype = KANMUSU
+			is_archetype = DATEALIVE
+			is_archetype = UNITED_FLEET
+			is_archetype = NANITES_CROP
+			is_archetype = NYTO
+			is_archetype = Schale
+		}
+	}
+}
+
+colonizable_planet = {
+	OR = {
+		is_planet_class = pc_city
+		is_planet_class = pc_relic
+		is_planet_class = pc_nuked
+		is_planet_class = pc_hive
+		is_planet_class = pc_machine
+		habitable_structure = yes
+		habitable_planet = yes
+		# PD
+		is_artificial = yes
+		is_planet_class = pc_irradiated
+		is_planet_class = pc_pdshroud
+		# Giga
+		is_planet_class = pc_katzenland
+		# 阿夸
+		is_planet_class = pc_swgs_engineer
+		is_planet_class = pc_swgs_engineer_ringworld_habitable
+		# WSG
+		is_planet_class = pc_wsg_port
+		is_planet_class = pc_shenhai
+		# APSR
+		has_apsr_modifiers = yes
+		# Endless Frontier
+		is_planet_class = pc_mzilli_shadow
+	}
+}
+
+habitable_planet = {
+	optimize_memory	#内存
+	OR = {
+		# vanilla
+		habitable_planet_not_urban = yes
+		is_planet_class = pc_relic
+		is_planet_class = pc_city
+		# swg/wsg		has_wsg_mod	#_|舰R激活|
+		is_planet_class = pc_wsg_port
+		is_planet_class = pc_shenhai
+		is_planet_class = pc_swgs_engineer
+		is_planet_class = pc_swgs_engineer_ringworld_habitable
+		# Giga
+		is_planet_class = pc_ll_temperate
+		is_planet_class = pc_ll_foggy
+		is_planet_class = pc_ll_torrid
+		# mop
+		is_planet_class = pc_eco
+		# hiveDLC
+		is_planet_class = pc_hollow
+		# BA
+		is_planet_class = pc_BA_campus_planet
+		is_planet_class = pc_BA_ruined_planet
+		is_planet_class = pc_BA_auto_habitat
+		# pd			planetarydiversity	#_|PD激活|
+		is_planet_class = pc_pdshroud
+		is_planet_class = pc_cascadian
+		is_planet_class = pc_desertislands
+		is_planet_class = pc_subarctic
+		is_planet_class = pc_mangrove
+		is_planet_class = pc_wetswamp
+		is_planet_class = pc_hajungle
+		is_planet_class = pc_cenote
+		is_planet_class = pc_biolumen
+		is_planet_class = pc_steppe
+		is_planet_class = pc_sandsea
+		is_planet_class = pc_oasis
+		is_planet_class = pc_mesa
+		is_planet_class = pc_badlands
+		is_planet_class = pc_outback
+		is_planet_class = pc_swamp
+		is_planet_class = pc_mud
+		is_planet_class = pc_frozen_desert
+		is_planet_class = pc_glacial
+		is_planet_class = pc_hadesert
+		is_planet_class = pc_prairie
+		is_planet_class = pc_veld
+		is_planet_class = pc_semiarid
+		is_planet_class = pc_med
+		is_planet_class = pc_boreal
+		is_planet_class = pc_mushroom
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_sulfur
+		is_planet_class = pc_acid
+		is_planet_class = pc_methane
+		is_planet_class = pc_geothermal
+		is_planet_class = pc_superhabitable
+		is_planet_class = pc_tidallylocked
+		is_planet_class = pc_supercon
+		is_planet_class = pc_floating
+		is_planet_class = pc_crystal
+		is_planet_class = pc_technoorganic
+		is_planet_class = pc_graveyard
+		is_planet_class = pc_antarctic
+		is_planet_class = pc_aeolian
+		is_planet_class = pc_snow
+		is_planet_class = pc_highland
+		is_planet_class = pc_duneforest
+		is_planet_class = pc_retinal
+		is_planet_class = pc_forest
+		is_planet_class = pc_lake
+		is_planet_class = pc_tepid
+		is_planet_class = pc_irradiated
+		is_planet_class = pc_karst
+		is_planet_class = pc_ash
+		is_planet_class = pc_primal
+		is_planet_class = pc_aquatic
+		is_planet_class = pc_salt
+		is_planet_class = pc_aquifer
+		is_planet_class = pc_coral
+		is_planet_class = pc_storm
+		is_planet_class = pc_rogue
+		is_planet_class = pc_lichen
+		is_planet_class = pc_eyeball
+		is_planet_class = pc_glacio
+		is_planet_class = pc_lanthanide
+		is_planet_class = pc_megaflora
+		is_planet_class = pc_megaflorahive
+		is_planet_class = pc_megafloratol
+		is_planet_class = pc_pdhive1
+		is_planet_class = pc_pdhive2
+		is_planet_class = pc_bioforge
+		is_planet_class = pc_biocapital
+		is_planet_class = pc_biofort
+	}
+}

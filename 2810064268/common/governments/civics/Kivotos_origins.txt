@@ -1,0 +1,93 @@
+# 伊甸条约起源
+origin_Kivotos_Eden_treaty = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_Kivotos_Eden_treaty.dds"
+	picture = GFX_origin_eden_treaty
+	starting_colony = pc_BA_campus_planet
+	max_once_global = yes
+	possible = {
+		authority = {
+			value = auth_kivotos
+		}
+		civics = {
+			NOT = {
+				value = civic_Omnia_Vanitas
+			}
+		}
+	}
+	description = "origin_Kivotos_Eden_treaty_effects"
+	advanced_start = yes
+	flags = {
+		custom_start_screen
+		BA_start_at_campus_planet
+		origin_Eden_treaty
+	}
+	random_weight = {
+		base = 0
+	}
+}
+
+# 阿里乌斯起源
+origin_Kivotos_Kyrie = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_Kivotos_Kyrie.dds"
+	picture = GFX_origin_kyrie
+	starting_colony = pc_BA_ruined_planet
+	max_once_global = yes
+	possible = {
+		authority = {
+			value = auth_kivotos
+		}
+		civics = {
+			value = civic_Omnia_Vanitas
+		}
+	}
+	description = origin_Kivotos_Kyrie_effects
+	advanced_start = yes
+	flags = {
+		custom_start_screen
+		BA_start_at_ruined_planet
+		origin_Kyrie
+	}
+	random_weight = {
+		base = 0
+	}
+}
+
+# 虚空站起源
+# origin_Kivotos_Void_halo = {
+# 	is_origin = yes
+# 	icon = "gfx/interface/icons/origins/origins_Kivotos_Kyrie.dds"	#先用着 以后改
+# 	picture = GFX_origin_kyrie	#先用着 以后改
+# 	starting_colony = pc_BA_auto_habitat
+# 	max_once_global = yes
+# 	preferred_planet_class_neighbor = no
+# 	possible = {
+# 		authority = {
+# 			value = auth_kivotos
+# 		}
+# 	}
+# 	description = origin_Kivotos_Void_halo_effects
+# 	flags = {
+# 		custom_start_screen
+# 		BA_start_at_auto_habitat
+# 		origin_Void_halo
+# 	}
+# 	random_weight = {
+# 		base = 0
+# 	}
+# }
+#堕落帝国起源
+origin_ba_fallen_empire = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_Kivotos_Eden_treaty.dds"	#图标（N/A)
+	playable = {
+		always = no		#非玩家起源
+	}
+	possible = {
+	}
+	description = origin_ba_fe_effect
+	random_weight = {
+		base = 0
+	}
+}

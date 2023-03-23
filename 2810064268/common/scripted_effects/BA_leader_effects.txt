@@ -1,0 +1,418 @@
+#######  生成领袖（country_scope)
+## 伊甸条约
+BA_leader_Hoshino = {
+	create_leader = {
+		class = ruler
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Hoshino
+		skill = 3
+		set_age = 17
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_ruler_hoshino
+			trait = leader_trait_ruler_hoshino2
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 17
+		change_leader_portrait = BA_Hoshino
+		set_leader_flag = BA_Hoshino
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_99
+		}
+	}
+	set_leader = last_created_leader
+}
+
+BA_leader_Hina = {
+	create_leader = {
+		class = ruler
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Hina
+		skill = 3
+		set_age = 17
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_ruler_hina
+			trait = leader_trait_ruler_hina2
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 17
+		change_leader_portrait = BA_Hina
+		set_leader_flag = BA_Hina
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_46
+		}
+	}
+	set_leader = last_created_leader
+}
+
+BA_leader_Mika = {
+	create_leader = {
+		class = ruler
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Mika
+		skill = 3
+		set_age = 17
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_ruler_mika
+			trait = leader_trait_ruler_mika2
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 17
+		change_leader_portrait = BA_Mika
+		set_leader_flag = BA_Mika
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_19
+		}
+	}
+	set_leader = last_created_leader
+}
+
+BA_leader_Yuuka = {
+	create_leader = {
+		class = ruler
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Yuuka
+		skill = 3
+		set_age = 16
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_ruler_yuuka
+			trait = leader_trait_ruler_yuuka2
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 16
+		change_leader_portrait = BA_Yuuka
+		set_leader_flag = BA_Yuuka
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_76
+		}
+	}
+	set_leader = last_created_leader
+}
+
+BA_admiral_Hoshino = {
+	create_leader = {
+		class = admiral
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Hoshino
+		skill = 3
+		set_age = 17
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_admiral_hoshino
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 17
+		change_leader_portrait = BA_Hoshino
+		add_ruler_trait = leader_trait_ruler_hoshino
+		add_ruler_trait = leader_trait_ruler_hoshino2
+		set_leader_flag = BA_Hoshino
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_99
+		}
+	}
+}
+
+BA_admiral_Hina = {
+	create_leader = {
+		class = admiral
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Hina
+		skill = 3
+		set_age = 17
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_admiral_hina
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 17
+		change_leader_portrait = BA_Hina
+		add_ruler_trait = leader_trait_ruler_hina
+		add_ruler_trait = leader_trait_ruler_hina2
+		set_leader_flag = BA_Hina
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_46
+		}
+	}
+}
+
+BA_admiral_Mika = {
+	create_leader = {
+		class = admiral
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Mika
+		skill = 3
+		set_age = 17
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_admiral_mika
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 17
+		change_leader_portrait = BA_Mika
+		add_ruler_trait = leader_trait_ruler_mika
+		add_ruler_trait = leader_trait_ruler_mika2
+		set_leader_flag = BA_Mika
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_19
+		}
+	}
+}
+
+BA_governor_Yuuka = {
+	create_leader = {
+		class = governor
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Yuuka
+		skill = 3
+		set_age = 16
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_governor_yuuka
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 16
+		change_leader_portrait = BA_Yuuka
+		add_ruler_trait = leader_trait_ruler_yuuka
+		add_ruler_trait = leader_trait_ruler_yuuka2
+		set_leader_flag = BA_Yuuka
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_76
+		}
+	}
+}
+
+## 致被遗忘的众神
+BA_governor_Atsuko = {
+	# if = {
+	# 	limit = {
+	# 		NOT = {
+	# 			any_owned_leader = {
+	# 				leader_class = governor
+	# 			}
+	# 		}
+	# 	}
+	# 	create_leader = {
+	# 		class = governor
+	# 		species = event_target:BA_leader_species
+	# 		gender = female
+	# 		event_leader = yes
+	# 	}
+	# }
+	# random_owned_leader = {
+	# 	limit = {
+	# 		leader_class = governor
+	# 	}
+	# 	change_species = event_target:BA_leader_species
+	# 	set_name = NAME_Atsuko
+	# 	set_skill = 3
+	# 	set_age = 15
+	# 	set_immortal = yes
+	# 	change_leader_portrait = BA_Atsuko
+	# 	#remove_trait = all
+	# 	add_trait = leader_trait_governor_atsuko
+	# 	set_leader_flag = BA_event_leader
+	# 	set_leader_flag = BA_Atsuko 
+	# }
+	create_leader = {
+		class = governor
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Atsuko
+		skill = 3
+		set_age = 15
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_governor_atsuko
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 15
+		change_leader_portrait = BA_Atsuko
+		set_leader_flag = BA_Atsuko
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_136
+		}
+	}
+}
+
+BA_admiral_Saori = {
+	create_leader = {
+		class = admiral
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Saori
+		skill = 3
+		set_age = 17
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_admiral_saori
+		}
+	}
+	last_created_leader = {
+		set_leader_flag = BA_event_leader
+		set_age = 17
+		change_leader_portrait = BA_Saori
+		set_leader_flag = BA_Saori
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_134
+		}
+	}
+}
+
+## 定制领袖
+BA_governor_Serina_PR = {
+	create_leader = {
+		class = governor
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Serina
+		skill = 3
+		set_age = 16
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_customize
+			trait = leader_trait_governor_Serina
+		}
+	}
+	last_created_leader = {
+		BA_Halo_for_special_leader = yes
+		set_leader_flag = BA_event_leader
+		set_age = 16
+		change_leader_portrait = BA_193
+		set_leader_flag = BA_Serina_PR
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_193
+		}
+	}
+}
+
+BA_admiral_Iori_PR = {
+	create_leader = {
+		class = admiral
+		species = event_target:BA_leader_species
+		gender = female
+		name = NAME_Iori
+		skill = 3
+		set_age = 16
+		immortal = yes
+		event_leader = yes
+		traits = {
+			trait = leader_trait_customize
+			trait = leader_trait_admiral_Iori
+		}
+	}
+	last_created_leader = {
+		BA_Halo_for_special_leader = yes
+		set_leader_flag = BA_event_leader
+		set_age = 16
+		change_leader_portrait = BA_50
+		set_leader_flag = BA_Iori
+		BA_event_leader_replace = {
+			Leader_flag = leader_BA_50
+		}
+	}
+}
+
+#######  特殊领袖加特质（leader_scope)
+BA_Halo_for_special_leader = {
+	#一段光环
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = BA_ape_1_finished
+				NOT = {
+					has_country_flag = BA_ape_1_tr_finished
+					# TODO：光环改造
+				}
+			}
+		}
+		add_ruler_trait = leader_trait_halo_awakened_ruler
+		switch = {
+			trigger = leader_class
+			ruler = {
+				add_trait = leader_trait_halo_awakened_ruler
+			}
+			governor = {
+				add_trait = leader_trait_halo_awakened_governor
+			}
+			scientist = {
+				add_trait = leader_trait_halo_awakened_scientist
+			}
+			admiral = {
+				add_trait = leader_trait_halo_awakened_admiral
+			}
+			general = {
+				add_trait = leader_trait_halo_awakened_general
+			}
+		}
+	}
+	#二段光环
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = BA_ape_1_tr_finished
+				# TODO：光环改造
+			}
+		}
+		add_ruler_trait = leader_trait_halo_full_awakened_ruler
+		switch = {
+			trigger = leader_class
+			ruler = {
+				add_trait = leader_trait_halo_full_awakened_ruler
+			}
+			governor = {
+				add_trait = leader_trait_halo_full_awakened_governor
+			}
+			scientist = {
+				add_trait = leader_trait_halo_full_awakened_scientist
+			}
+			admiral = {
+				add_trait = leader_trait_halo_full_awakened_admiral
+			}
+			general = {
+				add_trait = leader_trait_halo_full_awakened_general
+			}
+		}
+	}
+	#改造光环
+	# TODO：光环改造
+}

@@ -1,0 +1,24 @@
+gov_ba_fe = {
+	ruler_title = PRESCRIPTED_ruler_title_ba_fe	#堕落领袖尊称
+	ruler_title_female = PRESCRIPTED_ruler_ba_fe	#堕落领袖名字
+	possible = {
+		has_authority = auth_ba_fe		#堕落帝国政体
+	}
+	weight = {
+		base = 9999
+	}
+}
+
+# gov_ba_fe_02 = {
+# 	ruler_title = PRESCRIPTED_ruler_title_ba_fe_02  #堕落领袖尊称
+# 	ruler_title_female = PRESCRIPTED_ruler_ba_fe_02   #堕落领袖名字
+# 	possible = {
+# 		has_authority = auth_ba_fe   #堕落帝国政体
+# 	}
+# 	weight = {
+# 		base = 9999
+# 	}
+# 	playable = {
+# 		always = no   #非玩家政府
+# 	}
+# }

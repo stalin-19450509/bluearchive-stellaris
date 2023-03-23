@@ -1,0 +1,35 @@
+portraits = {
+	Arona0001 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0001.dds"}
+	Arona0002 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0002.dds"}
+	Arona0003 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0003.dds"}
+	Arona0004 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0004.dds"}
+	Arona0005 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0005.dds"}
+	Arona0006 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0006.dds"}
+	Arona0007 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0007.dds"}
+	Arona0008 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0008.dds"}
+	Arona0009 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0009.dds"}
+	Arona0010 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0010.dds"}
+	Arona0011 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0011.dds"}
+	Arona0012 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0012.dds"}
+	Arona0013 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0013.dds"}
+	Arona0014 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0014.dds"}
+	Arona0015 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0015.dds"}
+	Arona0016 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0016.dds"}
+	Arona0017 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0017.dds"}
+	Arona0018 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0018.dds"}
+	Arona0019 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0019.dds"}
+	Arona0020 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0020.dds"}
+	Arona0021 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0021.dds"}
+	Arona0022 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0022.dds"}
+	Arona0023 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0023.dds"}
+	Arona0024 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0024.dds"}
+	Arona0025 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0025.dds"}
+	Arona0026 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0026.dds"}
+	Arona0027 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0027.dds"}
+	Arona0028 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0028.dds"}
+	Arona0029 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0029.dds"}
+	Arona0030 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0030.dds"}
+	Arona0031 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0031.dds"}
+	Arona0032 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0032.dds"}
+	Arona0099 = {textureFile = "gfx/models/portraits/Custom/Arona/Arona0099.dds"}
+}

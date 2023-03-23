@@ -1,0 +1,337 @@
+#国民理念 枪械，少女，青春
+civic_Kivotos = {
+	icon = "gfx/interface/icons/governments/civics/shiroko.dds"
+	potential = {
+		authority = {
+			value = auth_kivotos
+		}
+	}
+	possible = {
+	}
+	# 话说我为啥要给AI100来着？
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_kivotos
+		}
+	}
+	modifier = {
+		ship_weapon_range_mult = 0.1
+		ship_fire_rate_mult = 0.1
+		ship_weapon_damage = 0.1
+		admiral_skill_levels = 3
+		planet_stability_add = -5
+		planet_crime_mult = 0.15
+	}
+}
+
+# 阿拜多斯
+civic_Abydos = {
+	icon = "gfx/interface/icons/governments/civics/Abydos.dds"
+	modification = no
+	potential = {
+		authority = {
+			value = auth_kivotos
+		}
+	}
+	possible = {
+		civics = {
+			NOR = {
+				text = civic_one_school_only
+				value = civic_Millennium
+				value = civic_Trinity
+				value = civic_Gehenna
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_kivotos
+		}
+	}
+	modifier = {
+		pop_environment_tolerance = 0.05
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+		planet_building_refund_mult = 0.15
+	}
+}
+
+# 千年
+civic_Millennium = {
+	icon = "gfx/interface/icons/governments/civics/Millennium.dds"
+	modification = no
+	potential = {
+		authority = {
+			value = auth_kivotos
+		}
+	}
+	possible = {
+		civics = {
+			NOR = {
+				text = civic_one_school_only
+				value = civic_Abydos
+				value = civic_Trinity
+				value = civic_Gehenna
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_kivotos
+		}
+	}
+	modifier = {
+		planet_researchers_produces_mult = 0.2
+		num_tech_alternatives_add = 1
+		job_researcher_per_pop = 0.05
+		planet_researchers_upkeep_mult = 0.1
+	}
+}
+
+# 圣三一
+civic_Trinity = {
+	icon = "gfx/interface/icons/governments/civics/Trinity.dds"
+	modification = no
+	potential = {
+		authority = {
+			value = auth_kivotos
+		}
+	}
+	possible = {
+		civics = {
+			NOR = {
+				text = civic_one_school_only
+				value = civic_Millennium
+				value = civic_Abydos
+				value = civic_Gehenna
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_kivotos
+		}
+	}
+	modifier = {
+		country_unity_produces_mult = 0.2
+		envoys_add = 1
+		diplo_weight_mult = 0.3
+		country_trust_growth = 0.3
+	}
+}
+
+# 欣嫰谷
+civic_Gehenna = {
+	icon = "gfx/interface/icons/governments/civics/Gehenna.dds"
+	modification = no
+	potential = {
+		authority = {
+			value = auth_kivotos
+		}
+	}
+	possible = {
+		civics = {
+			NOR = {
+				text = civic_one_school_only
+				value = civic_Millennium
+				value = civic_Abydos
+				value = civic_Trinity
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_kivotos
+		}
+	}
+	modifier = {
+		empire_size_mult = -0.2
+		diplo_weight_mult = -0.1
+		country_trust_growth = -0.1
+	}
+}
+
+#万物皆虚
+civic_Omnia_Vanitas = {
+	icon = "gfx/interface/icons/governments/civics/azusa.dds"
+	modification = no
+	potential = {
+		authority = {
+			value = auth_kivotos
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	possible = {
+		origin = {
+			NOT = {
+				value = origin_Kivotos_Eden_treaty
+			}
+		}
+	}
+	description = "civic_Omnia_Vanitas_effects"
+	modifier = {
+		country_unity_produces_mult = 0.2
+		envoys_add = -1
+		country_starbase_influence_cost_mult = -0.3
+		ship_weapon_damage = 0.25
+		starbase_shipyard_build_cost_mult = -0.15
+		country_naval_cap_mult = 0.33
+		country_resettlement_cost_mult = 1.5
+	}
+}
+
+#联邦星际探索局
+civic_explore = {
+	icon = "gfx/interface/icons/civics/Icon_explore.dds"
+	potential = {
+		authority = {
+			value = auth_kivotos
+		}
+	}
+	possible = {
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_kivotos
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = 0.2
+		#ship_archeaological_site_clues_add = 2
+		ship_anomaly_generation_chance_mult = 0.15
+		ship_anomaly_research_speed_mult = 0.15
+		empire_size_colonies_mult = -0.1		
+	}
+}
+
+#联邦应急事件常备对策
+civic_emergency = {
+	icon = "gfx/interface/icons/civics/Icon_emergency.dds"
+	potential = {
+		authority = {
+			value = auth_kivotos
+		}
+	}
+	possible = {
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_kivotos
+		}
+	}
+	modifier = {
+		ships_upkeep_mult = -0.2
+		country_naval_cap_mult = 0.2
+		ship_speed_mult = 0.2
+		empire_size_pops_mult = -0.1
+	}
+}
+
+###################
+#堕落帝国
+civic_ba_fe = {
+	#icon = "gfx/interface/icons/governments/civics/.dds"	#旗帜（N/A）
+	icon = "gfx/interface/icons/governments/civics/azusa.dds"
+	potential = {
+		country_type = {
+			value = fallen_empire
+		}
+		authority = {
+			value = auth_ba_fe
+		}
+		#堕落帝国政体
+	}
+	possible = {
+	}
+	modifier = {
+		ships_upkeep_mult = -1
+		armies_upkeep_mult = -0.2
+		country_war_exhaustion_mult = 0.2
+		#pop_growth_speed_reduction = 0.5
+		planet_max_buildings_add = 16		#堕落帝国修正
+	}
+	random_weight = {
+		base = 0
+	}
+}
+
+civic_ba_awakened_fe = {
+	icon = "gfx/interface/icons/governments/civics/azusa.dds"	#觉醒旗帜（N/A）
+	potential = {
+		country_type = {
+			value = awakened_fallen_empire
+		}
+		authority = {
+			value = auth_ba_fe
+		}
+	}
+	modifier = {
+		ships_upkeep_mult = -0.4
+		ship_disengage_chance_mult = 0.5
+		starbase_shipyard_capacity_add = 30
+		country_command_limit_add = 200
+		country_naval_cap_add = 9999
+		country_resource_max_add = 1000000
+		planet_max_buildings_add = 16		#觉醒修正
+	}
+	random_weight = {
+		base = 0
+	}
+}
+
+civic_ba_awakened_fe_advance = {
+	icon = "gfx/interface/icons/governments/civics/azusa.dds"	#觉醒旗帜（N/A）
+	potential = {
+		country_type = {
+			value = awakened_fallen_empire
+		}
+		authority = {
+			value = auth_ba_fe
+		}
+	}
+	modifier = {
+		ships_upkeep_mult = -0.4
+		ship_hull_mult = 0.1
+		ship_hull_regen_add_static = 10
+		ship_shield_mult = 0.1
+		ship_shield_regen_add_static = 50
+		ship_shield_damage_mult = 0.1
+		ship_shield_penetration_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_armor_regen_add_static = 50
+		ship_armor_damage_mult = 0.1
+		ship_armor_penetration_mult = 0.1
+		ship_disengage_chance_mult = 0.5
+		starbase_shipyard_capacity_add = 30
+		country_command_limit_add = 200
+		ship_starting_experience_add = 10000
+		country_naval_cap_add = 9999
+		country_resource_max_add = 1000000
+		planet_max_buildings_add = 16		#觉醒过后的各类加成
+	}
+	random_weight = {
+		base = 99999
+	}
+}

@@ -1,0 +1,187 @@
+
+spriteTypes = {
+
+	spriteType = { 
+		name = "GFX_army_type_Binah_1"
+		textureFile = "gfx/interface/planetview/Binah_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Binah_2"
+		textureFile = "gfx/interface/planetview/Binah_army_2_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Chesed_1"
+		textureFile = "gfx/interface/planetview/Chesed_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Chesed_2"
+		textureFile = "gfx/interface/planetview/Chesed_army_2_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Goz_1"
+		textureFile = "gfx/interface/planetview/Goz_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Hieronymus_1"
+		textureFile = "gfx/interface/planetview/Hieronymus_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Hieronymus_2"
+		textureFile = "gfx/interface/planetview/Hieronymus_army_2_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Hod_1"
+		textureFile = "gfx/interface/planetview/Hod_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Hod_2"
+		textureFile = "gfx/interface/planetview/Hod_army_2_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Kaiten_FX_MK0_1"
+		textureFile = "gfx/interface/planetview/Kaiten_FX_MK0_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Kuro_1"
+		textureFile = "gfx/interface/planetview/Kuro_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Kuro_2"
+		textureFile = "gfx/interface/planetview/Kuro_army_2_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Perorodzilla_1"
+		textureFile = "gfx/interface/planetview/Perorodzilla_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Perorodzilla_2"
+		textureFile = "gfx/interface/planetview/Perorodzilla_army_2_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Shiro_1"
+		textureFile = "gfx/interface/planetview/Shiro_army_1_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_Shiro_2"
+		textureFile = "gfx/interface/planetview/Shiro_army_2_icon.dds"
+		default_frame = 1
+	}
+
+	spriteType = { 
+		name = "GFX_army_type_C&C"
+		textureFile = "gfx/interface/planetview/C&C_army_icon.dds"
+		default_frame = 1
+	}
+
+
+
+	spriteType = { 
+		name = "GFX_army_type_Disciplinary"
+		textureFile = "gfx/interface/planetview/Disciplinary_army_icon.dds"
+		default_frame = 1
+	}
+
+
+	spriteType = { 
+		name = "GFX_army_type_Game_Dev"
+		textureFile = "gfx/interface/planetview/Game_Dev_army_icon.dds"
+		default_frame = 1
+	}
+
+
+	spriteType = { 
+		name = "GFX_army_type_Gourmet"
+		textureFile = "gfx/interface/planetview/Gourmet_army_icon.dds"
+		default_frame = 1
+	}
+
+
+	spriteType = { 
+		name = "GFX_army_type_Handyman"
+		textureFile = "gfx/interface/planetview/Handyman_army_icon.dds"
+		default_frame = 1
+	}
+
+
+	spriteType = { 
+		name = "GFX_army_type_Justice"
+		textureFile = "gfx/interface/planetview/Justice_army_icon.dds"
+		default_frame = 1
+	}
+
+
+	spriteType = { 
+		name = "GFX_army_type_Pandemonium"
+		textureFile = "gfx/interface/planetview/Pandemonium_army_icon.dds"
+		default_frame = 1
+	}
+
+
+	spriteType = { 
+		name = "GFX_army_type_Seminar"
+		textureFile = "gfx/interface/planetview/Seminar_army_icon.dds"
+		default_frame = 1
+	}
+
+
+	spriteType = { 
+		name = "GFX_army_type_Sweets_Club"
+		textureFile = "gfx/interface/planetview/Sweets_Club_army_icon.dds"
+		default_frame = 1
+	}
+
+
+
+
+	spriteType = { 
+		name = "GFX_army_type_Tea_Party"
+		textureFile = "gfx/interface/planetview/Tea_Party_army_icon.dds"
+		default_frame = 1
+	}
+
+
+
+
+	spriteType = { 
+		name = "GFX_army_type_Veritas"
+		textureFile = "gfx/interface/planetview/Veritas_army_icon.dds"
+		default_frame = 1
+	}
+
+
+
+
+
+
+}
+

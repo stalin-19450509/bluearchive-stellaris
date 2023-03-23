@@ -1,0 +1,663 @@
+d_BA_hab_gas_1 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_exotic_gases
+				}
+			}
+			exotic_gases = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_gas_2 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_exotic_gases
+				}
+			}
+			exotic_gases = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_gas_3 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_exotic_gases
+				}
+			}
+			exotic_gases = 3
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_gas_4 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_exotic_gases
+				}
+			}
+			exotic_gases = 4
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_gas_5 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_exotic_gases
+				}
+			}
+			exotic_gases = 5
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_crystal_1 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_rare_crystals
+				}
+			}
+			rare_crystals = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_crystal_2 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_rare_crystals
+				}
+			}
+			rare_crystals = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_crystal_3 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_rare_crystals
+				}
+			}
+			rare_crystals = 3
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_crystal_4 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_rare_crystals
+				}
+			}
+			rare_crystals = 4
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_crystal_5 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_rare_crystals
+				}
+			}
+			rare_crystals = 5
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_mote_1 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_volatile_motes
+				}
+			}
+			volatile_motes = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_mote_2 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_volatile_motes
+				}
+			}
+			volatile_motes = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_mote_3 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_volatile_motes
+				}
+			}
+			volatile_motes = 3
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_mote_4 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_volatile_motes
+				}
+			}
+			volatile_motes = 4
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_mote_5 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_volatile_motes
+				}
+			}
+			volatile_motes = 5
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_zro_1 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_zro
+				}
+			}
+			sr_zro = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_zro_2 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_zro
+				}
+			}
+			sr_zro = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_zro_3 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_zro
+				}
+			}
+			sr_zro = 3
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_dark_matter_1 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_dark_matter
+				}
+			}
+			sr_dark_matter = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_dark_matter_2 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_dark_matter
+				}
+			}
+			sr_dark_matter = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_dark_matter_3 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_dark_matter
+				}
+			}
+			sr_dark_matter = 3
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_living_metal_1 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_mine_living_metal
+				}
+			}
+			sr_living_metal = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_alloy_1 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			alloys = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_alloy_2 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			alloys = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_alloy_3 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			alloys = 3
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_alloy_4 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			alloys = 4
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_alloy_5 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			alloys = 5
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_BA_hab_nanites_1 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_BA_auto_habitat
+	}
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			nanites = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

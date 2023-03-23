@@ -1,0 +1,282 @@
+﻿l_english:
+###############################
+#this is a very basic translation.(yes,we very need english localization support)
+
+#物种相关基本信息及称呼
+ Schale:0 "Kivotos students"
+ Schalebot:0 "Kivotos students(BOT)"
+
+
+ Schale_desc:0 "Students from academy City Kivotos."
+ Schale_plural:0 "Kivotos students"
+
+ FLAG_CATEGORY_ba:0 "Bluearchive flags"
+ name_list_Schale:0 "Bluearchive"
+
+ BA_Robot:0 "AL-1S"
+
+#物种增长
+ mod_Schale_pop_growth_speed:0 "Kivotos students griwth speed"
+ mod_Schale_pop_growth_speed_DESC:0 "N/A"
+
+#物种特质
+ trait_test:0 "Test"
+ trait_test_desc:0 "The robots in test,is only a prototype at present."
+
+ trait_halo_unreleased:0 "Halo(unreleased)"
+ trait_halo_unreleased_desc:0 "The halo that has accompanied us since birth,the principle is unknown."
+ trait_halo_awakened:0 "Halo(awakened)"
+ trait_halo_awakened_desc:0 "The blessing it brings seems to be undetected."
+ trait_tactical_training:0 "Tactical training"
+ trait_tactical_training_desc:0 "The students have to spare some time for tactical training every week."
+ trait_starlink:0 "Starlink"
+ trait_starlink_desc:0 "The marketing department overreached the publicitys!all the satellites can be linked into star chains,At the same time, it also makes students look forward to this."
+ trait_boarding:0 "Boarding"
+ trait_boarding_desc:0 "Some students prefer to stay together rather than live alone."
+ trait_camp:0 "Laid Back Camp"
+ trait_camp_desc:0 "Students will go camping in various places during the holidays,so they can adapt to the new environment more quickly."
+ trait_exoskeleton_armor:0 "Top level protectionism"
+ trait_exoskeleton_armor_desc:0 "Buy 30 tubes of physical strength every day to upgrade all students to top equipment,this has greatly enhanced the students' fighting ability and efficiency."
+ trait_BD_case:0 "BD supply plan"
+ trait_BD_case_desc:0 "Beat the Super Sentai at all costs to fully obtain the technical training BD,tech notes and secret tech notes to ensure that all students can work hard."
+ trait_slack:0 "Slack"
+ trait_slack_desc:0 "Today's file?we well solve it few hours late!"
+ trait_food_1:0 "Chaotic canteen"
+ trait_food_1_desc:0 "The canteen exploded again today... so hungry...look like we can only eat rice ball for now,wait, it seems that something has just escaped?!"
+ trait_gammer:0 "Addicted to games"
+ trait_gammer_desc:0 "The students like playing games at home during the holidays very much, so it is difficult to call them out.Even if they do,they still say words like axis alignment and intensity from time to time."
+ trait_loophole:0 "Regulatory loopholes"
+ trait_loophole_desc:0 "As a land and air dual-use motorcycle called the tyrant mk2 appeared in the market,some students like to fly at extremely low altitude and high speed at a height that cannot be detected by the ATC radar, resulting in various accidents, such as hitting the building.
+ trait_no_pack_man:0 "No pack man"
+ trait_no_pack_man_desc:0 "Because the students in charge of leading the formation forgot to bring the supply backpack,the combat capability and ability to withstand damage decreased straightly."
+
+ trait_good_students:0 ""Three good" Student"
+ trait_good_students_desc:0 "Exclude of those students cause trouble,Most of students are good,they study very hard."
+ trait_koharu:0 "Koharu"
+ trait_koharu_desc:0 "H dame!"
+ trait_ship_slow:0 "Ship trial plan"
+ trait_ship_slow_desc:0 "Invest a small amount of resources to build various ships for students at a slower speed,we'll win the bid one day."
+ trait_ship_fast:0 "Ship mass production plan"
+ trait_ship_fast_desc:0 "Invest a lot of resources to quickly build various ships for students, no matter how,I have many ship prototype,the advantage lies on me!"
+
+
+ gov_Kivotos_country:0 "Federal Student Union System"
+ gov_Kivotos_country_desc:0 "The "Federal Student Union"is a centralized organization,is in charge of major and minor affairs."
+ auth_kivotos:0 "Federal system of student union"
+ auth_kivotos_desc:0 ""Kivotos is a federation composed of a large number of colleges. Each college is highly autonomous, but it is under the unified jurisdiction of the Federal Student Union. However, since the mysterious disappearance of the last president of the Federal Student Union, Kivotos is no longer as united as before"mi
+ scripted_student_federal_president:0 "Federal Student President"
+
+#指针悬停政府类型时显示的内容
+ KIVOTOS_STUDENTS:0 "Federal autonomy of students"
+ MOD_AUTHORITIES_LIMIT:0 "§RMost special eventchans can only be triggered when using this regime§!"
+ PROJECT_LIMITIED:0 "§YPlease use the initial galaxy of "Kivotos" to start,otherwise some content will not take effect§!"
+
+
+#国民理念
+ civic_Kivotos:0 "Guns、Maiden、Youth"
+ civic_Kivotos_desc:0 "As we all know, Kivotos is a place full of great fire power (refers to robbing banks). Therefore, we are already handy in the use of weapons, but this also brings instability to our internal."
+ civic_one_school_only:0 "Only one Gakuen level national concept can be possessed"
+ civic_Abydos:0 "Abedos College"
+ civic_Abydos_desc:0 "The revival of Abaddos is long and tortuous, and the past experience has made people pay more attention to environmental protection."
+ civic_Millennium:0 "Millennium technology Academy"
+ civic_Millennium_desc:0 "Speaking of the center of science and technology, in Kivotos, it always the millennium, even in the whole galaxy, it will also be the millennium."
+ civic_Trinity:0 "Trinity Comprehensive College"
+ civic_Trinity_desc:0 "The first public meeting will unite us, and the Treaty of Eden will lead us to the light."
+ civic_Omnia_Vanitas:0 "Everything is empty"
+ civic_Omnia_Vanitas_desc:0 "Omnia Vanitas……"
+ civic_emergency:0 "Federal Emergency situation Response Act"
+ civic_emergency_desc:0 "In response to large-scale emergencies, the Federal Student Union requires each academy to have multiple emergency response teams that can be dispatched at any time."
+ civic_explore:0 "Federal Interstellar Exploration Agency"
+ civic_explore_desc:0 "Our journey is the sea of stars!looking at the billions of stars in the Milky Way,chasing the star sea  for another year."
+
+#临时便签
+#极秘术 Gematria
+#神名文字 Eleph
+
+#起源
+ origin_Kivotos_Eden_treaty:0 "Treaty of Eden"
+ origin_Kivotos_Eden_treaty_desc:0 "In the face of the fully attack on us by the Gematria,We signed the Treaty of Eden with the help of a trustworthy person,the new formed academy federation war with Gematria for many years,we finally drove the Gematria out of our planet,they disappeared into the deep sky by spaceship.\nThis war has brought great losses to our planet,We have to spend many years to rebuilding our infrastructure,on the other side,the millennium has analysis the hyperspace navigation technology in Gematria's ship debris.\nAlthough the reconstruction of the planet has not been completed,but we still have to alert the Gematria threat in the deep sky,so we decided to do these two things at the same time."
+ origin_Kivotos_Eden_treaty_effects:0 "Start the game with a planet with partial block obstacles,please complete the reconstruction as soon as possible."
+
+ origin_Kivotos_Kyrie:0 "Kyrie for the Forgotten Gods"
+ origin_Kivotos_Kyrie_desc:0 "We used to have a pure land,We met there, we wept together,we laughed together.\nHowever, we trampled on the former pure land with hatred,turn it into a sea of fire,no place to return, no one to rely on,we lingered silently among the ruins,longing for the warmth of the past.\nNo one can imagine that the Milky Way, which only looks up to when we are sad, has become our new home."
+ origin_Kivotos_Kyrie_effects:0 "Start the game with a academy ruins planet,development to ruins will bring disasters\n§RNeed to complete the reconstruction of the academy city planet planet in 50 years,otherwise……§!\n§RThe Gematria are still waiting attak chance to our planet in the deep sky§!"
+
+
+#政策
+ policy_BA_Arius_mining_policy:0 "Ruin mining policy"
+ policy_BA_Arius_mining_policy_desc:0 "Ruins piled up like mountainsare our important source of resources, and we should make full use of them."
+ BA_Arius_mining_consumer_goods_name:0 "Ruin mining:Consumer Goods"
+ For_consumer_goods:0 "Ruin mining:Consumer Goods"
+ For_consumer_goods_desc:0 "$job_BA_scavenger$and$job_BA_reminer$will produce additional£consumer_goods£consumer goods."
+ BA_Arius_mining_rare_resource_name:0 "Ruin mining:rare resources"
+ For_rare_resource:0 "Ruin mining:rare resources"
+ For_rare_resource_desc:0 "$job_BA_scavenger$and$job_BA_reminer$will produce additional£rare_crystals£ £volatile_motes£ £exotic_gases£rare resources."
+
+ policy_BA_Arius_guise_policy:0 "veil"
+ policy_BA_Arius_guise_policy_desc:0 "For us, aliens are just stepping stones on the road to rejuvenation.\n§RThis policy cannot be changed§!"
+ BA_Arius_guise_policy_tooltip:0 "We need an opportunity."
+ BA_Arius_Under_guise_name:0 "Under the veil"
+ Arius_Under_guise:0 "Under the veil"
+ Arius_Under_guise_desc:0 "In order to make better use of them, enough camouflage is necessary."
+ BA_Arius_Guise_lifted_name:0 "lifted's veil"
+ Arius_Guise_lifted:0 "lifted's veil"
+ Arius_Guise_lifted_desc:0 "All alien populations will be sacrifice,get£alloys£Alloys and £sr_keystone£keystone.When war destroys a country,can obtain part of its inventory resources."
+ BA_Arius_Guise_aborted_name:0 "Two-Face"
+ Arius_Guise_aborted:0 "Two-Face"
+ Arius_Guise_aborted_desc:0 "Maybe there's not much difference between you and me……"
+
+#传统&飞升
+ tradition_Kivotos_chronicle:0 "Academy Federation"
+ tradition_Kivotos_chronicle_desc:0 "Space age,the academy must keep pace with the times."
+
+ tr_kivotos_adopt:0 "Academy Federation tradition"
+ tr_kivotos_finish:0 "Academy Federation tradition has complete"
+ tr_kivotos_daily_duty:0 "Duty rotation"
+ tr_kivotos_daily_duty_desc:0 "Duty rotation is an essential part of academy life."
+ tr_kivotos_daily_duty_delayed:0 "§Gstudent on duty§!post will produce£Unity,§GSelf police regiment§!post will produce planet defense force."
+ tr_kivotos_newkind_dome:0 "Redesigned dormitory"
+ tr_kivotos_newkind_dome_desc:0 "The academy city in the space age needs new supporting facilities for life."
+ tr_kivotos_newkind_dome_delayed:0 "§G-5%§!£amenities£Amenities and £housing£Housing use."
+ tr_kivotos_space_supplies:0 "Space supply"
+ tr_kivotos_space_supplies_desc:0 "The resources coming from space are endless,if we dont make it fully use,thas waste."
+ tr_kivotos_space_supplies_delayed:0 "Mining station produce§G+20%§!."
+ tr_kivotos_opaz:0 "Mastering mystery"
+ tr_kivotos_opaz_desc:0 "We walked out of the sign of ignorance,is to mass produce mysterious materials for our use."
+ tr_kivotos_opaz_delayed:0 "Every month£sr_pyroxenes£pyroxenes、£sr_keystone£keystone produce§G+15%§!."
+ tr_kivotos_student_arms:0 "Academy armament"
+ tr_kivotos_student_arms_desc:0 "Each academy to provide have own armed is a long tradition of Kivotos Now we have formally incorporated it into the federal constitution."
+ tr_kivotos_student_arms_delayed:0 "Fleet and army maintenance cost§G-20%§!."
+
+
+#飞升
+ ap_BA_halo_awaken:0 "Halo awakening"
+ ap_BA_halo_awaken_desc:0 "This halo accompanies us like shadow,what kind of secret does it contain?"
+ ap_BA_halo_awaken_tip:0 "Start an event chain to transform the whole species to explore the potential of halo."
+ finish_com_07_first:0 "$TRIGGER_FAIL$complete§Y$commmission.Normal_07_A$§!entrust(Start in 2215)"
+ require_150_eligma:0 "$TRIGGER_FAIL$at least have150£sr_eligma£Eleph"
+
+ ap_BA_Our_story:0 "Our Stories"
+ ap_BA_Our_story_desc:0 "Where we will go is up to us.Of course we won't end here. This is story we wrote with our hands,our stories."
+ ap_BA_Our_story_tip:0 "Districts of each academy+1$job_BA_student_delegate$Jobs\nUnlock a series of projects to bring huge gain to the academy city planet"
+ ap_BA_origin_limit:0 "$TRIGGER_FAIL$The event chain of this origin needs to be completed first."
+ requires_ascension_perks_4:0 "$TRIGGER_FAIL$You need to select the other four ascension theory first."
+
+ ap_BA_new_frontier:0 "New frontier"
+ ap_BA_new_frontier_desc:0 "Wherever we here,the world will eventually become a beautifully grand blue."
+ ap_BA_new_frontier_tip:0 "colony can be transformed to§YAcademy city planet§!.The satellite department can be upgraded to the star chains department."
+ BA_Project_Cradle_finished:0 "$TRIGGER_FAIL$complete“Project Cradle”"
+ BA_tr_kivotos_finished:0 "$TRIGGER_FAIL$complete§GAcademy Federation tradition§!"
+ BA_chronicle_finished:0 "$TRIGGER_FAIL$Need to complete the transform of academy city planet"
+ decision_BA_new_frontier:0 "Academy city planet transform"
+ decision_BA_new_frontier_desc:0 "Transforming this colony to academy city planet."
+
+#飞升事件链
+ BA_ape.1001.name:0 "Halo"
+ BA_ape.1001.desc:0 "自我们出生以来,光环就把我们区别于基沃托斯以外者,时间流逝让我们对它的存在习以为常.既然它是基沃托斯人特殊体质的根源,既然我们已经决定动手发掘光环的秘密,我们必须发现光环更多的潜力.千里之行始于足下,我们要有所行动才行."
+ BA_ape.1001.next:0 "动手吧."
+
+ BA_ape.1002.name:0 "$BA_ape.1001.name$"
+ BA_ape.1002.desc:0 "我们完成了对光环改造方向的研究,数百次完美成功的实验标志着光环改造技术现在已经成熟.光环改造不是什么大手术,去宿舍附近的医院就可以做.现在的问题是:虽然创伤只需几小时就可以完全恢复,但过程并不令人愉悦(事实上非常的痛),而且就已成功的案例来看,对大多数人并不能带来明显的好处.我们可以发放一些奖励,鼓励尽可能多的学生们接受这一手术."
+ BA_ape.1002.Prize0:0 "没有奖励,让她们乖乖站好就完事了"
+ BA_ape.1002.Prize1:0 "227号温泉乡特供美味棒一根"
+ BA_ape.1002.Prize2:0 "水晶佩洛洛烟花一套"
+ BA_ape.1002.Prize3:0 "[Root.GetRulerName]限定可脱手办"
+ BA_ape.1002.Prize4:0 "青辉石制发卡项链手环套装"
+
+ BA_ape.1003.name:0 "$BA_ape.1001.name$"
+ BA_ape.1003.Prize0:0 "改造光环的准备已经完成,我们可以开始相关的工作了.我们没有准备相关的激励措施,看来这一工作会相当花时间."
+ BA_ape.1003.Prize1:0 "改造光环的准备已经完成,我们可以开始相关的工作了.不少学生表示我们准备的奖励只是聊胜于无……不过,由于227温泉乡已经不复存在,特供的美味棒相当抢手."
+ BA_ape.1003.Prize2:0 "改造光环的准备已经完成,我们可以开始相关的工作了.我们用来奖励给受改造者的烟花在MomoTalk上引发了相当大的话题,借此机会我们好好的科普了一下手术相关的知识.“浮士德已经迫不及待了”,某位值日生悄悄的对我们说."
+ BA_ape.1003.Prize3:0 "改造光环的准备已经完成,我们可以开始相关的工作了.[Root.GetRulerName]就我们对其肖像权的侵犯做出了公开抗议,在公众引发了一些谴责言论和相当之多的发癫言论.据说一小部分提前流入黑市的手办价格已经炒到了不可思议的数字."
+ BA_ape.1003.Prize4:0 "改造光环的准备已经完成,我们可以开始相关的工作了.这次我们下了血本,发放的饰品迅速占领了各个头条页面,引发了相当大的期待.毫无疑问,这次工作会相当顺利."
+ BA_ape.1003.next:0 "放手去做吧."
+
+ BA_ape.1004.name:0 "$BA_ape.1001.name$"
+ BA_ape.1004.desc:0 "光环改造工作已经全部完成.虽然大部分学生光环的外貌没有发生变化,但亮度得到了一点点的提升.这项工程具体会对基沃托斯产生什么效果,还要等后续更多的观察."
+ BA_ape.1004.next:0 "希望这个会有用吧."
+
+ BA_Halo_awaken_chain_title:0 "光环觉醒"
+ BA_Halo_awaken_chain_desc:0 "$BA_ape.1001.desc$"
+ BA_Halo_research:0 "研究光环"
+ BA_Halo_research_DESC:0 "从光环炸弹破坏光环的原理出发,动员所有学生进行研究,直到可以对光环进行精确的破坏重构为止.一点点揭露光环的奥秘,并将其掌握在自己手中."
+ BA_Halo_preparation:0 "光环改造准备"
+ BA_Halo_preparation_DESC:0 "准备相关的设施、人力以及奖品."
+ BA_Halo_remake:0 "改造光环"
+ BA_Halo_remake_DESC:0 "采用服药、手术、恢复训练等一系列疗程,觉醒每一个学生的光环的潜力."
+
+ BA_Shittem.3002.name:0 "爱丽丝"
+ BA_Shittem.3002.desc:0 "(提交委托后不久,两位身着§B千年科技学园§!制服的奇怪的少女闯进了办公室)"
+ BA_Shittem.3002.a:0 "你们是？"
+ BA_Shittem.3002.a.re:0 "§W“唐突打扰十分抱歉,老师.我是研讨会的生盐诺亚,这位是游戏开发部的天童爱丽丝,我们想就本次委托的内容向您做一个汇报.”§!\n\n§B“老师,感谢您对千年科技学园工作的赞助！吾名为天童爱丽丝,是担负拯救之使命的勇者……\n也是此次机器人实验的原型机! ”§!"
+ BA_Shittem.3002.b:0 "……你好,爱丽丝,诺亚."
+ BA_Shittem.3002.b.re:0 "§W“之前,我们千年科技学园对制作出爱丽丝的那些科技十分感兴趣,所以试着进行了一些扫描和分析,并且成功的逆向出了一些目前无法解决的关键技术.多亏了您的协助,我们这次制作出了许多的试做机体和模板,但它们的智能程度远远无法和爱丽丝相比……\n现在我们需要收集很多很多数据对量产型的智能进行优化,方式是让爱丽丝进行各种工作……老师,您意下如何？”§!"
+ BA_Shittem.3002.c:0 "去联邦学生会如何？科研部门会很欢迎你的."
+ BA_Shittem.3002.c.re:0 "§B“梆梆咔梆! 爱丽丝接受了新任务,爱丽丝会努力帮忙的! ”§!"
+ Aris_joined:0 "爱丽丝成为了科学家领袖."
+
+ BA_ape.2001.name:0 "编年史"
+ BA_ape.2001.desc:0 "“老师,现如今的学园都市星球已经完全不能够支持星际旅行的需求了,而且在土地和资源方面存在严重的浪费……\n当然,各种各样的改造方案早就被提出,有的建议全部推倒重建,有的建议学一学那些失落帝国……\n啊,老师您应该不会认为这些建议可行吧……\n不过,Arona最中意的是这个方案,它对每种区划都提出了不同的方向性提纲,改造后,区划的效能几乎翻倍,但造价基本不会改变！很不可思议,对吧！缺点嘛,当然也有……按这个方案的话,每个区域都要设计不同的改造工程……”"
+ BA_ape.2001.a:0 "没关系,就选这个方案吧."
+ BA_ape.2001.a.re:0 "“……欸,那可真是一笔不小的开销,而且很多充满大家的回忆的地方要被覆盖起来……\n历史和回忆,顺便修一部历史……吗？嗯,我们确实应该这么做了,老师.被过去所裹挟就忘记了未来,这可不是我们的作风呢.那么,选个日期把这件事告诉大家吧,改造的事情以及编年史的工作,就让大家一起完成,好吗？”"
+ BA_ape.2001.b:0 "没问题的.放手去做吧."
+
+ modifier_Blue_world_2:0 "2增益"
+ modifier_Blue_world_6:0 "编年史"
+
+ BA_ape.2003.name:0 "编年史:不同的选项支"
+ BA_ape.2003.desc:0 "我们之前的错误为基沃托斯带来了破灭的结局,我们还有一次机会.重要的不是经验,是在这之上的延长线上的,与被扭曲的终点所不同的结果."
+ BA_ape.2003.next:0 "与此相连的选项,我们一定能够找到."
+
+ BA_ape.2004.name:0 "编年史:高塔下盛开的花儿"
+ BA_ape.2004.desc:0 "在基沃托斯中,曾经有一座耸入云宵的巨塔,那里是距离星河最近的地方.在那高塔之下,无数的花儿盛开着,恍若童话故事里的彩绘."
+ BA_ape.2004.next:0 "我们曾经祈祷过这样的日子永远不要结束."
+
+ BA_ape.2005.name:0 "编年史:被灰与火浸染的每日"
+ BA_ape.2005.desc:0 "有些观念无法调和,有些仇恨无法化解.我们为此支付了代价,一份整个基沃托斯都难以承受的代价."
+ BA_ape.2005.next:0 "但是,没有人喜欢灰暗沉重的Bad Ending."
+
+ BA_ape.2006.name:0 "编年史:绝对无法放手的东西"
+ BA_ape.2006.desc:0 "虽然如此,我们仍然没有失去我们最宝贵的东西.就算有过痛苦的事,所有人到最后都能展露笑容."
+ BA_ape.2006.next:0 "我们再次联合,怀抱着同一份梦想和希望."
+
+ BA_ape.2007.name:0 "编年史:星空,星空"
+ BA_ape.2007.desc:0 "一直以来只能仰望的星空,成为了我们新的家园.再也不用害怕被星星们责骂了,这种感觉真是奇妙."
+ BA_ape.2007.next:0 "一份小小的档案就能改变一切."
+
+ BA_ape.2008.name:0 "编年史:碧蓝色的新世界"
+ BA_ape.2008.desc:0 "新的联邦学生会长,新的秩序,新的科技,新的飞船,新的建筑物.新的星球,新的朋友.新的基沃托斯."
+ BA_ape.2008.next:0 "我们的家园,在这碧蓝色的新世界中."
+
+ BA_ape.2009.name:0 "编年史:我们的故事"
+ BA_ape.2009.desc:0 "我们将走向何方由自己来决定,我们当然不会让它结束在这里,我们还要继续讲下去."
+ BA_ape.2009.next:0 "这就是我们用双手亲自写下的,我们的故事."
+
+ BA_ape.2010.name:0 "编年史:尾声"
+ BA_ape.2010.desc:0 "历史的尾声,正是留下新的历史的当下.崭新的基沃托斯屹立在星河之中."
+ BA_ape.2010.next:0 "致那些年幼的神明们."
+
+
+ BA_Another_route:0 "阶段一:城郊区重规划"
+ BA_Flowers:0 "阶段二:民用工业升级"
+ BA_In_flame:0 "阶段三:制造石军工化"
+ BA_Things_cannot_give_up:0 "阶段四:住房改造"
+ BA_Hoshizora:0 "阶段五:大型学园协议"
+ BA_Blue_new_world:0 "阶段六:星际工业规模化"
+ BA_End_of_chronicle:0 "尾声:年幼众神的编年史"
+
+ BA_Another_route_DESC:0 "郊区是学园都市扩展的前沿,混乱的郊区等同于迷惘的未来.(完成后,$BA_ape.2003.tip$)"
+ BA_Flowers_DESC:0 "大量的民用工业集中在自治区内,正好方便进行工业改造.(完成后,$BA_ape.2004.tip$)"
+ BA_In_flame_DESC:0 "制造石具有良好的制造用性能,可以将其用于军用工厂.(完成后,$BA_ape.2005.tip$)"
+ BA_Things_cannot_give_up_DESC:0 "只是片瓦遮头当然不够.(完成后,$BA_ape.2006.tip$)"
+ BA_Hoshizora_DESC:0 "即使是现在,大型学园之间也难免会有不和.找出本质,解决它.(完成后,$BA_ape.2007.tip$)"
+ BA_Blue_new_world_DESC:0 "统筹本星球和其他星球的工业体系,最大化工业产能.(完成后,$BA_ape.2008.tip$)"
+ BA_End_of_chronicle_DESC:0 "学园都市星球的最终改造.水到渠成.(完成后,$BA_ape.2010.tip$)"
+
+ BA_ape.2003.tip:0 "城郊区区划将提供更多§G£job£岗位§!,并且这些岗位的产出都会提升§G25%§!."
+ BA_ape.2004.tip:0 "自治区区划将提供更多§G£job£岗位§!,包括产出£sr_pyroxenes£青辉石的£job£岗位."
+ BA_ape.2005.tip:0 "军工厂区划将提供更多§G£job£岗位§!,同时$job_BA_keystone_foundry$岗位会代替$job_foundry$."
+ BA_ape.2006.tip:0 "学园都市星球上的区划将提供更多£housing£住房和§G建筑槽位§!."
+ BA_ape.2007.tip:0 "学园区划将提供更多§G£job£岗位§!,并且不再减少星球稳定度."
+ BA_ape.2008.tip:0 "舰船与巨构建筑建造速度§G+50%§!,同时所有岗位的£alloys£合金产出都会提升§G10%§!."
+ BA_ape.2010.tip:0 "学园都市星球上的每个§H区划§!将使该星球上的£job£岗位产出的资源§G+2.5%§!,§H宿舍区划§!具有双倍效果."

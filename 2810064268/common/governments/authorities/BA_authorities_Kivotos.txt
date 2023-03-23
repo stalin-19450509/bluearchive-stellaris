@@ -1,0 +1,47 @@
+# 基沃托斯政体
+auth_kivotos = {
+	has_heir = no	# 无继承人
+	can_reform = no	# 不能改革
+	election_type = oligarchic	# 大概是 寡头制？
+	election_term_years = 3000	# 三千年选举一次，民 主 基 沃 托 斯
+	election_term_variance = 20
+	can_have_emergency_elections = yes	# 紧急选举（正常人谁去紧急选举啊）
+	emergency_election_cost = 50
+	max_election_candidates = 5	# 最大选举人数（3000年一选哪里来的选举啊）
+	has_factions = no	# 无派系
+	#can_reform = yes
+	valid_for_released_vassal = no
+	has_agendas = yes	# 允许议程
+	random_weight = {
+		modifier = {
+			factor = 0
+		}
+	}
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_fanatic_purifiers
+			}
+		}
+	}
+	traits = {
+		trait = trait_halo_unreleased
+	}
+	# 这个tag不知道是啥 大概是后续调用要用的？
+	tags = {
+		KIVOTOS_STUDENTS		#允许无限制火力(轰炸)
+		MOD_AUTHORITIES_LIMIT
+		PROJECT_LIMITIED
+	}
+	country_modifier = {
+		country_admin_cap_mult = -0.1
+		country_unity_produces_mult = -0.1
+		empire_size_colonies_mult = -0.2
+		colony_start_num_pops_add = 1
+	}
+}

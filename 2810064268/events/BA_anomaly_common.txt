@@ -1,0 +1,30 @@
+namespace =  BA_SC_events
+# Anomaly Events
+
+#ship_event = {
+#	id = BA_SC_events.1000
+#	title = "BA_SC_events.1000.name"
+#	desc = "BA_SC_events.1000.desc"
+#	picture = GFX_evt_space_debris
+#	show_sound = event_ship_bridge
+#	location = from
+#
+#	is_triggered_only = yes
+#
+#	#trigger = {
+#	#	any_country = { 
+#	#		has_authority = auth_kivotos
+#	#	}
+#	#}
+#	
+#	option = {
+#		name = "BA_SC_events.1000.a"		
+#	}
+#
+#	option = {
+#		name = "BA_SC_events.1000.b"
+#		owner = {
+#			add_modifier = { modifier = test_idk days = 3600 }   #test_idk目前还为不生效内容
+#		}
+#	}
+#}

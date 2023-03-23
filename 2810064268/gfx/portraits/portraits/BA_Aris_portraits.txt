@@ -1,0 +1,153 @@
+portraits = {
+	"Aris01" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris01.dds"
+	}
+	"Aris02" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris02.dds"
+	}
+	"Aris03" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris03.dds"
+	}
+	"Aris04" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris04.dds"
+	}
+	"Aris05" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris05.dds"
+	}
+	"Aris06" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris06.dds"
+	}
+	"Aris08" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris07.dds"
+	}
+	"Aris07" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris08.dds"
+	}
+	"Aris09" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris09.dds"
+	}
+	"Aris10" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris10.dds"
+	}
+	"Aris11" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris11.dds"
+	}
+	"Aris12" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris12.dds"
+	}
+	"Aris13" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris13.dds"
+	}
+	#
+	"Aris_Pr" = {
+		texturefile = "gfx/models/portraits/Custom/Aris/Aris_Pr.dds"
+	}
+}
+
+portrait_groups = {
+	"Aris" = {
+		default = "Aris01"
+		game_setup = {
+			add = {
+				portraits = {
+					"Aris01"
+					"Aris02"
+					"Aris03"
+					"Aris04"
+					"Aris05"
+					"Aris06"
+					"Aris07"
+					"Aris08"
+					"Aris09"
+					"Aris10"
+					"Aris11"
+					"Aris12"
+					"Aris13"
+				}
+			}
+		}
+		#species scope
+		species = {
+			#generic portrait for a species
+			add = {
+				portraits = {
+					"Aris01"
+					"Aris02"
+					"Aris03"
+					"Aris04"
+					"Aris05"
+					"Aris06"
+					"Aris07"
+					"Aris08"
+					"Aris09"
+					"Aris10"
+					"Aris11"
+					"Aris12"
+					"Aris13"
+				}
+			}
+		}
+		#pop scope
+		pop = {
+			#for a specific pop
+			add = {
+				portraits = {
+					"Aris01"
+					"Aris02"
+					"Aris03"
+					"Aris04"
+					"Aris05"
+					"Aris06"
+					"Aris07"
+					"Aris08"
+					"Aris09"
+					"Aris10"
+					"Aris11"
+					"Aris12"
+					"Aris13"
+				}
+			}
+		}
+		#leader scope
+		leader = {
+			#scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					"Aris01"
+					"Aris02"
+					"Aris03"
+					"Aris04"
+					"Aris05"
+					"Aris06"
+					"Aris07"
+					"Aris08"
+					"Aris09"
+					"Aris10"
+					"Aris11"
+					"Aris12"
+					"Aris13"
+				}
+			}
+		}
+		#leader scope 
+		ruler = {
+			add = {
+				portraits = {
+					"Aris01"
+					"Aris02"
+					"Aris03"
+					"Aris04"
+					"Aris05"
+					"Aris06"
+					"Aris07"
+					"Aris08"
+					"Aris09"
+					"Aris10"
+					"Aris11"
+					"Aris12"
+					"Aris13"
+				}
+			}
+		}
+	}
+}

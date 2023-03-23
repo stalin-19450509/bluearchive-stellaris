@@ -1,0 +1,79 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_origin_eden_treaty"
+		texturefile = "gfx/event_pictures/origins/origins_Kivotos_Eden_treaty.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_origin1"
+		texturefile = "gfx/event/BA_origin1.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_origin2"
+		texturefile = "gfx/event/BA_origin2.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_origin3"
+		texturefile = "gfx/event/BA_origin3.dds"
+		alwaystransparent = yes
+	}
+}
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_origin_kyrie"
+		texturefile = "gfx/event_pictures/origins/origins_Kivotos_Kyrie.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_news"
+		texturefile = "gfx/event/BA_news.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_ring_tech"
+		texturefile = "gfx/event/BA_ring_tech.dds"
+		alwaystransparent = yes
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_The_legacy_of_the_dream1"
+		texturefile = "gfx/event/BA_The_legacy_of_the_dream1.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_hina1"
+		texturefile = "gfx/event/BA_HINA1.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_yuuka_no_bag"
+		texturefile = "gfx/event/BA_yuuka_no_bag.dds"
+		alwaystransparent = yes
+	}
+}

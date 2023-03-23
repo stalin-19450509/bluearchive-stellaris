@@ -1,0 +1,2 @@
+# Component Tags
+weapon_type_Kivotos

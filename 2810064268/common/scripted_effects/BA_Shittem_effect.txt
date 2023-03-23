@@ -1,0 +1,560 @@
+#获取资源数量（界面显示用） country scope
+BA_Shittem_get_stockpile = {
+	#### 初始化
+	remove_country_flag = BA_negative_pyroxenes
+	remove_country_flag = BA_negative_keystone
+	#存量
+	set_variable = {
+		which = BA_var_stockpile_pyroxenes
+		value = 0
+	}
+	set_variable = {
+		which = BA_var_stockpile_keystone
+		value = 0
+	}
+	set_variable = {
+		which = BA_var_stockpile_energy
+		value = 0
+	}
+	#月度
+	set_variable = {
+		which = BA_var_income_pyroxenes
+		value = 0
+	}
+	set_variable = {
+		which = BA_var_income_keystone
+		value = 0
+	}
+	#### 载入
+	#存量
+	export_resource_stockpile_to_variable = {
+		resource = sr_pyroxenes
+		variable = BA_var_stockpile_pyroxenes
+	}
+	export_resource_stockpile_to_variable = {
+		resource = sr_keystone
+		variable = BA_var_stockpile_keystone
+	}
+	export_resource_stockpile_to_variable = {
+		resource = sr_eligma
+		variable = BA_var_stockpile_energy
+	}
+	#月度
+	export_resource_income_to_variable = {
+		resource = sr_pyroxenes
+		variable = BA_var_income_pyroxenes
+	}
+	export_resource_income_to_variable = {
+		resource = sr_keystone
+		variable = BA_var_income_keystone
+	}
+	#### 设置
+	if = {
+		limit = {
+			check_variable = {
+				which = BA_var_income_pyroxenes
+				value < 0
+			}
+		}
+		set_country_flag = BA_negative_pyroxenes
+		multiply_variable = {
+			which = BA_var_income_pyroxenes
+			value = -1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = BA_var_income_keystone
+				value < 0
+			}
+		}
+		set_country_flag = BA_negative_keystone
+		multiply_variable = {
+			which = BA_var_income_keystone
+			value = -1
+		}
+	}
+}
+
+#### 社团
+#社团容量相关 country scope
+BA_club_cap_add = {
+	change_variable = {
+		which = BA_Club_limit
+		value = 1
+	}
+	BA_club_cap_recount = yes
+	BA_club_set_modifier = yes
+}
+
+BA_club_cap_use = {
+	change_variable = {
+		which = BA_Club_count
+		value = 1
+	}
+	BA_club_cap_recount = yes
+	BA_club_set_modifier = yes
+}
+
+BA_club_cap_recount = {
+	set_variable = {
+		which = BA_Club_check
+		value = BA_Club_limit
+	}
+	subtract_variable = {
+		which = BA_Club_check
+		value = BA_Club_count
+	}
+}
+
+BA_club_resource_recount = {
+	set_variable = {
+		which = BA_club_cap_consumer_goods_cost
+		value = BA_Club_limit
+	}
+	multiply_variable = {
+		which = BA_club_cap_consumer_goods_cost
+		value = 500
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = BA_Club_limit
+				value < 3
+			}
+		}
+		set_variable = {
+			which = BA_club_cap_pyroxenes_cost
+			value = 0
+		}
+	}
+	else = {
+		set_variable = {
+			which = BA_club_cap_pyroxenes_cost
+			value = BA_Club_limit
+		}
+		subtract_variable = {
+			which = BA_club_cap_pyroxenes_cost
+			value = 2
+		}
+		multiply_variable = {
+			which = BA_club_cap_pyroxenes_cost
+			value = 100
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = BA_Club_limit
+				value < 7
+			}
+		}
+		set_variable = {
+			which = BA_club_cap_keystone_cost
+			value = 0
+		}
+	}
+	else = {
+		set_variable = {
+			which = BA_club_cap_keystone_cost
+			value = BA_Club_limit
+		}
+		subtract_variable = {
+			which = BA_club_cap_keystone_cost
+			value = 6
+		}
+		multiply_variable = {
+			which = BA_club_cap_keystone_cost
+			value = 300
+		}
+	}
+}
+
+BA_club_set_modifier = {
+	if = {
+		limit = {
+			check_variable = {
+				which = BA_Club_check
+				value >= 0
+			}
+		}
+		remove_modifier = modifier_BA_club_overload_1
+		remove_modifier = modifier_BA_club_overload_2
+		remove_modifier = modifier_BA_club_overload_3
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = BA_Club_check
+				value >= -1
+			}
+		}
+		add_modifier = {
+			modifier = modifier_BA_club_overload_1
+		}
+		remove_modifier = modifier_BA_club_overload_2
+		remove_modifier = modifier_BA_club_overload_3
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = BA_Club_check
+				value >= -2
+			}
+		}
+		remove_modifier = modifier_BA_club_overload_1
+		add_modifier = {
+			modifier = modifier_BA_club_overload_2
+		}
+		remove_modifier = modifier_BA_club_overload_3
+	}
+	else = {
+		remove_modifier = modifier_BA_club_overload_1
+		remove_modifier = modifier_BA_club_overload_2
+		add_modifier = {
+			modifier = modifier_BA_club_overload_3
+		}
+	}
+}
+
+#清点赞助情况
+BA_club_check_sponse = {
+	set_variable = {
+		which = BA_club_to_sponse
+		value = 0
+	}
+	# TODO：随社团更新
+	if = {
+		limit = {
+			has_country_flag = BA_Game_development_department
+			NOT = {
+				has_country_flag = BA_club_Game_development_department_sponsoring
+			}
+		}
+		change_variable = {
+			which = BA_club_to_sponse
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = BA_Engineering_club
+			NOT = {
+				has_country_flag = BA_club_Engineering_club_sponsoring
+			}
+		}
+		change_variable = {
+			which = BA_club_to_sponse
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = BA_Veritas
+			NOT = {
+				has_country_flag = BA_club_Veritas_sponsoring
+			}
+		}
+		change_variable = {
+			which = BA_club_to_sponse
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = BA_Foreclosure_task_force
+			NOT = {
+				has_country_flag = BA_club_Foreclosure_task_force_sponsoring
+			}
+		}
+		change_variable = {
+			which = BA_club_to_sponse
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = BA_Teaparty
+			NOT = {
+				has_country_flag = BA_club_Teaparty_sponsoring
+			}
+		}
+		change_variable = {
+			which = BA_club_to_sponse
+			value = 1
+		}
+	}
+	set_variable = {
+		which = BA_club_sponse_cost
+		value = BA_club_to_sponse
+	}
+	multiply_variable = {
+		which = BA_club_sponse_cost
+		value = 1600
+	}
+}
+
+#赞助所有社团
+BA_club_sponse_all = {
+	# TODO：随社团更新
+	if = {
+		limit = {
+			has_country_flag = BA_Game_development_department
+			NOT = {
+				has_country_flag = BA_club_Game_development_department_sponsoring
+			}
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Game_development_department_sponsoring
+			days = 720
+		}
+		change_variable = {
+			which = Game_development_department
+			value = 40
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = BA_Engineering_club
+			NOT = {
+				has_country_flag = BA_club_Engineering_club_sponsoring
+			}
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Engineering_club_sponsoring
+			days = 720
+		}
+		change_variable = {
+			which = Engineering_club
+			value = 40
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = BA_Veritas
+			NOT = {
+				has_country_flag = BA_club_Veritas_sponsoring
+			}
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Veritas_sponsoring
+			days = 720
+		}
+		change_variable = {
+			which = Veritas
+			value = 40
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = BA_Foreclosure_task_force
+			NOT = {
+				has_country_flag = BA_club_Foreclosure_task_force_sponsoring
+			}
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Foreclosure_task_force_sponsoring
+			days = 720
+		}
+		change_variable = {
+			which = Foreclosure_task_force
+			value = 40
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = BA_Teaparty
+			NOT = {
+				has_country_flag = BA_club_Teaparty_sponsoring
+			}
+		}
+		set_timed_country_flag = {
+			flag = BA_club_Teaparty_sponsoring
+			days = 720
+		}
+		change_variable = {
+			which = Teaparty
+			value = 40
+		}
+	}
+	set_variable = {
+		which = BA_club_to_sponse
+		value = 0
+	}
+}
+
+#工程部开发武器 country scope
+BA_Engineering_club_weapon_develop = {
+	random_list = {
+		## 一级武器
+		#射手座之夜
+		5000 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = Sagittarius_night_developed
+					NOR = {
+						has_technology = tech_BA_spaceship_automation_1
+						has_technology = tech_flak_batteries_1
+						has_technology = tech_pd_tracking_1
+					}
+				}
+			}
+			country_event = {
+				id = BA_club.1111
+			}
+		}
+		#五七五式掷弹筒
+		5000 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = Grenadiers_575_developed
+					NOR = {
+						has_technology = tech_BA_spaceship_automation_1
+						has_technology = tech_starbase_2
+					}
+				}
+			}
+			country_event = {
+				id = BA_club.1112
+			}
+		}
+		#刚柔并济之心
+		5000 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = Soft_determination_developed
+					NOR = {
+						has_technology = tech_BA_spaceship_automation_1
+						has_technology = tech_corvette_hull_2
+					}
+				}
+			}
+			country_event = {
+				id = BA_club.1116
+			}
+		}
+		## 二级武器
+		#爱迪娜3号
+		3000 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = Adena_3_developed
+					NOR = {
+						has_technology = tech_BA_spaceship_automation_2
+						has_technology = tech_strike_craft_1
+					}
+				}
+			}
+			country_event = {
+				id = BA_club.1113
+			}
+		}
+		#独特点子
+		3000 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = Unique_idea_developed
+					NOR = {
+						has_technology = tech_BA_spaceship_automation_2
+						has_technology = tech_lasers_4
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = Flashy_inspiration_developed
+			}
+			country_event = {
+				id = BA_club.1117
+			}
+		}
+		#清爽灵感
+		3000 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = Flashy_inspiration_developed
+					NOR = {
+						has_technology = tech_BA_spaceship_automation_2
+						has_technology = tech_lasers_4
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = Unique_idea_developed
+			}
+			country_event = {
+				id = BA_club.1118
+			}
+		}
+		#爆裂一击
+		3000 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = Adena_3_developed
+					NOR = {
+						has_technology = tech_BA_spaceship_automation_2
+						has_technology = tech_interstellar_fleet_traditions
+					}
+				}
+			}
+			country_event = {
+				id = BA_club.1113
+			}
+		}
+		## 三级部件
+		#奇幻色彩
+		1000 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = Fantacy_colors_developed
+					NOR = {
+						has_technology = tech_BA_spaceship_automation_2
+						has_technology = tech_battleships
+					}
+				}
+			}
+			country_event = {
+				id = BA_club.1114
+			}
+		}
+		## 四级部件
+		#超新星
+		500 = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = SuperNova_developed
+					NOT = {
+						has_technology = tech_BA_spaceship_automation_3
+					}
+				}
+			}
+			country_event = {
+				id = BA_club.1115
+			}
+		}
+		## 空队列
+		1 = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = BA_block_blank_weapon_opinion
+					}
+				}
+				country_event = {
+					id = BA_club.1110
+				}
+			}
+		}
+	}
+}

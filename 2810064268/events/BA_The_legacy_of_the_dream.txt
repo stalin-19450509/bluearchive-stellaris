@@ -1,0 +1,53 @@
+namespace = BA_The_legacy_of_the_dream
+#当选
+country_event = {
+	id = BA_The_legacy_of_the_dream.0001
+	is_triggered_only = yes
+	title = "BA_The_legacy_of_the_dream.0001.name"
+	desc = "BA_The_legacy_of_the_dream.0001.desc"
+	picture = GFX_BA_The_legacy_of_the_dream1
+	option = {
+		name = BA_The_legacy_of_the_dream.0001.a
+		default_hide_option = yes
+		country_event = {
+			id = BA_The_legacy_of_the_dream.0002
+		}
+	}
+	option = {
+		name = BA_The_legacy_of_the_dream.0001.b
+		default_hide_option = yes
+		country_event = {
+			id = BA_The_legacy_of_the_dream.0002
+		}
+	}
+}
+
+country_event = {
+	id = BA_The_legacy_of_the_dream.0002
+	is_triggered_only = yes
+	title = "BA_The_legacy_of_the_dream.0002.name"
+	desc = "BA_The_legacy_of_the_dream.0002.desc"
+	picture = GFX_BA_origin3
+	option = {
+		name = BA_The_legacy_of_the_dream.0002.a
+		default_hide_option = yes
+	}
+}
+
+#光环研究后续
+country_event = {
+	id = BA_The_legacy_of_the_dream.0003
+	is_triggered_only = yes
+	title = "BA_The_legacy_of_the_dream.0003.name"
+	desc = "BA_The_legacy_of_the_dream.0003.desc"
+	picture = GFX_BA_Kivotos_highway
+	option = {
+		name = BA_The_legacy_of_the_dream.0003.a
+		# hidden_effect = {
+		# 	country_event = {
+		# 		id = BA_ape.1001
+		# 		days = 30
+		# 	}
+		# }
+	}	
+}

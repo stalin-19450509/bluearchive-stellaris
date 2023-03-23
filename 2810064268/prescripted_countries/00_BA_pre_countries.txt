@@ -1,0 +1,148 @@
+BA_ETO = {
+	ship_prefix = "ETOSS"
+	species = {
+		class = "Schale"
+		portrait = "Schale"
+		name = "species_name_BA"
+		plural = "species_plural_BA"
+		adjective = "species_adjective_BA"
+		name_list = "Schale"
+		gender = female
+		trait = "trait_halo_unreleased"
+		trait = "trait_tactical_training"
+		trait = "trait_starlink"
+		#trait = "trait_explore"
+		#trait = "trait_emergency"
+		trait = "trait_food_1"
+		trait = "trait_loophole"
+		trait = "trait_good_students"
+		trait = "trait_ship_slow"
+	}
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_xenophile"
+	ethic = "ethic_militarist"
+	name = "EMPIRE_DESIGN_BA_ETO"
+	adjective = "PRESCRIPTED_adjective_BA_ETO"
+	authority = "auth_kivotos"
+	government = "gov_Kivotos_country"
+	planet_name = "NAME_ETO"
+	planet_class = "pc_continental"
+	initializer = "BA_Kivotos_sys"
+	system_name = "SYSTEM_BA_ETO"
+	#graphical_culture = "humanoid_01"
+	graphical_culture = "ba_01"
+	city_graphical_culture = "ba_01"
+	advisor_voice_type = "l_english"
+	flags = {
+		BA_ETO
+		custom_start_screen
+	}
+	empire_flag = {
+		icon = {
+			category = "ba"
+			file = "ba_flags_08.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "double_triangles.dds"
+		}
+		colors = {
+			"intense_blue"
+			"satin_burgundy"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender = female
+		name = "PRESCRIPTED_ruler_name_BA_ETO"
+		portrait = "BA_19"
+		ruler_title = scripted_student_federal_president
+		ruler_title_female = scripted_student_federal_president
+		leader_class = ruler
+		texture = 0
+	}
+	spawn_as_fallen = no
+	ignore_portrait_duplication = no
+	room = "BA_01_room"
+	civics = {
+		"civic_Trinity"
+		"civic_Kivotos"
+	}
+	name_list = "Schale"
+	origin = "origin_Kivotos_Eden_treaty"
+}
+
+BA_Arius = {
+	ship_prefix = "NPASS"
+	species = {
+		class = "Schale"
+		portrait = "Schale"
+		name = "species_name_BA"
+		plural = "species_plural_BA"
+		adjective = "species_adjective_BA"
+		name_list = "Schale"
+		gender = female
+		trait = "trait_halo_unreleased"
+		trait = "trait_starlink"
+		#trait = "trait_explore"
+		#trait = "trait_emergency"
+		trait = "trait_ship_fast"
+		trait = "trait_loophole"
+		trait = "trait_exoskeleton_armor"
+	}
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_fanatic_militarist"
+	#ethic = "ethic_spiritualist"
+	name = "EMPIRE_DESIGN_BA_Arius"
+	adjective = "PRESCRIPTED_adjective_BA_Arius"
+	authority = "auth_kivotos"
+	government = "gov_Kivotos_country"
+	#沿用ETO
+	planet_name = "NAME_ETO"
+	planet_class = "pc_continental"
+	initializer = "BA_Kivotos_sys"
+	system_name = "SYSTEM_BA_ETO"
+	#graphical_culture = "humanoid_01"
+	graphical_culture = "ba_01"
+	city_graphical_culture = "ba_01"
+	advisor_voice_type = "l_english"
+	flags = {
+		BA_Arius
+		custom_start_screen
+	}
+	empire_flag = {
+		icon = {
+			category = "ba"
+			file = "ba_flags_13.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "double_triangles.dds"
+		}
+		colors = {
+			"intense_blue"
+			"satin_burgundy"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender = female
+		name = "PRESCRIPTED_ruler_name_BA_Arius"
+		portrait = "BA_136"
+		ruler_title = scripted_student_federal_president
+		ruler_title_female = scripted_student_federal_president
+		leader_class = "ruler"
+		texture = 0
+	}
+	spawn_as_fallen = no
+	ignore_portrait_duplication = no
+	room = "personality_hegemonic_imperialists_room"
+	civics = {
+		"civic_Kivotos"
+		"civic_Omnia_Vanitas"
+	}
+	name_list = "Schale"
+	origin = "origin_Kivotos_Kyrie"
+}

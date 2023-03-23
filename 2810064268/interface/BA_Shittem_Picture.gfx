@@ -1,0 +1,79 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_Aloha"
+		texturefile = "gfx/event/Shittem_Aloha.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Shittem_Arona_contact"
+		texturefile = "gfx/event/Shittem_Arona_contact.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_BA_chronicle_1"
+		texturefile = "gfx/event/chronicle/chronicle1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_chronicle_2"
+		texturefile = "gfx/event/chronicle/chronicle2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_chronicle_3"
+		texturefile = "gfx/event/chronicle/chronicle3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_chronicle_4"
+		texturefile = "gfx/event/chronicle/chronicle4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_chronicle_5"
+		texturefile = "gfx/event/chronicle/chronicle5.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_chronicle_6"
+		texturefile = "gfx/event/chronicle/chronicle6.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_chronicle_7"
+		texturefile = "gfx/event/chronicle/chronicle7.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_chronicle_8"
+		texturefile = "gfx/event/chronicle/chronicle8.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_BA_Halo1"
+		texturefile = "gfx/event/Halo_ap/halo1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Halo2"
+		texturefile = "gfx/event/Halo_ap/halo2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Halo3"
+		texturefile = "gfx/event/Halo_ap/halo3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Halo4"
+		texturefile = "gfx/event/Halo_ap/halo4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Halo5"
+		texturefile = "gfx/event/Halo_ap/halo5.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+}

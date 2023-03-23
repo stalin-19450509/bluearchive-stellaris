@@ -1,0 +1,1138 @@
+﻿# 基沃托斯 namelist
+Schale = {
+	randomized = no
+	language = "l_simp_chinese"
+	ship_names = {
+		generic = {
+			#HUM1_SHIP_KhutmatheGreat HUM1_SHIP_RhuntheUnyielding HUM1_SHIP_KashnakthePatient HUM1_SHIP_RoktartheBrave HUM1_SHIP_SuulnartheStalwart HUM1_SHIP_KhebbtheFierce HUM1_SHIP_LasnemtheUnforgiving HUM1_SHIP_MendracktheCunning HUM1_SHIP_YndantheStrong HUM1_SHIP_PandacktheWise HUM1_SHIP_IalnesstheSuperior HUM1_SHIP_AnabantheImpervious HUM1_SHIP_GalatotheJust HUM1_SHIP_HempesttheFearless HUM1_SHIP_UtaktheUnexpected HUM1_SHIP_JhanatheBold HUM1_SHIP_HitaabtheSilent HUM1_SHIP_RhebnartheCruel HUM1_SHIP_TetrantheVile HUM1_SHIP_ElesnatheFortunate HUM1_SHIP_BerektheClever HUM1_SHIP_PorsamtheShadow HUM1_SHIP_LurtheUnpredictable HUM1_SHIP_MantartheDevious HUM1_SHIP_AshnutheSober HUM1_SHIP_PerektheMagnanimous HUM1_SHIP_HolttheMagnificent HUM1_SHIP_JesslurtheSteadfast HUM1_SHIP_OmbektheStout HUM1_SHIP_BynththeFirm HUM1_SHIP_GorontheShining HUM1_SHIP_HhomevtheCourageous HUM1_SHIP_DonabbtheResolute HUM1_SHIP_SelraktheDependable HUM1_SHIP_FarassatheSpirited HUM1_SHIP_TorktheDetermined HUM1_SHIP_TipuktheEarnest HUM1_SHIP_UrbektheUnhesitant HUM1_SHIP_IllvaghtheTenacious HUM1_SHIP_FajutheStubborn HUM1_SHIP_KhabbashtheFurious HUM1_SHIP_AppantheJoyless HUM1_SHIP_KetrilltheBright HUM1_SHIP_LessajatheRuinous HUM1_SHIP_IssatheJudgmental HUM1_SHIP_LethamtheDecisive HUM1_SHIP_RothatheInvincible HUM1_SHIP_FosstheQuick HUM1_SHIP_JolkegtheAgile HUM1_SHIP_TetreggtheNimble HUM1_SHIP_GhuumtheMerciful HUM1_SHIP_RothinkatheEnlightened HUM1_SHIP_KhambatheMerciless HUM1_SHIP_LinntyltheSharp HUM1_SHIP_OnakbaltheAble HUM1_SHIP_HoftahttheAvenger HUM1_SHIP_MenesiktheBlessed HUM1_SHIP_RothnaktheBrash HUM1_SHIP_LahvontheImpudent HUM1_SHIP_RhasstheConqueror HUM1_SHIP_IhlmactheCrusader HUM1_SHIP_JohvontheExecutioner HUM1_SHIP_PahnitheGlorious HUM1_SHIP_EsslontheGood HUM1_SHIP_UntabbtheGrim HUM1_SHIP_NehdabantheHoly HUM1_SHIP_NothantheImperious HUM1_SHIP_GalathortheHunter HUM1_SHIP_GaraltheLiberator HUM1_SHIP_InniktheMartyr HUM1_SHIP_AvathimtheMighty HUM1_SHIP_JimmabthePowerful HUM1_SHIP_ComboctheProud HUM1_SHIP_VarkhimthePrudent HUM1_SHIP_KonshatheRedeemer HUM1_SHIP_KadmuntheRestorer HUM1_SHIP_KhaagultheRighteous HUM1_SHIP_YhlattheSavior HUM1_SHIP_HahjumtheGallant HUM1_SHIP_FalatirtheValiant HUM1_SHIP_FahvimtheVictorious HUM1_SHIP_ListhimtheWarrior HUM1_SHIP_BathuntheChampion HUM1_SHIP_HihmaltheScourge HUM1_SHIP_TatharontheDominator HUM1_SHIP_DorlantheTyrant HUM1_SHIP_KarvulantheDamned HUM1_SHIP_CyssaktheDignified HUM1_SHIP_VeltassatheOrdained HUM1_SHIP_OssanatheFounder HUM1_SHIP_UsaltheBuilder HUM1_SHIP_HissnaktheFair HUM1_SHIP_ElemanotheProdigal HUM1_SHIP_EtherontheUnifier HUM1_SHIP_OthanatheBenign HUM1_SHIP_OlymactheLearned HUM1_SHIP_TiltartheYoung HUM1_SHIP_TimaphontheImplacable HUM1_SHIP_VeldiktheMerry HUM1_SHIP_JussannontheHermit HUM1_SHIP_IrevantheBitter HUM1_SHIP_RussutheSour HUM1_SHIP_RemoltheAbandoned HUM1_SHIP_PetracktheSolitary HUM1_SHIP_ThaloththeJusticiar HUM1_SHIP_AsmacintheGracious HUM1_SHIP_TarallatheGraceful HUM1_SHIP_EskemantheBlue HUM1_SHIP_MuntattheYellow HUM1_SHIP_RatallatheRed HUM1_SHIP_TulakintheWhite HUM1_SHIP_EffkartheBlack HUM1_SHIP_LisamonttheGreen HUM1_SHIP_LomatiktheButcher HUM1_SHIP_RalpakintheDefender HUM1_SHIP_JhullatheProtector HUM1_SHIP_JhutanatheElder HUM1_SHIP_DonogtheApogee HUM1_SHIP_DassmaththeFighter HUM1_SHIP_DathanatheMystic HUM1_SHIP_DarmulltheMysterious HUM1_SHIP_UlbanoktheEquitable HUM1_SHIP_BathartheAmicable HUM1_SHIP_BemalontheDistrustful HUM1_SHIP_HannakontheSacrificer HUM1_SHIP_HaghonontheWatchful HUM1_SHIP_HephanirtheSavage HUM1_SHIP_ErkmaltheProvident HUM1_SHIP_SuthnartheProvider HUM1_SHIP_MonnobaktheSentinel HUM1_SHIP_SelengtheVenerable HUM1_SHIP_SalaastheRevered HUM1_SHIP_SuthmartheHardy HUM1_SHIP_YllmassatheReformer HUM1_SHIP_TessmatheMonstrous HUM1_SHIP_BoroktheAffable HUM1_SHIP_KhamthatheIllustrious HUM1_SHIP_KamkaktheCelebrated HUM1_SHIP_DamghallatheHeroic HUM1_SHIP_JaffabtheDevoted HUM1_SHIP_MitgapptheHumble HUM1_SHIP_GaffimultheImpetuous HUM1_SHIP_UssnaktheVigilant HUM1_SHIP_PetrobontheContender HUM1_SHIP_PagallumtheLoyal HUM1_SHIP_PeshnabtheFaithful HUM1_SHIP_ItrambuntheWhirlwind HUM1_SHIP_TakjamtheMemorable HUM1_SHIP_TakkramtheLawgiver HUM1_SHIP_FylimatheLawful HUM1_SHIP_PetessatheSymbol HUM1_SHIP_ElsamtheSlighted HUM1_SHIP_CognattheSlayer HUM1_SHIP_CarackontheGuardian HUM1_SHIP_NimpactheObserver HUM1_SHIP_IllajontheAstute HUM1_SHIP_GimalbonthePerceptive HUM1_SHIP_RommackintheSly HUM1_SHIP_PolonartheInsidious HUM1_SHIP_CampramarthePernicious HUM1_SHIP_LimpoktheBaneful HUM1_SHIP_RuthjaratheIcon HUM1_SHIP_LimathartheMajestic HUM1_SHIP_KajanatheSwift HUM1_SHIP_RukimartheRenowned HUM1_SHIP_PatanatheDistinguished HUM1_SHIP_HishmatheBrooding HUM1_SHIP_KorgitheUnstable HUM1_SHIP_KodramtheSuave HUM1_SHIP_DonjabtheTactician
+			"终幕：毁灭者"
+			"Wine-red Admire"
+			"日常餐具"
+			"本大爷的特制手枪"
+			"爱之鞭"
+			"WHITE FANG 465"
+			"Multi-tactical"
+			"奇幻色彩"
+			"正义的显现"
+			"Et Omnia Vanitas"
+			"Justice Black"
+			"现场演唱会用T恤加农炮"
+			"音量抑制器"
+			"趣味烟花"
+			"圣徒掠夺者"
+			"Identity"
+			"Scorpius"
+			"阿里乌斯制突击步枪"
+			"深不可测"
+			"恶魔的咆哮"
+			"Trick or Trick"
+			"供餐部防身用枪typeA"
+			"清爽薄荷巧克力"
+			"逻辑与原因"
+			"自动瞄准"
+			"快乐微笑"
+			"诚意"
+			"第3号瓦尔基里制式手枪"
+			"Sagittarius Night"
+			"吹飞"
+			"图书馆守则"
+			"安全"
+			"Echolink"
+			"供餐部防身用枪typeB"
+			"爆裂一击"
+			"千禧制最新型哑铃"
+			"鹰眼"
+			"荷鲁斯之眼"
+			"双龙"
+			"自动喷漆"
+			"My Necessity"
+			"血与火药"
+			"清爽灵感"
+			"чистка"
+			"喵冲"
+			"后门"
+			"балала́йка"
+			"RABBIT-26式机关枪"
+			"RABBIT-31式短机关枪"
+			"RABBIT-39式来福枪"
+			"Rabbit-224式手枪"
+			"Mabinogion"
+			"大师零"
+			"晚餐守则"
+			"小型机关枪Ⅴ"
+			"无声解决"
+			"睡眠伴侣Ⅱ"
+			"常识"
+			"穿刺"
+			"独特点子"
+			"真诚的愿望"
+			"Support Pointer"
+			"教授K"
+			"无差别打击"
+			"甜蜜驾驶"
+			"Верность"
+			"第14号瓦尔基里制式步枪"
+			"理想化"
+			"泉奈流的超级忍具"
+			"光之剑：超新星"
+			"Beyond the Rumination"
+			"Hotshot"
+			"深红灾厄"
+			"刚柔并济之心"
+			"医疗应急包"
+			"祈祷"
+			"万魔殿制式手枪"
+			"月咏流冲锋枪"
+			"五七五式榴弹炮"
+			"樱花砰砰"
+			"怜悯"
+			"惊喜派对"
+			"战术治疗"
+			"满流溢流喷枪"
+		}
+		corvette = {
+		}
+		destroyer = {
+		}
+		cruiser = {
+		}
+		battleship = {
+		}
+		titan = {
+		}
+		colossus = {
+		}
+		science = {
+		}
+		colonizer = {
+		}
+		constructor = {
+		}
+		transport = {
+		}
+		military_station_small = {
+		}
+		ion_cannon = {
+		}
+		BA_missile_ship = {
+		}
+	}
+	ship_class_names = {
+		generic = {
+			"十字军"
+			"肃清君1号"
+			"虎丸"
+			"鼠助"
+			"小雷"
+			"11号"
+			"雨云"
+			"终幕：毁灭者"
+			"Wine-red Admire"
+			"日常餐具"
+			"本大爷的特制手枪"
+			"爱之鞭"
+			"WHITE FANG 465"
+			"Multi-tactical"
+			"奇幻色彩"
+			"正义的显现"
+			"Et Omnia Vanitas"
+			"Justice Black"
+			"现场演唱会用T恤加农炮"
+			"音量抑制器"
+			"趣味烟花"
+			"圣徒掠夺者"
+			"Identity"
+			"Scorpius"
+			"阿里乌斯制突击步枪"
+			"深不可测"
+			"恶魔的咆哮"
+			"Trick or Trick"
+			"供餐部防身用枪typeA"
+			"清爽薄荷巧克力"
+			"逻辑与原因"
+			"自动瞄准"
+			"快乐微笑"
+			"诚意"
+			"第3号瓦尔基里制式手枪"
+			"Sagittarius Night"
+			"吹飞"
+			"图书馆守则"
+			"安全"
+			"Echolink"
+			"供餐部防身用枪typeB"
+			"爆裂一击"
+			"千禧制最新型哑铃"
+			"鹰眼"
+			"荷鲁斯之眼"
+			"双龙"
+			"自动喷漆"
+			"My Necessity"
+			"血与火药"
+			"清爽灵感"
+			"чистка"
+			"喵冲"
+			"后门"
+			"балала́йка"
+			"RABBIT-26式机关枪"
+			"RABBIT-31式短机关枪"
+			"RABBIT-39式来福枪"
+			"Rabbit-224式手枪"
+			"Mabinogion"
+			"大师零"
+			"晚餐守则"
+			"小型机关枪Ⅴ"
+			"无声解决"
+			"睡眠伴侣Ⅱ"
+			"常识"
+			"穿刺"
+			"独特点子"
+			"真诚的愿望"
+			"Support Pointer"
+			"教授K"
+			"无差别打击"
+			"甜蜜驾驶"
+			"Верность"
+			"第14号瓦尔基里制式步枪"
+			"理想化"
+			"泉奈流的超级忍具"
+			"光之剑：超新星"
+			"Beyond the Rumination"
+			"Hotshot"
+			"深红灾厄"
+			"刚柔并济之心"
+			"医疗应急包"
+			"祈祷"
+			"万魔殿制式手枪"
+			"月咏流冲锋枪"
+			"五七五式榴弹炮"
+			"樱花砰砰"
+			"怜悯"
+			"惊喜派对"
+			"战术治疗"
+			"满流溢流喷枪"
+		}
+	}
+	# 默认舰船名字
+	fleet_names = {
+		random_names = {
+			夏莱第一特遣队
+			夏莱第二特遣队
+			夏莱第三特遣队
+			圣三一正义实现委员会舰队
+			格黑娜风纪委员会舰队
+			阿拜多斯对策委员会舰队
+			千年C&C特种舰队
+			瓦尔基里执法舰队
+			红冬亲卫舰队
+			山海经玄武商会舰队
+			百鬼夜行联合舰队
+		}
+		sequential_name = HUM1_xxARMADA_ORD
+	}
+	# 陆军名字吧？
+	army_names = {
+		machine_defense = {
+			sequential_name = HUM1_xxGROUNDSHIELD_ORD
+		}
+		machine_assault_1 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		machine_assault_2 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		machine_assault_3 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		defense_army = {
+			sequential_name = HUM1_xxGROUNDSHIELD_ORD
+		}
+		assault_army = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		slave_army = {
+			sequential_name = HUM1_xxWARPEONS_ORD
+		}
+		clone_army = {
+			sequential_name = HUM1_xxFIGHTINGCLONES_ORD
+		}
+		undead_army = {
+			sequential_name = HUM1_xxDREADPEONS_ORD
+		}
+		robotic_army = {
+			sequential_name = HUM1_xxROBOTICLANCERS_ORD
+		}
+		robotic_defense_army = {
+			sequential_name = HUM1_xxROBOTICPROTECTORS_ORD
+		}
+		psionic_army = {
+			sequential_name = HUM1_xxWARLOCKCOMPANY_ORD
+		}
+		xenomorph_army = {
+			sequential_name = HUM1_xxDEATHFLOCK_ORD
+		}
+		gene_warrior_army = {
+			sequential_name = HUM1_xxSTARKNIGHTS_ORD
+		}
+		occupation_army = {
+			sequential_name = HUM1_xxOCCUPATIONSHIELD_ORD
+		}
+		robotic_occupation_army = {
+			sequential_name = HUM1_xxROBOTICOCCUPIERS_ORD
+		}
+		primitive_army = {
+			sequential_name = HUM1_PRIMITIVEARMYxx_SEQ
+		}
+		industrial_army = {
+			sequential_name = HUM1_INDUSTRIALARMYxx_SEQ
+		}
+		postatomic_army = {
+			sequential_name = HUM1_POSTATOMICARMYxx_SEQ
+		}
+	}
+	# 我以为是殖民地名字 后来发现是母星系行星名字）
+	planet_names = {
+		generic = {
+			names = {
+				格黑娜
+				阿拜多斯
+				圣三一
+				千年
+				瓦尔基里
+				红冬
+				山海经
+				百鬼夜行
+				阿里乌斯
+			}
+		}
+		pc_desert = {
+			names = {
+			}
+		}
+		pc_tropical = {
+			names = {
+			}
+		}
+		pc_arid = {
+			names = {
+			}
+		}
+		pc_continental = {
+			names = {
+			}
+		}
+		pc_ocean = {
+			names = {
+			}
+		}
+		pc_tundra = {
+			names = {
+			}
+		}
+		pc_arctic = {
+			names = {
+			}
+		}
+		pc_savannah = {
+			names = {
+			}
+		}
+		pc_alpine = {
+			names = {
+			}
+		}
+	}
+	# 预设角色名（但是总是和立绘对不上）
+	character_names = {
+		default = {
+			# A complete name
+			full_names_male = {
+				春原瞬
+				银镜伊织
+				空崎日奈
+				白洲梓
+				砂狼白子
+				狮子堂泉
+				陆八魔阿露
+				黑见芹香
+				浅黄睦月
+				鳄渊茜里
+				花冈柚子
+				连河切里诺
+				才羽绿
+				小涂真纪
+				美甘尼禄
+				乙花菫
+				剑先鹤城
+				赤司纯子
+				才羽桃衣
+				十六夜野宫
+				羽川莲见
+				合欢垣吹雪
+				朝比奈菲娜
+				若叶日向
+				狐坂若藻
+				角楯花凛
+				天童爱丽丝
+				久田泉奈
+				黑馆晴奈
+				和乐千世
+				千鸟满
+				一之濑明日奈
+				静山真白
+				药子沙绫
+				猫冢响
+				空井咲
+				各务千寻
+				白石歌原
+				伊原木好美
+				和泉元艾米
+				早濑优香
+				伊草春香
+				月雪宫子
+				池仓玛丽娜
+				小鸟游星野
+				春日椿
+				大野月咏
+				柚鸟夏
+				古关忧
+				中务桐乃
+				鬼方佳代子
+				守月铃美
+				霞沢美游
+				阿慈谷日富美
+				水羽三森
+				豊见琴里
+				佐城巴
+				室笠茜
+				火宫千夏
+				勇美枫
+				小钩晴
+				栗村爱莉
+				天见和香
+				圆堂志美子
+				牛牧朱莉
+				音濑小玉
+				天雨亚子
+				伊落玛丽
+				河和静子
+				下江小春
+				浦和花子
+				鹫见芹娜
+				奥空绫音
+				爱清风香
+				朝颜花江
+				枣伊吕波
+				氷室濑名
+			}
+			full_names_female = {
+				春原瞬
+				银镜伊织
+				空崎日奈
+				白洲梓
+				砂狼白子
+				狮子堂泉
+				陆八魔阿露
+				黑见芹香
+				浅黄睦月
+				鳄渊茜里
+				花冈柚子
+				连河切里诺
+				才羽绿
+				小涂真纪
+				美甘尼禄
+				乙花菫
+				剑先鹤城
+				赤司纯子
+				才羽桃衣
+				十六夜野宫
+				羽川莲见
+				合欢垣吹雪
+				朝比奈菲娜
+				若叶日向
+				狐坂若藻
+				角楯花凛
+				天童爱丽丝
+				久田泉奈
+				黑馆晴奈
+				和乐千世
+				千鸟满
+				一之濑明日奈
+				静山真白
+				药子沙绫
+				猫冢响
+				空井咲
+				各务千寻
+				白石歌原
+				伊原木好美
+				和泉元艾米
+				早濑优香
+				伊草春香
+				月雪宫子
+				池仓玛丽娜
+				小鸟游星野
+				春日椿
+				大野月咏
+				柚鸟夏
+				古关忧
+				中务桐乃
+				鬼方佳代子
+				守月铃美
+				霞沢美游
+				阿慈谷日富美
+				水羽三森
+				豊见琴里
+				佐城巴
+				室笠茜
+				火宫千夏
+				勇美枫
+				小钩晴
+				栗村爱莉
+				天见和香
+				圆堂志美子
+				牛牧朱莉
+				音濑小玉
+				天雨亚子
+				伊落玛丽
+				河和静子
+				下江小春
+				浦和花子
+				鹫见芹娜
+				奥空绫音
+				爱清风香
+				朝颜花江
+				枣伊吕波
+				氷室濑名
+			}
+			# Always combined with a second name
+			first_names = {
+			}
+			# Always combined with a first name
+			second_names = {
+			}
+		}
+	}
+}
+
+#爱丽丝 namelist
+ArisName = {
+	randomized = no
+	language = "l_simp_chinese"
+	ship_names = {
+		generic = {
+			"终幕：毁灭者"
+			"Wine-red Admire"
+			"日常餐具"
+			"本大爷的特制手枪"
+			"爱之鞭"
+			"WHITE FANG 465"
+			"Multi-tactical"
+			"奇幻色彩"
+			"正义的显现"
+			"Et Omnia Vanitas"
+			"Justice Black"
+			"现场演唱会用T恤加农炮"
+			"音量抑制器"
+			"趣味烟花"
+			"圣徒掠夺者"
+			"Identity"
+			"Scorpius"
+			"阿里乌斯制突击步枪"
+			"深不可测"
+			"恶魔的咆哮"
+			"Trick or Trick"
+			"供餐部防身用枪typeA"
+			"清爽薄荷巧克力"
+			"逻辑与原因"
+			"自动瞄准"
+			"快乐微笑"
+			"诚意"
+			"第3号瓦尔基里制式手枪"
+			"Sagittarius Night"
+			"吹飞"
+			"图书馆守则"
+			"安全"
+			"Echolink"
+			"供餐部防身用枪typeB"
+			"爆裂一击"
+			"千禧制最新型哑铃"
+			"鹰眼"
+			"荷鲁斯之眼"
+			"双龙"
+			"自动喷漆"
+			"My Necessity"
+			"血与火药"
+			"清爽灵感"
+			"чистка"
+			"喵冲"
+			"后门"
+			"балала́йка"
+			"RABBIT-26式机关枪"
+			"RABBIT-31式短机关枪"
+			"RABBIT-39式来福枪"
+			"Rabbit-224式手枪"
+			"Mabinogion"
+			"大师零"
+			"晚餐守则"
+			"小型机关枪Ⅴ"
+			"无声解决"
+			"睡眠伴侣Ⅱ"
+			"常识"
+			"穿刺"
+			"独特点子"
+			"真诚的愿望"
+			"Support Pointer"
+			"教授K"
+			"无差别打击"
+			"甜蜜驾驶"
+			"Верность"
+			"第14号瓦尔基里制式步枪"
+			"理想化"
+			"泉奈流的超级忍具"
+			"光之剑：超新星"
+			"Beyond the Rumination"
+			"Hotshot"
+			"深红灾厄"
+			"刚柔并济之心"
+			"医疗应急包"
+			"祈祷"
+			"万魔殿制式手枪"
+			"月咏流冲锋枪"
+			"五七五式榴弹炮"
+			"樱花砰砰"
+			"怜悯"
+			"惊喜派对"
+			"战术治疗"
+			"满流溢流喷枪"
+		}
+		corvette = {
+		}
+		destroyer = {
+		}
+		cruiser = {
+		}
+		battleship = {
+		}
+		titan = {
+		}
+		colossus = {
+		}
+		science = {
+		}
+		colonizer = {
+		}
+		constructor = {
+		}
+		transport = {
+		}
+		military_station_small = {
+		}
+		ion_cannon = {
+		}
+		BA_missile_ship = {
+		}
+	}
+	ship_class_names = {
+		generic = {
+			"十字军"
+			"肃清君1号"
+			"虎丸"
+			"鼠助"
+			"小雷"
+			"11号"
+			"雨云"
+			"终幕：毁灭者"
+			"Wine-red Admire"
+			"日常餐具"
+			"本大爷的特制手枪"
+			"爱之鞭"
+			"WHITE FANG 465"
+			"Multi-tactical"
+			"奇幻色彩"
+			"正义的显现"
+			"Et Omnia Vanitas"
+			"Justice Black"
+			"现场演唱会用T恤加农炮"
+			"音量抑制器"
+			"趣味烟花"
+			"圣徒掠夺者"
+			"Identity"
+			"Scorpius"
+			"阿里乌斯制突击步枪"
+			"深不可测"
+			"恶魔的咆哮"
+			"Trick or Trick"
+			"供餐部防身用枪typeA"
+			"清爽薄荷巧克力"
+			"逻辑与原因"
+			"自动瞄准"
+			"快乐微笑"
+			"诚意"
+			"第3号瓦尔基里制式手枪"
+			"Sagittarius Night"
+			"吹飞"
+			"图书馆守则"
+			"安全"
+			"Echolink"
+			"供餐部防身用枪typeB"
+			"爆裂一击"
+			"千禧制最新型哑铃"
+			"鹰眼"
+			"荷鲁斯之眼"
+			"双龙"
+			"自动喷漆"
+			"My Necessity"
+			"血与火药"
+			"清爽灵感"
+			"чистка"
+			"喵冲"
+			"后门"
+			"балала́йка"
+			"RABBIT-26式机关枪"
+			"RABBIT-31式短机关枪"
+			"RABBIT-39式来福枪"
+			"Rabbit-224式手枪"
+			"Mabinogion"
+			"大师零"
+			"晚餐守则"
+			"小型机关枪Ⅴ"
+			"无声解决"
+			"睡眠伴侣Ⅱ"
+			"常识"
+			"穿刺"
+			"独特点子"
+			"真诚的愿望"
+			"Support Pointer"
+			"教授K"
+			"无差别打击"
+			"甜蜜驾驶"
+			"Верность"
+			"第14号瓦尔基里制式步枪"
+			"理想化"
+			"泉奈流的超级忍具"
+			"光之剑：超新星"
+			"Beyond the Rumination"
+			"Hotshot"
+			"深红灾厄"
+			"刚柔并济之心"
+			"医疗应急包"
+			"祈祷"
+			"万魔殿制式手枪"
+			"月咏流冲锋枪"
+			"五七五式榴弹炮"
+			"樱花砰砰"
+			"怜悯"
+			"惊喜派对"
+			"战术治疗"
+			"满流溢流喷枪"
+		}
+	}
+	# 默认舰船名字
+	fleet_names = {
+		random_names = {
+			夏莱第一特遣队
+			夏莱第二特遣队
+			夏莱第三特遣队
+			圣三一正义实现委员会舰队
+			格黑娜风纪委员会舰队
+			阿拜多斯对策委员会舰队
+			千年C&C特种舰队
+			瓦尔基里执法舰队
+			红冬亲卫舰队
+			山海经玄武商会舰队
+			百鬼夜行联合舰队
+		}
+		sequential_name = HUM1_xxARMADA_ORD
+	}
+	# 陆军名字吧？
+	army_names = {
+		machine_defense = {
+			sequential_name = HUM1_xxGROUNDSHIELD_ORD
+		}
+		machine_assault_1 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		machine_assault_2 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		machine_assault_3 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		defense_army = {
+			sequential_name = HUM1_xxGROUNDSHIELD_ORD
+		}
+		assault_army = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		slave_army = {
+			sequential_name = HUM1_xxWARPEONS_ORD
+		}
+		clone_army = {
+			sequential_name = HUM1_xxFIGHTINGCLONES_ORD
+		}
+		undead_army = {
+			sequential_name = HUM1_xxDREADPEONS_ORD
+		}
+		robotic_army = {
+			sequential_name = HUM1_xxROBOTICLANCERS_ORD
+		}
+		robotic_defense_army = {
+			sequential_name = HUM1_xxROBOTICPROTECTORS_ORD
+		}
+		psionic_army = {
+			sequential_name = HUM1_xxWARLOCKCOMPANY_ORD
+		}
+		xenomorph_army = {
+			sequential_name = HUM1_xxDEATHFLOCK_ORD
+		}
+		gene_warrior_army = {
+			sequential_name = HUM1_xxSTARKNIGHTS_ORD
+		}
+		occupation_army = {
+			sequential_name = HUM1_xxOCCUPATIONSHIELD_ORD
+		}
+		robotic_occupation_army = {
+			sequential_name = HUM1_xxROBOTICOCCUPIERS_ORD
+		}
+		primitive_army = {
+			sequential_name = HUM1_PRIMITIVEARMYxx_SEQ
+		}
+		industrial_army = {
+			sequential_name = HUM1_INDUSTRIALARMYxx_SEQ
+		}
+		postatomic_army = {
+			sequential_name = HUM1_POSTATOMICARMYxx_SEQ
+		}
+	}
+	# 我以为是殖民地名字 后来发现是母星系行星名字）
+	planet_names = {
+		generic = {
+			names = {
+				星点
+				晶闪
+				雪耀
+				熠光
+				金属
+				铜
+				银
+				金
+				铂
+			}
+		}
+		pc_desert = {
+			names = {
+			}
+		}
+		pc_tropical = {
+			names = {
+			}
+		}
+		pc_arid = {
+			names = {
+			}
+		}
+		pc_continental = {
+			names = {
+			}
+		}
+		pc_ocean = {
+			names = {
+			}
+		}
+		pc_tundra = {
+			names = {
+			}
+		}
+		pc_arctic = {
+			names = {
+			}
+		}
+		pc_savannah = {
+			names = {
+			}
+		}
+		pc_alpine = {
+			names = {
+			}
+		}
+	}
+	# 预设角色名（但是总是和立绘对不上）
+	character_names = {
+		default = {
+			first_names = {
+				"AL-1S "
+			}
+			second_names = {
+				No.B62CF4
+				No.8A251D
+				No.3BEC8A
+				No.9E83AD
+				No.C41FD3
+				No.E57AF3
+				No.85E69D
+				No.5F31A4
+				No.E832C7
+				No.FB3745
+				No.B1FD34
+				No.5C6182
+				No.FB3DE9
+				No.F219D7
+				No.987DB5
+				No.FE8617
+				No.39B7AC
+				No.751ECF
+				No.AF8351
+				No.CB8A95
+				No.7CBE64
+				No.3E8A79
+				No.9182BF
+				No.59762A
+				No.DFA413
+				No.F3E5CD
+				No.17C5FD
+				No.7A8FC9
+				No.B39A78
+				No.F289DB
+				No.DB3C7A
+				No.2A7B4C
+				No.135AEF
+				No.2C14B9
+				No.72FD1E
+				No.482DBF
+				No.2FD95C
+				No.5384AF
+				No.F6A5B3
+				No.1C3F6D
+				No.5BF462
+				No.A63D1C
+				No.15EF76
+				No.8F3267
+				No.9BEC7D
+				No.EA918B
+				No.14A976
+				No.8EB23A
+				No.C739A8
+				No.3B4596
+			}
+		}
+	}
+}
+
+ArisPrName = {
+	randomized = no
+	language = "l_simp_chinese"
+	ship_names = {
+		generic = {
+			EU
+		}
+		corvette = {
+		}
+		destroyer = {
+		}
+		cruiser = {
+		}
+		battleship = {
+		}
+		titan = {
+		}
+		colossus = {
+		}
+		science = {
+		}
+		colonizer = {
+		}
+		constructor = {
+		}
+		transport = {
+		}
+		military_station_small = {
+		}
+		ion_cannon = {
+		}
+		BA_missile_ship = {
+		}
+	}
+	ship_class_names = {
+		generic = {
+			"无差别打击"
+		}
+	}
+	# 默认舰船名字
+	fleet_names = {
+		random_names = {
+			无差别打击
+		}
+		sequential_name = HUM1_xxARMADA_ORD
+	}
+	# 陆军名字吧？
+	army_names = {
+		machine_defense = {
+			sequential_name = HUM1_xxGROUNDSHIELD_ORD
+		}
+		machine_assault_1 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		machine_assault_2 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		machine_assault_3 = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		defense_army = {
+			sequential_name = HUM1_xxGROUNDSHIELD_ORD
+		}
+		assault_army = {
+			sequential_name = HUM1_xxWARGUILD_ORD
+		}
+		slave_army = {
+			sequential_name = HUM1_xxWARPEONS_ORD
+		}
+		clone_army = {
+			sequential_name = HUM1_xxFIGHTINGCLONES_ORD
+		}
+		undead_army = {
+			sequential_name = HUM1_xxDREADPEONS_ORD
+		}
+		robotic_army = {
+			sequential_name = HUM1_xxROBOTICLANCERS_ORD
+		}
+		robotic_defense_army = {
+			sequential_name = HUM1_xxROBOTICPROTECTORS_ORD
+		}
+		psionic_army = {
+			sequential_name = HUM1_xxWARLOCKCOMPANY_ORD
+		}
+		xenomorph_army = {
+			sequential_name = HUM1_xxDEATHFLOCK_ORD
+		}
+		gene_warrior_army = {
+			sequential_name = HUM1_xxSTARKNIGHTS_ORD
+		}
+		occupation_army = {
+			sequential_name = HUM1_xxOCCUPATIONSHIELD_ORD
+		}
+		robotic_occupation_army = {
+			sequential_name = HUM1_xxROBOTICOCCUPIERS_ORD
+		}
+		primitive_army = {
+			sequential_name = HUM1_PRIMITIVEARMYxx_SEQ
+		}
+		industrial_army = {
+			sequential_name = HUM1_INDUSTRIALARMYxx_SEQ
+		}
+		postatomic_army = {
+			sequential_name = HUM1_POSTATOMICARMYxx_SEQ
+		}
+	}
+	# 我以为是殖民地名字 后来发现是母星系行星名字）
+	planet_names = {
+		generic = {
+			names = {
+				星点
+				晶闪
+				雪耀
+				熠光
+				金属
+				铜
+				银
+				金
+				铂
+			}
+		}
+		pc_desert = {
+			names = {
+			}
+		}
+		pc_tropical = {
+			names = {
+			}
+		}
+		pc_arid = {
+			names = {
+			}
+		}
+		pc_continental = {
+			names = {
+			}
+		}
+		pc_ocean = {
+			names = {
+			}
+		}
+		pc_tundra = {
+			names = {
+			}
+		}
+		pc_arctic = {
+			names = {
+			}
+		}
+		pc_savannah = {
+			names = {
+			}
+		}
+		pc_alpine = {
+			names = {
+			}
+		}
+	}
+	# 预设角色名（但是总是和立绘对不上）
+	character_names = {
+		default = {
+			first_names = {
+				"Flashed_AL-1S "
+			}
+			second_names = {
+				No.B62CF4
+				No.8A251D
+				No.3BEC8A
+				No.9E83AD
+				No.C41FD3
+				No.E57AF3
+				No.85E69D
+				No.5F31A4
+				No.E832C7
+				No.FB3745
+				No.B1FD34
+				No.5C6182
+				No.FB3DE9
+				No.F219D7
+				No.987DB5
+				No.FE8617
+				No.39B7AC
+				No.751ECF
+				No.AF8351
+				No.CB8A95
+				No.7CBE64
+				No.3E8A79
+				No.9182BF
+				No.59762A
+				No.DFA413
+				No.F3E5CD
+				No.17C5FD
+				No.7A8FC9
+				No.B39A78
+				No.F289DB
+				No.DB3C7A
+				No.2A7B4C
+				No.135AEF
+				No.2C14B9
+				No.72FD1E
+				No.482DBF
+				No.2FD95C
+				No.5384AF
+				No.F6A5B3
+				No.1C3F6D
+				No.5BF462
+				No.A63D1C
+				No.15EF76
+				No.8F3267
+				No.9BEC7D
+				No.EA918B
+				No.14A976
+				No.8EB23A
+				No.C739A8
+				No.3B4596
+			}
+		}
+	}
+}

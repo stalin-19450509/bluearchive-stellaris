@@ -1,0 +1,257 @@
+﻿l_simp_chinese:
+ BA_origin.1001.title:0 "致少女们的垂怜经"
+ BA_origin.1001.desc:0 "我们的抗争已是过往云烟，挣扎了许久的我们迎来终于迎来了曙光。\n母星上关于能量、矿物、食物的生产正在不计后果的全力进行，只为我们能够在这浩瀚星宇中抢占先机。\n数据显示，在星球的地下有一个持续充能、预计于§R40年§!内启动的不明军事设施，我们必须全力寻找排除这一危险的方法，或者在灾难降临之前寻找到我们的另一个家园。"
+ BA_origin.1001.next:0 "我们等待这一刻已经太久。"
+
+ BA_origin.1002.name:0 "致被遗忘的众神"
+ BA_origin.1002.desc:0 "“老师，我们已经完成了本星系的宣称工作，现在这个星系正式成为我们的领土了！\n\n现在，我们必须加倍努力，解除我们要面临的最大威胁……\n\n正如我们很多年前就探测到的数据显示，在基沃托斯的地下，有一个持续充能、预计于§R2250年启动§!的不明军事设施，我们必须全力寻找排除这一危险的方法。做不到的话，我们也许需要一个外星殖民地作为我们的‘新家’……”" #\n\n\n此外，提醒老师一件重要的事情：§R千万不要手动迁都，否则……§!
+ BA_origin.1002.a:0 "要上了，Arona！"
+
+ BA_origin.1003.name:0 "致被遗忘的众神"
+ BA_origin.1003.desc:0 "“老师，我们收到了一份关于调查废墟的计划书，Arona认为这对重建有很大帮助……\n您可以在 委托 页面里查看这份计划书并批准实行。\n(§Y通讯(F1)§! -> §Y$Shittem.name$§! -> §Y委托§!)\n另外，关于这个委托页面，还有一件事……\n\n这是夏莱地下室的制造机被摧毁前保留的最后一批£sr_pyroxenes£青辉石和£sr_keystone£制造石，Arona一直在尝试修复它但是一直没有什么进展……\n\n虽然没有了制造机，但我们仍然可以继续执行夏莱的职责，完成学生们的委托来赚取一些稀有资源。\n\n§Y也许她们能带来奇迹也说不定？§!”"
+ BA_origin.1003.go:0 "那就去看看吧。"
+ BA_origin.1003.cancel:0 "一会再处理。"
+
+ BA_origin.1004.title:0 "研究完成"
+ BA_origin.1004.desc:0 "$tech_BA_ruins_research$已经完成，我们已经在母星上建造了一座$building_BA_mixed_ruins_lab$用于之后的研究。"
+ BA_origin.1004.next:0 "已确认"
+
+ BA_origin.1005.title:0 "废墟采矿技术改进提案"
+ BA_origin.1005.desc:0 "混成化实验室的研究有了初步的结论，她们提交了一份关于废墟开采的报告。报告指出，长年以来，废墟中开采出的材料没有被充分的利用，许许多多建造时使用的稀有资源被当作燃料烧掉，还有很多尚能使用的物品被直接打碎作为矿物，为此，他们提出了一个重新设计各种采集流程的方案大纲。虽然报告的内容很夸张，但其想法仍然具有很高的可行性。"
+ BA_origin.1005.next:0 "好。"
+
+ BA_origin.1006.title:0 "学园废墟重规划提案"
+ BA_origin.1006.desc:0 "对大型学园的废墟的清理工作被提上了日程。工程学部门很快就拿出了一份相当完善的清理与重规划流程。只要能够腾出足够的资源，我们就可以开始动工。"
+ BA_origin.1006.next:0 "好。"
+
+ BA_origin.1007.name:0 "废墟加固完成"
+ BA_origin.1007.desc:0 "“老师，工程部门已经对一些危险废墟点位进行了加固，同时改进了现有的废墟采矿技术。从此以后不会再产生那些恼人的废墟了! 欸嘿嘿……”"
+ BA_origin.1007.a:0 "了解。"
+
+ BA_origin.1008.name:0 "准备清理重建"
+ BA_origin.1008.desc:0 "母星上的绝大多数大型学园的废墟都已清理完毕，未清理的废墟也被采取了措施以避免发生事故。接下来的工作是将整个星球上的异常废墟全部清理，之后才能够开始我们的重建工作。我们的工程部门和科研部门已经准备开始进行这一工作了。"
+ BA_origin.1008.next:0 "放手去做吧。"
+
+
+ BA_origin.1031.title:0 "废墟障碍"
+ BA_origin.1031.desc:0 "似乎是因为年久失修，又似乎是因为过度压榨，一次巨大的废墟的坍塌事件阻碍了我们本就有的规划。这些新产生的废墟对星球的环境破坏极大，必须想办法尽快处理。"
+ BA_origin.1031.next:0 "了解。"
+
+ BA_origin.1032.title:0 "废墟障碍"
+ BA_origin.1032.desc:0 "老师，这种随机出现的废墟会对我们的星球重建工作造成严重的阻碍，但清除它们也会获得丰厚的资源回报。如果不能清除的话，也许学生们会找到合适的办法，不如试着去什亭之匣的§Y委托§!界面看一看？\n\n此外，Arona已经准备好了相关的算法，可以找到可能产生废墟的地方并提前加固，但特制的加固材料需要消耗50£sr_pyroxenes£青辉石，并且只能维持五年时间，想要执行的话，同样在什亭之匣的§Y项目§!界面中就可以找到。§!\n\n……至少这可以让它们不会拖累我们最后的工作……"
+ BA_origin.1032.next:0 "了解。Arona真棒。"
+
+ BA_origin.1033.title:0 "废墟障碍"
+ BA_origin.1033.desc:0 "我们的母星上又发生了一次巨大的坍塌事件，产生了大量的异维化废墟。这些新产生的废墟对星球的环境破坏极大，必须想办法尽快处理。"
+ BA_origin.1033.next:0 "了解。"
+
+ BA_origin.1034.title:0 "清除完成。"
+ BA_origin.1034.desc:0 "意外产生的障碍已被清除。工程队从其中回收了许多的有用资源。"
+ BA_origin.1034.next:0 "已确认"
+ BA_origin.1034.minerals_tips:0 "一些矿物和合金。"
+ BA_origin.1034.energy_tips:0 "一本双利。"
+ BA_origin.1034.rare_tips:0 "稀缺的，罕见的。"
+ BA_origin.1034.dark_matter_tips:0 "Deep Dark Fantasy"
+ BA_origin.1034.nothing:0 "(虽然这些不能算资源，但不能浪费了学生们的辛苦劳动……)"
+
+
+#
+ BA_origin.1101.title:0 "废墟清理"
+ BA_origin.1101.desc:0 "“老师，关于废墟清理方面的技术问题已经被解决，是时候开始我们的清扫工作了。工程部门成功设计出了用于清理异常废墟的专用机械，但由于清理工作十分暴力，因此机械部件的必要更换十分频繁，我们需要建造一些能够持续生产设备的厂区，来保证清扫工作能够持续不断的进行。”"
+ BA_origin.1101.next:0 "了解。"
+
+ BA_origin.1102.title:0 "废墟清理"
+ BA_origin.1102.desc:0 "机械厂区已经建设完成，我们可以正式开启我们的清扫工作了。厂区马上就会开始运转，为马上开始的清扫工作提供提供设备支持，届时我们会通告清扫工作而每月收到£minerals£矿物和£alloys£合金。"
+ BA_origin.1102.next:0 "加油。"
+
+ BA_origin.1103.title:0 "废墟清理"
+ BA_origin.1103.desc:0 "“老师，我们已经清理完成了星球表面大部分的异常废墟，并为之后的重建工作做好了充足的基础准备。现在我们可以动手开始将星球重建为§Y学园都市星球§!了！想要确认具体需要多少资源，或者想要开始动工的话，可以在§Y星球决议中找到“重建学园都市星球”§!这样的决议哦！”"
+ BA_origin.1103.next:0 "太棒了。"
+
+ BA_origin.1104.title:0 "废墟清理"
+ BA_origin.1104.desc:0 "老师，学园都市重建完成了，我们不用再住在那个漏风的庇护所里，可以住到宽敞明亮的宿舍里了！\n\n……嗯，说得对，这种话稍后再说。我们从前在废墟的生产方式不再适用于新的学园都市，所以需要一定时间重新规划。旧的区划已经被拆解用作重建材料，并提供了大量的临时重建工岗位以加快我们的重建进程。此外，自警团已经就绪，她们会尽力维护这颗星球的治安，加上大家现在每个人都斗志高涨，您暂时不需要担心星球稳定度的问题。"
+ BA_origin.1104.next:0 "开始规划吧，Arona！"
+
+#
+ BA_origin.1201.title:0 "地下威胁"
+ BA_origin.1201.desc:0 "虽然我们在战后就一直在面对一些敌人的残兵败将的反扑，但最近一次敌人对一处补给站发起的规模袭击显然不同以往。这一次敌人从地下的军工厂出动了足够称之为“军队”的数量的机器人部队，若不是附近恰巧在进行陆军军事演习，我们可能要丢失一整个区划。我们必须早做准备，提防这些来自地下的威胁。毕竟，它们曾经想要摧毁这整座星球。"
+ BA_origin.1201.next:0 "（连线Arona）"
+
+ BA_origin.1202.title:0 "地下威胁"
+ BA_origin.1202.desc:0 "“老师，关于那些来自地下的敌人，我们之前曾经设立过数千座屏蔽塔来阻止它们出现在地表。虽然它们现在已经不再工作，现在还有许多屏蔽塔仍然保持完好。我们可以试着重启那些屏蔽塔来削弱这些敌人，也许还需要再试着重新制造几座。当然，这些敌人的目的尚不清晰，因此我们也要从这里面找些线索来找到完全摧毁它们的办法……”"
+ BA_origin.1202.next:0 "好。"
+
+ BA_origin.1203.title:0 "地下威胁"
+ BA_origin.1203.desc:0 "最近我们的一处再采集区划遭遇了一次意外的攻击。这区域内有十余座开启的屏蔽塔，但还是遭遇了不应该在如此强的保护下受到的攻击。所幸中心区域的屏蔽塔最多，受损很轻微。"
+ BA_origin.1203.next:0 "（连线Arona）"
+ BA_origin.1203.tip:0 "之后出现的敌人将会变得更强"
+
+ BA_origin.1204.title:0 "地下威胁"
+ BA_origin.1204.desc:0 "“老师，看来这些敌人对屏蔽塔信号的耐受力变得更强了。我们需要尽快执行我们的计划……必须尽快建造更好的保护措施，要么准备更多的陆军在星球上待命，要么迅速完成屏蔽塔的铺设。”"
+ BA_origin.1204.next:0 "好。"
+
+ BA_origin.1205.title:0 "地下威胁"
+ BA_origin.1205.desc:0 "随着敌人对屏蔽塔信号耐性的增加，我们又有一处被屏蔽塔重重包围的供给站区划被攻击了。我们的屏蔽塔还没有满功率运行，虽然这次只需要开大一点开关就可以……"
+ BA_origin.1205.next:0 "……"
+ BA_origin.1205.tip:0 "之后出现的敌人将会变得更强"
+
+ BA_origin.1206.title:0 "地下威胁"
+ BA_origin.1206.desc:0 "我们的一处特殊工业区划被攻击了。我们的屏蔽塔已经接近满载，这些区划本应是最为安全的地区。留给我们的时间不多了。"
+ BA_origin.1206.next:0 "（连线Arona）"
+ BA_origin.1206.tip:0 "之后出现的敌人将会变得更强"
+
+ BA_origin.1207.title:0 "地下威胁"
+ BA_origin.1207.desc:0 "“老师，我们没有多长时间来解决这些地下残兵了，必须尽快的行动。……就目前的态势而言，Arona还能提供的帮助有这些……再不快一点完成的话，这颗星球真的会……不，没什么……”"
+ BA_origin.1207.next:0 "……"
+
+ BA_origin.1211.title:0 "地下威胁"
+ BA_origin.1211.desc:0 "如同我们预料的那样，地下部队开始了它们的进攻。虽然这次战役我们几乎胜券在握，但很明显敌人不会善罢甘休。未来的敌人数量和威胁性都会不断上升，我们必须研究一些战术来对抗它们。"
+ BA_origin.1211.next:0 "……"
+
+ BA_origin.1212.title:0 "地下威胁"
+ BA_origin.1212.desc:0 "斥候报告地下残兵又在进行聚集。我们的陆军防御部队已经准备进行下一次防御作战了。"
+ BA_origin.1212.next:0 "加油。"
+
+
+ BA_origin.1213.title:0 "地下威胁对应措施"
+ BA_origin.1213.desc:0 "星球上残存的屏蔽塔已经检修完毕，全部运行状态良好。轰鸣着的屏蔽塔可以使进入其范围的地下残兵在短时间内倒戈，大大的减轻了在此区域内的作战难度。不过，似乎新建造的敌人可以抵御更强的信号，因此我们必须动作快。"
+ BA_origin.1213.next:0 "了解，准备下一个项目。"
+
+ BA_origin.1214.title:0 "地下威胁对应措施"
+ BA_origin.1214.desc:0 "许许多多的增幅信号的装置被安装在一些关键地区的屏蔽塔上，以增强其发出的信号，确保这些地区的安全。下一步，我们需要制造出微型化的可移动屏蔽塔，以将信号覆盖全球，并为最后的关闭核心工作做准备。"
+ BA_origin.1214.next:0 "好。"
+
+ BA_origin.1215.title:0 "地下威胁对应措施"
+ BA_origin.1215.desc:0 "随着微型化屏蔽塔成功量产，我们现在可以很方便的将屏蔽信号遍布全球。不过，这一研究也证实：敌人在抵御更强的信号时会对地下的核心造成更多的负载。我们必须动作快，如果这一核心过载爆炸，后果将不堪设想。"
+ BA_origin.1215.next:0 "全力准备下一措施所需资源！"
+
+ BA_origin.1216.title:0 "地下威胁对应措施"
+ BA_origin.1216.desc:0 "地下威胁的核心已经被骇入并关闭，再也不会有新的敌军出现了。陆军正在对星球上的残兵进行最后的肃清工作，至此，再也没有什么敌人能够威胁到我们的母星了。"
+ BA_origin.1216.next:0 "太棒了。"
+
+ BA_origin.1220.title:0 "地下威胁"
+ BA_origin.1220.desc:0 "地下残兵的行动通常会留下可作为优质合金的残骸，也会将一些矿物带到地表。击退本次进攻之后，我们收集了这些资源作为战利品。"
+ BA_origin.1220.next:0 "好。"
+
+#
+ BA_origin.1301.title:0 "圣殿整修完成"
+ BA_origin.1301.desc:0 "阿里乌斯圣殿的整修工作已经完成。那里现在被改为了一处遗址公园，部分翻修与部分加固的修复创意极大的凸显了辉煌和尘封的反差。"
+ BA_origin.1301.next:0 "好极了。"
+
+ BA_origin.1302.title:0 "阿拜多斯整修完成。"
+ BA_origin.1302.desc:0 "陈旧的阿拜多斯校区早在决战之前就已经废弃，大部分区域里的废墟只能拆解为材料。我们从中回收了不少可用资源，期待着重建星球的那一天这里能恢复以往的辉煌。"
+ BA_origin.1302.next:0 "拭目以待。"
+
+ BA_origin.1303.title:0 "千年科技学园整修完成"
+ BA_origin.1303.desc:0 "除能源核心外的千年科技学园废墟已经整修完毕，为日后的重建空出土地。正如我们所料，废墟下幸存的存储介质中有不少的数据尚可以抢救。这次我们从中获得了一些可用科技，以及一份关于当时设计制造Hod时留下的技术资料。"
+ BA_origin.1303.next:0 "太棒了。"
+
+ BA_origin.1304.title:0 "圣三一整修完成"
+ BA_origin.1304.desc:0 "圣三一废墟已经清除完毕。大圣堂和主教学楼保存相当完好，存在改建为博物馆的可能性。出于决战时圣可托斯一派的背叛，有一些人对此意见十分激烈，认为应该将那里当作垃姬场使用以报一箭之仇。"
+ BA_origin.1304.protect:0 "我们确实需要一个这样的博物馆。"
+ BA_origin.1304.destroy:0 "如果能团结大家的话，这样也好。"
+
+ BA_origin.1305.title:0 "格黑那整修完成"
+ BA_origin.1305.desc:0 "格黑那的废墟已经整修完毕。这一片校区留下了不少稍加修复便可以改为庇护所的旧校舍。目前工程部门正努力解决这里无法供应自来水的问题。"
+ BA_origin.1305.next:0 "好。"
+
+ BA_origin.1320.title:0 "废墟清除完毕"
+ BA_origin.1320.desc:0 "至此，毁于决战的战火的大型学园已经清除完毕。相信重建完成的那一天，这些学园会恢复它们以往的盛况。"
+ BA_origin.1320.next:0 "好。"
+
+#
+ BA_origin.1401.title:0 "废墟采矿"
+ BA_origin.1401.desc:0 "“老师，我们研究出了一种从废墟中更有效率的开采所需物资的办法……这种办法同样可以增加我们在废墟中开采的稀有资源。您可以在 政策 中切换需要提取的产物。”"
+ BA_origin.1401.next:0 "太棒了。"
+
+ BA_origin.1410.title:0 "未名之神"
+ BA_origin.1410.desc:0 "虽然[root.GetName]上的地下残兵最后已经可以完全抵抗屏蔽塔，但它们似乎也达到了能够稳定自己的极限。短短几天之内，地下的能源核心就因为无法承受如此强大的负载，在激烈的引力波动中解体，并随即引发了一次壮烈的爆炸。万幸的是，我们借此机会准备好了足够转移所有学生的载具。\n我们还有其他的殖民地作为容身之处，星空很大，尚有无限的可能。"
+ BA_origin.1410.next:0 "但我们永远的失去了我们的摇篮……"
+
+ BA_origin.1412.title:0 "未名之神"
+ BA_origin.1412.desc:0 "我们在[root.GetName]抵抗地下设施中涌出的入侵者的行动失败了。地下残兵精准的在星球的几个节点处站稳了脚跟，然后建造了升空装置，准备设立恒星基地，准备建立它们的海军。但不知为何，它们的能源核心突然出现了激烈的引力波动，导致大部分入侵者发生了宕机，不一会就达到了临界并发生了一次壮烈的爆炸。万幸的是，大部分的学生都借着宕机的时间乘坐能够找到的载具升空，躲过了这一劫。\n我们还有其他的殖民地作为容身之处，星空很大，尚有无限的可能。"
+ BA_origin.1412.next:0 "但我们永远的失去了我们的摇篮……"
+
+ BA_origin.1414.title:0 "未名之神"
+ BA_origin.1414.desc:0 "随着[root.GetName]的失守，再也没有任何东西能够抵抗地下残兵了。不过，那些入侵者似乎也高估了自己的负载能力，随着数次激烈的引力波动，整个星球被过载自爆的能源核心炸成了碎片。我们已无从得知那里究竟发生了什么，但我们已经永远的失去了我们的母星。"
+ BA_origin.1414.next:0 "悲痛。"
+
+ BA_origin.1415.title:0 "未名之神"
+ BA_origin.1415.desc:0 "我们获得了[fromfrom.GetName]的控制权，但没过多久，这颗星球的核心就发出了激烈的引力波动，来不及我们采取更多的措施，整颗星球就被炸成了碎片。"
+ BA_origin.1415.next:0 "究竟发生了什么？"
+
+#
+ BA_origin.1430.title:0 "致被遗忘的众神"
+ BA_origin.1430.desc:0 "至此，学园都市星球重建已全部完成。昔日的灰暗与冰冷如过眼云烟，我们得以重新拥抱蔚蓝的天空。很快，这颗星球又将被我们的欢声笑语充满。"
+ BA_origin.1430.a:0 "我们用自己的双手让基沃托斯重获新生。"
+ BA_origin.1430.b:0 "我们也不会让基沃托斯再次陨落。"
+
+#
+ situation_Kyrie_ruin_research:0 "废墟研究"
+ situation_Kyrie_ruin_research_type:0 "废墟研究"
+ situation_Kyrie_ruin_research_desc_1:0 "我们星球上的废墟是意外之敌所造成，和通常意义上的废墟并不相同。现在，我们已经在星系中建立了哨站，将我们的疆域扩张至太空。接下来，我们必须在无垠的太空中获取我们需要的一切，研究母星上的废墟，将我们的家园在废墟上重新建起。"
+ situation_Kyrie_ruin_research_desc_2:0 "我们的矿业协会首先取得了突破：按她们的计划，我们需要收集更多关于这颗星球上废墟的相关数据，为此我们需要建造一个混成化实验室来承担这个功能。首先，先要完成£society_research£§Y$tech_BA_ruins_research$§!科技(研究选项可在§Y委托§!页面中获得)。"
+ situation_Kyrie_ruin_research_desc_3:0 "混成化实验室正在对星球废墟的一些特征进行基础研究。目标是将废墟变成可供开采的矿藏。"
+ situation_Kyrie_ruin_research_desc_4:0 "那些过度开采产生的异维化废墟正在对我们的母星的生活环境造成严重的危害。现在，我们必须找到解决它的办法，并想办法从那些大型学园的废墟中找寻过往的点滴。(清除母星上的£blocker£以进行下一步，千年能源核心和阿拜多斯沙漠矿区除外)"
+ situation_Kyrie_ruin_research_desc_5:0 "我们已经掌握了解决异维化废墟的方法，现在我们需要面对的是一整个星球的废墟。我们的时间不多，必须有一份足够快的对策，既要整修那些大型学园的遗迹，又要快速解决洲级规模的废墟。(清除母星上的£blocker£以进行下一步，千年能源核心和阿拜多斯沙漠矿区除外)"
+ situation_Kyrie_ruin_research_default:0 "全力进行"
+ situation_Kyrie_ruin_research_1:0 ""
+ situation_Kyrie_ruin_research_2:0 ""
+ situation_Kyrie_ruin_research_3:0 ""
+ situation_Kyrie_ruin_research_4:0 ""
+ situation_Kyrie_ruin_research_5:0 ""
+ situation_Kyrie_ruin_research_1_tip:0 ""
+ situation_Kyrie_ruin_research_2_tip:0 ""
+ situation_Kyrie_ruin_research_3_tip:0 ""
+ situation_Kyrie_ruin_research_4_tip:0 ""
+ situation_Kyrie_ruin_research_5_tip:0 ""
+
+ situation_Kyrie_planet_cleaning:0 "清扫重建"
+ situation_Kyrie_planet_cleaning_type:0 "清扫重建"
+ situation_Kyrie_planet_cleaning_1:0 "联邦学生会工程部门正在准备清扫星球废墟需要使用的各种重型设备。"
+ situation_Kyrie_planet_cleaning_2:0 "正在对星球进行清扫，这个过程需要消耗£energy£能量币并产出各种资源。"
+ situation_Kyrie_planet_cleaning_3:0 "清扫工作已经全部完成，只剩下最后一步工作了。(于§Y行星决议(N)§!中完成重建学园都市星球)"
+ situation_Kyrie_planet_cleaning_default:0 "保障运行"
+ situation_Kyrie_planet_cleaning_1_tip:0 ""
+ situation_Kyrie_planet_cleaning_2_tip:0 ""
+ situation_Kyrie_planet_cleaning_3_tip:0 ""
+
+ situation_Kyrie_engage_enemy:0 "地下威胁"
+ situation_Kyrie_engage_enemy_type:0 "地下威胁"
+ situation_Kyrie_engage_enemy_desc:0 "母星的地下有着不少的危险敌人。幸运的是，我们占据了绝对有利的地理位置，即使敌人异常强大，我们也仍握有战斗的主动权。(在§R局势进度推满§!前，于母星的§Y行星决议(N)§!中完成4项决议以完成该局势)"
+ situation_Kyrie_engage_enemy_default:0 "维持现状"
+ situation_Kyrie_engage_enemy_alert:0 "巡逻警戒"
+ situation_Kyrie_engage_enemy_alert_desc:0 "简单的巡逻警戒也可以起到相当不错的效果。"
+ situation_Kyrie_engage_enemy_max_signal:0 "增强屏蔽塔信号"
+ situation_Kyrie_engage_enemy_max_signal_desc:0 "增强屏蔽塔的信号，从而更好的抑制敌人的进攻。"
+ situation_Kyrie_engage_enemy_quest:0 "伏击战术"
+ situation_Kyrie_engage_enemy_quest_desc:0 "采用诱敌伏击的战术，增加作战效率并从敌人身上获取资源，不过，敌人可是很狡猾的。(提高敌人的出现频率)"
+ situation_Kyrie_engage_enemy_1:0 ""
+ situation_Kyrie_engage_enemy_2:0 ""
+ situation_Kyrie_engage_enemy_3:0 ""
+ situation_Kyrie_engage_enemy_4:0 ""
+ situation_Kyrie_engage_enemy_5:0 ""
+ situation_Kyrie_engage_enemy_1_tip:0 ""
+ situation_Kyrie_engage_enemy_2_tip:0 ""
+ situation_Kyrie_engage_enemy_3_tip:0 ""
+ situation_Kyrie_engage_enemy_4_tip:0 ""
+ situation_Kyrie_engage_enemy_5_tip:0 ""
+
+ NAME_BA_origin_enemy:0 "地下残兵"
+ NAME_BA_origin_enemy_country:0 "$NAME_BA_origin_enemy$"
+ NAME_BA_origin_enemy_species:0 "$NAME_BA_origin_enemy$"
+
+#
+ decision_Kyrie_enemy_1:0 "措施一：屏蔽塔重启检修"
+ decision_Kyrie_enemy_1_desc:0 "对行星上现存的屏蔽塔进行重启检修。此外，还要为陆军准备一些物资。"
+ decision_Kyrie_enemy_2:0 "措施二：屏蔽塔功率增强"
+ decision_Kyrie_enemy_2_desc:0 "安装附加元件以强化屏蔽塔的最大功率。不过，星球上的其他设施和居民们可能需要一些抗干扰设备。"
+ decision_Kyrie_enemy_3:0 "措施三：屏蔽塔微型化"
+ decision_Kyrie_enemy_3_desc:0 "建造微型化的可移动屏蔽塔，最大化屏蔽塔的覆盖面积。"
+ decision_Kyrie_enemy_4:0 "措施四：解除威胁"
+ decision_Kyrie_enemy_4_desc:0 "屏蔽塔覆盖全球后，交由Arona藉由俘军的通讯协议全方位获取地下残兵的信息，骇入核心后关闭它们。"
+ decision_Kyrie_in_order:0 "必须先完成前一个项目"
+ BA_Kyrie_defence_1:0 "屏蔽塔"
+ BA_Kyrie_defence_2:0 "屏蔽塔"
+ BA_Kyrie_defence_3:0 "屏蔽塔"
+ BA_Kyrie_defence_4:0 "屏蔽塔"

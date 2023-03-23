@@ -1,0 +1,55 @@
+# #堕落帝国舰队司令
+# create_ba_fe_admiral = {
+#     event_target:wg_fallen_empire = {
+#         random_list = {
+#             30 = {
+#                 create_leader = {
+#                     class = admiral
+#                     species = event_target:fe_species_sh   #第二天捣鼓
+#                     name = random
+#                     skill = 10
+#                     traits = {
+#                         trait = leader_trait_admiral_   #添加舰队司令特质
+# 						trait = leader_trait_admiral_
+#                     }
+#                 }
+#             }
+#             30 = {
+#                 create_leader = {
+#                     class = admiral
+#                     species = event_target:fe_species_sh
+#                     name = random
+#                     skill = 10
+#                     traits = {
+#                         trait = leader_trait_admiral_shenhai2
+# 						trait = leader_trait_admiral_sh_armor
+#                     }
+#                 }
+#             }			
+#             20 = {
+#                 create_leader = {
+#                     class = admiral
+#                     species = event_target:fe_species_wsg
+#                     name = random
+#                     skill = 8
+#                     traits = {
+#                         trait = leader_trait_admiral_warshipgirls2
+# 						trait = leader_trait_admiral_wsg_cannoneer
+#                     }
+#                 }
+#             }
+#             20 = {
+#                 create_leader = {
+#                     class = admiral
+#                     species = event_target:fe_species_wsg
+#                     name = random
+#                     skill = 8
+#                     traits = {
+#                         trait = leader_trait_admiral_warshipgirls2
+# 						trait = leader_trait_admiral_wsg_sniper
+#                     }
+#                 }
+#             }
+#         }
+#     }
+# }

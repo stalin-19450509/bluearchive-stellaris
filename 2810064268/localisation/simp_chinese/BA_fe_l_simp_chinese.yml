@@ -1,0 +1,29 @@
+﻿l_simp_chinese:
+##########################
+PRESCRIPTED_species_name_ba_fe_1:0 "基沃托斯学生"
+PRESCRIPTED_species_plural_ba_fe_1:0 "基沃托斯学生们"
+DokiDoki_ministry_of_interior:0 "心跳内务部"
+EMPIRE_DESIGN_ba_fe_1:0 "蓝色恶魔抽卡集团"
+PRESCRIPTED_adjective_ba_fe_1:0 "蓝色恶魔抽卡集团"
+NAME_ba_fe_sun_rising:0 "旭日"
+NAME_ba_fe_horizon:0 "地平线"
+
+ gov_ba_fe:0 "基沃托斯先驱"
+ gov_ba_fe_desc:0 "基沃托斯先驱"
+ personality_ba_fallen_empire_01:0 "先驱反抗者"
+ personality_ba_fallen_empire_01_desc:0 "从压迫者的手中夺回自由，将科技与文化发展至巅峰的反抗者们。她们很乐于向后来者提供各种各样的帮助。"
+ personality_ba_awakened_fallen_empire_01:0 "尖锐煽动者"
+ personality_ba_awakened_fallen_empire_01_desc:0 "贯彻自己曾经的荣光，帮助星系扫除危机的先驱者。"
+
+ civic_ba_fe:0 "沉睡数秘术"
+ civic_ba_fe_desc:0 "沉睡数秘术_desc"
+ origin_ba_fallen_empire:0 "学者之裔"
+ origin_ba_fallen_empire_desc:0 "学者之裔_desc"
+ origin_ba_fe_effect:0 "无效果"
+
+ personality_ba_fallen_empire_02:0 "personality_ba_fallen_empire_02"
+ personality_ba_fallen_empire_02_desc:0 "personality_ba_fallen_empire_02_desc"
+ personality_ba_awakened_fallen_empire_02:0 "personality_ba_awakened_fallen_empire_02"
+ personality_ba_awakened_fallen_empire_02_desc:0 "personality_ba_awakened_fallen_empire_02_desc"
+
+ BA_FE_FLEET:0 "先驱者舰队"

@@ -1,0 +1,31 @@
+BA_Sacrifice = {
+	base = 4800
+	modifier = {
+		resource_income_compare = {
+			resource = energy
+			value <= 200
+		}
+		add = 1200
+	}
+	modifier = {
+		resource_income_compare = {
+			resource = energy
+			value <= 0
+		}
+		add = 1200
+	}
+	modifier = {
+		resource_income_compare = {
+			resource = energy
+			value <= -150
+		}
+		add = 1200
+	}
+	modifier = {
+		resource_income_compare = {
+			resource = energy
+			value <= -300
+		}
+		add = 1200
+	}
+}

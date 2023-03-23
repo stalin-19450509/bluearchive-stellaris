@@ -1,0 +1,306 @@
+﻿l_simp_chinese:
+#
+ Game_development_department:0 "游戏开发部"
+ Game_development_department_desc:0 "游戏开发部可以制作并发行游戏，提供大量的凝聚力。"
+
+ Engineering_club:0 "工程师部"
+ Engineering_club_desc:0 "工程师部可以基于学生使用的武器开发新的太空武器，并以研究选项的形式呈现。"
+
+ Veritas:0 "真理部"
+ Veritas_desc:0 "真理部可以提升整个帝国的信息获取与攻防能力。"
+
+ Foreclosure_task_force:0 "对策委员会"
+ Foreclosure_task_force_desc:0 "对策委员会可以极大的改善基础物资的生产和使用。"
+
+ Teaparty:0 "茶会"
+ Teaparty_desc:0 "茶会优秀的行政人员可以有效的控制帝国规模。"
+
+#
+ BA_club_ship:0 "社团舰"
+ BA_club_ship_plural:0 "社团舰"
+ BA_club_base:0 "社团部基址"
+ BA_club_base_DESC:0 "将一艘社团舰送入此处以建立一个社团"
+ BA_club_base_MEGASTRUCTURE_DETAILS:0 "$BA_club_base_DESC$"
+ single_club_limit:0 "$TRIGGER_FAIL$每个星系只能设立一个社团"
+
+ BA_club_station_game_dev:0 "$Game_development_department$"
+ BA_club_station_game_dev_DESC:0 "$Game_development_department_desc$"
+ BA_club_station_engineering_club:0 "$Engineering_club$"
+ BA_club_station_engineering_club_DESC:0 "$Engineering_club_desc$"
+ BA_club_station_veritas:0 "$Veritas$"
+ BA_club_station_veritas_DESC:0 "$Veritas_desc$"
+ BA_club_station_countermeasures_committee:0 "$Foreclosure_task_force$"
+ BA_club_station_countermeasures_committee_DESC:0 "$Foreclosure_task_force_desc$"
+ BA_club_station_tea_party:0 "Teaparty$$"
+ BA_club_station_tea_party_DESC:0 "$Teaparty_desc$"
+
+ BA_Veritas_device:0 "真理部节点站"
+ BA_Veritas_device_DESC:0 "真理部用部室改装而成的通讯站，作为她们黑客行动的基地。"
+ BA_Veritas_device_full:0 "真理部监测阵列"
+ BA_Veritas_device_full_DESC:0 "真理部花费了大量的经费才建成的传感器阵列，内嵌了一个演算枢纽核心的原型，可以用来做许多不可言说的事情。"
+
+#
+ BA_club.0001.title:0 "社团机制说明"
+ BA_club.0001.desc:0 "“老师，我们刚刚完成了建造社团舰和太空部室所必须的研究……\n咳嗯，现在是太空时代了……您不觉得一个太空中的社团部室十分的炫酷吗? 现在，我们可以建造这样的部室了。要建造太空社团，首先需要派一艘工程船修建一座社团部基址，然后再建造一艘社团舰，命令社团舰进入基址轨道，社团建立就会开始进行。”"
+ BA_club.0001.comfirmed:0 "了解。"
+
+ BA_club.0002.title:0 "社团机制说明"
+ BA_club.0002.desc:0 "“老师，我们的第一艘社团舰下水了！\n需要注意的是，每个星系只能建造一个社团部室，而且我们要控制社团部室的数量不超出社团上限，否则会对联邦学生会的管理造成一些压力……当然，只要资源足够，这些都是可以轻松解决的问题。\n同时，您也可以指派社团舰上的部员们殖民一个新的行星，社团部员的工作效率不如正规的殖民者，但她们创造性的想法有助于星球的后续发展。好了，老师，一起加油吧！”"
+ BA_club.0002.comfirmed:0 "了解。"
+
+ BA_club.0005.title:0 "社团部室开建"
+ BA_club.0005.desc:0 "社团舰已经抵达社团基址，使用申请已经向学生开放。可以进行社团部室的建造准备了。您可以将此部室分配给指定的社团，也可以交给学生们内部竞争来裁定。"
+ BA_club.0005.random:0 "交给学生们自由裁定。"
+ BA_club.0005.cancel:0 "暂时取消。"
+
+ BA_club.0006.title:0 "社团建立取消"
+ BA_club.0006.desc:0 "由于没有合适的社团被选择使用这个部室，部室的建设已经取消。（更多社团正在制作中，请等待卫星击落）"
+
+ BA_club.0032.title:0 "社团舰殖民"
+ BA_club.0032.desc:0 "经过船员的大胆决策，我们的社团舰已经降落在[from.GetName]的一处平坦地形上。船上的社团部员小心翼翼的踏上了这个新世界的土地，留下了来自基沃托斯的第一个脚印。之后，一座座的建筑将在这里拔地而起。新的世界已经触手可得。"
+
+ BA_club_station:0 "基沃托斯社团空间站"
+ BA_club_station_DESC:0 "这里是一个基沃托斯社团的太空活动据点。"
+ BA_club_station_plural:0 "基沃托斯社团空间站"
+ BA_club_enclave_curator_key:0 "通用空间站-核心区段"
+
+ favor_fail:0 "好感度不足，先进行其他互动增加下好感度吧"
+
+#
+ Club_communicate.name:0 "基沃托斯社团联络中枢"
+ BA_club.0051.title:0 "社团联络中枢"
+ BA_club.0051.desc:0 "（这里是社团联络中枢，在右侧点击想要进行交流的社团）\n\n\n\n（当前社团上限：[Root.BA_Club_count]/[Root.BA_Club_limit]）"
+ BA_club.0051.exit:0 "关闭窗口"
+
+ Communication_main:0 "联邦学生会社团总部"
+ Communication_main.desc1:0 "这里是联邦学生会社团总部，您可以在此联系各个社团，也可以在此处理社团相关的事务。"
+ Communication_exit:0 "关闭窗口"
+ Sponsor_all_club:0 "赞助全部社团"
+ All_club_sponsed:0 "所有社团都已经赞助，单次赞助为期720天。"
+ Sponsor_all_club.re:0 "部费已经下发给各社团，学生们会怎么用这笔钱呢？"
+ Sponsor_all_club.tip:0 "拨款给所有可赞助的社团。§Y此操作将赞助个[Root.BA_club_to_sponse]社团，消耗[Root.BA_club_sponse_cost]£energy£能量币。§!"
+ Gain_more_club:0 "增加社团容量"
+ Club_overlimit:0 "暂时不需要这么多社团容量，先去新建几个社团如何？"
+ Gain_more_club.re:0 "Arona已经收到资金，会好好的将它们用在社团方面的事务的！\n\n\n\n（当前社团上限：[Root.BA_Club_count]/[Root.BA_Club_limit]）"
+ Gain_more_club.tip:0 "支付一些款项以增加社团容量。"
+
+ Upgrade_club_ship:0 "升级社团舰"
+ Upgrade_club_ship.re:0 "我们的社团舰等级得到了提升! 现在它可以更好的为新世界的建设贡献力量了!"
+ Upgrade_club_ship.tip:0 "升级社团舰，使得由社团舰建设的新殖民地获得更加强力的增益。[Root.GetClubshipUpgrade]"
+ Need_club_colonized:0 "必须先使用社团舰进行过一次殖民。"
+ club_colonize_fail_Lv1:0 "$TRIGGER_FAIL$拥有£society_research£§Y$tech_capital_productivity_1$§!科技"
+ club_colonize_fail_Lv2:0 "$TRIGGER_FAIL$拥有£society_research£§Y$tech_capital_productivity_2$§!科技"
+ club_colonize_fail_Lv3:0 "$TRIGGER_FAIL$拥有£society_research£§Y$tech_capital_productivity_3$§!科技"
+
+ club_colonize_Lv1:0 "第一次升级：强化原有效果，并以增加区划的帝国规模为代价大幅降低其维护费。"
+ club_colonize_Lv2:0 "第二次升级：强化原有效果，并且此殖民地的迁入吸引力提升。"
+ club_colonize_Lv3:0 "第三次升级：强化原有效果，并且这个效果不再提升帝国规模。"
+ club_colonize_Blank:0 ""
+
+#建立通讯
+ BA_club.1001.title:0 "设部报告：$Game_development_department$"
+ BA_club.1001.desc:0 "“游……游戏开发部部长，花冈柚子，报告在§Y[from.solar_system.GetName]§!设部完成……呜……”"
+ BA_club.1001.next:0 "希望大家能为我们带来好的游戏。"
+ BA_club.1002.title:0 "$BA_club.1001.title$"
+ BA_club.1002.desc:0 "一个其他国家已经抢先建立了$Game_development_department$。"
+
+ BA_club.1101.title:0 "设部报告：$Engineering_club$"
+ BA_club.1101.desc:0 "“报告联邦学生会，工程部的太空部室已经在§Y[from.solar_system.GetName]§!设部完成。我们接到的委托包含了不少§G星舰武器的研究§!，所以账单方面……可能有些惊人，还请不要见怪……”"
+ BA_club.1101.next:0 "加油。"
+ BA_club.1102.title:0 "$BA_club.1101.title$"
+ BA_club.1102.desc:0 "一个其他国家已经抢先建立了$Engineering_club$。"
+
+ BA_club.1201.title:0 "设部报告：$Veritas$"
+ BA_club.1201.desc:0 "“这里是各务千寻。真理部的太空部室已经在§Y[from.solar_system.GetName]§!定位，既然得到了这座巨构的使用权，我们当然也需要对其进行一些改造，来从太空中§G获取更多的信息§!……”"
+ BA_club.1201.next:0 "需要什么就说，我会支持你们的。"
+ BA_club.1202.title:0 "$BA_club.1201.title$"
+ BA_club.1202.desc:0 "一个其他国家已经抢先建立了$Veritas$。"
+
+ BA_club.1301.title:0 "设部报告：$Foreclosure_task_force$"
+ BA_club.1301.desc:0 "“这里是奥空绫音，通过基沃托斯4号线路报告联邦学生会：对策委员会在§Y[from.solar_system.GetName]§!的太空部室已经设部完成。我们会充分利用我们在阿拜多斯的工作经验，为§G改进基础生产§!努力出言献策……嗯，以上。”"
+ BA_club.1301.next:0 "了解了，有什么需要的尽管开口。"
+ BA_club.1302.title:0 "$BA_club.1301.title$"
+ BA_club.1302.desc:0 "一个其他国家已经抢先建立了$Foreclosure_task_force$。"
+
+ BA_club.1401.title:0 "设部报告：$Teaparty$"
+ BA_club.1401.desc:0 "“贵安，茶会举办者桐藤渚，现在以社团而非圣三一的名义报告联邦学生会：茶会的太空部室已在§Y[from.solar_system.GetName]§!设部完成。咳嗯嗯……茶会具有管理大型学园的丰富经历，我们在殖民地上的活动可以有效的§G提升行政能力§!，为基沃托斯做出独到的贡献。以上，祝好。”"
+ BA_club.1401.next:0 "有你们的帮助，联邦学生会定将如虎添翼。"
+ BA_club.1402.title:0 "$BA_club.1401.title$"
+ BA_club.1402.desc:0 "一个其他国家已经抢先建立了$Teaparty$。"
+
+ HARDWORK:0 "我们也要加把劲了。"
+
+ Club_sponsoring:0 "每两年最多拨款一次"
+ BA_option_club_exit:0 "关闭通讯"
+
+#游戏部
+ Game_development_department_opinion:0 "（§G当前好感度：[Root.Game_development_department] §!）\n\n"
+
+ Yuzu_desc1:0 "$Game_development_department_opinion$……欢，欢迎……呜……"
+ Yuzu_desc2:0 "$Game_development_department_opinion$我们是游戏开发部，制作游戏是我们的活动内容……额，不只是制作。"
+ Yuzu_desc3:0 "$Game_development_department_opinion$……噫! 老，老师……别在突然出现在背后……"
+ Aris_desc1:0 "$Game_development_department_opinion$勇者发现了老师! 启动礼仪流程!"
+ Aris_desc2:0 "$Game_development_department_opinion$……(编译中)"
+ Aris_desc3:0 "$Game_development_department_opinion$欢迎，老师。小桃小绿和柚子都在里面等着您。"
+
+ Game_development_department_sponsor:0 "我们可以为你们提供更多部费。"
+ Game_development_department_sponsor_YuzuRE:0 "感、感谢您的帮助……"
+ Game_development_department_sponsor_ArisRE:0 "勇者小队得到了资助! 可以更换更好更强的装备了!"
+
+ Game_development_department_play:0 "叫上部员，来玩游戏吧！"
+
+ Game_development_department_game_develop:0 "你们可以为我们定制一个游戏吗？"
+ Game_development_department_game_develop_YuzuRE:0 "当，当然可以……相关费用就用我们的部费就好，但是……您也可以资助我们更多经费，这样我们也可以做出更好的成品……"
+ Game_development_department_game_develop_ArisRE:0 "爱丽丝接到了任务! 集结小队，出发!"
+
+ Game_development_department_building:0 "想在星球上拥有一个工作室吗？"
+ Game_development_department_building_YuzuRE:0 "真……真的吗……谢谢您，老师……"
+ Game_development_department_building_ArisRE:0 "梆梆咔梆! 爱丽丝获得了新的据点，可以存放更多道具了!"
+
+ Game_development_department_building_add:0 "想要更多的工作室吗？"
+ Game_development_department_building_add_YuzuRE:0 "感激不尽，老师……"
+ Game_development_department_building_add_ArisRE:0 "唔呣……爱丽丝获得了一处更好的据点，需要好好规划用途才行！"
+
+ Game_developing:0 "游戏开发部正在忙于工作，稍后再来吧。"
+ Game_development_department_game_complete:0 "游戏开发部：制作完成"
+ Game_development_department_game_complete_1:0 "游戏开发部开发的新品游戏已经发售，但玩家反响平平。"
+ Game_development_department_game_complete_2:0 "游戏开发部开发的新品游戏已经发售，赢得了许多玩家的称赞，还短暂占据了游戏媒体的头版。"
+ Game_development_department_game_complete_3:0 "游戏开发部开发的新品游戏已经发售，这一作不仅口碑良好，销量也十分可观。"
+ Game_development_department_game_complete_4:0 "游戏开发部开发的新品游戏已经发售。这一作的发售在基沃托斯里掀起了空前的热潮，成为了学生间的日常话题。"
+ Game_development_department_game_complete_5:0 "游戏开发部开发的新品游戏已经发售。这一作是前一口碑佳作的续作，仍然延续了游戏部一贯的制作水准。"
+
+#工程师部
+ Engineering_club_opinion:0 "（§G当前好感度：[Root.Engineering_club] §!）\n\n"
+
+ Utaha_desc1:0 "$Engineering_club_opinion$欢迎老师……什么，这不是巧克力，这是弹匣，我们这个弹匣体积小方便携带，……"
+ Utaha_desc2:0 "$Engineering_club_opinion$老师，快来看，我家的小雷现在会后空翻了!……额，没事了，您先说。"
+ Utaha_desc3:0 "$Engineering_club_opinion$我的部员们经常会搞出很多奇怪的东西，比如方糖狙击枪什么的……我向您保证，她们不是在浪费经费，只是点子比较跳脱而且失败率有点高……而已。"
+ Hibiki_desc1:0 "$Engineering_club_opinion$欢迎，老师。这个? 这个是一个躺在床上就可以换衣服的机器，比如……"
+ Hibiki_desc2:0 "$Engineering_club_opinion$唔，我好像不小心把电容缝到了衣服里……所以才一直被报警器袭击吗……"
+ Hibiki_desc3:0 "$Engineering_club_opinion$游戏开发部里有个孩子的武器就是我们制作的，我们在星舰武器方向有着充足的制造经验。"
+
+ Engineering_club_sponsor:0 "我们可以为你们提供更多部费。"
+ Engineering_club_sponsor_UtahaRE:0 "真是感激不尽啊，老师，想要什么设备，尽管开口。"
+ Engineering_club_sponsor_HibikiRE:0 "这笔钱可以买到很不错的材料……感谢您。"
+
+ Engineering_club_weapon_develop:0 "对于开发武器，你们有什么灵感吗？"
+ enginner_developing_cooldown:0 "部员正在全力研究中"
+ Hibiki_Blank:0 "现在还没有可供研究的科技……抱歉，我们有些灵感不足。我们会持续追踪联邦科研部门的新进展，还请给我们和科研部门一些时间……"
+ Hibiki_Sagittarius_night:0 "之前买材料的时候，我曾经见到过一位227特别班的学生……她用的冲锋枪的枪口上附带着手电筒，能在仰望天空的同时注意脚下，确实是个美妙的点子。我们的构想是，以此为原型制作一型激光点防御武器，使用光束为实体子弹开路……"
+ Hibiki_Grenadiers_575:0 "参加百鬼夜行的活动之后，您也对千世印象深刻吧……作为工程师部的一员，我发现千世的武器使用的弹药和柚子的不同：可以绕过能量场……只要您的一点小小帮忙，取得一些千世的弹着点样品，我们就可以制作一型飞弹……啊，不要误会了，不会拿去卖的……"
+ Hibiki_Adena_3:0 "真理部的晴，身边总是有无人机在环绕，对吧？那些无人机可以释放电子脉冲，用这种思路，同样的功能也可以安装在舰载机上……不过，想要对战舰这种级别的护盾进行打击的话，现有的舰载机型号是不够的，需要从头设计一型新的舰载机……"
+ Hibiki_Fantacy_colors:0 "……这次是我自己的迫击炮。不得不承认，虽然火力强大，但笨重无比，所以需要脊峰型的武器槽位才可以安装。"
+ Hibiki_SuperNova:0 "爱丽丝的武器，一开始就是为星舰设计的。现在自律脊峰舰已经足够成熟，这个武器也可以做的更大一些……"
+ Hibiki_Soft_determination:0 "修行部在百鬼夜行里也是很有特色的社团呢……其中有一位部员，她的武器虽然只是手枪，但却保养的相当良好，和她本人一样都是相当优秀的女士……那么，参照现有的动能炮的退壳程序，把这些程序推翻重来……"
+ Hibiki_Unique_idea:0 "游戏部的双子您应该很熟悉吧，老师。小桃真的是很有活力呢……参照她们的配合，我们工程师部可以制造出一套可以相互配合的武器。"
+ Hibiki_Flashy_inspiration:0 "游戏部的双子您应该很熟悉吧，老师。小绿真的是很惹人怜爱呢……参照她们的配合，我们工程师部可以制造出一套可以相互配合的武器。"
+ Hibiki_Crack_shot:0 "格黑那的管理组织……风纪委员会，他们的突击队长使用一把极具破坏力的狙击步枪……别听她说什么高手不择武器什么的，战舰可不是凭高手决胜负的领域，对吧，老师？"
+
+ Engineering_club_building:0 "你们需要一个星球工作室吗？"
+ Engineering_club_building_UtahaRE:0 "如您所见，有些设备的部署需要大量的面积……这可真是帮了大忙了，感谢您。"
+ Engineering_club_building_HibikiRE:0 "老师这么说了的话……我们当然不会拒绝了，感谢……"
+
+ Engineering_club_building_add:0 "想要更多的工作室吗？"
+ Engineering_club_building_add_UtahaRE:0 "虽然我们有些缺人手……但工作室永远多多益善。谢谢您，有些仪器不必呆在仓库里吃灰了。"
+ Engineering_club_building_add_HibikiRE:0 "真的吗? 太棒了……我想给不同工作室的部员配不同的制服……"
+
+#真理部
+ Veritas_opinion:0 "（§G当前好感度：[Root.Veritas] §!）\n\n"
+
+ Chihiro_desc1:0 "$Veritas_opinion$啊，欢迎……"
+ Chihiro_desc2:0 "$Veritas_opinion$……我看起来很疲惫? ……只是被一种原始而令人惊叹的入侵方法折磨了一天而已。"
+ Chihiro_desc3:0 "$Veritas_opinion$饮料机一旦被拔掉了网线就不能被入侵，这确实是一种精妙的设计。……没什么。"
+ Hare_desc1:0 "$Veritas_opinion$唔，零重力环境意外的对腰很不好……"
+ Hare_desc2:0 "$Veritas_opinion$在这里，爱迪娜3号的功耗可以大幅降低，能够让它们做到更多的事情。……虽然它们还是不太听我指挥就是了。"
+ Hare_desc3:0 "$Veritas_opinion$啊，欢迎……如果您要找小玉她们的话，她们在里面忙。"
+
+ Veritas_sponsor:0 "虽然可能不必多此一问……你们需要更多部费吗。"
+ Veritas_sponsor_ChihiroRE:0 "……感谢。不过，拨款就免了，我们已经提前收到了……抱歉。"
+ Veritas_sponsor_HareRE:0 "被您发现了吗……实在抱歉，下次不会了……"
+
+ Veritas_sensor_crafting:0 "你们的改造计划如何了？"
+ Veritas_crafting_sensor:0 "真理部部员正在对此项目进行攻关。"
+ Veritas_sensor1:0 "首先，感谢老师批准我们的扩建许可，这次我们计划建造一个宇宙波动通讯管控装置。目前，我们需要一些调查情报，以及一大批的合金……所以才需要这么夸张的预算，抱歉。哦对了，晴和小玉这段时间为了研究这个项目已经几天没有睡觉了，捎点树莓派(RasPi/RPI)给她吧。"
+ Veritas_sensor1.next:0 "好的，同时我会批准你们的传感协议的。"
+ Veritas_sensor2:0 "嗯，老师，社团巨构的新区域已经准备就绪，目前还需要在程序上有所攻克，相信过不了多久就会有所成果的，如果老师想了解进程的话可以随时通讯。啊，对了，谢谢老师送的树莓派……"
+ Veritas_sensor2.next:0 "了解了，也要注意自己的健康哦。"
+ Veritas_sensor3:0 "工作进行到这一步，程序和协议已经大体上没有问题了，但是目前讯息捕捉的精度仍然不足，所以我们补充了一些精密仪器。日鞠前辈帮我们解决了大部分的程序问题，但调试工作她也无能为力……当这些都完成之后，通讯装置就可以开始运行了。"
+ Veritas_sensor3.next:0 "辛苦了，我会帮你们准备的。"
+ Veritas_sensor4:0 "老师，现在所有设备和程序都准备完毕……还请您帮忙调配最后一批合金，我们即将开始组装这宇宙间最庞大的监察设备！"
+ Veritas_sensor4.next:0 "开工！"
+
+ Veritas_building:0 "你们需要将节点部署在星球上吗？"
+ Veritas_building_ChihiroRE:0 "您愿意提供帮助的话……也好，真是太棒了。感谢您。"
+ Veritas_building_HareRE:0 "真的吗? 如果您是指星球网络的接口……额，当然。谢谢您。"
+
+ Veritas_building_add:0 "我们可以为你们提供更多的节点。"
+ Veritas_building_add_ChihiroRE:0 "您愿意提供帮助的话……也好，真是太棒了。感谢您。"
+ Veritas_building_add_HareRE:0 "如果您是指星球网络的接口……额，当然。谢谢您。"
+
+#对策委员会
+ Foreclosure_task_force_opinion:0 "（§G当前好感度：[Root.Foreclosure_task_force] §!）\n\n"
+
+ Nonomi_desc1:0 "$Foreclosure_task_force_opinion$啊啦，老师~ 有什么事情吗？"
+ Nonomi_desc2:0 "$Foreclosure_task_force_opinion$我们对策委员会并不研发设备，我们靠的是敏锐的眼光~"
+ Nonomi_desc3:0 "$Foreclosure_task_force_opinion$如果我们总想着用钱解决一切问题，阿拜多斯就不会有今天的复兴……您绝对可以相信我们的能力。"
+ Shiroko_desc1:0 "$Foreclosure_task_force_opinion$老师，是来看望我们的吗? ……嗯，我很高兴。"
+ Shiroko_desc2:0 "$Foreclosure_task_force_opinion$老师您看，这是我外勤的时候记录的那些行商老鼠的路线和舰船盲区，如果联邦学生会缺钱了，等它们下次来的时候……不可以吗? ……知道了……"
+ Shiroko_desc3:0 "$Foreclosure_task_force_opinion$一些跑外勤的活计现在都是我在做……正好可以让这辆快子轴单车派上用场。"
+
+ Foreclosure_task_force_sponsor:0 "我们可以为你们提供拨款"
+ Foreclosure_task_force_sponsor_NonomiRE:0 "其实不需要劳烦老师的，但我们还是非常感谢哦。"
+ Foreclosure_task_force_sponsor_ShirokoRE:0 "感谢，虽然这点小事情，我自己就可以解决……嗯，这样的话……"
+
+ Foreclosure_task_force_decisions:0 "我需要你们对殖民地建设的意见。"
+ Foreclosure_task_force_decisions.tip:0 "$decision_Foreclosure_task_force_desc$"
+ taskforce_not_finished:0 "一个优化决策已准备好，请先在一个殖民地上执行此决策"
+ taskforce_cooldown:0 "需要时间准备下一个决策"
+ decision_fulled:0 "$TRIGGER_FAIL$优化决策已充分进行，去其他殖民地进行优化吧"
+ decision_Foreclosure_task_force:0 "对策委员会优化"
+ decision_Foreclosure_task_force_desc:0 "对策委员会的各位成员可以对此殖民地进行资源配置、人力分配的优化。"
+ Foreclosure_task_force_decisions.NonomiRE:0 "了解~我们马上动身~"
+ Foreclosure_task_force_decisions.ShirokoRE:0 "嗯，我知道了，这就去。"
+
+ Foreclosure_task_force_building:0 "我们可以给你们分配管理中心。"
+ Foreclosure_task_force_building_NonomiRE:0 "啊啦嘛……真的太谢谢您了。"
+ Foreclosure_task_force_building_ShirokoRE:0 "可以的话，我想要离市区近一些的高处，方便我……啊，抱歉。"
+
+ Foreclosure_task_force_building_add:0 "管理中心不足的话，可以分配更多给你们。"
+ Foreclosure_task_force_building_add_NonomiRE:0 "嘛，对阿拜多斯来说是好事情呢，谢谢您。"
+ Foreclosure_task_force_building_add_ShirokoRE:0 "嗯，可以当作撤退的据点使用……没什么。"
+
+#茶会
+ Teaparty_opinion:0 "（§G当前好感度：[Root.Teaparty] §!）\n\n"
+
+ Nagisa_desc1:0 "$Teaparty_opinion$欢迎您的到访，老师。"
+ Nagisa_desc2:0 "$Teaparty_opinion$茶会是一个由三个学生会合并而来的组织……因此我们更加懂得何为平衡。"
+ Nagisa_desc3:0 "$Teaparty_opinion$和平是目的而非手段，若为了目的不择手段就会变成压迫。我们为此付出过代价，所以不同的声音是很有必要的。"
+ Seia_desc1:0 "$Teaparty_opinion$(醒来)……啊，……您好……"
+ Seia_desc2:0 "$Teaparty_opinion$您似乎为什么事情而困扰……需要我的帮助吗，老师？"
+ Seia_desc3:0 "$Teaparty_opinion$它叫银喉长尾山雀……嗯，我知道您想要问什么。"
+ Mika_desc1:0 "$Teaparty_opinion$老师! 来茶会有何贵干，是来和我聊天的吗？"
+ Mika_desc2:0 "$Teaparty_opinion$在太空中，瑞士卷有和平时不同的风味，圣娅酱和我说过，这是因为太空中……呃，因为什么来着？"
+ Mika_desc3:0 "$Teaparty_opinion$我很喜欢这座太空部室，你看，我站在这里，这样……看，像不像《传说传奇编年史4》末章那一幕的公主！……嗯? 第五部的主角队是公主和勇者的儿女们…… 啊，呃，那个…… (脸红)"
+
+ Teaparty_sponsor:0 "社团总部可以为你们提供赞助。"
+ Teaparty_sponsor_NagisaRE:0 "多谢，虽然金钱上的帮助对我们而言意义不大，但您的诚意令我们十分感动。"
+ Teaparty_sponsor_SeiaRE:0 "十分感谢……这是给联邦学生会的回礼，请务必收下。"
+ Teaparty_sponsor_MikaRE:0 "不愧是您！我会珍惜的使用这些钱的。"
+
+ Teaparty_support:0 "我们需要你们的行政人员。"
+ Teaparty_support.tip:0 "请求茶会提供行政人员为联邦学生会支援，以限制帝国规模。"
+ Teaparty_support.NagisaRE:0 "十分感谢，老师，而且我一向不会刁难有诚意的合作方。"
+ Teaparty_support.SeiaRE:0 "……甜点，啊，不……才不是我想要吃……"
+ Teaparty_support.MikaRE:0 "真的吗? 那么，就奖励您可以和可爱的未花一起共事的机会！……公文每天三千页起? ……那还是算了……"
+ Teaparty_support_capped:0 "支援已达到最大规模"
+
+ Teaparty_building:0 "如果你们需要分支建筑，殖民地可以提供规划。"
+ Teaparty_building_NagisaRE:0 "这样的话我们也能更好的履行我们的义务，帮大忙了。"
+ Teaparty_building_SeiaRE:0 "不愧是老师，恰到好处的时机呢……"
+ Teaparty_building_MikaRE:0 "真棒！这可是值得纪念的地方，该怎么布置呢……"
+
+ Teaparty_building_add:0 "分支建筑数量是否不足？现在可以提供补充。"
+ Teaparty_building_add_NagisaRE:0 "现在茶会的分支可以承担更多的职能了，感谢。"
+ Teaparty_building_add_SeiaRE:0 "……于此对应的，我需要一张更大的床……"
+ Teaparty_building_add_MikaRE:0 "这样可以更快的处理掉那些不听话的坏孩子了。"
+

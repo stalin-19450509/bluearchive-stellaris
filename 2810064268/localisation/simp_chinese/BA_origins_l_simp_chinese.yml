@@ -1,0 +1,197 @@
+﻿l_simp_chinese:
+##########################
+#
+ NAME_Hoshino:0 "小鸟游星野"
+ NAME_Hina:0 "空崎日奈"
+ NAME_Mika:0 "圣园未花"
+ NAME_Yuuka:0 "早濑优香"
+
+ NAME_Aris:0 "天童爱丽丝"
+ NAME_Atsuko:0 "秤亚津子"
+
+ NAME_Saori:0 "锭前纱织"
+
+ NAME_Seia:0 "百合园圣娅"
+
+#### 起源事件
+ BA_origin.0002.name:0 "基沃托斯的新秩序"
+ BA_origin.0002.desc:0 "    终于，在经历了漫长而曲折的斗争之后，基沃托斯总算把数秘术彻底从这颗星球上清理了出去，在历经多年战争的创伤之后，青春校园的气息再一次回到了这片大陆——总算能松一口气了\n    然而，这个范围并不包括夏莱和联邦学生会。尽管在伊甸条约签订之后一批新鲜血液进入了联邦学生会，但是这显然满足不了基沃托斯日益扩张的治理需求。光是星球重建的事情就够我忙的了，现在又加上了星球之外的事情，就算为师有同时撩十二个女学生的能力（大雾）也忙不过来吧！\n    一方面，遁入深空的数秘术是一个不可忽视的威胁，我们不能放缓对深空的探索。另一方面，总学生会长的位置长期闲置——基沃托斯的上一任学生会长，那个带我来到这个奇迹之地的人，我想她大概再也回不来了。虽然有些对不住她，但是，我不能长期代理她的位置。"
+ BA_origin.0002.a:0 "递交《进行新一任学生会长大选》提案书。"
+ BA_origin.0003.name:0 "学生会长大选"
+ BA_origin.0003.desc:0 "    “基沃托斯是一个学生建立的国度，它的未来也应该掌握在学生手中。”\n    在我影响力的推动下，新一任学生会长大选如期举行。虽然我早就应该想到这一点，不过已经太迟了——伊甸条约的主要缔约校的三位领导人和格黑娜纠察部的委员长这四个人以绝对的票数优势成为了最终的候选人。如果可以的话我还是希望一个没有这么明显的学院立场的人担任学生会长，不过好像除了我再也找不到这样的人了。\n    显然，目前的学院联邦内部依然存在的不少矛盾，或者说，这完全就是一个在我的影响力下勉强维持着的联邦，我很担心空降一位学生会长会引发事态的进一步恶化，但是不可否认的是，这四位候选人绝对拥有胜任这个职位的能力\n    最终的结果已经送到了联邦学生会，是时候宣布下一任学生会长的人选了……"
+ BA_origin.0003.a:0 "小鸟游星野将引领基沃托斯走上复兴"
+ BA_origin.0003.b:0 "空崎日奈已经准备好整顿基沃托斯内部的混乱了"
+ BA_origin.0003.c:0 "圣园未花将会把瑞士卷的光辉散播到星河之中"
+ BA_origin.0003.d:0 "经过精密的计算，早濑优香将登上会长之位"
+
+ BA_origin.0004.name:0 "星野当选"
+ BA_origin.0004.desc:0 "    星野成为了基沃托斯的下一任学生会长，她的就职仪式在伊甸条约曾经的签约处举行，同时我也终于可以把精力都放在对深空的探索上了。\n    她的就职仪式稍微出了一点意外，嗯……简单来说就是星野又睡过头了，据说还是被黑猫拖过来的，某种意义上这也算是她特有的风格吧？\n    在仪式结束之后，星野找到了我，似乎有什么想说的话"
+ BA_origin.0004.a:0 "怎么了吗，星野酱？"
+
+ BA_origin.0005.name:0 "日奈当选"
+ BA_origin.0005.desc:0 "    日奈成为了基沃托斯的下一任学生会长，她的就职仪式在伊甸条约曾经的签约处举行，同时我也终于可以把精力都放在对深空的探索上了。\n    日奈似乎并不是很想出任这个职位，按照她本人的想法，她本应该享受卸任风纪委员长的退休生活的。当然，她并没有什么怨言，很快就接手了基沃托斯的日常工作\n    当晚，在我结束了我自己的工作之后，夏莱的大楼已经基本没有灯火了——除了学生会长的办公室"
+ BA_origin.0005.a:0 "去拜访一下日奈吧？"
+
+ BA_origin.0006.name:0 "未花当选"
+ BA_origin.0006.desc:0 "    未花成为了基沃托斯的下一任学生会长，她的就职仪式在伊甸条约曾经的签约处举行，同时我也终于可以把精力都放在对深空的探索上了。\n    尽管基沃托斯内部有部分学生因为她之前的所作所为而对此感到不满，但是总体来讲，大部分基沃托斯的学生都接受了这个事实。\n    自第一次伊甸条约事件之后，未花深刻地认识到了自己的错误并且虚心向渚请教治国之道（或许是治校之道？），在为师的精心调教下，她已经基本放下了对于格黑娜的成见。\n    尽管如此，总的来讲，她依旧是一个对政事一窍不通只知道用暴力解决问题的人，还是多关注一下这孩子好一点..."
+ BA_origin.0006.a:0 "虽然是个不靠谱的家伙，但是应该没有什么大问题吧..."
+
+ BA_origin.0007.name:0 "优香当选"
+ BA_origin.0007.desc:0 "优香成为了基沃托斯的下一任学生会长，她的就职仪式在伊甸条约曾经的签约处举行，同时我也终于可以把精力都放在对深空的探索上了。\n    按照她本人的说法，她已经精确地计算出了得票结果，并且早就准备好了上任，我不清楚这是否是真的，不过以我对她的了解，我猜她确实已经算过了。\n    她已经迫不及待地在全基沃托斯推行“人手一个包”政策了，但是出于一些未知原因，她总是忘记带上自己的战术背包"
+ BA_origin.0007.a:0 "这大概就是没包人的诅咒吧。"
+
+ BA_origin.0008.name:0 "基沃托斯的战后重建"
+ BA_origin.0008.desc:0 "近日，随着新上任的学生会长[Root.GetRulerName]的安排，基沃托斯的重建计划正在有条不紊地进行着，对于[Root.GetRulerName]的母校的重建已经基本完成，其他学校的重建也已经提上日程，只需要拥有足够的资源，就可以随时动工。"
+ BA_origin.0008.a:0 "我知道了。"
+
+ BA_origin.0017.name:0 "基沃托斯的战后重建"
+ BA_origin.0017.desc:0 "近日，随着新上任的学生会长空崎日奈的安排，基沃托斯的重建计划正在有条不紊地进行着，目前对于格黑娜学园的重建已经基本完成，其他学校的重建也已经提上日程，只需要拥有足够的资源，就可以随时动工。"
+ BA_origin.0017.a:0 "我知道了。"
+
+ BA_origin.0019.name:0 "基沃托斯的战后重建"
+ BA_origin.0019.desc:0 "近日，随着新上任的学生会长圣园未花的安排，基沃托斯的重建计划正在有条不紊地进行着，目前对于圣三一学园的重建已经基本完成，其他学校的重建也已经提上日程，只需要拥有足够的资源，就可以随时动工。"
+ BA_origin.0019.a:0 "我知道了。"
+
+ BA_origin.0021.name:0 "基沃托斯的战后重建"
+ BA_origin.0021.desc:0 "近日，随着新上任的学生会长早濑优香的安排，基沃托斯的重建计划正在有条不紊地进行着，目前对于千年学园的重建已经基本完成，其他学校的重建也已经提上日程，只需要拥有足够的资源，就可以随时动工。"
+ BA_origin.0021.a:0 "我知道了。"
+
+ BA_origin.0010.name:0 "基沃托斯的新征程"
+ BA_origin.0010.desc:0 "终于，我们完成了对于母星的战后重建计划，基沃托斯恢复了往日的繁荣。\n\n在清理废墟的时候，我们意外的发现了我们一直在寻找的、于大战中失踪的什亭之匣，所幸它受损并不是很严重，还有修复的可能。\n\n是时候把目光投向这片浩瀚的星海了，尽管我们已经慢了别人一步，但是总是有办法追赶的，老师联合曾经负责检测数秘术活动的特异现象调查部改组为联邦星系调查委员会，进一步加快了我们探秘星际的速度。"
+ BA_origin.0010.a:0 "我们的目标，是星辰大海！"
+
+
+
+ situation_conservative:0 "situation_conservative"
+ situation_conservative_type:0 "situation_conservative_type"
+ situation_conservative.desc:0 "situation_conservative.desc"
+ Eden_Treaty_Conservative:0 "Eden_Treaty_Conservative"
+ Eden_Treaty_Progressive:0 "Eden_Treaty_Progressive"
+
+##########################
+
+ BA_origin.0210.title:0 "发现外星人"
+ BA_origin.0210.desc:0 "从发现外星人的蛛丝马迹开始，到与外星人正式建立外交联系，我们对于外星人的看法逐渐趋于一致：它们将成为复兴的垫脚石。早已学会了两面三刀的我们，表面上和它们以正常的国家立场进行交流，实际上心中已经安排好了它们的价值。"
+ BA_origin.0210.next:0 "我们早就已经做好了不择手段的决心。"
+
+ BA_origin.0211.title:0 "揭开面纱"
+ BA_origin.0211.desc:0 "我们早就已经做好了不择手段的决心，我们无需再伪装。为了阿里乌斯的信念。"
+ BA_origin.0211.next:0 "万物皆虚。"
+ BA_origin.0211.tip:0 "将所有外星物种的权利设为“不可接触者”"
+
+ BA_origin.0212.title:0 "面纱之下"
+ BA_origin.0212.desc:0 "我们和这些外星人相处了如此长的时间。我们反思了自己的所作所为，发现它们道路与我们并不干涉。既然如此……"
+ BA_origin.0212.next:0 "结交新朋使人臻于至善。"
+
+
+#系统事件
+ BA_origin.0236.title:0 "获取资源"
+ BA_origin.0236.desc:0 "一个外星帝国已在我们的武力献祭之下化为灰烬。陆军缴获了一大批国库中尚未来得及销毁的物资，废料也被仔细的回收起来。这一批物资已经装上了运输船发往首都。"
+ BA_origin.0236.confirm:0 "批准入库。"
+
+ BA_Shittem.2005.title:0 "计划书"
+ BA_Shittem.2005.desc:0 "“老师，我们收到了一份关于调查废墟的计划书，Arona认为这对重建有很大帮助……\n您可以在 委托 页面里查看这份计划书并批准实行。\n（§Y通讯(F1)§! -> §Y$Shittem.name$§! -> §Y委托§!）”"
+ BA_Shittem.2005.go:0 "那就去看看吧。"
+ BA_Shittem.2005.cancel:0 "一会再处理。"
+
+ BA_Shittem.2006.title:0 "研究完成"
+ BA_Shittem.2006.desc:0 "$tech_BA_ruins_research$已经完成，我们已经在母星上建造了一座$building_BA_mixed_ruins_lab$用于之后的研究。"
+ BA_Shittem.2006.next:0 "已确认"
+
+ BA_Shittem.2008.title:0 "委托提示"
+ BA_Shittem.2008.desc:0 "“老师，您似乎很久都没有查看 委托 页面了……学生们的委托都堆成山了哦，不好好的处理一下可不行……\n\n（提示：完成7个委托之后可以在 项目 中解锁青辉石相关科技）\n（§Y通讯(F1)§! -> §Y$Shittem.name$§! -> §Y委托§!）”"
+ BA_Shittem.2008.go:0 "$BA_Shittem.2005.go$"
+ BA_Shittem.2008.cancel:0 "$BA_Shittem.2005.cancel$"
+
+ BA_Shittem.1921.title:0 "青辉石"
+ BA_Shittem.1921.desc:0 "“老师，Arona一直在尝试着修复夏莱地下室的青辉石制造机，但是一直没有什么进展……呜，这种涉及到神秘的机器Arona实在是没有什么办法……\n不过转念一想，这种时候就要依赖可爱的学生们来帮忙了……\n老师会帮助我吗? 太棒了! 那么，这个就当作Arona给夏莱递交的 委托 吧! 平时学生们也会向夏莱递交各种各样的委托，得好好的处理才行……这种时候，不如就相信她们，也许能带来奇迹也说不定?\n\n（§Y通讯(F1)§! -> §Y$Shittem.name$§! -> §Y委托§!）”"
+ BA_Shittem.1921.go:0 "$BA_Shittem.2005.go$"
+ BA_Shittem.1921.cancel:0 "$BA_Shittem.2005.cancel$"
+
+
+#局势
+ situation_Kyrie_main:0 "致被遗忘的众神"
+ situation_Kyrie_main_type:0 "致被遗忘的众神"
+ situation_Kyrie_main_desc_1:0 "我们已经在星系中建立了哨站，将我们的疆域扩张至太空。接下来，我们必须在无垠的太空中获取我们需要的一切，将我们的家园在废墟上重新建起。"
+ situation_Kyrie_main_desc_2:0 "我们的矿业协会首先取得了突破：按她们的计划，我们需要收集更多关于这颗星球上废墟的相关数据，为此我们需要建造一个混成化实验室来承担这个功能。首先，先要完成£society_research£§Y$tech_BA_ruins_research$§!科技。"
+ situation_Kyrie_main_desc_3:0 "混成化实验室正在对星球废墟的一些特征进行基础研究。"
+ situation_Kyrie_main_desc_4:0 "混成化实验室正在研究快速清理星球废墟的方法。"
+ situation_Kyrie_main_desc_5:0 "我们的科研部门正在对混成化实验室提交的线索进行研究。这不会耗费太多时间的。"
+ situation_Kyrie_main_desc_6:0 "工程部门正在安排集中清除一些结构复杂的学园废墟。（在星球障碍中清除所有学园障碍以进行下一步）"
+ situation_Kyrie_main_desc_7:0 "重建星球的理论研究任务已分配给科研部门的下属机构。"
+ situation_Kyrie_main_desc_8:0 "信息部门正在准备入侵地下设施的载体。"
+ situation_Kyrie_main_default:0 "全力进行"
+ situation_Kyrie_main_1:0 ""
+ situation_Kyrie_main_2:0 ""
+ situation_Kyrie_main_3:0 ""
+ situation_Kyrie_main_4:0 ""
+ situation_Kyrie_main_1_tip:0 ""
+ situation_Kyrie_main_2_tip:0 ""
+ situation_Kyrie_main_3_tip:0 ""
+ situation_Kyrie_main_4_tip:0 ""
+
+ situation_Kyrie_cleaning:0 "清扫废墟"
+ situation_Kyrie_cleaning_type:0 "清扫废墟"
+ situation_Kyrie_cleaning_default:0 "保障运行"
+ situation_Kyrie_cleaning_1_tip:0 ""
+ situation_Kyrie_cleaning_2_tip:0 ""
+
+#事件链
+ BA_Kyrie_title:0 "致被遗忘的众神"
+ BA_Kyrie_desc:0 "我们的抗争已是过往云烟，挣扎了许久的我们迎来的曙光。\n母星上关于能量、矿物、食物的生产正在不计后果的全力进行，只为我们能够在这浩瀚星宇中抢占先机。\n"
+
+
+ BA_Arius_Kyrie:0 "致少女们的垂怜经"
+ BA_Arius_Kyrie_desc:0 "我们的抗争已是过往云烟，挣扎了许久的我们迎来的曙光。母星上关于能量、矿物、食物的生产正在不计后果的全力进行，只为我们能够在这浩瀚星宇中抢占先机。"
+ BA_Arius_deterrence_disconnecting:0 "解除威胁中"
+ BA_Arius_deterrence_disconnecting_desc:0 "解除威胁中"
+ BA_Arius_cleaning:0 "清扫中"
+ BA_Arius_cleaning_desc:0 "正在清扫废墟"
+ BA_Arius_rebuilding:0 "戒律，新与旧"
+ BA_Arius_rebuilding_desc:0 "年幼的神明们，在这里画下崭新的色彩吧。"
+
+ decision_Kyrie_clean_colony:0 "准备清理废墟"
+ decision_Kyrie_clean_colony_desc:0 "建造一个工厂，以生产用于清理废墟和建造最基本设施的自动机械。"
+ decision_Kyrie_rebuild_Kivotos_on_ruins:0 "$decision_rebuild_Kivotos_on_ruins$"
+ decision_Kyrie_rebuild_Kivotos_on_ruins_desc:0 "重建我们的家园，在这行将就木的废墟之上。"
+ BA_origin_Kyrie_ruins_count_zero:0 "需要停止£blocker£阿里乌斯特色废墟的生成，并将其清理干净。"
+
+ BA_Kyrie_disconnet_deterrence:0 "解除地下威胁"
+ BA_Kyrie_disconnet_deterrence_DESC:0 "解除地下威胁"
+ BA_Kyrie_disconnet_deterrence_by_Arona:0 "解除地下威胁"
+ BA_Kyrie_disconnet_deterrence_by_Arona_DESC:0 "解除地下威胁"
+
+ war_goal_wg_BA_Sacrifice:0 "全面战争"
+ war_goal_wg_BA_Sacrifice_desc:0 "我们的心向她而去……"
+ casus_belli_BA_Bellum_Ariusum:0 "武力献祭"
+ war_goal_wg_BA_resist_Arius:0 "终止暴行"
+ war_goal_wg_BA_resist_Arius_desc:0 "揭开她们的伪装。"
+ casus_belli_BA_resist_Arius:0 "终止暴行"
+ wg_BA_Sacrifice_tooltip:0 "[Root.GetName]获得或转化了大量[LastKilledCountryName]的资源。"
+
+ citizenship_Sacrifice:0 "武力献祭"
+ citizenship_Sacrifice_tooltip:0 "净化并获得£alloys£合金与£sr_keystone£制造石。"
+ citizenship_Sacrifice_tooltip_delayed:0 "它们只有一种为阿里乌斯做贡献的方式。"
+ purge_Sacrifice:0 "武力献祭"
+ purge_Sacrifice_tooltip:0 "净化并获得£alloys£合金与£sr_keystone£制造石。"
+ purge_Sacrifice_tooltip_delayed:0 "它们只有一种为阿里乌斯做贡献的方式。"
+
+ NAME_BA_Kyrie_enemy_species:0 "十字神名"
+ NAME_BA_Kyrie_enemy_country:0 "十字神名"
+
+
+ BA_Deca_army:0 "中继站控制部队"
+ BA_Deca_army_1:0 "$BA_Deca_army$ 1"
+ BA_Deca_army_1_desc:0 "$BA_Deca_army$"
+ BA_Deca_army_2:0 "$BA_Deca_army$ 2"
+ BA_Deca_army_2_desc:0 "$BA_Deca_army$"
+ BA_Deca_army_3:0 "$BA_Deca_army$ 3"
+ BA_Deca_army_3_desc:0 "$BA_Deca_army$"
+ BA_Deca_army_4:0 "$BA_Deca_army$ 4"
+ BA_Deca_army_4_desc:0 "$BA_Deca_army$"
+
+ BA_origin_Kyrie_destroy:0 "$BA_Deca_army$"
+ BA_origin_Kyrie_destroy_desc:0 "$BA_Deca_army$"
+
+ BA_origin_Kyrie_controled:0 "机械转换者部队"
+ BA_origin_Kyrie_controled_desc:0 "机械转换者部队"

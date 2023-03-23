@@ -1,0 +1,840 @@
+#############   人口建筑   #############
+#卫星局
+building_BA_starlink_1 = {
+	position_priority = 20
+	base_buildtime = 360
+	category = pop_assembly
+	base_cap_amount = 1
+	potential = {
+		exists = owner
+		NOT = {
+			is_planet_class = pc_habitat
+		}
+		owner = {
+			is_ai = no
+			has_authority = auth_kivotos
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		planet_pop_assembly_organic_mult = 0.12
+		planet_pop_assembly_mult = 0.12
+	}
+	planet_modifier = {
+		job_roboticist_add = 1
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			sr_eligma = 20
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+	upgrades = {
+		building_BA_starlink_2
+	}
+}
+
+#星链局
+building_BA_starlink_2 = {
+	position_priority = 20
+	can_build = no
+	base_buildtime = 360
+	category = pop_assembly
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_BA_new_frontier
+		}
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		planet_pop_assembly_organic_mult = 0.25
+		planet_pop_assembly_mult = 0.25
+	}
+	planet_modifier = {
+		job_roboticist_add = 3
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			sr_eligma = 30
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+}
+
+#############   特殊资源   #############
+#青辉石建造中心 +3青辉石生产员岗位
+building_BA_pyroxenes_1 = {
+	position_priority = 151
+	base_buildtime = 360
+	category = manufacturing
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_pyroxenes_maker_add = 3
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+	prerequisites = {
+		"tech_BA_pyroxenes_crafting"
+	}
+	upgrades = {
+		building_BA_pyroxenes_2
+	}
+}
+
+#规模化青辉石制造中心 +7青辉石生产员岗位
+building_BA_pyroxenes_2 = {
+	position_priority = 150
+	base_buildtime = 360
+	can_build = no
+	category = manufacturing
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_pyroxenes_maker_add = 7
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+		}
+		upkeep = {
+			energy = 8
+		}
+	}
+	prerequisites = {
+		"tech_BA_pyroxenes_industrial_crafting"
+	}
+}
+
+#拱心石制造机 +1制造机维护员岗位 8电3青辉石->4制造石
+building_BA_keystone_1 = {
+	position_priority = 153
+	base_buildtime = 360
+	category = manufacturing
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_keystone_maintenance_staff_add = 1
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+			sr_pyroxenes = 50
+		}
+		upkeep = {
+			energy = 8
+			sr_pyroxenes = 3
+		}
+		produces = {
+			sr_keystone = 4
+		}
+		produces = {
+			trigger = {
+				colony_type = col_pyroxenes_use
+			}
+			sr_keystone = 0.4
+		}
+	}
+	prerequisites = {
+		"tech_BA_keystone_crafting"
+	}
+	upgrades = {
+		building_BA_keystone_2
+	}
+}
+
+#集约化拱心石制造机 +1制造机维护员岗位 12电10青辉石->15制造石
+building_BA_keystone_2 = {
+	position_priority = 152
+	base_buildtime = 360
+	can_build = no
+	category = manufacturing
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_keystone_maintenance_staff_add = 1
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1200
+			sr_pyroxenes = 50
+		}
+		upkeep = {
+			energy = 12
+			sr_pyroxenes = 10
+		}
+		produces = {
+			sr_keystone = 15
+		}
+		produces = {
+			trigger = {
+				colony_type = col_pyroxenes_use
+			}
+			sr_keystone = 1.5
+		}
+	}
+	prerequisites = {
+		"tech_BA_keystone_automatic_crafting"
+	}
+}
+
+#暗物质浓缩机 无岗位 20电10青辉石->5暗物质
+building_BA_dark_matter_concentrator = {
+	position_priority = 156
+	base_buildtime = 360
+	category = manufacturing
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+			sr_pyroxenes = 100
+		}
+		upkeep = {
+			energy = 20
+			sr_pyroxenes = 10
+		}
+		produces = {
+			sr_dark_matter = 5
+		}
+		produces = {
+			trigger = {
+				colony_type = col_pyroxenes_use
+			}
+			sr_keystone = 0.5
+		}
+	}
+	prerequisites = {
+		"tech_BA_dark_matter_absorbing"
+	}
+}
+
+#稀有资源集中生产中心 10电5青辉石->2三种稀有资源
+building_BA_rare_center_1 = {
+	position_priority = 155
+	base_buildtime = 360
+	category = manufacturing
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			sr_pyroxenes = 30
+		}
+		upkeep = {
+			energy = 10
+			sr_pyroxenes = 5
+		}
+		produces = {
+			volatile_motes = 2
+			exotic_gases = 2
+			rare_crystals = 2
+		}
+		produces = {
+			trigger = {
+				colony_type = col_pyroxenes_use
+			}
+			volatile_motes = 0.2
+			exotic_gases = 0.2
+			rare_crystals = 0.2
+		}
+	}
+	prerequisites = {
+		"tech_BA_angel24_rare_produce"
+	}
+}
+
+#制造石冶金厂 +3制造石冶金者岗位
+building_BA_keystone_foundry = {
+	base_buildtime = 360
+	position_priority = 154
+	category = manufacturing
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_keystone_foundry_add = 3
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 8
+		}
+	}
+	prerequisites = {
+		"tech_BA_angel24_keystone_to_alloy"
+	}
+}
+
+#############   社团建筑   #############
+### 夏莱办公室
+#基础：+2社团部员岗位 非学园都市星球每10人口+1社团部员岗位
+building_ba_Schale_office = {
+	position_priority = 21
+	base_buildtime = 300
+	base_cap_amount = 1
+	category = amenity
+	icon = Schale_office
+	allow = {
+		has_upgraded_capital = yes
+	}
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	can_be_disabled = no
+	can_be_ruined = no
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_club_members_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+			planet = {
+				NOR = {
+					is_planet_class = pc_BA_campus_planet
+					is_planet_class = pc_BA_ruined_planet
+				}
+			}
+		}
+		modifier = {
+			job_BA_club_members_per_pop = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+			planet = {
+				NOR = {
+					is_planet_class = pc_nuked
+					is_planet_class = pc_relic
+					is_planet_class = pc_habitat
+					is_planet_class = pc_BA_auto_habitat
+				}
+			}
+		}
+		pop_environment_tolerance = 0.2
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+	# on_built = {
+	# 	set_variable = {
+	# 		which = BA_planet_club_count
+	# 		value = 0
+	# 	}
+	# }
+}
+
+#游戏开发部 +2/+5社团部员
+building_BA_Game_development_department = {
+	base_buildtime = 300
+	category = government
+	position_priority = 22
+	base_cap_amount = 1
+	empire_limit = {
+		base = 0
+		modifier = {
+			add = Game_development_department_room_limit			#设置的部室变量
+			owner = {
+				has_country_flag = allow_Game_development_department				#设置的允许标志
+			}
+		}
+		modifier = {
+			set = -1
+			always = no			#需要的话以后改
+		}
+	}
+	triggered_desc = {
+		text = building_BA_Game_development_department_effect
+	}
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	allow = {
+		#has_active_building = building_ba_Schale_office
+		check_variable = {
+			which = BA_planet_club_count
+			value < 3
+		}
+	}
+	on_queued = {
+		change_variable = {
+			which = BA_planet_club_count
+			value = 1
+		}
+	}
+	on_unqueued = {
+		change_variable = {
+			which = BA_planet_club_count
+			value = -1
+		}
+	}
+	on_destroy = {
+		change_variable = {
+			which = BA_planet_club_count
+			value = -1
+		}
+	}
+	can_be_disabled = no
+	can_be_ruined = no
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_club_members_add = 2
+			pop_happiness = 0.15
+			planet_jobs_unity_produces_mult = 0.15
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			consumer_goods = 1
+			energy = 1
+		}
+	}
+}
+
+#工程师部 +2/+5社团部员
+building_BA_Engineering_club = {
+	base_buildtime = 300
+	category = government
+	position_priority = 22
+	base_cap_amount = 1
+	empire_limit = {
+		base = 0
+		modifier = {
+			add = Engineering_club_room_limit			#设置的部室变量
+			owner = {
+				has_country_flag = allow_Engineering_club				#设置的允许标志
+			}
+		}
+		modifier = {
+			set = -1
+			always = no			#需要的话以后改
+		}
+	}
+	triggered_desc = {
+		text = building_BA_Engineering_club_effect
+	}
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	can_be_disabled = no
+	can_be_ruined = no
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_club_members_add = 2
+			planet_building_build_speed_mult = 0.2
+			planet_decision_enact_speed_mult = 0.2
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			consumer_goods = 1
+			energy = 1
+		}
+	}
+}
+
+#真理部服务器
+building_BA_Veritas_server = {
+	base_buildtime = 300
+	category = government
+	position_priority = 22
+	base_cap_amount = 1
+	empire_limit = {
+		base = 0
+		modifier = {
+			add = Veritas_room_limit			#设置的部室变量
+			owner = {
+				has_country_flag = allow_Veritas				#设置的允许标志
+			}
+		}
+		modifier = {
+			set = -1
+			always = no			#需要的话以后改
+		}
+	}
+	triggered_desc = {
+		text = building_BA_Veritas_server_effect
+	}
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	can_be_disabled = no
+	can_be_ruined = no
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_club_members_add = 2
+			empire_size_colonies_mult = -0.5
+		}
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		intel_encryption_add = 1
+		intel_decryption_add = 1
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			consumer_goods = 1
+			energy = 1
+		}
+	}
+}
+
+#阿拜多斯生产部门（本地） +2/+5社团部员
+building_BA_local_division = {
+	base_buildtime = 300
+	category = government
+	position_priority = 22
+	base_cap_amount = 1
+	empire_limit = {
+		base = 0
+		modifier = {
+			add = Foreclosure_task_force_room_limit			#设置的部室变量
+			owner = {
+				has_country_flag = allow_Foreclosure_task_force				#设置的允许标志
+			}
+		}
+		modifier = {
+			set = -1
+			always = no			#需要的话以后改
+		}
+	}
+	triggered_desc = {
+		text = building_BA_local_division_effect
+	}
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	can_be_disabled = no
+	can_be_ruined = no
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_club_members_add = 2
+			planet_miners_minerals_produces_mult = 0.25
+			planet_miners_consumer_goods_upkeep_add = 0.5
+			planet_technician_energy_produces_mult = 0.25
+			planet_technician_consumer_goods_upkeep_add = 0.5
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			consumer_goods = 1
+			energy = 1
+		}
+	}
+}
+
+#茶会办事处 +2/+5社团部员
+building_BA_Teaparty_branch = {
+	base_buildtime = 300
+	category = government
+	position_priority = 22
+	base_cap_amount = 1
+	empire_limit = {
+		base = 0
+		modifier = {
+			add = Teaparty_room_limit			#设置的部室变量
+			owner = {
+				has_country_flag = allow_Teaparty				#设置的允许标志
+			}
+		}
+		modifier = {
+			set = -1
+			always = no			#需要的话以后改
+		}
+	}
+	triggered_desc = {
+		text = building_BA_local_division_effect
+	}
+	potential = {
+		owner = {
+			has_authority = auth_kivotos
+		}
+	}
+	can_be_disabled = no
+	can_be_ruined = no
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_kivotos
+			}
+		}
+		modifier = {
+			job_BA_club_members_add = 2
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 350
+		}
+		upkeep = {
+			energy = 5
+			alloys = 5
+		}
+	}
+	
+}
+# #风纪委员会 +2/+5社团部员
+# building_BA_Prefect_team = {
+# 	base_buildtime = 300
+# 	base_cap_amount = 1
+# 	category = amenity
+# 	icon = building_luxury_residence	#暂时的 以后改
+# 	#icon = engineer_club
+# 	allow = {
+# 		has_upgraded_capital = yes
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_authority = auth_kivotos
+# 			}
+# 		}
+# 		modifier = {
+# 			#job_BA_judgemen_add = 4
+# 			job_BA_club_members_add = 2
+# 			planet_stability_add = 10			#暂时的 以后改
+# 			planet_crime_mult = -15
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 350
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 			alloys = 5
+# 		}
+# 	}
+# 	prerequisites = {
+# 		"tech_BA_culture_Gehenna"
+# 	}
+# }
+
+#############   事件建筑   #############
+#混成数据实验室
+building_BA_mixed_ruins_lab = {
+	position_priority = 199
+	base_buildtime = 360
+	base_cap_amount = 1
+	potential = {
+		# is_planet_class = pc_BA_ruined_planet
+		# owner = {
+		# 	has_authority = auth_kivotos
+		# }
+		always = no
+	}
+	can_be_disabled = no
+	can_demolish = no
+	can_be_ruined = no
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			alloys = 100
+		}
+		upkeep = {
+			energy = 5
+			unity = 5
+		}
+	}
+	# prerequisites = {
+	# 	tech_BA_ruins_research
+	# }
+	triggered_planet_modifier = {
+		potential = {
+			is_planet_class = pc_BA_campus_planet
+		}
+		job_BA_club_members_add = 4
+	}
+	destroy_trigger = {
+		planet = {
+			is_planet_class = pc_BA_campus_planet
+		}
+	}
+}

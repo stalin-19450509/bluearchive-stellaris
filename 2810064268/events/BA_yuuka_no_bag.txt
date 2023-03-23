@@ -1,0 +1,13 @@
+namespace = BA_yuuka_no_bag
+#没包人就职事件链，话说我们不是要做爱用品来着吗（催更）
+country_event = {
+	id = BA_yuuka_no_bag.0001
+	is_triggered_only = yes
+	title = "BA_yuuka_no_bag.0001.name"
+	desc = "BA_yuuka_no_bag.0001.desc"
+	picture = GFX_BA_yuuka_no_bag
+	option = {
+		name = BA_yuuka_no_bag.0001.a
+		default_hide_option = yes
+	}
+}

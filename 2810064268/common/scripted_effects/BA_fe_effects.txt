@@ -1,0 +1,251 @@
+#### 失落帝国殖民地初始化 !planet scope
+#初始化失落帝国首都
+BA_fe_capital_initial = {
+	while = {
+		count = 12
+		add_district = BA_districts_dome
+	}
+	add_building = building_ancient_palace	#以后改
+	add_building = building_BA_fe_data
+	add_building = building_BA_fe_energy
+	add_building = building_BA_fe_food
+	add_building = building_BA_fe_alloy
+	add_building = building_BA_fe_alloy
+	add_building = building_BA_fe_pyroxenes
+	add_building = building_BA_fe_keystone
+	add_building = building_BA_fe_keystone
+	add_building = building_BA_fe_keystone
+	while = {
+		count = 55
+		create_pop = {
+			species = event_target:BA_fe_species
+		}
+	}
+	set_capital = yes
+}
+
+#初始化失落帝国殖民地
+BA_fe_colony_initial = {
+	add_building = building_ancient_palace	#以后改
+	add_building = building_BA_fe_data
+	add_building = building_BA_fe_energy
+	add_building = building_BA_fe_food
+	add_building = building_BA_fe_alloy
+	add_building = building_BA_fe_alloy
+	add_building = building_BA_fe_pyroxenes
+	add_building = building_BA_fe_keystone
+	add_building = building_BA_fe_keystone
+	add_building = building_BA_fe_keystone
+	add_building = building_BA_fe_dome
+	add_building = building_BA_fe_dome
+	while = {
+		count = 10
+		create_pop = {
+			species = event_target:BA_fe_species
+		}
+	}
+}
+
+#初始化失落帝国环世界殖民地
+BA_fe_rw_initial = {
+	add_building = building_ancient_palace	#以后改
+	add_building = building_BA_fe_data
+	add_building = building_BA_fe_energy
+	add_building = building_BA_fe_food
+	add_building = building_BA_fe_alloy
+	add_building = building_BA_fe_alloy
+	add_building = building_BA_fe_pyroxenes
+	add_building = building_BA_fe_keystone
+	add_building = building_BA_fe_keystone
+	add_building = building_BA_fe_keystone
+	add_building = building_BA_fe_dome
+	add_building = building_BA_fe_dome
+	while = {
+		count = 25
+		create_pop = {
+			species = event_target:BA_fe_species
+		}
+	}
+}
+
+#### 失落帝国恒星系初始化 !system scope
+#建立失落帝国恒星哨站
+BA_fe_starbase_initial = {
+	create_starbase = {
+		size = starbase_citadel
+		module = shipyard
+		module = shipyard
+		module = shipyard
+		module = hangar_bay
+		module = gun_battery
+		module = gun_battery
+		building = target_uplink_computer
+		building = defense_grid
+		building = colossus_yards
+		building = titan_yards
+		owner = event_target:BA_fe_country
+		effect = {
+			while = {
+				count = 11
+				create_ship = {
+					name = random
+					design = "NAME_BA_FE_DEFENCE_CANON"
+					graphical_culture = owner
+				}
+			}
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:BA_fe_country
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:BA_fe_country
+		}
+	}
+}
+
+#### 失落帝国刷舰队 !system scope
+#失落帝国刷舰队
+BA_fe_create_fleet = {
+	event_target:BA_fe_country = {
+		create_fleet = {
+			name = BA_FE_FLEET
+			effect = {
+				set_owner = prev
+				set_location = {
+					target = prevprev
+					distance = 75
+					angle = 60
+					direction = out_system
+				}
+				while = {
+					count = 1
+					create_ship = {
+						name = RANDOM
+						design = NAME_BA_FE_HUB_SHIP
+						prefix = yes
+					}
+				}
+				while = {
+					count = 12
+					create_ship = {
+						name = RANDOM
+						design = NAME_BA_FE_ARTILLERY_SHIP
+						prefix = yes
+					}
+				}
+				while = {
+					count = 12
+					create_ship = {
+						name = RANDOM
+						design = NAME_BA_FE_SWARM_SHIP
+						prefix = yes
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = RANDOM
+						design = NAME_BA_FE_MISSILE_SHIP
+						prefix = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+#失落帝国军备初始化
+BA_fe_fleet_initial = {
+	while = {
+		count = 4
+		event_target:D_KETHER = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 1
+		event_target:D_CHHOKMAH = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 1
+		event_target:D_BINAH = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 1
+		event_target:D_CHESED = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 1
+		event_target:D_GEBURAH = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 1
+		event_target:D_TIPHARETH = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 1
+		event_target:D_NETSAH = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 1
+		event_target:D_HOD = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 4
+		event_target:D_YESOD = {
+			BA_fe_create_fleet = yes
+		}
+	}
+	while = {
+		count = 5
+		event_target:D_MALKUTH = {
+			BA_fe_create_fleet = yes
+		}
+	}
+}
+
+#### 失落帝国资源调配 !country scope
+BA_fe_set_energy = {
+	export_resource_stockpile_to_variable = {
+		resource = energy
+		variable = BA_fe_resource_var
+	}
+	multiply_variable = {
+		which = BA_fe_resource_var
+		value = -1
+	}
+	change_variable = {
+		which = BA_fe_resource_var
+		value = 1000
+	}
+	add_resource = {
+		energy = 1
+		multiplier = BA_fe_resource_var
+	}
+}

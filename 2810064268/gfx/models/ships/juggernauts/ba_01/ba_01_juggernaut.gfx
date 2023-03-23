@@ -1,0 +1,54 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "ba_01_juggernaut_frame_mesh"
+		file = "gfx/models/ships/juggernauts/nemesis_01/nemesis_01_juggernaut_frame.mesh"
+		animation = {id = "idle"		type = "nemesis_01_juggernaut_frame_idle_animation" }
+		animation = {id = "death"		type = "nemesis_01_juggernaut_frame_death_animation" }
+
+	}
+
+	pdxmesh = {
+		name = "ba_01_juggernaut_mesh"
+		file = "gfx/models/ships/juggernauts/nemesis_01/nemesis_01_juggernaut.mesh"
+		animation = {id = "idle"		type = "nemesis_01_juggernaut_idle_animation" }
+		animation = {id = "death"		type = "nemesis_01_juggernaut_death_animation" }
+
+		meshsettings = {
+			name = "g_bodyShape"
+			index = 0
+
+			texture_diffuse = "ba_01_juggernaut_diffuse.dds"
+			texture_normal = "ba_01_juggernaut_normal.dds"
+			texture_specular = "ba_01_juggernaut_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "xl_turret_slot1Shape"
+			index = 0
+			texture_diffuse = "ba_01_turret_XL_diffuse.dds"
+			texture_normal = "ba_01_turret_XL_normal.dds"
+			texture_specular = "ba_01_turret_XL_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "xl_turret_slot2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turret_XL_diffuse.dds"
+			texture_normal = "ba_01_turret_XL_normal.dds"
+			texture_specular = "ba_01_turret_XL_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

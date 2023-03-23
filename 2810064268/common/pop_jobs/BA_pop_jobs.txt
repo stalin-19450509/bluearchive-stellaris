@@ -1,0 +1,1439 @@
+#注：原版基本人口-投入-产出比
+#每人口一产| 电：/-6 矿：/-4 粮/-6
+#每人口二产| 消费品：6矿-6 合金：6矿-3 稀有：5矿-1
+#每人口特产| 凝聚力：2消费品-4 科研点：2消费品-4*3 舒适度：1消费品-10+1凝聚力
+############################
+##		学园都市星球
+############################
+#############  统治者  #############
+### 学生代表 ###
+#基础：4消费品 4凝聚力 -> 1影响力 12三种科研点数
+#buff:星球科技产出+5%
+BA_student_delegate = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		is_kivotos = yes
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+			influence = 1
+			physics_research = 12
+			society_research = 12
+			engineering_research = 12
+		}
+		upkeep = {
+			consumer_goods = 4
+			unity = 4
+		}
+	}
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+	}
+	pop_modifier = {
+		pop_happiness = 0.3
+	}
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_research_modifier|JOB|head_researcher|
+		mult = value:job_weights_modifier|JOB|head_researcher|RESOURCE|unity|FACTOR|0.25|
+		modifier = {
+			factor = 5
+			has_job = BA_student_delegate
+		}
+	}
+}
+
+### 自警团 ###
+#基础：2合金 3消费品 -> 3凝聚力 4舒适度 8海军容量
+#buff：4稳定度
+#传统强化：生成2防御部队 2凝聚力
+BA_Vigilant_crew = {
+	category = ruler
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		is_kivotos = yes
+	}
+	resources = {
+		category = planet_soldiers
+		produces = {
+			unity = 3
+		}
+		produces = {
+			trigger = {
+				planet = {
+					owner = {
+						has_tradition = tr_kivotos_space_supplies
+					}
+				}
+			}
+			unity = 2
+		}
+		upkeep = {
+			alloys = 2
+			consumer_goods = 3
+		}
+	}
+	planet_modifier = {
+		planet_stability_add = 2
+		planet_amenities_add = 4
+	}
+	pop_modifier = {
+		pop_defense_armies_add = 2
+	}
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_tradition = tr_kivotos_student_arms
+			}
+		}
+		pop_defense_armies_add = 2
+	}
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_modifier|JOB|high_priest|RESOURCE|unity|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 5
+			has_job = BA_Vigilant_crew
+		}
+	}
+}
+
+#############   专家   #############
+### 社团部员 
+# 1食物 1消费品 0.5合金 -> 4*3科研点
+#传统强化：无 -> 1凝聚力    0.5消费品 -> 1*3科研点
+#
+BA_club_members = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		is_kivotos = yes
+	}
+	resources = {
+		#门类太杂 分类列出
+		category = planet_researchers
+		### 基础
+		produces = {
+			physics_research = 4
+			society_research = 4
+			engineering_research = 4
+		}
+		upkeep = {
+			consumer_goods = 1
+			food = 1
+			alloys = 0.5
+		}
+		### 凝聚力传统强化
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_kivotos_daily_duty
+				}
+			}
+			unity = 1
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					has_tradition = tr_kivotos_daily_duty
+				}
+			}
+			consumer_goods = 0.5
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_kivotos_opaz
+				}
+			}
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					has_tradition = tr_kivotos_opaz
+				}
+			}
+			consumer_goods = 0.5
+		}
+		### 社团建筑强化
+		#游戏部
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_Game_development_department
+				}
+			}
+			unity = 0.5
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_Game_development_department
+				}
+			}
+			consumer_goods = 0.5
+		}
+		#工程师部
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_Engineering_club
+				}
+			}
+			engineering_research = 1.5
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_Engineering_club
+				}
+			}
+			consumer_goods = 0.5
+		}
+		#真理部
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_Veritas_server
+				}
+			}
+			physics_research = 1.5
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_Veritas_server
+				}
+			}
+			consumer_goods = 0.5
+		}
+		#对策委员会
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_local_division
+				}
+			}
+			society_research = 1.5
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_local_division
+				}
+			}
+			consumer_goods = 0.5
+		}
+		#茶会
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_Teaparty_branch
+				}
+			}
+			unity = 0.5
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_Teaparty_branch
+				}
+			}
+			consumer_goods = 0.5
+		}
+		#行星类型强化
+	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		planet = {
+	# 			NOT = {
+	# 				has_planet_flag = has_franchise_headquarters
+	# 			}
+	# 		}
+	# 	}
+	# 	trade_value_add = 1
+	# 	mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	# }
+	#传统修正
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				NOT = {
+					has_tradition = tr_kivotos_finish
+				}
+			}
+		}
+		planet_stability_add = -0.5
+	}
+	#社团修正
+	triggered_planet_modifier = {
+		potential = {
+		}
+		pop_happiness = 0.02
+	}
+	#
+	pop_modifier = {
+		pop_happiness = 0.3
+		pop_amenities_usage_mult = -0.3
+	}
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_modifier|JOB|artisan|RESOURCE|consumer_goods|
+		modifier = {
+			factor = 2
+			always = yes
+		}
+		modifier = {
+			factor = 5
+			has_job = BA_club_members
+		}
+	}
+}
+
+### 自治区职员 ###
+#基础：7矿物 -> 6消费品 2食物
+#飞升强化：我们的故事 2段 —— 5矿物 -> 0.5青辉石 5消费品
+#传统强化：2舒适度
+BA_Kivotos_staff = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = {
+			exists = owner
+		}
+		owner = {
+			is_gestalt = no
+		}
+	}
+	resources = {
+		category = planet_artisans
+		produces = {
+			consumer_goods = 6
+			food = 2
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_country_flag = BA_Blue_new_world_2
+				}
+			}
+			sr_pyroxenes = 0.5
+			consumer_goods = 5
+		}
+		upkeep = {
+			minerals = 7
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					has_country_flag = BA_Blue_new_world_2
+				}
+			}
+			minerals = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_tradition = tr_kivotos_newkind_dome
+			}
+		}
+		planet_amenities_add = 2
+	}
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_modifier|JOB|artisan|RESOURCE|consumer_goods|
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 5
+			has_job = BA_Kivotos_staff
+		}
+	}
+}
+
+### 制造石锻造师 ###
+#基础：8矿物 -> 5合金
+#飞升强化：我们的故事 3段 —— 2制造石 -> 5合金
+#传统强化：8海军容量
+BA_keystone_foundry = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	icon = foundry
+	building_icon = building_nano_forge
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = {
+			exists = owner
+		}
+		owner = {
+			is_gestalt = no
+		}
+	}
+	resources = {
+		category = planet_metallurgists
+		upkeep = {
+			minerals = 8
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					has_country_flag = BA_Blue_new_world_3
+				}
+			}
+			sr_keystone = 2
+		}
+		produces = {
+			alloys = 5
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_country_flag = BA_Blue_new_world_3
+				}
+			}
+			alloys = 5
+		}
+	}
+	triggered_country_modifier = {
+		potential = {
+			owner = {
+				has_tradition = tr_kivotos_space_supplies
+			}
+		}
+		country_naval_cap_add = 8
+	}
+	weight = {
+		weight = @specialist_job_weight		# Fairly important job
+		mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
+		modifier = {
+			factor = 5
+			has_job = BA_keystone_foundry
+		}
+	}
+}
+
+### 废料精炼工 ###
+#模式一：废墟球 无维护 -> 稀有资源 -1舒适度
+#模式二：学园球 8电 -> 稀有资源
+#飞升强化：我们的故事 1段 —— 2电 -> 稀有资源
+BA_scrap_refiner = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_worker_job
+	possible = {
+		hidden_trigger = {
+			exists = owner
+		}
+		owner = {
+			is_gestalt = no
+		}
+	}
+	resources = {
+		category = planet_miners
+		produces = {
+			rare_crystals = 0.5
+			exotic_gases = 0.5
+			volatile_motes = 0.5
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					is_planet_class = pc_BA_campus_planet
+				}
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_country_flag = BA_Blue_new_world_1
+				}
+			}
+			rare_crystals = 0.2
+			exotic_gases = 0.2
+			volatile_motes = 0.2
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					has_country_flag = BA_Blue_new_world_1
+				}
+			}
+			energy = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				is_planet_class = pc_BA_ruined_planet
+			}
+		}
+		planet_amenities_add = -1
+	}
+	pop_modifier = {
+		pop_happiness = -0.1
+	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 7
+			has_job = BA_scrap_refiner
+		}
+	}
+}
+
+#############   劳工   #############
+### 发癫者 ###
+#基础：3凝聚力 -> 20电
+#飞升强化：我们的故事 1段 —— 无 -> 10电
+BA_dont_be_crazy_here = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_energy_nexus
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_worker_job
+	possible = {
+		hidden_trigger = {
+			exists = owner
+		}
+		owner = {
+			is_gestalt = no
+		}
+	}
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 20
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_country_flag = BA_Blue_new_world_1
+				}
+			}
+			energy = 10
+		}
+		upkeep = {
+			unity = 3
+		}
+	}
+	pop_modifier = {
+		pop_happiness = 1
+	}
+	weight = {
+		weight = @worker_job_weight
+		mult = value:job_weights_modifier|JOB|technician|RESOURCE|energy|
+	}
+}
+
+### 采矿团 ###
+#基础：1合金 4舒适度 -> 20矿 
+#飞升强化：我们的故事 1段 —— 无 -> 10矿
+BA_Kivotos_miner = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_mineral_purification_plant
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_worker_job
+	possible = {
+		hidden_trigger = {
+			exists = owner
+		}
+		owner = {
+			is_gestalt = no
+		}
+	}
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 20
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_country_flag = BA_Blue_new_world_1
+				}
+			}
+			minerals = 10
+		}
+		upkeep = {
+			alloys = 1
+		}
+	}
+	planet_modifier = {
+		planet_amenities_add = -4
+	}
+	pop_modifier = {
+		pop_happiness = 0.2
+	}
+	weight = {
+		weight = @worker_job_weight
+		mult = value:job_weights_modifier|JOB|miner|RESOURCE|minerals|
+	}
+}
+
+### 灵活就业者 ###
+#基础：1消费品 2凝聚力 -> 2电 1贸易额 1*3科研点数
+#注：基沃托斯的失业者
+BA_flexible_workers = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	is_capped_by_modifier = no
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible = {
+		planet = {
+			is_planet_class = pc_BA_campus_planet
+			free_jobs = 0
+		}
+	}
+	resources = {
+		category = planet_soldiers
+		produces = {
+			energy = 2
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1
+		}
+		upkeep = {
+			unity = 2
+			consumer_goods = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				NOT = {
+					has_planet_flag = has_franchise_headquarters
+				}
+			}
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+	weight = {
+		weight = 1
+	}
+}
+
+##############################
+##		学园都市废墟星球
+##############################
+#############  统治者  #############
+### 配给员
+#基础：6矿 -> 3凝聚力 12社会学点数
+#混成化增益：2食物 -> 4工程学
+BA_supplier = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		is_kivotos = yes
+	}
+	resources = {
+		category = planet_politicians
+		produces = {
+			unity = 3
+			society_research = 6
+		}
+		upkeep = {
+			minerals = 5
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				planet = {
+					has_active_building = building_BA_mixed_ruins_lab
+				}
+			}
+			engineering_research = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				planet = {
+					has_active_building = building_BA_mixed_ruins_lab
+				}
+			}
+			food = 2
+		}
+	}
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_research_modifier|JOB|head_researcher|
+		modifier = {
+			factor = 5
+			has_job = BA_supplier
+		}
+	}
+}
+
+### 军需员 
+#基础：6矿 -> 12物理和工程学点数
+#8海军容量 5舒适度
+BA_quartermaster = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		is_kivotos = yes
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+			alloys = 3
+			physics_research = 4
+			engineering_research = 4
+		}
+		upkeep = {
+			unity = 4
+			consumer_goods = 2
+			minerals = 2
+		}
+	}
+	planet_modifier = {
+		planet_amenities_add = 5
+	}
+	country_modifier = {
+		country_naval_cap_add = 8
+	}
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_research_modifier|JOB|head_researcher|
+		modifier = {
+			factor = 5
+			has_job = BA_quartermaster
+		}
+	}
+}
+
+#############   专家   #############
+### 废墟开采员
+#基础：4电 -> 4矿 1.5合金 1消费品
+#政策：2消费品或0.15稀有资源
+#混成化增益：2食物 -> 4工程学
+BA_reminer = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 4
+			alloys = 1.5
+		}
+		upkeep = {
+			energy = 4
+		}
+		#
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = BA_Arius_mining_rare_resource
+						has_policy_flag = BA_Arius_mining_consumer_goods
+					}
+				}
+			}
+			consumer_goods = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = BA_Arius_mining_rare_resource
+				}
+			}
+			rare_crystals = 0.15
+			volatile_motes = 0.15
+			exotic_gases = 0.15
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = BA_Arius_mining_consumer_goods
+				}
+			}
+			consumer_goods = 1
+		}
+		#
+		produces = {
+			trigger = {
+				exists = owner
+				planet = {
+					has_active_building = building_BA_mixed_ruins_lab
+				}
+			}
+			engineering_research = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				planet = {
+					has_active_building = building_BA_mixed_ruins_lab
+				}
+			}
+			food = 2
+		}
+	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 5
+			has_job = BA_reminer
+		}
+	}
+}
+
+### 太阳能农场职工
+#基础：1合金 2矿 -> 6电 2食物 1消费品
+BA_solar_farmer = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 6
+			food = 2
+			consumer_goods = 1
+		}
+		upkeep = {
+			alloys = 1
+			minerals = 2
+		}
+	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 5
+			has_job = BA_solar_farmer
+		}
+	}
+}
+
+### 调查员（摇篮计划
+#基础：5电 -> 6社会和工程学点数 5舒适度
+BA_surveyor = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	resources = {
+		category = planet_farmers
+		produces = {
+			society_research = 6
+			engineering_research = 6
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	planet_modifier = {
+		planet_amenities_add = 5
+	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 5
+			has_job = BA_surveyor
+		}
+	}
+}
+
+#############   劳工   #############
+### 餐务员
+#基础：5食物 -> 4凝聚力 3社会学点数 1消费品 混成化增益
+BA_caterer = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_worker_job
+	resources = {
+		category = planet_farmers
+		produces = {
+			unity = 4
+			society_research = 3
+			consumer_goods = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				planet = {
+					has_active_building = building_BA_mixed_ruins_lab
+				}
+			}
+			engineering_research = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				planet = {
+					has_active_building = building_BA_mixed_ruins_lab
+				}
+			}
+			food = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+			}
+			food = 1
+		}
+		upkeep = {
+			food = 5
+		}
+	}
+	weight = {
+		weight = @worker_job_weight
+		mult = value:job_weights_modifier|JOB|farmer|RESOURCE|food|
+	}
+}
+
+### 拾荒者
+#基础：3凝聚力 2电 -> 1消费品 1食物 0.1稀有资源
+#政策：1消费品或0.1稀有资源
+#注：这是废墟星球上的失业者
+BA_scavenger = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	is_capped_by_modifier = no
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible = {
+		planet = {
+			is_planet_class = pc_BA_ruined_planet
+			free_jobs = 0
+		}
+	}
+	resources = {
+		category = planet_miners
+		produces = {
+			consumer_goods = 1
+			food = 1
+			rare_crystals = 0.1
+			volatile_motes = 0.1
+			exotic_gases = 0.1
+		}
+		upkeep = {
+			energy = 2
+			unity = 3
+		}
+		#
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = BA_Arius_mining_consumer_goods
+				}
+			}
+			consumer_goods = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = BA_Arius_mining_rare_resource
+				}
+			}
+			rare_crystals = 0.1
+			volatile_motes = 0.1
+			exotic_gases = 0.1
+		}
+	}
+	weight = {
+		weight = 1
+	}
+}
+
+#######################
+##		其他岗位
+#######################
+### 青辉石生产员
+#模式一：3电 5矿 -> 2凝聚力 1青辉石
+#模式二：3电 8矿 -> 2凝聚力 2青辉石 （科技强化）
+#模式三：3电 12矿 -> 2凝聚力 3青辉石 （升级建筑）
+BA_pyroxenes_maker = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		is_kivotos = yes
+	}
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			unity = 2
+			sr_pyroxenes = 1
+		}
+		upkeep = {
+			energy = 2
+			minerals = 5
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_technology = tech_BA_pyroxenes_industrial_crafting
+				}
+			}
+			sr_pyroxenes = 1
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					has_technology = tech_BA_pyroxenes_industrial_crafting
+				}
+			}
+			minerals = 3
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_pyroxenes_2
+				}
+			}
+			sr_pyroxenes = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_BA_pyroxenes_2
+				}
+			}
+			minerals = 3
+		}
+	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 20
+				}
+			}
+			factor = 0.7
+		}
+		modifier = {
+			factor = 5
+			has_job = BA_pyroxenes_maker
+		}
+	}
+}
+
+### 制造机维护员
+#基础：4电 1制造石 -> 4舰容 10舒适度 1消费品
+BA_keystone_maintenance_staff = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		is_kivotos = yes
+	}
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			sr_keystone = 3
+		}
+		upkeep = {
+			energy = 3
+			sr_pyroxenes = 1
+		}
+	}
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+	planet_modifier = {
+		planet_amenities_add = 10
+	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 5
+			has_job = BA_keystone_maintenance_staff
+		}
+	}
+}
+
+### 被献祭
+#基础：
+BA_oblation = {
+	icon = purge
+	category = purge
+	#purge = purge_Sacrifice
+	is_capped_by_modifier = no
+	ignores_sapience = yes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = yes
+	}
+	possible = {
+		is_kivotos = no
+	}
+	resources = {
+		category = planet_jobs
+		produces = {
+			alloys = 2
+			sr_keystone = 2
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+	weight = {
+		weight = 0
+		modifier = {
+			owner = {
+				has_policy_flag = BA_Arius_Guise_lifted
+			}
+			set = 100000
+		}
+	}
+}
+
+### 先驱自警团
+BA_fe_defender = {
+	category = precursor
+	icon = BA_Vigilant_crew
+	is_capped_by_modifier = yes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+	possible = {
+		owner = {
+			is_fallen_empire = yes
+		}
+		is_same_species = owner
+		owner = {
+			has_country_flag = BA_Precursor
+		}
+	}
+	pop_modifier = {
+		pop_defense_armies_add = 10
+	}
+	weight = {
+		weight = 30000
+		modifier = {
+			factor = 5
+			has_job = BA_fe_defender
+		}
+	}
+}
+
+### 先驱研究者
+BA_fe_researcher = {
+	category = precursor
+	icon = BA_club_members
+	is_capped_by_modifier = no
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+	possible = {
+		owner = {
+			is_fallen_empire = yes
+		}
+		is_same_species = owner
+		owner = {
+			has_country_flag = BA_Precursor
+		}
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 150
+			society_research = 150
+			engineering_research = 150
+		}
+	}
+	weight = {
+		weight = 10000
+		modifier = {
+			set = 10
+			OR = {
+				has_job = fe_overseer
+				has_job = fe_protector
+				has_job = BA_fe_defender
+			}
+		}
+	}
+}
+
+### 清扫难民
+BA_Sweeper_refugees = {
+	icon = fe_hedonist
+	category = sweeper_pop
+	is_capped_by_modifier = no
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+	possible = {
+		planet = {
+			exists = owner
+			planet = {
+				has_planet_flag = BA_Planet_sweeped
+			}
+		}
+		owner = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+	weight = {
+		base = 80000
+	}
+}
+
+#######################
+##		废弃岗位
+#######################
+#值日生 2消费品-->3三种科研点数 5舒适度 传统：+3凝聚力（废弃）
+BA_student_on_duty = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes 
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	planet_modifier = {
+		planet_amenities_add = 5
+	}
+	resources = {
+		category = planet_executives
+		produces = {
+			physics_research = 3
+			society_research = 3
+			engineering_research = 3
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_kivotos_daily_duty
+				}
+			}
+			unity = 3
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+	weight = {
+		weight = 25
+	}
+}
+
+#玩家 （已砍掉）
+BA_master_game_player = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	icon = duelist
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	resources = {
+		category = planet_entertainers
+		produces = {
+			unity = 4
+		}
+		upkeep = {
+			consumer_goods = 2
+			energy = 2
+		}
+	}
+	planet_modifier = {
+		planet_amenities_add = 3
+	}
+	weight = {
+		weight = 25
+	}
+}
+
+#生产管理员 2食物4消费品 8凝聚力 （已砍掉）
+BA_production_control = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = building_BA_pyroxenes
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	resources = {
+		category = planet_executives
+		produces = {
+			unity = 8
+		}
+		upkeep = {
+			food = 2
+			consumer_goods = 4
+		}
+	}
+	weight = {
+		weight = 25
+	}
+}

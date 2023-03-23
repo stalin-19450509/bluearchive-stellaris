@@ -1,0 +1,110 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wg_BA_Sacrifice"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}
+}
+
+spriteTypes = {
+	# Tradition - Kivotos
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_Kivotos_chronicle"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_tradition_Kivotos_chronicle.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_Kivotos_chronicle"
+		textureFile = "gfx/interface/traditions/tradition_category_tile_tradition_Kivotos_chronicle.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_Kivotos_chronicle"
+		textureFile = "gfx/interface/traditions/tradition_icon_tradition_Kivotos_chronicle.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_Kivotos_chronicle"
+		textureFile = "gfx/interface/traditions/tradition_category_tile_tradition_Kivotos_chronicle.dds"
+		borderSize = {
+			x = 140
+			y = 140
+		}
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_tr_kivotos_daily_duty"
+		textureFile = "gfx/interface/traditions/tr_kivotos_daily_duty.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_kivotos_newkind_dome"
+		textureFile = "gfx/interface/traditions/tr_kivotos_newkind_dome.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_kivotos_space_supplies"
+		textureFile = "gfx/interface/traditions/tr_kivotos_space_supplies.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_kivotos_opaz"
+		textureFile = "gfx/interface/traditions/tr_kivotos_opaz.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_kivotos_student_arms"
+		textureFile = "gfx/interface/traditions/tr_kivotos_student_arms.dds"
+	}
+	# Tradition - Halo Awaken
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_Halo_awaken"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_tradition_Halo_awaken.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_Halo_awaken"
+		textureFile = "gfx/interface/traditions/tradition_category_tile_tradition_Halo_awaken.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_Halo_awaken"
+		textureFile = "gfx/interface/traditions/tradition_icon_tradition_Halo_awaken.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_Halo_awaken"
+		textureFile = "gfx/interface/traditions/tradition_category_tile_tradition_Halo_awaken.dds"
+		borderSize = {
+			x = 140
+			y = 140
+		}
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_tr_halo_awaken_predator"
+		textureFile = "gfx/interface/traditions/tr_halo_awaken_predator.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_halo_awaken_drop"
+		textureFile = "gfx/interface/traditions/tr_halo_awaken_drop.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_halo_awaken_luminous"
+		textureFile = "gfx/interface/traditions/tr_halo_awaken_luminous.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_halo_awaken_fertile"
+		textureFile = "gfx/interface/traditions/tr_halo_awaken_fertile.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_halo_awaken_color"
+		textureFile = "gfx/interface/traditions/tr_halo_awaken_color.dds"
+	}
+	# Ascension Perks
+	spriteType = {
+		name = "GFX_ap_BA_Our_story"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_BA_Our_story.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_BA_halo_awaken"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_BA_halo_awaken.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_BA_new_frontier"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_BA_new_frontier.dds"
+		alwaystransparent = yes
+	}
+}

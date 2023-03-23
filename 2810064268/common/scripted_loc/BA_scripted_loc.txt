@@ -1,0 +1,282 @@
+defined_text = {
+	name = GetShittemDesc
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = GetShittemDesc.common.01
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = GetShittemDesc.common.02
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = GetShittemDesc.common.03
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = GetShittemDesc.common.04
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = GetShittemDesc.common.05
+	}
+}
+
+defined_text = {
+	name = GetPyroxenesSign
+	random = no
+	text = {
+		trigger = {
+			has_country_flag = BA_negative_pyroxenes
+		}
+		localization_key = BA_Shittem_minus_pyroxenes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = BA_Shittem_plus_pyroxenes
+	}
+}
+
+defined_text = {
+	name = GetKeystoneSign
+	random = no
+	text = {
+		trigger = {
+			has_country_flag = BA_negative_keystone
+		}
+		localization_key = BA_Shittem_minus_keystone
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = BA_Shittem_plus_keystone
+	}
+}
+
+defined_text = {
+	name = GetRatherPlanetRebuilded
+	text = {
+		trigger = {
+			has_country_flag = BA_Planet_rebuilded
+		}
+		localization_key = BA_Rebuild_a_planet_YES
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = BA_Planet_rebuilded
+			}
+		}
+		localization_key = BA_Rebuild_a_planet_NO
+	}
+}
+
+defined_text = {
+	name = GetRatherTraditionFinished
+	text = {
+		trigger = {
+			has_country_flag = BA_tr_kivotos_finished
+		}
+		localization_key = BA_tr_kivotos_finished_YES
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = BA_tr_kivotos_finished
+			}
+		}
+		localization_key = BA_tr_kivotos_finished_NO
+	}
+}
+
+#查询天灾
+defined_text = {
+	name = GetBACrisisLevel
+	text = {
+		trigger = {
+			has_global_flag = BA_Crisis_Insane
+		}
+		localization_key = LEVEL_Insane
+	}
+	text = {
+		trigger = {
+			has_global_flag = BA_Crisis_Veryhard
+		}
+		localization_key = LEVEL_Veryhard
+	}
+	text = {
+		trigger = {
+			has_global_flag = BA_Crisis_Hardcore
+		}
+		localization_key = LEVEL_Hardcore
+	}
+	text = {
+		trigger = {
+			has_global_flag = BA_Crisis_Normal
+		}
+		localization_key = LEVEL_Normal
+	}
+}
+
+#障碍
+defined_text = {
+	name = GetDescAbydos
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_campus_planet
+			}
+		}
+		localization_key = d_broken_Abydos_school_desc_campus
+	}
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_ruined_planet
+			}
+		}
+		localization_key = d_broken_Abydos_school_desc_ruined
+	}
+}
+
+defined_text = {
+	name = GetDescMillennium
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_campus_planet
+			}
+		}
+		localization_key = d_broken_Millennium_school_desc_campus
+	}
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_ruined_planet
+			}
+		}
+		localization_key = d_broken_Millennium_school_desc_ruined
+	}
+}
+
+defined_text = {
+	name = GetDescTrinity
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_campus_planet
+			}
+		}
+		localization_key = d_broken_Trinity_school_desc_campus
+	}
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_ruined_planet
+			}
+		}
+		localization_key = d_broken_Trinity_school_desc_ruined
+	}
+}
+
+defined_text = {
+	name = GetDescGehenna
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_campus_planet
+			}
+		}
+		localization_key = d_broken_Gehenna_school_desc_campus
+	}
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_ruined_planet
+			}
+		}
+		localization_key = d_broken_Gehenna_school_desc_ruined
+	}
+}
+
+defined_text = {
+	name = GetDescPower
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_campus_planet
+			}
+		}
+		localization_key = d_broken_power_station_desc_campus
+	}
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_ruined_planet
+			}
+		}
+		localization_key = d_broken_power_station_desc_ruined
+	}
+}
+
+defined_text = {
+	name = GetDescMine
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_campus_planet
+			}
+		}
+		localization_key = d_broken_desert_mine_desc_campus
+	}
+	text = {
+		trigger = {
+			capital_scope = {
+				is_planet_class = pc_BA_ruined_planet
+			}
+		}
+		localization_key = d_broken_desert_mine_desc_ruined
+	}
+}
+
+#社团舰升级
+defined_text = {
+	name = GetClubshipUpgrade
+	text = {
+		trigger = {
+			has_country_flag = BA_Club_ship_upgrade_0
+		}
+		localization_key = club_colonize_Lv1
+	}
+	text = {
+		trigger = {
+			has_country_flag = BA_Club_ship_upgrade_1
+		}
+		localization_key = club_colonize_Lv2
+	}
+	text = {
+		trigger = {
+			has_country_flag = BA_Club_ship_upgrade_2
+		}
+		localization_key = club_colonize_Lv3
+	}
+	text = {
+		trigger = {
+			has_country_flag = BA_Club_ship_upgrade_3
+		}
+		localization_key = club_colonize_Blank
+	}
+}

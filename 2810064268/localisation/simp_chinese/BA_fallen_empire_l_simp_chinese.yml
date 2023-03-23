@@ -1,0 +1,23 @@
+﻿l_simp_chinese:
+###############################
+#堕落帝国首领称呼
+ PRESCRIPTED_ruler_title_ba_fe:0 "见证者"
+ PRESCRIPTED_ruler_ba_fe:0 "见证者"
+
+#堕落帝国通讯
+ #01_BA_FE_PATRONIZING:0 "[From.GetSpeciesName]，你们好，如果你看到这句话那就证明生效了"
+ 01_BA_FE_PATRONIZING:0 "“我们还不是很能适应第四面墙之外的观众角色……但是，我们还是想听听你们的故事。”"
+ 02_BA_FE_PATRONIZING:0 "“你们还真是有活力啊，外域者……就像很久很久以前的我们一样。”"
+ 03_BA_FE_PATRONIZING:0 "“你说你们修不好这个？……送到我们这来吧，也许我们可以帮你。”"
+ 04_BA_FE_PATRONIZING:0 "“……没什么，看到了一个眼熟的人，想起了我们曾经的同伴而已……”"
+
+ 01_BA_FE_DISMISSIVE:0 "“啊，是你们啊。说吧。”"
+ 02_BA_FE_DISMISSIVE:0 "“我们从来就不喜欢欺凌他人……你懂的。”"
+ 03_BA_FE_DISMISSIVE:0 "“我们不会分享我们的技术，除非必要。”"
+
+ 01_BA_FE_ANGRY:0 "“血与火……”"
+ 02_BA_FE_ANGRY:0 "“我们也曾有过希望，但这是我们自己争取来的。不像你们。”"
+ 03_BA_FE_ANGRY:0 "“如果你们的故事就是这样的话，也好。”"
+
+ 01_BA_FE_WAR:0 "“我要谢谢你们……让我们知晓了光环下的阴暗面。”"
+ 02_BA_FE_WAR:0 "“你把这个地方当成了什么？”"

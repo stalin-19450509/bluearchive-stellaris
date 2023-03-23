@@ -1,0 +1,525 @@
+objectTypes = {
+
+############frame########
+
+	pdxmesh = {
+		name = "ba_club_ship_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_colony_ship.mesh"
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "ba_01_colony_ship_diffuse.dds"
+			texture_normal = "ba_01_colony_ship_normal.dds"
+			texture_specular = "ba_01_colony_ship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	scale = 1.0
+	}
+	
+
+	pdxmesh = {
+		name = "ba_missile_ship_entity_frame_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_destroyer_frame.mesh"
+				animation = { id = "idle"			type = "nemesis_01_destroyer_frame_idle_animation" }
+				animation = { id = "death"			type = "nemesis_01_destroyer_frame_death1_animation" }
+				animation = { id = "death2"			type = "nemesis_01_destroyer_frame_death2_animation" }
+				animation = { id = "death3"			type = "nemesis_01_destroyer_frame_death3_animation" }
+				animation = { id = "attack"			type = "nemesis_01_destroyer_frame_idle_animation" }				
+		scale = 1.5
+	}
+
+	pdxmesh = {
+		name = "ba_artillery_ship_frame_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_frame.mesh"
+				animation = { id = "idle"			type = "nemesis_01_battleship_frame_idle_animation" }
+				animation = { id = "death"			type = "nemesis_01_battleship_frame_death1_animation" }
+				animation = { id = "death2"			type = "nemesis_01_battleship_frame_death2_animation" }
+				animation = { id = "death3"			type = "nemesis_01_battleship_frame_death3_animation" }			
+		scale = 1.5
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+
+
+
+	pdxmesh = {
+		name = "ba_swarm_ship_frame_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_frame.mesh"
+				animation = { id = "idle"			type = "nemesis_01_battleship_frame_idle_animation" }
+				animation = { id = "death"			type = "nemesis_01_battleship_frame_death1_animation" }
+				animation = { id = "death2"			type = "nemesis_01_battleship_frame_death2_animation" }
+				animation = { id = "death3"			type = "nemesis_01_battleship_frame_death3_animation" }			
+		scale = 1.5
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+
+
+
+	pdxmesh = {
+		name = "ba_hub_ship_frame_mesh"
+		file = "gfx/models/ships/titans/nemesis_01/nemesis_01_titan_frame.mesh"
+		scale = 1.5		
+		animation = { id = "idle"						type = "nemesis_01_titan_frame_idle_animation" }
+		animation = { id = "death1"						type = "nemesis_01_titan_frame_death1_animation" }
+		animation = { id = "death2"						type = "nemesis_01_titan_frame_death2_animation" }
+		animation = { id = "death3"						type = "nemesis_01_titan_frame_death3_animation" }
+		
+	}
+
+	pdxmesh = {
+		name = "ba_missile_ship_bow_M1S2_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_destroyer_bow_M1S2.mesh"
+		scale = 1.5
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "ba_01_destroyer_diffuse.dds"
+			texture_normal = "ba_01_destroyer_normal.dds"
+			texture_specular = "ba_01_destroyer_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "ba_missile_ship_bow_L1_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_destroyer_bow_L1.mesh"
+		scale = 1.5
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "ba_01_destroyer_diffuse.dds"
+			texture_normal = "ba_01_destroyer_normal.dds"
+			texture_specular = "ba_01_destroyer_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "ba_missile_ship_stern_S2_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_destroyer_stern_S2.mesh"
+		scale = 1.5
+
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_destroyer_diffuse.dds"
+			texture_normal = "ba_01_destroyer_normal.dds"
+			texture_specular = "ba_01_destroyer_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+##################
+
+	pdxmesh = {
+		name = "ba_artillery_ship_bow_L1_M1_S2_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_bow_L1_M1_S2.mesh"
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_battleship_diffuse.dds"
+			texture_normal = "ba_01_battleship_normal.dds"
+			texture_specular = "ba_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_largeShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_mediumShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_small2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+
+	pdxmesh = {
+		name = "ba_artillery_ship_bow_XL_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_bow_XL.mesh"
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_battleship_diffuse.dds"
+			texture_normal = "ba_01_battleship_normal.dds"
+			texture_specular = "ba_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_largeShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_mediumShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_small2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}	
+
+	pdxmesh = {
+		name = "ba_artillery_ship_mid_L3_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_mid_L3.mesh"
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_battleship_diffuse.dds"
+			texture_normal = "ba_01_battleship_normal.dds"
+			texture_specular = "ba_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_largeShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_mediumShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_small2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+
+	pdxmesh = {
+		name = "ba_artillery_ship_stern_L1_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_stern_L1.mesh"
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_battleship_diffuse.dds"
+			texture_normal = "ba_01_battleship_normal.dds"
+			texture_specular = "ba_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_largeShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_mediumShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_small2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+#####################
+
+	pdxmesh = {
+		name = "ba_swarm_ship_bow_L2_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_bow_L2.mesh"
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_battleship_diffuse.dds"
+			texture_normal = "ba_01_battleship_normal.dds"
+			texture_specular = "ba_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_largeShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_mediumShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_small2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+
+	pdxmesh = {
+		name = "ba_swarm_ship_mid_L3_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_mid_L3.mesh"
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_battleship_diffuse.dds"
+			texture_normal = "ba_01_battleship_normal.dds"
+			texture_specular = "ba_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_largeShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_mediumShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_small2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+
+	pdxmesh = {
+		name = "ba_swarm_ship_stern_M2_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_stern_M2.mesh"
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_battleship_diffuse.dds"
+			texture_normal = "ba_01_battleship_normal.dds"
+			texture_specular = "ba_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_largeShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_mediumShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_small2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+
+	}
+
+
+	pdxmesh = {
+		name = "ba_swarm_ship_stern_L1_mesh"
+		file = "gfx/models/ships/nemesis_01/nemesis_01_battleship_stern_L1.mesh"
+		meshsettings = {
+	
+			index = 0
+			texture_diffuse = "ba_01_battleship_diffuse.dds"
+			texture_normal = "ba_01_battleship_normal.dds"
+			texture_specular = "ba_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_largeShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_mediumShape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "g_body_small2Shape"
+			index = 0
+			texture_diffuse = "ba_01_turrets_diffuse.dds"
+			texture_normal = "ba_01_turrets_normal.dds"
+			texture_specular = "ba_01_turrets_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+
+	pdxmesh = {
+		name = "ba_hub_ship_bow_mesh"
+		file = "gfx/models/ships/titans/nemesis_01/nemesis_01_titan_bow_XL.mesh"
+
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "ba_01_titan_diffuse.dds"
+			texture_normal = "ba_01_titan_normal.dds"
+			texture_specular = "ba_01_titan_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+
+	pdxmesh = {
+		name = "ba_hub_ship_mid_mesh"
+		file = "gfx/models/ships/titans/nemesis_01/nemesis_01_titan_mid_L4.mesh"
+
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "ba_01_titan_diffuse.dds"
+			texture_normal = "ba_01_titan_normal.dds"
+			texture_specular = "ba_01_titan_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+	
+	pdxmesh = {
+		name = "ba_hub_ship_stern_mesh"
+		file = "gfx/models/ships/titans/nemesis_01/nemesis_01_titan_stern_L2.mesh"
+
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "ba_01_titan_diffuse.dds"
+			texture_normal = "ba_01_titan_normal.dds"
+			texture_specular = "ba_01_titan_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+
+	pdxmesh = {
+		name = "ba_hub_ship_colossus_mid_mesh"
+		file = "gfx/models/ships/colossus/nemesis_01/nemesis_01_colossus.mesh"
+		
+		animation = { id = "idle"			type = "nemesis_01_colossus_idle_animation" }
+		animation = { id = "open"			type = "nemesis_01_colossus_open_animation" }
+		animation = { id = "opening"		type = "nemesis_01_colossus_opening_animation" }
+		animation = { id = "closing"		type = "nemesis_01_colossus_closing_animation" }
+		animation = { id = "closed_death"	type = "nemesis_01_colossus_closed_death_animation" }
+		animation = { id = "opened_death"	type = "nemesis_01_colossus_opened_death_animation" }
+		
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "ba_01_colossus_diffuse.dds"
+			texture_normal = "ba_01_colossus_normal.dds"
+			texture_specular = "ba_01_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.0
+	}
+
+
+
+	pdxmesh = {
+		name = "ba_hub_ARIS_ship_mid_mesh"
+		file = "gfx/models/ships/titans/nemesis_01/nemesis_01_titan_mid_L4.mesh"
+
+		meshsettings = {
+
+			index = 0
+			texture_diffuse = "ba_01_titan_diffuse.dds"
+			texture_normal = "ba_01_titan_normal.dds"
+			texture_specular = "ba_01_titan_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		scale = 1.5
+	}
+
+
+	pdxmesh = {
+		name = "ba_01_science_ship_sphere_mesh"
+		file = "gfx/models/ships/humanoid_01/humanoid_01_science_ship_sphere.mesh"
+		scale = 4.0
+
+		animation = { id = "idle"			type = "humanoid_01_science_ship_sphere_idle_animation" }
+
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+
+
+}
+
+
+

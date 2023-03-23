@@ -1,0 +1,44 @@
+#伊甸条约起源
+part = {
+	location = 0
+	localization = "START_SCREEN_EDEN_TREATY"
+	trigger = {
+		has_origin = origin_Kivotos_Eden_treaty
+		NOT = {
+			has_country_flag = BA_ETO
+		}
+	}
+}
+
+#预设：ETO
+part = {
+	location = 0
+	localization = "START_SCREEN_BA_ETO"
+	trigger = {
+		has_country_flag = BA_ETO
+	}
+}
+
+#阿里乌斯起源
+part = {
+	location = 0
+	localization = "START_SCREEN_KYRIE"
+	trigger = {
+		has_origin = origin_Kivotos_Kyrie
+		NOT = {
+			has_country_flag = BA_Arius
+		}
+	}
+}
+
+#预设：NPA
+part = {
+	location = 0
+	localization = "START_SCREEN_BA_ARIUS"
+	trigger = {
+		has_origin = origin_Kivotos_Kyrie
+		NOT = {
+			has_country_flag = BA_ARIUS
+		}
+	}
+}

@@ -1,0 +1,53 @@
+# namespace = arctest
+
+# #测试考古1
+# country_event = {
+# 	id = arctest.1
+# 	title = "arctest.1.name"
+# 	desc = "arctest.1.desc"
+# 	picture = GFX_archaeology_runes_A2 #暂用
+# 	#show_sound =
+	
+# 	archaeology = yes
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		from = { set_site_progress_locked = yes }
+# 	}
+
+# 	after = {
+# 		from = { set_site_progress_locked = no }
+# 	}
+
+# 	option = {
+# 		name = arctest.2
+# 		small_artifact_reward = yes
+# 	}
+# }
+
+# country_event = {
+# 	id = arctest.2
+# 	title = "arctest.2.name"
+# 	desc = "arctest.2.desc"
+# 	picture = GFX_archaeology_runes_A2 #暂用
+# 	#show_sound = 
+
+# 	archaeology = yes
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		from = { set_site_progress_locked = yes }
+# 	}
+
+# 	after = {
+# 		from = { set_site_progress_locked = no }
+# 	}
+
+# 	option = {
+# 		name = arctesr.2.a
+# 		large_artifact_reward = yes
+# 		owner = { add_relic = "test_relic_1"}
+# 	}
+# }

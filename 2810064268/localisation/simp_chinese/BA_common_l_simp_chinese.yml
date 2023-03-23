@@ -1,0 +1,22 @@
+﻿l_simp_chinese:
+####################
+BA_SC_events.1000.name:0 ""
+BA_SC_events.1000.desc:0 ""
+
+ opinion_RGBB:0 "天堂に駆ける"
+ 
+ BA_hina.1001.title:0 "$opinion_RGBB$"
+ BA_hina.1001.desc:0 "我们RGB化了一个殖民地"
+ BA_hina.1001.next:0 "太棒了 high起来"
+ 
+ BA_hina.1002.title:0 "$opinion_RGBB$"
+ BA_hina.1002.desc:0 "我们的一个殖民地被RGB化了"
+ BA_hina.1002.next:0 "上面的人一定很high"
+ 
+ BA_hina.1003.title:0 "$opinion_RGBB$"
+ BA_hina.1003.desc:0 "一颗野生的星球被RGB化了"
+ BA_hina.1003.next:0 "是太空电竞房 好耶"
+
+ BA_hina.1005.title:0 "$opinion_RGBB$"
+ BA_hina.1005.desc:0 "感谢你们给了我们一个如此炫酷的圣地。"
+ BA_hina.1005.next:0 "不用谢，应该的"

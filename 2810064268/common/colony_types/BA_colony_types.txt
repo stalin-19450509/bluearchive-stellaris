@@ -1,0 +1,51 @@
+col_pyroxenes_craft = {
+	icon = GFX_colony_type_industrial	#以后改
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_authority = auth_kivotos
+		}
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_amenities_add = 10
+		pop_happiness = 0.1
+		planet_jobs_sr_pyroxenes_produces_mult = 0.1
+		planet_building_BA_pyroxenes_1_build_speed_mult = 0.25
+	}
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 15
+			has_building = building_BA_pyroxenes_1
+		}
+	}
+}
+
+col_pyroxenes_use = {
+	icon = GFX_colony_type_industrial	#以后改
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_authority = auth_kivotos
+		}
+		is_special_colony_type = no
+	}
+	custom_tooltip = col_pyroxenes_use_tooltip
+	planet_modifier = {
+		planet_building_BA_keystone_1_build_speed_mult = 0.25
+		planet_building_BA_rare_center_1_build_speed_mult = 0.25
+		planet_building_BA_dark_matter_concentrator_build_speed_mult = 0.25
+		pop_housing_usage_mult = 0.5
+	}
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 15
+			has_building = building_BA_pyroxenes_1
+		}
+	}
+}

@@ -1,0 +1,26 @@
+portraits = {
+	Rabbit1 = {
+		textureFile = "gfx/models/portraits/Custom/Rabbit/Miyako.dds"
+	}
+	Rabbit2 = {
+		textureFile = "gfx/models/portraits/Custom/Rabbit/Saki.dds"
+	}
+	Rabbit3 = {
+		textureFile = "gfx/models/portraits/Custom/Rabbit/Moe.dds"
+	}
+	Rabbit4 = {
+		textureFile = "gfx/models/portraits/Custom/Rabbit/Miyu.dds"
+	}
+	RabbitTeam = {
+		textureFile = "gfx/models/portraits/Custom/Rabbit/rabbitteam.dds"
+	}
+	Kanna = {
+		textureFile = "gfx/models/portraits/Custom/Rabbit/Kanna.dds"
+	}
+	Kirino_Fubuki = {
+		textureFile = "gfx/models/portraits/Custom/Rabbit/Kirino_Fubuki.dds"
+	}
+	Emergencies_event9 = {
+		textureFile = "gfx/models/portraits/Custom/Rabbit/Rabbit_event9.dds"
+	}
+}

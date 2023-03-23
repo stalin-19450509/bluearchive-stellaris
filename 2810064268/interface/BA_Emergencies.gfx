@@ -1,0 +1,42 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BA_Emergencies_0001"
+		texturefile = "gfx/event/Emergencies/SRT/0001.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Emergencies_0002"
+		texturefile = "gfx/event/Emergencies/SRT/0002.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Emergencies_0003"
+		texturefile = "gfx/event/Emergencies/SRT/0003.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Emergencies_0004"
+		texturefile = "gfx/event/Emergencies/SRT/0004.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Emergencies_0006"
+		texturefile = "gfx/event/Emergencies/SRT/0006.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BA_Emergencies_0012"
+		texturefile = "gfx/event/Emergencies/SRT/0012.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_BA_Emergencies_0401"
+		texturefile = "gfx/event/Emergencies/Lunch/0401.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}spriteType = {
+		name = "GFX_BA_Emergencies_0406"
+		texturefile = "gfx/event/Emergencies/Lunch/0406.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+}

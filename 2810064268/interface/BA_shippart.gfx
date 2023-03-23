@@ -1,0 +1,118 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_T1CORE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T1CORE.dds"
+	}
+	spriteType = {
+		name = "GFX_T2CORE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T2CORE.dds"
+	}
+	spriteType = {
+		name = "GFX_T3CORE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T3CORE.dds"
+	}
+	spriteType = {
+		name = "GFX_T4CORE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T4CORE.dds"
+	}
+	spriteType = {
+		name = "GFX_T5CORE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T5CORE.dds"
+	}
+	spriteType = {
+		name = "GFX_T6CORE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T6CORE.dds"
+	}
+	spriteType = {
+		name = "GFX_T1BACKPACK"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T1BACKPACK.dds"
+	}
+	spriteType = {
+		name = "GFX_T2BACKPACK"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T2BACKPACK.dds"
+	}
+	spriteType = {
+		name = "GFX_T3BACKPACK"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T3BACKPACK.dds"
+	}
+	spriteType = {
+		name = "GFX_T4BACKPACK"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T4BACKPACK.dds"
+	}
+	spriteType = {
+		name = "GFX_T5BACKPACK"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T5BACKPACK.dds"
+	}
+	spriteType = {
+		name = "GFX_T6BACKPACK"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T6BACKPACK.dds"
+	}
+	spriteType = {
+		name = "GFX_T1BADGE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T1BADGE.dds"
+	}
+	spriteType = {
+		name = "GFX_T2BADGE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T2BADGE.dds"
+	}
+	spriteType = {
+		name = "GFX_T3BADGE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T3BADGE.dds"
+	}
+	spriteType = {
+		name = "GFX_T4BADGE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T4BADGE.dds"
+	}
+	spriteType = {
+		name = "GFX_T5BADGE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T5BADGE.dds"
+	}
+	spriteType = {
+		name = "GFX_T6BADGE"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_T6BADGE.dds"
+	}
+	spriteType = {
+		name = "GFX_Sagittarius_night"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Sagittarius_night.dds"
+	}
+	spriteType = {
+		name = "GFX_Grenadiers_575"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Grenadiers_575.dds"
+	}
+	spriteType = {
+		name = "GFX_Adena_3"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Adena_3.dds"
+	}
+	spriteType = {
+		name = "GFX_Fantacy_colors"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Fantacy_colors.dds"
+	}
+	spriteType = {
+		name = "GFX_Fantacy_colors_SP"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Fantacy_colors_SP.dds"
+	}
+	spriteType = {
+		name = "GFX_SuperNova"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_SuperNova.dds"
+	}
+	spriteType = {
+		name = "GFX_Soft_determination"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Soft_determination.dds"
+	}
+	spriteType = {
+		name = "GFX_Unique_idea"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Unique_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_Flashy_inspiration"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Flashy_inspiration.dds"
+	}
+	spriteType = {
+		name = "GFX_Crack_shot"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Fantacy_colors.dds"
+	}
+	spriteType = {
+		name = "GFX_Ojiisan_Atsui"
+		texturefile = "gfx/interface/icons/ship_parts/GFX_Ojiisan_atsui.dds"
+	}
+}

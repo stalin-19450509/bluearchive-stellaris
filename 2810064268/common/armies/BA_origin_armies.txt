@@ -1,0 +1,115 @@
+BA_Deca_army_1 = {
+	#defensive = yes
+	damage = 0.1
+	health = 2
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 10
+	time = 5
+	has_species = no
+	icon = GFX_army_type_machine_defensive
+	resources = {
+		category = armies
+	}
+	potential = {
+		always = no
+	}
+}
+
+BA_Deca_army_2 = {
+	#defensive = yes
+	damage = 0.5
+	health = 4
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 10
+	time = 5
+	has_species = no
+	icon = GFX_army_type_machine_defensive
+	resources = {
+		category = armies
+	}
+	potential = {
+		always = no
+	}
+}
+
+BA_Deca_army_3 = {
+	#defensive = yes
+	damage = 1
+	health = 8
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 10
+	time = 5
+	has_species = no
+	icon = GFX_army_type_machine_defensive
+	resources = {
+		category = armies
+	}
+	potential = {
+		always = no
+	}
+}
+
+BA_Deca_army_4 = {
+	#defensive = yes
+	damage = 1.5
+	health = 10
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 10
+	time = 5
+	has_species = no
+	icon = GFX_army_type_machine_defensive
+	resources = {
+		category = armies
+	}
+	potential = {
+		always = no
+	}
+}
+
+BA_origin_Kyrie_destroy = {
+	defensive = yes
+	damage = 5
+	health = 100
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 10
+	time = 5
+	has_species = no
+	icon = GFX_army_type_machine_defensive
+	resources = {
+		category = armies
+		upkeep = {
+			energy = 1
+		}
+	}
+	potential = {
+		always = no
+	}
+}
+
+BA_origin_Kyrie_controled = {
+	defensive = yes
+	damage = 6
+	health = 20
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 10
+	time = 5
+	has_species = no
+	icon = GFX_army_type_machine_defensive
+	resources = {
+		category = armies
+		upkeep = {
+			energy = 1
+		}
+	}
+	potential = {
+		always = no
+		#has_country_flag = BA_Kyrie_deterrence_disconnected_by_Arona
+		#has_country_flag = BA_origin_Kyrie_finished
+	}
+}

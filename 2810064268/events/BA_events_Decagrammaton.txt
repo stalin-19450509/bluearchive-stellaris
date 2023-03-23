@@ -1,0 +1,4452 @@
+namespace = BA_Decagrammaton
+######################
+###     前置准备 
+######################
+#创建国家
+country_event = {
+	id = BA_Decagrammaton.0001
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_country_type = global_event
+		any_country = {
+			has_country_flag = Kivotos_detected
+		}
+		NOR = {
+			# any_country = {
+			# 	has_country_flag = BA_Decagrammaton
+			# }
+			any_country = {
+				has_country_flag = BA_Gematria
+			}
+			any_country = {
+				has_country_flag = BA_Precursor
+			}
+		}
+	}
+	immediate = {
+		#### 设定线路！！
+		random_list = {
+			100 = {
+				#先驱反抗者
+				create_species = {
+					name = "NAME_BA_Precursor_species"
+					class = Schale					#以后改
+					portrait = Schale					#以后改
+					traits = {
+						trait = trait_pc_ringworld_habitable_preference
+						trait = trait_Halo_precursor
+						trait = trait_tactical_training
+						trait = trait_starlink
+						trait = trait_gammer
+						trait = trait_koharu
+					}
+					effect = {
+						save_global_event_target_as = BA_Precursor_species
+					}
+				}
+				create_country = {
+					name = "NAME_BA_Precursor_country"
+					type = fallen_empire
+					ignore_initial_colony_error = yes
+					species = event_target:BA_Precursor_species
+					authority = auth_ba_fe
+					flag = {
+						icon = {
+							category = "special"
+							file = "flag_MX.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "flag_BG_31.dds"
+						}
+						colors = {
+							"satin_burgundy"
+							"intense_blue"
+							"null"
+							"null"
+						}
+					}
+					civics = {
+						civic = civic_ba_fe
+					}
+					ethos = {
+						ethic = ethic_pacifist
+						ethic = ethic_fanatic_egalitarian
+					}
+					origin = origin_ba_fallen_empire
+					effect = {
+						##########
+						save_global_event_target_as = BA_Precursor_country						#BA_fe_country
+						set_country_flag = BA_Precursor
+						##########
+						#失落帝国加成
+						add_modifier = {
+							modifier = modifier_BA_fe
+						}
+						add_resource = {
+							minerals = 5000
+							energy = 5000
+							food = 5000
+							alloys = 5000
+							consumer_goods = 5000
+							influence = 800
+							unity = 500000
+							#sr_dark_matter = 100000
+							sr_keystone = 500000
+							sr_pyroxenes = 500000
+						}
+						#舰船设计
+						add_global_ship_design = NAME_BA_FE_MISSILE_SHIP
+						add_global_ship_design = NAME_BA_FE_ARTILLERY_SHIP
+						add_global_ship_design = NAME_BA_FE_SWARM_SHIP
+						add_global_ship_design = NAME_BA_FE_HUB_SHIP
+						add_global_ship_design = NAME_BA_FE_DEFENCE_CANON
+						add_global_ship_design = NAME_BA_FE_CONSTRUCTION
+						#领袖
+						create_leader = {
+							class = ruler
+							species = event_target:BA_leader_species
+							gender = female
+							name = NAME_Seia
+							skill = 3
+							set_age = 17
+							immortal = yes
+							event_leader = yes
+							traits = {
+							}
+						}
+						last_created_leader = {
+							change_leader_portrait = BA_Seia
+						}
+						set_leader = last_created_leader
+					}
+				}
+				event_target:BA_Precursor_species = {
+					save_global_event_target_as = BA_fe_species
+				}
+				event_target:BA_Precursor_country = {
+					save_global_event_target_as = BA_fe_country
+				}
+				set_global_flag = BA_Precursor_route
+			}
+			0 = {
+				#数秘术（以后改）
+				create_species = {
+					name = "NAME_BA_Gematria_species"
+					class = Schale					#以后改
+					portrait = Schale					#以后改
+					traits = {
+						trait = trait_pc_ringworld_habitable_preference						#以后改
+					}
+					effect = {
+						save_global_event_target_as = BA_Gematria_species
+					}
+				}
+				create_country = {
+					name = "NAME_BA_Gematria_country"
+					type = fallen_empire
+					ignore_initial_colony_error = yes
+					species = event_target:BA_Gematria_species
+					authority = auth_ba_fe
+					flag = {
+						icon = {
+							category = "special"
+							file = "flag_MX.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "flag_BG_31.dds"
+						}
+						colors = {
+							"intense_blue"
+							"satin_burgundy"
+							"null"
+							"null"
+						}
+					}
+					civics = {
+						civic = civic_ba_fe
+					}
+					ethos = {
+						ethic = ethic_pacifist
+						ethic = ethic_fanatic_egalitarian
+					}
+					origin = origin_ba_fallen_empire
+					effect = {
+						##########
+						save_global_event_target_as = BA_Gematria_country
+						set_country_flag = BA_Gematria
+						##########
+						#失落帝国加成
+						add_modifier = {
+							modifier = modifier_BA_fe
+						}
+						add_resource = {
+							minerals = 5000
+							energy = 5000
+							food = 5000
+							alloys = 5000
+							consumer_goods = 5000
+							influence = 800
+							unity = 500000
+							#sr_dark_matter = 100000
+							sr_keystone = 500000
+							sr_pyroxenes = 500000
+						}
+						#舰船设计
+						add_global_ship_design = NAME_BA_FE_MISSILE_SHIP
+						add_global_ship_design = NAME_BA_FE_ARTILLERY_SHIP
+						add_global_ship_design = NAME_BA_FE_SWARM_SHIP
+						add_global_ship_design = NAME_BA_FE_HUB_SHIP
+						add_global_ship_design = NAME_BA_FE_DEFENCE_CANON
+						add_global_ship_design = NAME_BA_FE_CONSTRUCTION
+						#领袖
+						create_leader = {
+							class = ruler
+							species = event_target:BA_leader_species							#以后改
+							gender = female
+							name = NAME_Seia							#以后改
+							skill = 3
+							set_age = 17
+							immortal = yes
+							event_leader = yes
+							traits = {
+							}
+						}
+						last_created_leader = {
+							change_leader_portrait = BA_Seia							#以后改
+						}
+						set_leader = last_created_leader
+					}
+				}
+				event_target:BA_Gematria_species = {
+					save_global_event_target_as = BA_fe_species
+				}
+				event_target:BA_Gematria_country = {
+					save_global_event_target_as = BA_fe_country
+				}
+				set_global_flag = BA_Gematria_route
+			}
+		}
+		# #Decagrammaton
+		# create_species = {
+		# 	name = "NAME_BA_Decagrammaton_species"
+		# 	class = machine
+		# 	portrait = random
+		# 	traits = random
+		# }
+		# create_country = {
+		# 	name = "NAME_BA_Decagrammaton_country"
+		# 	type = Decagrammaton_country
+		# 	species = last_created_species
+		# 	effect = {
+		# 		save_global_event_target_as = BA_Decagrammaton_country
+		# 		set_country_flag = BA_Decagrammaton
+		# 	}
+		# }
+		#### 设定难度！！
+		set_variable = {
+			which = BA_Crisis_Strength
+			value = 0
+		}
+		get_galaxy_setup_value = {
+			which = BA_Crisis_Strength
+			setting = crisis_strength_scale
+		}
+		# ~2倍 简单；~5倍 中等；~25倍 困难；~1000倍 疯狂
+		if = {
+			limit = {
+				check_variable = {
+					which = BA_Crisis_Strength
+					value <= 2
+				}
+			}
+			set_global_flag = BA_Crisis_Normal
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = BA_Crisis_Strength
+					value <= 5
+				}
+			}
+			set_global_flag = BA_Crisis_Hardcore
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = BA_Crisis_Strength
+					value <= 25
+				}
+			}
+			set_global_flag = BA_Crisis_Veryhard
+		}
+		else = {
+			set_global_flag = BA_Crisis_Insane
+		}
+	}
+	after = {
+		country_event = {
+			id = BA_Decagrammaton.0002
+		}
+	}
+}
+
+#创建星系
+country_event = {
+	id = BA_Decagrammaton.0002
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		NOT = {
+			has_global_flag = Decagrammaton_generated
+		}
+	}
+	immediate = {
+		set_global_flag = Decagrammaton_generated
+		### 生成星系
+		set_spawn_system_batch = begin
+		#200
+		if = {
+			limit = {
+				count_system = {
+					count <= 250
+				}
+			}
+			#入口*3
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 90
+					max_distance <= 180
+					min_orientation_angle = 30
+					max_orientation_angle = 30
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 90
+					max_distance <= 180
+					min_orientation_angle = 150
+					max_orientation_angle = 150
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_2
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 90
+					max_distance <= 180
+					min_orientation_angle = 270
+					max_orientation_angle = 270
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_3
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			#01
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_KETHER
+					min_distance >= 350
+					max_distance <= 360
+					min_orientation_angle = 135
+					max_orientation_angle = 135
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = D_KETHER
+						set_star_flag = BA_Dnexus
+						#starbase
+					}
+				}
+			}
+		}
+		#400
+		else_if = {
+			limit = {
+				count_system = {
+					count <= 450
+				}
+			}
+			#入口*4
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 125
+					max_distance <= 250
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 125
+					max_distance <= 250
+					min_orientation_angle = 90
+					max_orientation_angle = 90
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 125
+					max_distance <= 250
+					min_orientation_angle = 180
+					max_orientation_angle = 180
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 125
+					max_distance <= 250
+					min_orientation_angle = 270
+					max_orientation_angle = 270
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			#01
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_KETHER
+					min_distance >= 500
+					max_distance <= 510
+					min_orientation_angle = 135
+					max_orientation_angle = 135
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = D_KETHER
+						set_star_flag = BA_Dnexus
+						#starbase
+					}
+				}
+			}
+		}
+		#600
+		else_if = {
+			limit = {
+				count_system = {
+					count <= 650
+				}
+			}
+			#入口*5
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 150
+					max_distance <= 300
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 150
+					max_distance <= 300
+					min_orientation_angle = 72
+					max_orientation_angle = 72
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 150
+					max_distance <= 300
+					min_orientation_angle = 144
+					max_orientation_angle = 144
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 150
+					max_distance <= 300
+					min_orientation_angle = 216
+					max_orientation_angle = 216
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 150
+					max_distance <= 300
+					min_orientation_angle = 288
+					max_orientation_angle = 288
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			#01
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_KETHER
+					min_distance >= 580
+					max_distance <= 590
+					min_orientation_angle = 135
+					max_orientation_angle = 135
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = D_KETHER
+						set_star_flag = BA_Dnexus
+						#starbase
+					}
+				}
+			}
+		}
+		#800
+		else_if = {
+			limit = {
+				count_system = {
+					count <= 850
+				}
+			}
+			#入口*6
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 160
+					max_distance <= 320
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+						#starbase
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 160
+					max_distance <= 320
+					min_orientation_angle = 60
+					max_orientation_angle = 60
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 160
+					max_distance <= 320
+					min_orientation_angle = 120
+					max_orientation_angle = 120
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 160
+					max_distance <= 320
+					min_orientation_angle = 180
+					max_orientation_angle = 180
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 160
+					max_distance <= 320
+					min_orientation_angle = 240
+					max_orientation_angle = 240
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 160
+					max_distance <= 320
+					min_orientation_angle = 300
+					max_orientation_angle = 300
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			#01
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_KETHER
+					min_distance >= 630
+					max_distance <= 640
+					min_orientation_angle = 135
+					max_orientation_angle = 135
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = D_KETHER
+						set_star_flag = BA_Dnexus
+						#starbase
+					}
+				}
+			}
+		}
+		#1000
+		else = {
+			#入口*8
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 170
+					max_distance <= 340
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 170
+					max_distance <= 340
+					min_orientation_angle = 45
+					max_orientation_angle = 45
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 170
+					max_distance <= 340
+					min_orientation_angle = 90
+					max_orientation_angle = 90
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 170
+					max_distance <= 340
+					min_orientation_angle = 135
+					max_orientation_angle = 135
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 170
+					max_distance <= 340
+					min_orientation_angle = 180
+					max_orientation_angle = 180
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 170
+					max_distance <= 340
+					min_orientation_angle = 225
+					max_orientation_angle = 225
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 170
+					max_distance <= 340
+					min_orientation_angle = 270
+					max_orientation_angle = 270
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_ENTRANCE
+					min_distance >= 170
+					max_distance <= 340
+					min_orientation_angle = 315
+					max_orientation_angle = 315
+					hyperlane = yes
+					effect = {
+						save_global_event_target_as = D_ENTRANCE_1
+						set_star_flag = BA_Dnode
+					}
+				}
+			}
+			#01
+			no_scope = {
+				spawn_system = {
+					initializer = BA_D_system_KETHER
+					min_distance >= 680
+					max_distance <= 690
+					min_orientation_angle = 135
+					max_orientation_angle = 135
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = D_KETHER
+						set_star_flag = BA_Dnexus
+						#starbase
+					}
+				}
+			}
+		}
+		#02
+		event_target:D_KETHER = {
+			spawn_system = {
+				initializer = BA_D_system_CHHOKMAH
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = 60
+				max_orientation_angle = 60
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_CHHOKMAH
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_CHHOKMAH
+				to = event_target:D_KETHER
+			}
+		}
+		#03
+		event_target:D_KETHER = {
+			spawn_system = {
+				initializer = BA_D_system_BINAH
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = 300
+				max_orientation_angle = 300
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_BINAH
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_BINAH
+				to = event_target:D_KETHER
+			}
+		}
+		#04
+		event_target:D_CHHOKMAH = {
+			spawn_system = {
+				initializer = BA_D_system_CHESED
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = 0
+				max_orientation_angle = 0
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_CHESED
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_CHESED
+				to = event_target:D_CHHOKMAH
+			}
+		}
+		#05
+		event_target:D_BINAH = {
+			spawn_system = {
+				initializer = BA_D_system_GEBURAH
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = 0
+				max_orientation_angle = 0
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_GEBURAH
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_GEBURAH
+				to = event_target:D_BINAH
+			}
+		}
+		#06
+		event_target:D_KETHER = {
+			spawn_system = {
+				initializer = BA_D_system_TIPHARETH
+				min_distance >= 40
+				max_distance <= 40
+				min_orientation_angle = 0
+				max_orientation_angle = 0
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_TIPHARETH
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_TIPHARETH
+				to = event_target:D_CHESED
+			}
+			add_hyperlane = {
+				from = event_target:D_TIPHARETH
+				to = event_target:D_GEBURAH
+			}
+		}
+		#07
+		event_target:D_CHESED = {
+			spawn_system = {
+				initializer = BA_D_system_NETSAH
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = 0
+				max_orientation_angle = 0
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_NETSAH
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_NETSAH
+				to = event_target:D_CHESED
+			}
+			add_hyperlane = {
+				from = event_target:D_NETSAH
+				to = event_target:D_TIPHARETH
+			}
+		}
+		#08
+		event_target:D_GEBURAH = {
+			spawn_system = {
+				initializer = BA_D_system_HOD
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = 0
+				max_orientation_angle = 0
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_HOD
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_HOD
+				to = event_target:D_GEBURAH
+			}
+			add_hyperlane = {
+				from = event_target:D_HOD
+				to = event_target:D_TIPHARETH
+			}
+		}
+		#09
+		event_target:D_TIPHARETH = {
+			spawn_system = {
+				initializer = BA_D_system_YESOD
+				min_distance >= 20
+				max_distance <= 20
+				min_orientation_angle = 0
+				max_orientation_angle = 0
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_YESOD
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_YESOD
+				to = event_target:D_TIPHARETH
+			}
+			add_hyperlane = {
+				from = event_target:D_YESOD
+				to = event_target:D_NETSAH
+			}
+			add_hyperlane = {
+				from = event_target:D_YESOD
+				to = event_target:D_HOD
+			}
+		}
+		#10
+		event_target:D_TIPHARETH = {
+			spawn_system = {
+				initializer = BA_D_system_MALKUTH
+				min_distance >= 40
+				max_distance <= 40
+				min_orientation_angle = 0
+				max_orientation_angle = 0
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = D_MALKUTH
+					set_star_flag = BA_Dnode
+					#starbase
+				}
+			}
+			add_hyperlane = {
+				from = event_target:D_MALKUTH
+				to = event_target:D_YESOD
+			}
+		}
+		set_spawn_system_batch = end
+	}
+	after = {
+		BA_fe_fleet_initial = yes
+	}
+}
+
+#失落帝国资源每月调整（方便贸易
+country_event = {
+	id = BA_Decagrammaton.0015
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_BA_fallen_empire = yes
+	}
+	immediate = {
+		BA_fe_set_energy = yes
+	}
+}
+
+#激活外域链路
+country_event = {
+	id = BA_Decagrammaton.0020
+	is_triggered_only = yes
+	#fire_only_once = yes
+	hide_window = yes
+	trigger = {
+		is_country_type = global_event
+	}
+	immediate = {
+		every_megastructure = {
+			limit = {
+				is_megastructure_type = Dgate_base
+				NOT = {
+					has_megastructure_flag = Dgate_activated
+				}
+				solar_system = {
+					NOT = {
+						has_star_flag = BA_KETHER_SYS_flag
+					}
+				}
+			}
+			activate_gateway = this
+			set_megastructure_flag = Dgate_activated
+		}
+	}
+}
+
+#激活失落帝国内链路
+country_event = {
+	# 不激活的话无法和失落帝国取得联系
+	id = BA_Decagrammaton.0021
+	is_triggered_only = yes
+	#fire_only_once = yes
+	hide_window = yes
+	# 触发这个事件的事件还没做好，调试时需要控制台手动触发
+	# trigger = {
+	# 	is_country_type = global_event
+	# }
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+					is_country_type = dormant_marauders
+					is_country_type = awakened_marauders
+				}
+				NOT = {
+					has_communications = event_target:BA_fe_country
+				}
+			}
+			establish_communications_no_message = event_target:BA_fe_country
+			country_event = {
+				id = BA_Decagrammaton.0102
+			}
+		}
+		every_megastructure = {
+			limit = {
+				is_megastructure_type = Dgate_base
+				NOT = {
+					has_megastructure_flag = Dgate_activated
+				}
+				solar_system = {
+					has_star_flag = BA_KETHER_SYS_flag
+				}
+			}
+			activate_gateway = this
+			set_megastructure_flag = Dgate_activated
+		}
+	}
+}
+
+#得知链路激活
+country_event = {
+	id = BA_Decagrammaton.0025
+	is_triggered_only = yes
+	title = BA_Decagrammaton.0025.title
+	picture = GFX_evt_drifting_gateway
+	desc = {
+		text = BA_Decagrammaton.0025.desc.1
+		trigger = {
+			has_country_flag = BA_FIND_D_GATE
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.0025.desc.2
+		trigger = {
+			NOT = {
+				has_country_flag = BA_FIND_D_GATE
+			}
+		}
+	}
+	picture = GFX_BA_Checkmate
+	trigger = {
+	}
+	option = {
+		name = BA_Decagrammaton.0025.a
+		trigger = {
+			has_country_flag = BA_FIND_D_GATE
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.0025.b
+		trigger = {
+			NOT = {
+				has_country_flag = BA_FIND_D_GATE
+			}
+		}
+	}
+}
+
+######################
+###     探索星系 
+######################
+#通讯接口
+ship_event = {
+	id = BA_Decagrammaton.0051
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			has_star_flag = BA_D_ENTRANCE
+		}
+		fromfrom = {
+			has_country_flag = Kivotos_detected
+		}
+	}
+	immediate = {
+		fromfrom = {
+			country_event = {
+				id = BA_Decagrammaton.0052
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.0052
+	is_triggered_only = yes
+	title = BA_Decagrammaton.0052.title
+	desc = BA_Decagrammaton.0052.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		NOT = {
+			has_country_flag = BA_FIND_D_GATE
+		}
+	}
+	immediate = {
+		set_country_flag = BA_FIND_D_GATE
+	}
+	option = {
+		name = BA_Decagrammaton.0052.next
+	}
+}
+
+#失落帝国境内
+ship_event = {
+	id = BA_Decagrammaton.0053
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			has_star_flag = BA_FE_SYS
+			NOT = {
+				has_star_flag = BA_MALKUTH_SYS_flag
+			}
+		}
+		fromfrom = {
+			has_country_flag = Kivotos_detected
+		}
+	}
+	immediate = {
+		fromfrom = {
+			country_event = {
+				id = BA_Decagrammaton.0054
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.0054
+	is_triggered_only = yes
+	title = BA_Decagrammaton.0054.title
+	desc = BA_Decagrammaton.0054.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		NOT = {
+			has_country_flag = BA_ENTERED_FE
+		}
+	}
+	immediate = {
+		set_country_flag = BA_ENTERED_FE
+	}
+	option = {
+		name = BA_Decagrammaton.0054.next
+	}
+}
+
+#失落帝国母星
+ship_event = {
+	id = BA_Decagrammaton.0055
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			has_star_flag = BA_MALKUTH_SYS_flag
+		}
+		fromfrom = {
+			has_country_flag = Kivotos_detected
+		}
+	}
+	immediate = {
+		fromfrom = {
+			country_event = {
+				id = BA_Decagrammaton.0054
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.0056
+	is_triggered_only = yes
+	title = BA_Decagrammaton.0056.title
+	desc = BA_Decagrammaton.0056.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		NOT = {
+			has_country_flag = BA_ENTERED_FE_HOME
+		}
+	}
+	immediate = {
+		set_country_flag = BA_ENTERED_FE_HOME
+	}
+	option = {
+		name = BA_Decagrammaton.0056.next
+	}
+}
+
+#外域建哨站后刷一个坟
+ship_event = {
+	id = BA_Decagrammaton.0057
+	is_triggered_only = yes
+	title = BA_Decagrammaton.0057.title
+	desc = BA_Decagrammaton.0057.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		solar_system = {
+			has_star_flag = BA_D_ENTRANCE
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.0057.next
+		default_hide_option = yes
+		solar_system = {
+			random_system_planet = {
+				limit = {
+					has_planet_flag = BA_D_system_base
+				}
+			}
+			create_archaeological_site = BA_Dgate_arc_site
+		}
+		# from = {
+		# 	create_archaeological_site = BA_Dgate_arc_site
+		# }
+	}
+}
+
+######################
+###     先驱通讯 
+######################
+### 初次交流
+#MTTH触发器
+country_event = {
+	id = BA_Decagrammaton.0100
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 5400
+	}
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			has_country_flag = BA_Gematria
+			has_country_flag = BA_Precursor
+		}
+	}
+	immediate = {
+		create_country = {
+			name = "NAME_BA_Precursor_contactor"
+			type = Shittem_communication
+			ignore_initial_colony_error = yes
+			species = event_target:BA_Precursor_species
+			flag = {
+				icon = {
+					category = "special"
+					file = "flag_MX.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+				# background = {
+				# 	category = "backgrounds"
+				# 	file = "flag_BG_31.dds"
+				# }
+				# colors = {
+				# 	"intense_blue"
+				# 	"satin_burgundy"
+				# 	"null"
+				# 	"null"
+				# }
+			}
+			effect = {
+				add_modifier = {
+					modifier = modifier_BA_fe
+				}
+				set_country_flag = BA_Precursor_contactor
+				save_global_event_target_as = BA_Precursor_contactor
+				every_country = {
+					set_faction_hostility = {
+						target = prev
+						set_neutral = no
+						set_hostile = no
+						set_friendly = yes
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			establish_communications_no_message = root
+			country_event = {
+				id = BA_Decagrammaton.0101
+			}
+		}
+		#暂时放在这里开启
+		random_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = BA_Decagrammaton.0020
+			}
+		}
+	}
+}
+
+#通讯触发（先驱者线路）
+country_event = {
+	id = BA_Decagrammaton.0101
+	is_triggered_only = yes
+	title = BA_Decagrammaton.0101.title
+	desc = BA_Decagrammaton.0101.desc
+	picture = GFX_evt_clocks
+	trigger = {
+		has_global_flag = BA_Precursor_route
+		NOT = {
+			has_country_flag = BA_Gematria_contacted
+		}
+	}
+	immediate = {
+		set_country_flag = BA_Gematria_contacted
+		set_global_flag = BA_Gematria_contacted
+	}
+	option = {
+		name = BA_Decagrammaton.0101.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0102
+			}
+			# country_event = {
+			# 	id = BA_Decagrammaton.0103
+			# }
+		}
+	}
+}
+
+#先驱反抗者通讯
+country_event = {
+	id = BA_Decagrammaton.0102
+	is_triggered_only = yes
+	title = BA_Decagrammaton.0102.title
+	desc = BA_Decagrammaton.0102.desc
+	diplomatic = yes
+	force_open = yes
+	custom_gui = "BA_Window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	### 基沃托斯
+	option = {
+		name = BA_Decagrammaton.0102.Eden_Treaty
+		is_dialog_only = yes
+		trigger = {
+			has_origin = origin_Kivotos_Eden_treaty
+		}
+		response_text = BA_Decagrammaton.0102.Eden_Treaty.re
+	}
+	option = {
+		name = BA_Decagrammaton.0102.Kyrie
+		is_dialog_only = yes
+		trigger = {
+			has_origin = origin_Kivotos_Kyrie
+		}
+		response_text = BA_Decagrammaton.0102.Kyrie.re
+	}
+	option = {
+		name = BA_Decagrammaton.0102.Kivotos_other
+		is_dialog_only = yes
+		trigger = {
+			NOR = {
+				has_origin = origin_Kivotos_Eden_treaty
+				has_origin = origin_Kivotos_Kyrie
+			}
+			has_country_flag = Kivotos_detected
+		}
+		response_text = BA_Decagrammaton.0102.Kivotos_other.re
+	}
+	### 返回
+	option = {
+		name = BA_Decagrammaton.0102.exit_Kivotos
+		trigger = {
+			has_country_flag = Kivotos_detected
+		}
+		response_text = BA_Decagrammaton.0102.exit_Kivotos.re
+		event_target:BA_fe_country = {
+			set_closed_borders = {
+				who = prev
+				status = no
+			}
+			add_opinion_modifier = {
+				who = prev
+				modifier = opinion_BA_fe_after
+			}
+			add_intel = {
+				who = prev
+				amount = 100
+			}
+		}
+		hidden_effect = {
+			add_opinion_modifier = {
+				who = event_target:BA_fe_country
+				modifier = opinion_BA_fe_after
+			}
+			add_intel = {
+				who = event_target:BA_fe_country
+				amount = 100
+			}
+			#和先驱者通讯站联络
+			#establish_communications_no_message = event_target:BA_Precursor_contactor
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.0102.exit_other
+		trigger = {
+			NOT = {
+				has_country_flag = Kivotos_detected
+			}
+		}
+		response_text = BA_Decagrammaton.0102.exit_other.re
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+}
+
+#重置堕落物种立绘
+country_event = {
+	id = BA_Decagrammaton.0105
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		#先驱者
+		event_target:BA_Precursor_species = {
+			change_species_portrait = Schale
+		}
+	}
+}
+
+### 通讯站
+#点击触发
+# country_event = {
+# 	id = BA_Decagrammaton.0200
+# 	is_triggered_only = yes
+# 	hide_window = yes
+# }
+#主界面
+# country_event = {
+# 	id = BA_Decagrammaton.0201
+# 	is_triggered_only = yes
+# 	title = BA_Decagrammaton.0201.title
+# 	desc = {
+# 		text = BA_Decagrammaton.0201.desc.1
+# 	}
+# }
+######################
+###  中期天灾-爱丽丝 
+######################
+#触发器（global mtth）
+country_event = {
+	id = BA_Decagrammaton.1000
+	hide_window = yes
+	trigger = {
+		is_country_type = global_event
+		has_global_flag = BA_Precursor_route
+		mid_game_years_passed > 0
+	}
+	mean_time_to_happen = {
+		days = 1080		#1080
+	}
+	fire_only_once = yes
+	immediate = {
+		#开启外域链路
+		country_event = {
+			id = BA_Decagrammaton.0020
+		}
+		#快子信号通告及先驱者
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1001
+			}
+		}
+		#划定位置
+		country_event = {
+			id = BA_Decagrammaton.1002
+		}
+		#出现
+		country_event = {
+			id = BA_Decagrammaton.1003
+			days = 360
+			random = 720
+		}
+	}
+}
+
+#触发通告（country）
+country_event = {
+	id = BA_Decagrammaton.1001
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1001.title
+	desc = BA_Decagrammaton.1001.desc
+	picture = GFX_BA_Checkmate
+	trigger = {
+		has_authority = auth_kivotos
+	}
+	option = {
+		name = BA_Decagrammaton.1001.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.1201
+			}
+		}
+	}
+}
+
+#前期准备（global）
+country_event = {
+	id = BA_Decagrammaton.1002
+	is_triggered_only = yes
+	hide_window = yes
+	fire_only_once = yes
+	immediate = {
+		#创建先驱爱丽丝
+		create_species = {
+			name = "NAME_BA_Precursors_Aris_species"
+			class = MACHINE
+			portrait = Aris_Pr
+			namelist = "ArisPrName"
+			traits = {
+				trait = trait_G_after
+			}
+			effect = {
+				set_species_flag = BA_Precursors_Aris_flag
+				save_global_event_target_as = BA_Precursors_Aris_species
+			}
+		}
+		create_country = {
+			name = "NAME_BA_Precursors_Aris_country"
+			type = Aris_mid
+			ignore_initial_colony_error = yes
+			species = event_target:BA_Precursors_Aris_species
+			#authority = auth_ba_fe
+			flag = {
+				icon = {
+					category = "ba"
+					file = "ba_flags_06.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"dark_purple"
+					"dark_purple"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				##########
+				#set_graphical_culture = 
+				save_global_event_target_as = BA_Precursors_Aris_country
+				set_country_flag = BA_Precursors_Aris
+				add_modifier = {
+					modifier = modifier_BA_Aris
+				}
+				if = {
+					limit = {
+						OR = {
+							has_global_flag = BA_Crisis_Normal
+							has_global_flag = BA_Crisis_Hardcore
+							has_global_flag = BA_Crisis_Veryhard
+						}
+					}
+					add_modifier = {
+						modifier = modifier_BA_mid_debuff_1
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_global_flag = BA_Crisis_Normal
+							has_global_flag = BA_Crisis_Hardcore
+						}
+					}
+					add_modifier = {
+						modifier = modifier_BA_mid_debuff_2
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = BA_Crisis_Normal
+					}
+					add_modifier = {
+						modifier = modifier_BA_mid_debuff_3
+					}
+				}
+				##########
+				#舰船设计
+				add_global_ship_design = NAME_BA_FE_MISSILE_SHIP
+				add_global_ship_design = NAME_BA_FE_ARTILLERY_SHIP
+				add_global_ship_design = NAME_BA_FE_SWARM_SHIP
+				add_global_ship_design = NAME_BA_FE_HUB_SHIP
+				add_global_ship_design = NAME_BA_FE_DEFENCE_CANON
+				add_global_ship_design = NAME_BA_FE_CONSTRUCTION
+				#领袖
+				create_leader = {
+					class = ruler
+					species = event_target:BA_Precursors_Aris_species
+					gender = female
+					name = NAME_Aris
+					skill = 3
+					set_age = 17
+					immortal = yes
+					event_leader = yes
+					traits = {
+					}
+				}
+				last_created_leader = {
+					change_leader_portrait = Aris_Pr
+				}
+				set_leader = last_created_leader
+				##########
+				# every_country = {
+				# 	limit = {
+				# 		OR = {
+				# 			# is_country_type = enclave							#不攻击飞地
+				# 			# is_country_type = enclave_mercenary							#不攻击飞地
+				# 			# is_country_type = guardian_sphere							#不攻击无限神机
+				# 			# is_country_type = fallen_empire							#与堕落和平相处
+				# 			is_country_type = default
+				# 		}
+				# 	}
+				# 	set_faction_hostility = {
+				# 		target = prev
+				# 		set_neutral = no
+				# 		set_hostile = yes
+				# 	}
+				# }
+			}
+		}
+		#划定爱丽丝出现的星系
+		random_system = {
+			limit = {
+				has_planet_class = pc_barren
+				has_natural_wormhole = no
+				has_any_megastructure = no
+				NOT = {
+					has_star_flag = enclave
+				}
+				OR = {
+					NOT = {
+						exists = owner
+					}
+					owner = {
+						is_country_type = default
+					}
+				}
+				NOT = {
+					any_system_planet = {
+						OR = {
+							is_colonizable = yes
+							has_owner = yes
+							has_planet_flag = phaseshifting_active
+						}
+					}
+				}
+			}
+			set_star_flag = BA_mid_Aris_system
+			save_global_event_target_as = BA_mid_Aris_system
+			random_system_planet = {
+				limit = {
+					is_planet_class = pc_barren
+				}
+				set_planet_flag = BA_mid_Aris_base
+				save_global_event_target_as = BA_mid_Aris_base
+			}
+		}
+	}
+}
+
+#开始！爱丽丝出击！（global） # BA_Precursors_Aris_country
+country_event = {
+	id = BA_Decagrammaton.1003
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		random_list = {
+			50 = {
+				set_global_flag = BA_mid_Aris_charaA
+			}
+			50 = {
+				set_global_flag = BA_mid_Aris_charaB
+			}
+		}
+		#通告启动
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			event_target:BA_mid_Aris_system = {
+				set_surveyed = {
+					surveyed = yes
+					surveyor = prev
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1204
+			}
+			country_event = {
+				id = BA_Decagrammaton.1206
+				days = 10
+			}
+		}
+		#建立联系并初始化武装
+		event_target:BA_Precursors_Aris_country = {
+			country_event = {
+				id = BA_Decagrammaton.1004
+			}
+			country_event = {
+				id = BA_Decagrammaton.1005
+				days = 30
+			}
+		}
+		set_variable = {
+			which = BA_mid_Aris_countdown
+			value = 3
+		}
+	}
+}
+
+#初始化舰队和基地
+country_event = {
+	id = BA_Decagrammaton.1004
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		#设定第一个目的地
+		random_system = {
+			limit = {
+				has_star_flag = BA_D_ENTRANCE
+			}
+			random_system_planet = {
+				limit = {
+					has_planet_flag = BA_D_system_base
+				}
+			}
+			save_global_event_target_as = BA_Aris_mid_nod_target
+		}
+		#初始化星系基地并召出第一批舰队
+		event_target:BA_mid_Aris_system = {
+			event_target:BA_mid_Aris_base = {
+				change_pc = pc_ai
+				set_owner = event_target:BA_Precursors_Aris_country
+				#旗舰
+				BA_create_mid_Aris_fleet_king = yes
+				#卫戍舰
+				while = {
+					count = 6
+					BA_create_mid_Aris_fleet_bishop = yes
+				}
+				#攻击舰
+				while = {
+					count = 6
+					BA_create_mid_Aris_fleet_pawn = yes
+				}
+			}
+			# create_starbase = {
+			# 	size = starbase_marauder
+			# 	owner = event_target:BA_Precursors_Aris_country
+			# }
+		}
+		event_target:BA_Precursors_Aris_country = {
+			every_owned_fleet = {
+				limit = {
+					has_fleet_flag = BA_mid_Aris_pawn
+				}
+				fleet_event = {
+					id = BA_Decagrammaton.1030
+				}
+			}
+			every_owned_fleet = {
+				limit = {
+					has_fleet_flag = BA_mid_Aris_bishop
+				}
+				fleet_event = {
+					id = BA_Decagrammaton.1031
+				}
+			}
+		}
+	}
+}
+
+#与爱丽丝建立联系
+country_event = {
+	id = BA_Decagrammaton.1005
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			establish_communications_no_message = root
+		}
+	}
+}
+
+#爱丽丝抵达跳线点
+country_event = {
+	id = BA_Decagrammaton.1006
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		NOT = {
+			has_global_flag = BA_mid_Aris_Arrived_nod
+		}
+	}
+	immediate = {
+		set_global_flag = BA_mid_Aris_Arrived_nod
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1207
+			}
+		}
+	}
+}
+
+#爱丽丝遍历完成跳线点，舰队散开攻击
+country_event = {
+	id = BA_Decagrammaton.1007
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		NOR = {
+			has_global_flag = BA_mid_Aris_nod_complete
+			has_global_flag = BA_mid_Aris_disabled
+		}
+	}
+	immediate = {
+		set_global_flag = BA_mid_Aris_nod_complete
+		#爱丽丝开火
+		event_target:BA_Precursors_Aris_country = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+					}
+				}
+				set_faction_hostility = {
+					target = prev
+					set_neutral = no
+					set_hostile = yes
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1209
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = BA_Decagrammaton.1010
+				days = 360
+				random = 360
+			}
+		}
+	}
+}
+
+#爱丽丝被攻击，提前散开攻击
+country_event = {
+	id = BA_Decagrammaton.1008
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		NOR = {
+			has_global_flag = BA_mid_Aris_nod_complete
+			has_global_flag = BA_mid_Aris_disabled
+		}
+		is_country_type = default
+		from = {
+			has_country_flag = BA_Precursors_Aris
+		}
+	}
+	immediate = {
+		set_global_flag = BA_mid_Aris_nod_complete
+		set_country_flag = BA_mid_Aris_nod_attacker
+		#爱丽丝开火
+		event_target:BA_Precursors_Aris_country = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+					}
+				}
+				set_faction_hostility = {
+					target = prev
+					set_neutral = no
+					set_hostile = yes
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1210
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = BA_Decagrammaton.1010
+				days = 360
+				random = 360
+			}
+		}
+	}
+}
+
+#刷舰队
+country_event = {
+	id = BA_Decagrammaton.1010
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_country_type = global_event
+		NOT = {
+			has_global_flag = BA_mid_Aris_disabled
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				check_variable = {
+					which = BA_mid_Aris_countdown
+					value > 0
+				}
+			}
+			event_target:BA_Precursors_Aris_country = {
+				country_event = {
+					id = BA_Decagrammaton.1011
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = BA_mid_Aris_countdown
+						value = 2
+					}
+				}
+				change_variable = {
+					which = BA_mid_Aris_countdown
+					value = -1
+				}
+				every_country = {
+					limit = {
+						is_country_type = default
+					}
+					country_event = {
+						id = BA_Decagrammaton.1225
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = BA_mid_Aris_countdown
+						value = 0
+					}
+				}
+				change_variable = {
+					which = BA_mid_Aris_countdown
+					value = -1
+				}
+				every_country = {
+					limit = {
+						is_country_type = default
+					}
+					country_event = {
+						id = BA_Decagrammaton.1227
+					}
+				}
+			}
+			else = {
+				#random = {
+				#	chance = 0.7
+				change_variable = {
+					which = BA_mid_Aris_countdown
+					value = -1
+				}
+				#}
+				every_country = {
+					limit = {
+						is_country_type = default
+					}
+					country_event = {
+						id = BA_Decagrammaton.1226
+					}
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1010
+				days = 360
+				random = 360
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1011
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		event_target:BA_mid_Aris_base = {
+			set_owner = root
+			#卫戍舰
+			while = {
+				count = 2
+				BA_create_mid_Aris_fleet_bishop = yes
+				last_created_fleet = {
+					queue_actions = {
+						wait = 10
+					}
+				}
+			}
+			#攻击舰
+			while = {
+				count = 6
+				BA_create_mid_Aris_fleet_pawn = yes
+				last_created_fleet = {
+					queue_actions = {
+						wait = 10
+					}
+				}
+			}
+		}
+	}
+}
+
+#建门路线：刷先驱者通讯船
+country_event = {
+	id = BA_Decagrammaton.1013
+	is_triggered_only = yes
+	hide_window = yes
+	fire_only_once = yes
+	trigger = {
+		is_country_type = global_event
+	}
+	immediate = {
+		set_global_flag = BA_mid_Aris_disabled		#锁爱丽丝舰船，同时战斗停止
+		set_global_flag = BA_Precursor_Mid_A		#建门路线，影响终末天灾
+		event_target:BA_Precursors_Aris_country = {
+			every_owned_fleet = {
+				set_event_locked = yes
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+					}
+				}
+				set_faction_hostility = {
+					target = prev
+					set_hostile = no
+					set_neutral = yes
+				}
+			}
+		}
+		# event_target:BA_mid_Aris_flagship = {
+		# 	set_event_locked = yes
+		# }
+		#建门者通知
+		from.owner = {
+			remove_country_flag = BA_mid_Aris_gate_building
+			set_country_flag = BA_Gate_finished
+			country_event = {
+				id = BA_Decagrammaton.1231
+			}
+		}
+		#其他帝国的通知，并移除星门
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = {
+					has_country_flag = BA_Gate_finished
+				}
+			}
+			every_owned_megastructure = {
+				limit = {
+					is_megastructure_type = Dgate_temp_base
+				}
+				remove_megastructure = this
+			}
+			country_event = {
+				id = BA_Decagrammaton.1232
+			}
+		}
+		#联络国刷船
+		event_target:BA_Precursor_contactor = {
+			create_leader = {
+				class = admiral
+				species = event_target:BA_leader_species
+				gender = female
+				name = BA_Shigure
+				skill = 10
+				set_age = 16
+				immortal = yes
+				event_leader = yes
+			}
+			last_created_leader = {
+				set_leader_flag = BA_event_leader
+				set_age = 16
+				change_leader_portrait = BA_125
+			}
+			create_fleet = {
+				name = Soft_determination
+				effect = {
+					set_owner = prev
+					assign_leader = last_created_leader
+					set_location = event_target:BA_mid_Aris_gate
+					create_ship = {
+						name = NAME_BA_FE_HUB_SHIP
+						design = NAME_BA_FE_HUB_SHIP
+					}
+					add_modifier = {
+						modifier = BA_fe_determination
+					}
+					queue_actions = {
+						move_to = event_target:BA_mid_Aris_system
+						effect = {
+							id = ArisMid.effect.0005							#收尾事件
+							save_global_event_target_as = BA_Precursor_contactor_ship
+							every_country = {
+								limit = {
+									is_country_type = global_event
+								}
+								country_event = {
+									id = BA_Decagrammaton.1014
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#建门路线：先驱者将爱丽丝送至基沃托斯
+country_event = {
+	id = BA_Decagrammaton.1014
+	is_triggered_only = yes
+	hide_window = yes
+	fire_only_once = yes
+	trigger = {
+		is_country_type = global_event
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				has_country_flag = BA_Gate_finished
+			}
+			country_event = {
+				id = BA_Decagrammaton.1233
+			}
+		}
+		event_target:BA_Precursor_contactor_ship = {
+			fleet_event = {
+				id = BA_Decagrammaton.1040
+			}
+		}
+	}
+}
+
+#攻击路线：爱丽丝旗舰瘫痪
+ship_event = {
+	id = BA_Decagrammaton.1015
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_ship_flag = BA_mid_Aris_flagship
+	}
+	immediate = {
+		set_global_flag = BA_mid_Aris_disabled		#锁爱丽丝舰船，同时战斗停止
+		set_global_flag = BA_Precursor_Mid_B		#战斗路线，影响终末天灾
+		#瘫痪旗舰者的通知
+		from.owner = {
+			set_country_flag = BA_mid_Aris_disabler
+			country_event = {
+				id = BA_Decagrammaton.1211
+			}
+		}
+		#其他国家的通知
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = {
+					has_country_flag = BA_mid_Aris_disabler
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1212
+				days = 5
+			}
+		}
+		#停止局势
+		every_country = {
+			limit = {
+				has_authority = auth_kivotos
+			}
+			every_situation = {
+				limit = {
+					is_situation_type = situation_mid_Aris_ask_help
+				}
+				destroy_situation = this
+			}
+		}
+		#临时星门拆毁
+		every_megastructure = {
+			limit = {
+				has_megastructure_flag = BA_temp_Dgate
+			}
+			delete_megastructure = this
+		}
+		#武装自毁
+		event_target:BA_Precursors_Aris_country = {
+			every_owned_fleet = {
+				limit = {
+					NOT = {
+						has_fleet_flag = BA_mid_Aris_king
+					}
+				}
+				destroy_fleet = this
+			}
+		}
+	}
+}
+
+#攻击路线：完成项目并捕获爱丽丝
+ship_event = {
+	id = BA_Decagrammaton.1016
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		set_global_flag = BA_mid_Aris_get
+		owner = {
+			if = {
+				limit = {
+					has_authority = auth_kivotos
+				}
+				country_event = {
+					id = BA_Decagrammaton.1215
+				}
+			}
+			else = {
+				country_event = {
+					id = BA_Decagrammaton.1213
+				}
+			}
+		}
+		delete_ship = event_target:BA_mid_Aris_flagship
+		#定时结束
+		every_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = BA_Decagrammaton.1024
+				days = 360
+				random = 540
+			}
+		}
+	}
+}
+
+#爱丽丝返回先驱者
+country_event = {
+	id = BA_Decagrammaton.1024
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		#摧毁事件国家
+		event_target:BA_Precursors_Aris_country = {
+			destroy_country = yes
+		}
+		event_target:BA_Precursor_contactor_ship = {
+			delete_fleet = this
+		}
+		#剧情
+		every_country = {
+			limit = {
+				OR = {
+					has_country_flag = BA_mid_Aris_disabler
+					has_country_flag = BA_Gate_finished
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1240
+			}
+		}
+	}
+}
+
+### 设定舰队行动
+#pawn首次寻找跳线点
+fleet_event = {
+	id = BA_Decagrammaton.1030
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		queue_actions = {
+			wait = 60
+			find_closest_system = {
+				trigger = {
+					id = ArisMid.system.0001
+					has_star_flag = BA_D_ENTRANCE
+					NOT = {
+						has_star_flag = BA_mid_Aris_visited
+					}
+				}
+				found_system = {
+					move_to = this
+					find_closest_planet = {
+						trigger = {
+							id = ArisMid.planet.0001
+							has_planet_flag = BA_D_system_base
+						}
+						found_planet = {
+							move_to = this
+							effect = {
+								id = ArisMid.effect.0001								#1：剧情
+								random_country = {
+									limit = {
+										is_country_type = global_event
+									}
+									country_event = {
+										id = BA_Decagrammaton.1006
+									}
+								}
+							}
+						}
+					}
+					#
+					effect = {
+						id = ArisMid.effect.0002						#2：设定跳线点已到达
+						set_star_flag = BA_mid_Aris_visited
+					}
+				}
+			}
+			effect = {
+				id = ArisMid.effect.0003				#3：pawn寻找跳线点
+				event_target:BA_Precursors_Aris_country = {
+					every_owned_fleet = {
+						limit = {
+							has_fleet_flag = BA_mid_Aris_pawn
+						}
+						fleet_event = {
+							id = BA_Decagrammaton.1032
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#bishop、king于基地上方待命
+fleet_event = {
+	id = BA_Decagrammaton.1031
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		queue_actions = {
+			find_closest_system = {
+				trigger = {
+					id = ArisMid.system.0003					#返回基地
+					has_star_flag = BA_mid_Aris_system
+				}
+				found_system = {
+					move_to = this
+				}
+			}
+			repeat = {
+				while = {
+					id = ArisMid.global.0001
+					NOT = {
+						has_global_flag = BA_mid_Aris_nod_complete
+					}
+				}
+				find_closest_planet = {
+					trigger = {
+						id = ArisMid.planet.0004						#返回基地
+						has_planet_flag = BA_mid_Aris_base
+					}
+					found_planet = {
+						move_to = this
+						orbit_planet = this
+					}
+				}
+				wait = 10
+			}
+		}
+	}
+}
+
+#pawn循环寻找跳线点
+fleet_event = {
+	id = BA_Decagrammaton.1032
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		queue_actions = {
+			wait = 60
+			find_closest_system = {
+				trigger = {
+					id = ArisMid.system.0001
+					has_star_flag = BA_D_ENTRANCE
+					NOT = {
+						has_star_flag = BA_mid_Aris_visited
+					}
+				}
+				found_system = {
+					move_to = this
+					find_closest_planet = {
+						trigger = {
+							id = ArisMid.planet.0001
+							has_planet_flag = BA_D_system_base
+						}
+						found_planet = {
+							move_to = this
+						}
+					}
+					effect = {
+						id = ArisMid.effect.0002
+						set_star_flag = BA_mid_Aris_visited
+					}
+				}
+				failed = {
+					effect = {
+						id = ArisMid.effect.0004						#4：遍历完成 舰队散开
+						every_country = {
+							limit = {
+								OR = {
+									is_country_type = global_event
+								}
+							}
+							country_event = {
+								id = BA_Decagrammaton.1007
+							}
+						}
+					}
+				}
+			}
+			effect = {
+				id = ArisMid.effect.0003
+				event_target:BA_Precursors_Aris_country = {
+					every_owned_fleet = {
+						limit = {
+							has_fleet_flag = BA_mid_Aris_pawn
+						}
+						fleet_event = {
+							id = BA_Decagrammaton.1032
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#调查员舰船巡回
+fleet_event = {
+	id = BA_Decagrammaton.1040
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		queue_actions = {
+			find_closest_system = {
+				trigger = {
+					id = Arismid.system.0004					#检测有无爱丽丝舰队
+					any_fleet_in_system = {
+						is_owned_by = event_target:BA_Precursors_Aris_country
+						NOT = {
+							has_fleet_flag = BA_mid_Aris_king
+						}
+					}
+				}
+				found_system = {
+					move_to = this
+					repeat = {
+						while = {
+							id = Arismid.system.0004							#检测有无爱丽丝舰队
+							any_fleet_in_system = {
+								is_owned_by = event_target:BA_Precursors_Aris_country
+								NOT = {
+									has_fleet_flag = BA_mid_Aris_king
+								}
+							}
+						}
+						find_random_fleet = {
+							trigger = {
+								id = Arismid.fleet.0001								#检测爱丽丝舰队
+								is_owned_by = event_target:BA_Precursors_Aris_country
+								NOT = {
+									has_fleet_flag = BA_mid_Aris_king
+								}
+							}
+							found_fleet = {
+								move_to = this
+								wait = 30
+								effect = {
+									id = ArisMid.effect.0006									#解除锁定，摧毁舰队
+									set_event_locked = no
+									destroy_fleet = this
+								}
+							}
+						}
+					}
+					effect = {
+						id = ArisMid.effect.0007						#去下一个星系
+						root = {
+							fleet_event = {
+								id = BA_Decagrammaton.1040
+							}
+						}
+					}
+				}
+				failed = {
+					move_to = event_target:BA_mid_Aris_base
+					effect = {
+						id = ArisMid.effect.0008						#解除锁定，摧毁舰队
+						event_target:BA_mid_Aris_base = {
+							change_pc = pc_machine_broken
+						}
+						event_target:BA_mid_Aris_flagship = {
+							fleet = {
+								set_event_locked = no
+								destroy_fleet = this
+							}
+						}
+					}
+					wait = 60
+					#收集完成，返回星门，结束事件链
+					event_target:BA_mid_Aris_gate = {
+						move_to = this
+						orbit_planet = this
+					}
+					wait = 30
+					effect = {
+						id = ArisMid.effect.0009
+						every_country = {
+							limit = {
+								has_country_flag = BA_Gate_finished
+							}
+							country_event = {
+								id = BA_Decagrammaton.1024								#建门线
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+### 轨道轰炸事件
+#进入轨道即进行一次轰击 +25%破坏度
+#50% 人口10%概率死亡 进行一轮清扫[360d]
+#75% 人口15%概率死亡 摧毁所有建筑 进行一轮清扫[360d]
+#100% 人口20%概率死亡 星球炸为死寂星球 该星球环境改造花费-80% 进行一轮清扫[1800d] 不再轰炸该星球
+### 先驱爱丽丝的天灾通讯界面
+#触发器
+country_event = {
+	id = BA_Decagrammaton.1180
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			is_country_type = Aris_mid
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = BA_mid_Aris_get
+			}
+			country_event = {
+				id = BA_Decagrammaton.1183
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_global_flag = BA_mid_Aris_get
+				}
+				has_global_flag = BA_mid_Aris_disabled
+			}
+			country_event = {
+				id = BA_Decagrammaton.1182
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = BA_mid_Aris_get
+					has_global_flag = BA_mid_Aris_disabled
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.1181
+			}
+		}
+	}
+}
+
+#入侵时期
+country_event = {
+	id = BA_Decagrammaton.1181
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1181.title
+	desc = {
+		text = BA_Decagrammaton.1181.desc.else
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+			NOT = {
+				has_global_flag = BA_mid_Aris_nod_complete
+			}
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1181.desc.kivotos
+		trigger = {
+			has_authority = auth_kivotos
+			NOT = {
+				has_global_flag = BA_mid_Aris_nod_complete
+			}
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1181.desc.error
+		trigger = {
+			has_global_flag = BA_mid_Aris_nod_complete
+		}
+	}
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	option = {
+		name = BA_Decagrammaton.1181.dialog.a
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1181.dialog.a.re
+		trigger = {
+			NOR = {
+				has_authority = auth_kivotos
+				has_global_flag = BA_mid_Aris_nod_complete
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1181.dialog.b
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1181.dialog.b.re
+		trigger = {
+			NOR = {
+				has_authority = auth_kivotos
+				has_global_flag = BA_mid_Aris_nod_complete
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1181.dialog.c
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1181.dialog.c.re
+		trigger = {
+			has_authority = auth_kivotos
+			NOT = {
+				has_global_flag = BA_mid_Aris_nod_complete
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1181.dialog.d
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1181.dialog.d.re
+		trigger = {
+			has_authority = auth_kivotos
+			NOT = {
+				has_global_flag = BA_mid_Aris_nod_complete
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1181.exit.else
+		response_text = BA_Decagrammaton.1181.exit.else.re
+		trigger = {
+			NOR = {
+				has_authority = auth_kivotos
+				has_global_flag = BA_mid_Aris_nod_complete
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1181.exit.kivotos
+		response_text = BA_Decagrammaton.1181.exit.kivotos.re
+		trigger = {
+			has_authority = auth_kivotos
+			NOT = {
+				has_global_flag = BA_mid_Aris_nod_complete
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1181.exit.error
+		response_text = BA_Decagrammaton.1181.exit.error.re
+		trigger = {
+			has_authority = auth_kivotos
+			has_global_flag = BA_mid_Aris_nod_complete
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1181.exit.denied
+		response_text = BA_Decagrammaton.1181.exit.denied.re
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+			has_global_flag = BA_mid_Aris_nod_complete
+		}
+	}
+}
+
+#瘫痪时期
+country_event = {
+	id = BA_Decagrammaton.1182
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1182.title
+	desc = BA_Decagrammaton.1182.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	option = {
+		name = BA_Decagrammaton.1182.exit
+	}
+}
+
+#被俘获
+country_event = {
+	id = BA_Decagrammaton.1183
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1183.title
+	trigger = {
+		has_authority = auth_kivotos
+	}
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	desc = {
+		text = BA_Decagrammaton.1183.desc.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1183.dialog.charaA.1
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1183.dialog.charaA.1.re
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1183.dialog.charaA.2
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1183.dialog.charaA.2.re
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1183.dialog.charaA.next
+		response_text = BA_Decagrammaton.1183.dialog.charaA.next.re
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1183.desc.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1183.dialog.charaB.1
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1183.dialog.charaB.1.re
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1183.dialog.charaB.2
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1183.dialog.charaB.2.re
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1183.dialog.charaB.next
+		response_text = BA_Decagrammaton.1183.dialog.charaB.next.re
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+}
+
+#扭送先驱者之后
+### 剧情对话用事件
+#快子信号日志记录
+country_event = {
+	id = BA_Decagrammaton.1201
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1201.title
+	desc = BA_Decagrammaton.1201.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		room = "BA_Shittem_room"
+	}
+	option = {
+		name = BA_Decagrammaton.1201.a
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1201.a.re
+	}
+	option = {
+		name = BA_Decagrammaton.1201.b
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1201.b.re
+	}
+	option = {
+		name = BA_Decagrammaton.1201.c
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1201.c.re
+	}
+	option = {
+		name = BA_Decagrammaton.1201.d
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1201.d.re
+	}
+	option = {
+		name = BA_Decagrammaton.1201.next
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.1202
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1202
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1202.title
+	desc = BA_Decagrammaton.1202.desc
+	picture = GFX_BA_Checkmate
+	option = {
+		name = BA_Decagrammaton.1202.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.1203
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1203
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1203.title
+	desc = BA_Decagrammaton.1203.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1203.a
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1203.a.re
+	}
+	option = {
+		name = BA_Decagrammaton.1203.next
+		response_text = BA_Decagrammaton.1203.next.re
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+}
+
+#通告爱丽丝出现
+country_event = {
+	id = BA_Decagrammaton.1204
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1204.title
+	desc = BA_Decagrammaton.1204.desc
+	location = event_target:BA_mid_Aris_system
+	option = {
+		name = BA_Decagrammaton.1204.ba
+		trigger = {
+			hidden_trigger = {
+				has_authority = auth_kivotos
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.1205
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1204.else
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+}
+
+#出现后联系先驱者
+country_event = {
+	id = BA_Decagrammaton.1205
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1205.title
+	desc = BA_Decagrammaton.1205.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1205.next
+		response_text = BA_Decagrammaton.1205.next.re
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+}
+
+#与爱丽丝初次见面
+country_event = {
+	id = BA_Decagrammaton.1206
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1206.title
+	desc = BA_Decagrammaton.1206.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	option = {
+		name = BA_Decagrammaton.1206.a
+		trigger = {
+			has_authority = auth_kivotos
+		}
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1206.a.re
+	}
+	option = {
+		name = BA_Decagrammaton.1206.b
+		trigger = {
+			has_authority = auth_kivotos
+		}
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1206.b.re
+	}
+	option = {
+		name = BA_Decagrammaton.1206.next.kivotos
+		trigger = {
+			has_authority = auth_kivotos
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1206.next.other
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+}
+
+#通告到达跳线点
+country_event = {
+	id = BA_Decagrammaton.1207
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1207.title
+	desc = BA_Decagrammaton.1207.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	option = {
+		name = BA_Decagrammaton.1207.next.kivotos
+		trigger = {
+			has_authority = auth_kivotos
+		}
+		country_event = {
+			id = BA_Decagrammaton.1208
+			days = 1
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1207.next.other
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1208
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1208.title
+	desc = BA_Decagrammaton.1208.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1208.a
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1208.a.re
+	}
+	option = {
+		name = BA_Decagrammaton.1208.b
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1208.b.re
+	}
+	option = {
+		name = BA_Decagrammaton.1208.next
+		response_text = BA_Decagrammaton.1208.next.re
+		start_situation = {
+			type = situation_mid_Aris_ask_help
+		}
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+}
+
+#遍历跳线点完成，报错，舰队散开出击
+country_event = {
+	id = BA_Decagrammaton.1209
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1209.title
+	desc = BA_Decagrammaton.1209.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	option = {
+		name = BA_Decagrammaton.1209.next
+		response_text = BA_Decagrammaton.1209.next.re
+	}
+}
+
+#被攻击，舰队提前散开出击
+country_event = {
+	id = BA_Decagrammaton.1210
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1210.title
+	desc = BA_Decagrammaton.1210.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	option = {
+		name = BA_Decagrammaton.1210.next
+		trigger = {
+			NOT = {
+				has_country_flag = BA_mid_Aris_nod_attacker
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1210.attacker.kivotos
+		trigger = {
+			has_country_flag = BA_mid_Aris_nod_attacker
+			has_authority = auth_kivotos
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1210.attacker.other
+		trigger = {
+			has_country_flag = BA_mid_Aris_nod_attacker
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+}
+
+#瘫痪旗舰
+country_event = {
+	id = BA_Decagrammaton.1211
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1211.title
+	desc = {
+		text = BA_Decagrammaton.1211.desc.other
+		trigger = {
+			is_country_type = default
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1211.desc.kivotos
+		trigger = {
+			is_country_type = default
+			has_authority = auth_kivotos
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1211.desc.accident
+		trigger = {
+			NOT = {
+				is_country_type = default
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1211.other
+		trigger = {
+			is_country_type = default
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1211.kivotos
+		trigger = {
+			is_country_type = default
+			has_authority = auth_kivotos
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1211.accident
+		trigger = {
+			NOT = {
+				is_country_type = default
+			}
+		}
+	}
+	after = {
+		enable_special_project = {
+			name = BA_MID_GET_ARIS
+			location = event_target:BA_mid_Aris_flagship
+		}
+	}
+}
+
+#其他人收到瘫痪旗舰的通知
+country_event = {
+	id = BA_Decagrammaton.1212
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1212.title
+	desc = {
+		text = BA_Decagrammaton.1212.desc.other
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1212.desc.kivotos
+		trigger = {
+			has_authority = auth_kivotos
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1212.other
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1212.kivotos
+		trigger = {
+			has_authority = auth_kivotos
+		}
+		#巨构退款
+		add_resource = {
+			energy = 8500
+			food = 1500
+			alloys = 6000
+			sr_pyroxenes = 100
+		}
+	}
+}
+
+#非基沃托斯：先驱者赎人
+country_event = {
+	id = BA_Decagrammaton.1213
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1213.title
+	desc = BA_Decagrammaton.1213.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1213.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+			every_country = {
+				limit = {
+					has_authority = auth_kivotos
+				}
+				country_event = {
+					id = BA_Decagrammaton.1214
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+#赎人后通告基沃托斯
+country_event = {
+	id = BA_Decagrammaton.1214
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1214.title
+	desc = BA_Decagrammaton.1214.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1214.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+}
+
+#基沃托斯：瘫痪先驱爱丽丝事件链
+country_event = {
+	id = BA_Decagrammaton.1215
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1215.title
+	desc = BA_Decagrammaton.1215.desc
+	option = {
+		name = BA_Decagrammaton.1215.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.1216
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1216
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1216.title
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = Aris_Pr
+		room = BA_05_room
+	}
+	desc = {
+		text = BA_Decagrammaton.1216.desc.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1216.1.charaA
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1216.1.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1216.2.charaA
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1216.2.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1216.3.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+		country_event = {
+			id = BA_Decagrammaton.1217
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1216.desc.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1216.1.charaB
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1216.1.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1216.2.charaB
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1216.2.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1216.3.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+		country_event = {
+			id = BA_Decagrammaton.1217
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1217
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1217.title
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1217.desc.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1217.1.charaA
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1217.1.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1217.2.charaA
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1217.2.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1217.3.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+			# country_event = {
+			# 	id = BA_Decagrammaton.9501
+			# }
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1217.desc.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1217.1.charaB
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1217.1.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1217.2.charaB
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1217.2.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1217.3.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+			# country_event = {
+			# 	id = BA_Decagrammaton.9501
+			# }
+		}
+	}
+}
+
+#爱丽丝刷舰队-第一波
+country_event = {
+	id = BA_Decagrammaton.1225
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1225.title
+	desc = BA_Decagrammaton.1225.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	option = {
+		name = BA_Decagrammaton.1225.next
+	}
+}
+
+#爱丽丝刷舰队-中间波
+country_event = {
+	id = BA_Decagrammaton.1226
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1226.title
+	desc = BA_Decagrammaton.1226.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	option = {
+		name = BA_Decagrammaton.1226.next
+	}
+}
+
+#爱丽丝刷舰队-最终波
+country_event = {
+	id = BA_Decagrammaton.1227
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1227.title
+	desc = BA_Decagrammaton.1227.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_Precursors_Aris_country
+		room = enclave_curator_room
+	}
+	option = {
+		name = BA_Decagrammaton.1227.next
+	}
+}
+
+#先驱者支援
+country_event = {
+	id = BA_Decagrammaton.1230
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1230.title
+	desc = {
+		text = BA_Decagrammaton.1230.desc.A
+		trigger = {
+			has_country_flag = BA_mid_Aris_ask_help_A
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1230.desc.B
+		trigger = {
+			has_country_flag = BA_mid_Aris_ask_help_B
+		}
+	}
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1230.A
+		trigger = {
+			has_country_flag = BA_mid_Aris_ask_help_A
+		}
+		add_modifier = {
+			modifier = modifier_BA_vs_mid_Aris
+		}
+		add_monthly_resource_mult = {
+			resource = alloys
+			value = 24
+			min = 2500
+			max = 25000
+		}
+		hidden_effect = {
+			remove_country_flag = BA_mid_Aris_ask_help_A
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1230.B
+		trigger = {
+			has_country_flag = BA_mid_Aris_ask_help_B
+		}
+		give_technology = {
+			tech = tech_BA_gate_build
+			message = yes
+		}
+		capital_scope = {
+			solar_system = {
+				spawn_megastructure = {
+					type = Dgate_temp_base
+					graphical_culture = root
+					orbit_distance = 200
+					orbit_angle = 80
+					init_effect = {
+						set_megastructure_flag = BA_temp_Dgate
+						set_owner = prev.owner
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = BA_mid_Aris_ask_help_B
+			set_country_flag = BA_allow_build_gate
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+}
+
+#建门完成，建造者通知
+country_event = {
+	id = BA_Decagrammaton.1231
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1231.title
+	desc = BA_Decagrammaton.1231.desc
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	trigger = {
+		has_country_flag = BA_GateBuilder
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1231.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+		}
+	}
+}
+
+#建门完成，其他帝国通知
+country_event = {
+	id = BA_Decagrammaton.1232
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1232.title
+	desc = {
+		text = BA_Decagrammaton.1232.desc.other
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1232.desc.kivotos
+		trigger = {
+			has_authority = auth_kivotos
+		}
+	}
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1232.a.kivotos
+		trigger = {
+			has_authority = auth_kivotos
+		}
+		if = {
+			limit = {
+				has_country_flag = BA_mid_Aris_gate_building
+			}
+			add_resource = {
+				energy = 8500
+				food = 1500
+				alloys = 6000
+				sr_pyroxenes = 100
+			}
+			remove_country_flag = BA_mid_Aris_gate_building
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1232.a.other
+		trigger = {
+			NOT = {
+				has_authority = auth_kivotos
+			}
+		}
+	}
+}
+
+#对话，先驱者捕获爱丽丝事件链
+country_event = {
+	id = BA_Decagrammaton.1233
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1233.title
+	desc = BA_Decagrammaton.1233.desc
+	immediate = {
+	}
+	option = {
+		name = BA_Decagrammaton.1233.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.1234
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1234
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1234.title
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = Aris_Pr
+		room = BA_05_room
+	}
+	desc = {
+		text = BA_Decagrammaton.1234.desc.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1234.1.charaA
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1234.1.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1234.2.charaA
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1234.2.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1234.3.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+		country_event = {
+			id = BA_Decagrammaton.1235
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1234.desc.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1234.1.charaB
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1234.1.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1234.2.charaB
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1234.2.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1234.3.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+		country_event = {
+			id = BA_Decagrammaton.1235
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1235
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1235.title
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = event_target:BA_fe_country
+		room = BA_01_room
+	}
+	immediate = {
+		event_target:BA_Precursor_species = {
+			change_species_portrait = BA_Seia
+		}
+	}
+	desc = BA_Decagrammaton.1235.desc
+	option = {
+		name = BA_Decagrammaton.1235.1
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1235.1.re
+	}
+	option = {
+		name = BA_Decagrammaton.1235.2
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1235.2.re
+	}
+	option = {
+		name = BA_Decagrammaton.1235.3
+		custom_tooltip = BA_Decagrammaton.1235.3.tip
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.0105
+				days = 1
+			}
+			# country_event = {
+			# 	id = BA_Decagrammaton.9501
+			# }
+		}
+	}
+}
+
+#对话，爱丽丝回归
+country_event = {
+	id = BA_Decagrammaton.1240
+	is_triggered_only = yes
+	picture = GFX_BA_Site_of_Aris
+	title = BA_Decagrammaton.1240.title
+	desc = {
+		text = BA_Decagrammaton.1240.desc.A
+		trigger = {
+			has_global_flag = BA_Precursor_Mid_A
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1240.desc.B
+		trigger = {
+			has_global_flag = BA_Precursor_Mid_B
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1240.next
+		hidden_effect = {
+			country_event = {
+				id = BA_Decagrammaton.1241
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1241
+	title = BA_Decagrammaton.1241.title
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "BA_window"
+	picture_event_data = {
+		portrait = BA_Aris
+		room = BA_01_room
+	}
+	desc = {
+		text = BA_Decagrammaton.1241.desc.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1241.1.charaA
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1241.1.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1241.2.charaA
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1241.2.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1241.3.charaA
+		response_text = BA_Decagrammaton.1241.3.re.charaA
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaA
+		}
+		country_event = {
+			id = BA_Decagrammaton.1242
+			days = 1
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1241.desc.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1241.1.charaB
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1241.1.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1241.2.charaB
+		is_dialog_only = yes
+		response_text = BA_Decagrammaton.1241.2.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1241.3.charaB
+		response_text = BA_Decagrammaton.1241.3.re.charaB
+		trigger = {
+			has_global_flag = BA_mid_Aris_charaB
+		}
+		country_event = {
+			id = BA_Decagrammaton.1242
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = BA_Decagrammaton.1242
+	is_triggered_only = yes
+	title = BA_Decagrammaton.1242.title
+	desc = {
+		text = BA_Decagrammaton.1242.desc.A
+		trigger = {
+			has_global_flag = BA_Precursor_Mid_A
+		}
+	}
+	desc = {
+		text = BA_Decagrammaton.1242.desc.B
+		trigger = {
+			has_global_flag = BA_Precursor_Mid_B
+		}
+	}
+	option = {
+		name = BA_Decagrammaton.1242.next
+	}
+}
+
+########
+#考古遗址
+fleet_event = {
+	id = BA_Decagrammaton.8001
+	title = BA_Dgate_arc_site
+	picture = GFX_BA_Ruined_street
+	show_sound = event_collapsing_ruins
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	desc = {
+		text = BA_Dgate_arc_site_desc_RAID01
+	}
+	option = {
+		name = BA_Dgate_arc_site_option_RAID01
+	}
+}
+
+fleet_event = {
+	id = BA_Decagrammaton.8002
+	title = BA_Dgate_arc_site
+	picture = GFX_BA_Ruined_street
+	show_sound = event_collapsing_ruins
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	desc = {
+		text = BA_Dgate_arc_site_desc_RAID02
+	}
+	option = {
+		name = BA_Dgate_arc_site_option_RAID02
+	}
+}
+
+fleet_event = {
+	id = BA_Decagrammaton.8003
+	title = BA_Dgate_arc_site
+	picture = GFX_BA_Ruined_street
+	show_sound = event_collapsing_ruins
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	desc = {
+		text = BA_Dgate_arc_site_desc_RAID03
+	}
+	option = {
+		name = BA_Dgate_arc_site_option_RAID03
+	}
+}
+
+fleet_event = {
+	id = BA_Decagrammaton.8004
+	title = BA_Dgate_arc_site
+	picture = GFX_BA_Ruined_street
+	show_sound = event_collapsing_ruins
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	desc = {
+		text = BA_Dgate_arc_site_desc_RAID04
+	}
+	option = {
+		name = BA_Dgate_arc_site_option_RAID04
+	}
+}
+
+fleet_event = {
+	id = BA_Decagrammaton.8005
+	title = BA_Dgate_arc_site
+	picture = GFX_BA_Ruined_street
+	show_sound = event_collapsing_ruins
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	desc = {
+		text = BA_Dgate_arc_site_desc_RAID05
+	}
+	option = {
+		name = BA_Dgate_arc_site_option_RAID05
+	}
+}
+
+########
+#测试用 全图视野 开启外域链路 建立联系
+country_event = {
+	id = BA_Decagrammaton.7777
+	is_triggered_only = yes
+	immediate = {
+		#全图视野
+		add_modifier = {
+			modifier = modifier_BA_Veritas_4
+		}
+		#联系普通帝国
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			establish_communications = root
+		}
+		#联系先驱者或数秘术
+		every_country = {
+			limit = {
+				OR = {
+					has_country_flag = BA_Gematria
+					has_country_flag = BA_Precursor
+				}
+			}
+			country_event = {
+				id = BA_Decagrammaton.0100
+			}
+		}
+		# every_country = {
+		# 	limit = {
+		# 		OR = {
+		# 			has_country_flag = BA_Gematria
+		# 			has_country_flag = BA_Precursor
+		# 		}
+		# 	}
+		# 	every_country = {
+		# 		limit = {
+		# 			OR = {
+		# 				is_country_type = default
+		# 				is_country_type = fallen_empire
+		# 				is_country_type = awakened_fallen_empire
+		# 			}
+		# 		}
+		# 		establish_communications_no_message = prev
+		# 		country_event = {
+		# 			id = BA_Decagrammaton.0101
+		# 		}
+		# 	}
+		# }
+		# #开启外域链路
+		# random_country = {
+		# 	limit = {
+		# 		is_country_type = global_event
+		# 	}
+		# 	country_event = {
+		# 		id = BA_Decagrammaton.0020
+		# 	}
+		# }
+	}
+}
+
+#测试用 触发天灾
+country_event = {
+	id = BA_Decagrammaton.8888
+	is_triggered_only = yes
+	immediate = {
+		#全图视野
+		#
+		every_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			#快子信号通告及先驱者
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+				country_event = {
+					id = BA_Decagrammaton.1001
+				}
+			}
+			#划定位置
+			country_event = {
+				id = BA_Decagrammaton.1002
+			}
+			#出现
+			country_event = {
+				id = BA_Decagrammaton.1003
+				days = 60
+			}
+		}
+	}
+}
+
+#测试用 爱丽丝舰船获得大量加速
+country_event = {
+	id = BA_Decagrammaton.9000
+	is_triggered_only = yes
+	immediate = {
+		event_target:BA_Precursors_Aris_country = {
+			add_modifier = {
+				modifier = BA_fe_determination
+			}
+		}
+	}
+}
+
+#测试用 调查员巡回调查
+country_event = {
+	id = BA_Decagrammaton.7877
+	is_triggered_only = yes
+	immediate = {
+		event_target:BA_Precursor_contactor = {
+			every_owned_fleet = {
+				fleet_event = {
+					id = BA_Decagrammaton.7878
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = BA_Decagrammaton.7878
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		queue_actions = {
+			find_closest_system = {
+				trigger = {
+					id = Arismid.system.0004					#检测有无爱丽丝舰队
+					any_fleet_in_system = {
+						is_owned_by = event_target:BA_Precursors_Aris_country
+						NOT = {
+							has_fleet_flag = BA_mid_Aris_king
+						}
+					}
+				}
+				found_system = {
+					move_to = this
+					repeat = {
+						while = {
+							id = Arismid.system.0004							#检测有无爱丽丝舰队
+							any_fleet_in_system = {
+								is_owned_by = event_target:BA_Precursors_Aris_country
+								NOT = {
+									has_fleet_flag = BA_mid_Aris_king
+								}
+							}
+						}
+						find_random_fleet = {
+							trigger = {
+								id = Arismid.fleet.0001								#检测爱丽丝舰队
+								is_owned_by = event_target:BA_Precursors_Aris_country
+								NOT = {
+									has_fleet_flag = BA_mid_Aris_king
+								}
+							}
+							found_fleet = {
+								move_to = this
+								wait = 30
+								effect = {
+									id = ArisMid.effect.0006									#解除锁定，摧毁舰队
+									set_event_locked = no
+									destroy_fleet = this
+								}
+							}
+						}
+					}
+					effect = {
+						id = ArisMid.effect.0007						#去下一个星系
+						root = {
+							fleet_event = {
+								id = BA_Decagrammaton.7878
+							}
+						}
+					}
+				}
+				failed = {
+					move_to = event_target:BA_mid_Aris_base
+					effect = {
+						id = ArisMid.effect.0006						#解除锁定，摧毁舰队
+						event_target:BA_mid_Aris_base = {
+							change_pc = pc_machine_broken
+						}
+						event_target:BA_mid_Aris_flagship = {
+							fleet = {
+								set_event_locked = no
+								destroy_fleet = this
+							}
+						}
+					}
+					wait = 30
+					move_to = event_target:BA_mid_Aris_gate
+					wait = 30
+				}
+			}
+		}
+	}
+}
+
+#测试用 事件结束后摧毁爱丽丝国家
+country_event = {
+	id = BA_Decagrammaton.9501
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		event_target:BA_Precursors_Aris_country = {
+			destroy_country = yes
+		}
+	}
+}

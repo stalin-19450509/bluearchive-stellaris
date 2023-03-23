@@ -1,0 +1,117 @@
+##### Pop Jobs
+is_kivotos = {
+	OR = {
+		is_species_class = Schale
+		is_species_class = MACHINE
+	}
+}
+
+##### Leaders
+BA_has_halo_organic = {
+	NOT = {
+		is_same_value = event_target:BA_leader_species
+	}
+	OR = {
+		has_trait = trait_halo_unreleased
+		has_trait = trait_halo_awakened
+		has_trait = trait_halo_full_awakened
+		has_trait = trait_Halo_amplifier
+		has_trait = trait_Halo_precursor
+	}
+}
+
+##### Megastructures
+#system scope
+has_no_BA_Industry_megastructure = {
+	NOT = {
+		any_system_megastructure = {
+			#添加巨构后随时更新
+			OR = {
+				#制造石
+				is_megastructure_type = BA_Mega_keystone_base_0
+				is_megastructure_type = BA_Mega_keystone_base_1
+				is_megastructure_type = BA_Mega_keystone_base_2
+				#is_megastructure_type = BA_Mega_keystone_base_3
+			}
+		}
+	}
+}
+
+##### Project
+Project_Cradle_planet_trigger = {
+	solar_system = {
+		is_capital_system = yes
+	}
+	has_planet_flag = BA_Project_Cradle_target
+}
+
+##### CLUB
+##### AL-1S
+#leader scope
+Aris_is_scientist = {
+	any_owned_leader = {
+		has_leader_flag = BA_Real_Aris
+		leader_class = scientist
+	}
+}
+
+Aris_is_governor = {
+	any_owned_leader = {
+		has_leader_flag = BA_Real_Aris
+		leader_class = governor
+	}
+}
+
+Aris_is_admiral = {
+	any_owned_leader = {
+		has_leader_flag = BA_Real_Aris
+		leader_class = admiral
+	}
+}
+
+Aris_is_general = {
+	any_owned_leader = {
+		has_leader_flag = BA_Real_Aris
+		leader_class = general
+	}
+}
+
+##### Planet Killer Triggers
+#planet scope
+can_destroy_planet_with_Sweepers = {
+	custom_tooltip = {
+		fail_text = What_are_you_doing
+		NOR = {
+			is_planet_class = pc_BA_campus_planet
+			is_planet_class = pc_BA_ruined_planet
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_valid_target_for_sweeper
+		exists = owner
+		owner = {
+			OR = {
+				is_same_empire = FROM.owner
+				is_at_war_with = FROM.owner
+			}
+		}
+	}
+}
+
+##### Fallen Empire
+#country scope
+is_BA_fallen_empire = {
+	is_country_type = fallen_empire
+	OR = {
+		has_country_flag = BA_Gematria
+		has_country_flag = BA_Precursor
+	}
+}
+
+is_BA_fallen_empire_awakened = {
+	is_country_type = awakened_fallen_empire
+	OR = {
+		has_country_flag = BA_Gematria
+		has_country_flag = BA_Precursor
+	}
+}

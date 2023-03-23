@@ -1,0 +1,39 @@
+#摇篮计划：误击
+pm_BA_mistake_hit = {
+	spawn_chance = {
+		base = 0
+	}
+	modifier = "BA_mistake_hit"
+}
+
+#阿里乌斯起源 前15年母星增益
+pm_BA_Arius_Kyrie = {
+	spawn_chance = {
+		base = 0
+	}
+	modifier = "BA_Arius_Kyrie"
+}
+
+#阿里乌斯起源 解除威胁中
+pm_BA_Arius_deterrence_disconnecting = {
+	spawn_chance = {
+		base = 0
+	}
+	modifier = "BA_Arius_deterrence_disconnecting"
+}
+
+#阿里乌斯起源 清扫中
+pm_BA_Arius_cleaning = {
+	spawn_chance = {
+		base = 0
+	}
+	modifier = "BA_Arius_cleaning"
+}
+
+#清扫者轰击
+pm_BA_colony_sweeped = {
+	spawn_chance = {
+		base = 0
+	}
+	modifier = "BA_colony_sweeped"
+}
